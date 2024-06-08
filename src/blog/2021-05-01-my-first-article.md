@@ -22,6 +22,3 @@ Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis eges
 
 Mauris nunc congue nisi vitae suscipit tellus mauris. Vitae et leo duis ut. Arcu cursus euismod quis viverra nibh. Amet mauris commodo quis imperdiet. Condimentum lacinia quis vel eros donec. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Faucibus nisl tincidunt eget nullam. Cursus metus aliquam eleifend mi in nulla. Ut placerat orci nulla pellentesque dignissim enim sit amet. Lobortis feugiat vivamus at augue eget arcu dictum. Nunc faucibus a pellentesque sit amet porttitor. Quis varius quam quisque id diam vel quam elementum pulvinar.
 
-![Prueba de imagen](https://images.unsplash.com/photo-1556637943-090799c4ea25?ixlib=rb-1.2.1&q=80&auto=format&cs=srgb&ixid=eyJhcHBfaWQiOjM2MzIyfQ "Prueba 1")
-
-![Otra prueba de imagen](https://mockupcloud-themety.imgix.net/uploads/images/2021/10/17/02_2.jpg?auto=compress,format&fit=crop,max&h=780&w=1170 "Prueba 2")

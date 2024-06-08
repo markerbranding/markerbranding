@@ -1,6 +1,7 @@
 <li>
     <article class="snippet">
-        <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image" />
+        <!--<img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image" />-->
+        {% image "{{ post.data.image }}", "photo of my tabby cat", "(min-width: 30em) 50vw, 100vw" %}
         <h3 class="snippet__title">{{ post.data.title }}</h3>
         <p class="snippet__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate }}</span></p>
         <p class="snippet__body">{{ post.data.description }}</p>

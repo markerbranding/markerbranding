@@ -1,9 +1,12 @@
 ---
 title: Enfoque
+description: Rebranding para una empresa desarrolladora de proyectos inmobiliarios
 bodyClass: enfoque
 layout: 'base.njk'
+barba: index
 ---
-<div id="section__drag">
+
+
   <section id="section__hero">
     <div class="column__2 column__hero__1">
       <div id="logoScale__container" class="col__left">
@@ -17,22 +20,35 @@ layout: 'base.njk'
         <div class="col__left">
           <h1>Somos una agencia de branding en Mérida</h1>
           <h2>Creamos estrategias para construir marcas</h2>
-          <h2 style="color:#0071ce">profesionales</h2>
-          <a href="#" class="btn btn__hero">Descubre cómo</a>
+          <h2>profesionales</h2>
+          <a class="btn btn__hero">Conoce nuestro enfoque</a>
         </div>
         <div class="col__right">
           <video id="videoHero" width="320" height="240" autoplay muted loop>
             <source src="./assets/enfoque/video_prueba.mp4" type="video/mp4">
             <!--<source src="movie.ogg" type="video/ogg">-->
-              Tu navegador no puede reproducir este video, considera actualizarlo a una versión más nueva
+              Tu navegador no puede reproducir este video, considera actualizarlo a una versión más reciente
           </video> 
         </div>
     </div>
   </section>
 
+  <section id="section__intro">
+    <div class="column__2 column__intro">
+      <div class="col__left">
+        <h3 class="subtitle">Enfoque</h3>
+        <h2>Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.
+          Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
+      </div>
+      <div class="col__right">
+        
+      </div>
+    </div>
+  </section>
+
   <section id="section__metodologia">
     <div class="column__1">
-      <h2>Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
+      <h3 class="subtitle">Metodología</h3>
     </div>
     <div class="column__2 column__metodologia">
       <div class="col__left">
@@ -158,28 +174,35 @@ layout: 'base.njk'
             <img id="botella__web__fondo" src="./assets/enfoque/web_context_border.png" alt="Desarrollo de sitios web" />
             <div id="botella_gradiente_fondo"></div>
           </div>
-          
         </div>
-        
+        <div class="canva__cover"></div>
       </div>
       <div class="col__right">
         <div class="right__etapa right__etapa__1">
-          <h2>Etapa 1</h2>
-          <h3>Conceptos a partir de una estrategia de posicionamiento</h3>
-          <p>Para saber cómo comunicar un mensaje, primero debemos saber a quién lo dirigimos.</p>
-          <p>Después de una investigación y definición del target ideal para tu negocio, estructuramos junto contigo una estrategia que guiará cada fase para la construcción de tu marca.</p>
+          <h3><strong>Etapa 1:</strong> Estrategia de marca</h3>
+          <div>
+            <h2>Conceptos a partir de una estrategia de posicionamiento</h2>
+            <p>Para saber cómo comunicar un mensaje, primero debemos saber a quién lo dirigimos.</p>
+            <p>Después de una investigación y definición del target ideal para tu negocio, estructuramos junto contigo una estrategia que guiará cada fase para la construcción de tu marca.</p>
+          </div>
+          
         </div>
         <div class="right__etapa right__etapa__2">
-          <h2>Etapa 2</h2>
-          <h3>Identidad congruente con objetivos planteados</h3>
-          <p>Por otra parte, una buena estrategia por si sola no es suficiente para conectar a nivel emocional con tu audiencia.</p>
-          <p>El diseño de un logo atractivo y atemporal, un sistema de identidad flexible y congruente, o un empaque que destaque de la competencia, son algunos ejemplos de lo que te podemos ofrecer.</p>
+          <h3><strong>Etapa 2:</strong> Identidad de marca</h3>
+          <div>
+            <h2>Identidad congruente con objetivos planteados</h2>
+            <p>Por otra parte, una buena estrategia por si sola no es suficiente para conectar a nivel emocional con tu audiencia.</p>
+            <p>El diseño de un logo atractivo y atemporal, un sistema de identidad flexible y congruente, o un empaque que destaque de la competencia, son algunos ejemplos de lo que te podemos ofrecer.</p>
+          </div>
         </div>
         <div class="right__etapa right__etapa__3">
-          <h2>Etapa 3</h2>
-          <h3>Ejecución de la publlicidad a través de una estrategia de marketing</h3>
-          <p>Un negocio bien enfocado tiene más oportunidades de conectar con su audiencia, pero solo si saben de su existencia.</p>
-          <p>Por lo tanto, creamos estrategias de marketing y publicidad, gestionamos diversas plataformas digitales, y cuidamos que cada una sea de la mayor relevancia para tu audiencia.</p>
+          <h3><strong>Etapa 3:</strong> Marketing</h3>
+          <div>
+            <h2>Ejecución de la publlicidad a través de una estrategia de marketing</h2>
+            <p>Un negocio bien enfocado tiene más oportunidades de conectar con su audiencia, pero solo si saben de su existencia.</p>
+            <p>Por lo tanto, creamos estrategias de marketing y publicidad, gestionamos diversas plataformas digitales, y cuidamos que cada una sea de la mayor relevancia para tu audiencia.</p>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -187,36 +210,100 @@ layout: 'base.njk'
 
   <section id="section__featured" class="featured-articles">
     <div class="featured__cover"></div>
-    <div class="container flow">
-      <h2 class="subtitle">Proyectos destacados</h2>
-      
+    <div class="column__1">
+      <h3 class="subtitle">Proyectos destacados</h3>
+      <div class="circle">Más info</div>
       <ul role="list" class="work__list">
         {%- for work in collections.destacado | reverse -%}
           {% include 'work-snippet.njk' %}
         {%- endfor -%}
       </ul>
     </div>
+    <div class="column__1 col__btn">
+      <span>Ver más proyectos de:
+        <a class="btn" href="/branding/">Branding</a>
+        <a class="btn" href="/web/">Web</a>
+        <a class="btn" href="/marketing/">Marketing</a>
+      </span>
+    </div>
   </section>
 
+  <section id="section__clientes">
+    <div class="column__1">
+      <h3 class="subtitle">Clientes</h3>
+      <h2>Marcas con las que trabajamos</h2>
+    </div>
+    <div class="col__clientes">
+      <div class="cliente__slider1">
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_nervo.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_suhissa.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+      </div>
+      <div class="cliente__slider2">
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+        <img class="cliente__logo" src="./assets/enfoque/clientes/cliente_iotam.svg" />
+      </div>
+    </div>
+  </section>
 
+  <section id="section__testimonios">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 class="subtitle">Testimonios</h3>
+        <h2>Qué opinan nuestros clientes</h2>
+      </div>
+      <div class="col__right">
+        <div class="splide" aria-label="Splide Basic HTML Example">
+          <div class="splide__track">
+            <ul class="splide__list">
+              {%- for testimonio in collections.testimonio | reverse -%}
+                {% include 'testimonio-snippet.njk' %}
+              {%- endfor -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  
+
+  
+<script src="../../assets/scripts/splide.min.js"></script>
 <script>
+var splide = new Splide( '.splide', {
+  type: 'loop',
+  perPage: 1,
+  perMove: 1,
+  arrows: true,
+} );
+splide.mount();
 
 //GSAP
 //var tl2 = gsap.timeline();
 
-window.onload = function(){
+//window.onload = function(){
   let hLogo = gsap.getProperty("#logoMarkerScale", "height");
   let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
   let b1 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,35,35,0) 100%)";
   let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
-  gsap.set("#section__header", { y: hLogo });
+  //gsap.set("#section__header", { y: hLogo });
   
   gsap.to("#logoMarkerScale", {
     width:"200",
+    y:"-80",
     scrollTrigger: {
       trigger: "#logoMarkerScale",
-      start: "top top",
+      start: "=-80 top",
       scrub: true,
       end: "bottom top",
       pin: true,
@@ -227,10 +314,11 @@ window.onload = function(){
   gsap.to("#logoMarkerScale", {
     opacity:0,
     scrollTrigger: {
-      trigger: "#section__header",
-      start: "top top",
+      trigger: ".column__hero__1",
+      start: `bottom top`,
+      //start: `${hLogo/2}px top`,
       scrub: true,
-      end: "top top",
+      end: "bottom top",
     }
   });
 
@@ -238,7 +326,8 @@ window.onload = function(){
     opacity:1,
     scrollTrigger: {
       trigger: "#logoScale__container",
-      start: `${hLogo/2}px top`,
+      start: "top top",
+      //start: `${hLogo/2}px top`,
       scrub: true,
       end: `${hLogo}px top`,
     }
@@ -267,20 +356,20 @@ window.onload = function(){
   gsap.to("#logoMarkerHeader", {
     opacity:1,
     scrollTrigger: {
-      trigger: "#section__header",
-      start: "top top",
+      trigger: ".column__hero__1",
+      start: "bottom top",
       scrub: true,
-      end: "top top",
+      end: "bottom top",
     }
   });
 
   gsap.to("#section__header", {
-    backgroundColor:"#e0e5ed",
+    backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
-      trigger: "#section__header",
+      trigger: ".column__hero__2",
       start: "top top",
       scrub: true,
-      end: "top top",
+      end: "50% top",
     }
   });
 
@@ -339,7 +428,7 @@ window.onload = function(){
 
 
   gsap.to("#botella__real__img", {
-    css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1, duration:1 },    
+    css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
     scrollTrigger: {
       trigger: ".right__etapa__2",
       start: "top center",
@@ -425,6 +514,17 @@ window.onload = function(){
     }
   });
 
+  gsap.to(".canva__cover", {
+    scale:1,
+    scrollTrigger:{
+      trigger:"#section__metodologia",
+      start: "top 70%",
+      end: "100 50%",
+      scrub: true,
+      ease: "power4.inOut",
+    }
+  })
+
   gsap.to(".featured__cover", {
     scale:1,
     scrollTrigger:{
@@ -436,5 +536,22 @@ window.onload = function(){
     }
   })
 
-};
+  ScrollTrigger.batch(".work__list li", {
+		trigger: ".work__list",
+		start: "top, 70%",
+		end: "top, 60%",
+  	onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+		onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+		onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+	});
+
+  
+
+
+  // Clientes:
+  gsap.to('.cliente__slider1', { x:0, scrollTrigger: { trigger: '.cliente__slider1', start: 'top 100%', end: "bottom 0%", scrub: true}});
+	gsap.to('.cliente__slider2', { x:0, scrollTrigger: { trigger: '.cliente__slider2', start: 'top 100%', end: "bottom 0%", scrub: true}});
+
+//};
 </script>

@@ -1,21 +1,86 @@
 ---
 layout: 'base.njk'
 ---
+<div data-barba="container" data-barba-namespace="home" {{ bgcolor }}>
 
-<article class="main-article">
-<div class="container container--narrow flow">
+<article class="article__work">
+  <div class="demo">
+    {{ html | safe }}
+    </div>
   
-    <h1 class="article-title">
-      {{ title }}
-    </h1>
-    <figure class="main-article__figure">
-      <img src="{{ image }}" alt="{{ description }}">
-      <figcaption>
-        {{ description }}
-      </figcaption>
-    </figure>
-    
-    {{ content | safe }}
-  
-</div>
+  <section id="section__hero__work">
+    <div class="column__1 work__title">
+      <span>Proyectos / <a href="../../branding/">{{ tags[0] }}</a> /</span>
+      <h1 {{ textcolor }}>{{ title }}</h1>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        <h3 {{ textcolor }}>Sector</h3>
+        <h2>{{ sector }}</h2>
+      </div>
+      <div class="col__right">
+        <h3 {{ textcolor }}>Descripción del cliente</h3>
+        <p class="basics">{{ basics }}</p>
+      </div>
+    </div>
+    <div class="column__1">
+      <img src="{{ image1 }}" alt="{{ description }}" class="snippet__image" />
+    </div>
+  </section>
+
+  <section id="section__issue__work">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 {{ textcolor }}>Año</h3>
+        <p>2023 - 2024</p>
+      </div>
+      <div class="col__right">
+        <h3 {{ textcolor }}>El reto</h3>
+        <p class="basics">{{ issue }}</p>
+      </div>
+    </div>
+    <div class="column__1">
+      <img src="{{ image2 }}" alt="{{ description }}" class="snippet__image" />
+    </div>
+  </section>
+
+  <section id="section__solution__work">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 {{ textcolor }}>Servicios</h3>
+        {%- for service in services -%}
+          <span>{{ service }}</span>
+        {%- endfor -%}
+      </div>
+      <div class="col__right">
+        <h3 {{ textcolor }}>La solución</h3>
+        <p class="basics">{{ solution }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__work__list">
+    <div class="column__1">
+      {{ content | safe }}
+    </div>
+  </section>
 </article>
+</div>
+
+
+<script>
+
+
+
+  gsap.to("#section__header", {
+    scrollTrigger:{
+      trigger:"#section__header",
+      endTrigger: ".site-footer",
+      start: "top top",
+      end: "bottom top",
+      pin: "#section__header",
+      pinSpacing: false,
+    }
+  })
+
+</script>
