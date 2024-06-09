@@ -631,6 +631,7 @@ section{
   left: 0;
   z-index: 2;
   opacity: 0;
+  object-fit: contain;
 }
 
 #botella__web__base{
@@ -641,6 +642,7 @@ section{
   left: 0;
   z-index: 4;
   opacity: 0;
+  object-fit: contain;
 }
 
 #botella__web__fondo{
@@ -652,6 +654,7 @@ section{
   /*transform: translateX(-150%);*/
   transform: scale(0);
   z-index: 1;
+  object-fit: contain;
 }
 
 #botella_gradiente_fondo{
