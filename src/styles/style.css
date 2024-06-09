@@ -177,7 +177,7 @@ a{
   position: absolute;
   z-index: 100;
   width: 100%;
-  padding: 10px 50px;
+  padding: 0px 50px;
   top:0;
   left: 0;
   background-color: #e0e5ed;
@@ -205,12 +205,26 @@ a{
 }
 
 .header__nav li{
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .header__nav li a{
   color:#111c4e;
   text-transform: uppercase;
+  height: 64px;
+  display: block;
+}
+
+.header__nav ul ul{
+	position: absolute;
+	top: 64px;
+	left: 50%;
+	background-color: #fff;
+  display: none;
+}
+
+.header__nav li:hover > ul{
+	display: block;
 }
 
 .header__lang ul{
