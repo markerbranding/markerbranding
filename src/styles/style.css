@@ -1322,11 +1322,14 @@ form label{
 }
 
 .oscuro p, .oscuro h2, .oscuro span{
-  color:#fff;
+  color:#ffffffe0;
   opacity: 0.8;
 }
 
+.oscuro .header__nav li a, .oscuro .header__lang li a{
+  color:#ffffffe0;
+}
 
-
-
-
+.oscuro .st10{
+  fill:#b4bbc6;
+}

@@ -1,6 +1,7 @@
 ---
 title: Suhissa
 date: 2023-05-08
+year: 2023 - 2024
 bodyClass: suhissa
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/suhissa/suhissa_tb.jpg

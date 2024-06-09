@@ -1,6 +1,7 @@
 ---
 title: Linmex
 date: 2023-08-15
+year: 2023 - 2024
 bodyClass: linmex oscuro
 bgcolor: 'style= background-color:#181c1f;'
 textcolor: 'style= color:#ea4100;'

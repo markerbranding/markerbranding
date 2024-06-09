@@ -1,6 +1,7 @@
 ---
 title: Altare
 date: 2019-03-15
+year: 2023 - 2024
 bodyClass: altare
 tags: ["work", "branding"]
 thumbnail: /assets/work/altare/altare_tb.jpg

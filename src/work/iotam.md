@@ -1,6 +1,7 @@
 ---
 title: Iotam
 date: 2024-07-15
+year: 2023 - 2024
 bodyClass: iotam
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/iotam/iotam_tb.jpg

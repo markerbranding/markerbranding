@@ -1,6 +1,7 @@
 ---
 title: Nervo
 date: 2019-05-24
+year: 2023 - 2024
 bodyClass: nervo
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/nervo/nervo_tb.jpg
