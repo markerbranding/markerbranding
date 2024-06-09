@@ -1,0 +1,14 @@
+<li>
+    <a href="{{ latestwork.url }}" class="snippet">
+        <img src="{{ latestwork.data.thumbnail }}" alt="{{ latestwork.data.description }}" class="snippet__image" />
+        <div class="snippet__description">
+            <h2 class="snippet__title">{{ latestwork.data.title }}</h2>
+            <p class="snippet__body">{{ latestwork.data.description }}</p>
+            <div class="snippet__services">
+                {%- for service in latestwork.data.services -%}
+                    <span>{{ service }}</span>
+                {%- endfor -%}
+            </div>
+        </div>
+    </a>
+</li>

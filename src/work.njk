@@ -1,9 +1,9 @@
 ---
-title: Branding
+title: Work
 description: Proyectos de estrategia de marca, identidad corporativa y logo
-bodyClass: branding
+bodyClass: work
 layout: 'base.njk'
-barba: branding
+barba: work
 ---
 
 <section id="section__hero">
@@ -22,8 +22,8 @@ barba: branding
 <section id="section__work__list">
   <div class="column__1">
     <ul role="list" class="work__list">
-      {%- for branding in collections.branding | reverse -%}
-        {% include 'branding-snippet.njk' %}
+      {%- for work in collections.work | reverse -%}
+        {% include 'work-snippet.njk' %}
       {%- endfor -%}
     </ul>
   </div>

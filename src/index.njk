@@ -214,8 +214,8 @@ barba: index
       <h3 class="subtitle">Proyectos destacados</h3>
       <div class="circle">Más info</div>
       <ul role="list" class="work__list">
-        {%- for work in collections.destacado | reverse -%}
-          {% include 'work-snippet.njk' %}
+        {%- for latestwork in collections.destacado | reverse -%}
+          {% include 'latestwork-snippet.njk' %}
         {%- endfor -%}
       </ul>
     </div>
