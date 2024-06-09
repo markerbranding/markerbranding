@@ -1,5 +1,6 @@
 ---
 title: Linmex
+date: 2023-08-15
 bodyClass: linmex oscuro
 bgcolor: 'style= background-color:#181c1f;'
 textcolor: 'style= color:#ea4100;'

@@ -1,5 +1,6 @@
 ---
 title: Altare
+date: 2019-03-15
 bodyClass: altare
 tags: ["work", "branding"]
 thumbnail: /assets/work/altare/altare_tb.jpg
