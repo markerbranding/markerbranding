@@ -7,3 +7,19 @@
         <a href="{{ blog.url }}" class="btn btn--primary">Continuar leyendo</a>
     </article>
 </li>
+
+
+<li>
+    <a href="{{ work.url}}" class="snippet">
+        <img src="{{ work.data.thumbnail }}" alt="{{ work.data.description }}" class="snippet__image" />
+        <div class="snippet__description">
+            <h2 class="snippet__title">{{ work.data.title }}</h2>
+            <p class="snippet__body">{{ work.data.description }}</p>
+            <div class="snippet__services">
+                {%- for service in work.data.services -%}
+                    <span>{{ service }}</span>
+                {%- endfor -%}
+            </div>
+        </div>
+    </a>
+</li>

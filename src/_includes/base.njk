@@ -1,6 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
+{# `{{lang}}` must be set by you in the data cascade, see above note #}
+<!doctype html>
+<html lang="{{lang}}">
+  <head>
+    <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
+  {% for link in page.url | locale_links %}
+    <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
+  {% endfor %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MARKER branding | {{ title }} - {{ description }}</title>
@@ -23,7 +28,7 @@
         
     </head>
     <body class="page-{{ bodyClass }}">
-        <div class="transition transition-1 is-active"></div>
+        <!--<div class="transition transition-1 is-active"></div>-->
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 {% include 'header.njk' %}
@@ -59,7 +64,7 @@
 
             //Transition
 
-            window.onload = () => {
+            /*window.onload = () => {
                 const transition_el = document.querySelector('.transition');
                 const anchors = document.querySelectorAll('a');
 
@@ -79,7 +84,7 @@
                         }, 500)
                     })
                 }
-            }
+            }*/
 
         </script>
         

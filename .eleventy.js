@@ -1,5 +1,8 @@
 const { DateTime } = require("luxon");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
+const { EleventyI18nPlugin } = require("@11ty/eleventy");
+
+
 
 
 const Image = require('@11ty/eleventy-img')
@@ -68,6 +71,13 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 
 module.exports = function (eleventyConfig) {
 
+  /*  Language  */
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+		// any valid BCP 47-compatible language tag is supported
+		defaultLanguage: "es", // Required, this site uses "en"
+	});
+
+  /*  eleventy html */
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   /*  eleventy image */
