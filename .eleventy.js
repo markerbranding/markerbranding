@@ -74,7 +74,7 @@ module.exports = function (eleventyConfig) {
   /*  Language  */
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		// any valid BCP 47-compatible language tag is supported
-		defaultLanguage: "es", // Required, this site uses "en"
+		defaultLanguage: "en", // Required, this site uses "en"
 	});
 
   /*  eleventy html */
