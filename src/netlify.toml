@@ -1,7 +1,7 @@
 # tell netlify about your build script and output directory
 
 [build]
-  command = "npm run build"
+  command = "npm start"
   publish = "public"
 
 # redirect to english or spanish landing pages
