@@ -1,0 +1,20 @@
+# tell netlify about your build script and output directory
+
+[build]
+  command = "npm run build"
+  publish = "public"
+
+# redirect to spanish or english landing pages
+
+[[redirects]]
+  from = "/"
+  to = "/en"
+  status = 302
+  force = true
+  conditions = {Language = ["en"]}
+
+[[redirects]]
+  from = "/"
+  to = "/es"
+  status = 302
+  force = true
