@@ -1,6 +1,6 @@
 {
     "layout": "work.njk",
-    "tags": "work",
+    "tags": ["work", "es"],
     "lang": "es",
     "label": "es"
 }

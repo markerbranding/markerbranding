@@ -81,25 +81,30 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
   /*  eleventy image */
-		
   eleventyConfig.setLibrary('md', markdown)
 
+  
   /*  collection.locale */
+  eleventyConfig.addCollection("work_en", function(collection) {
+    return collection.getFilteredByGlob("./src/en/work/*.md");
+  });
 
-  
-    eleventyConfig.addCollection("work_en", function(collection) {
-      return collection.getFilteredByGlob("./src/en/work/*.md");
-    });
-  
-  
-  
-    eleventyConfig.addCollection("work_es", function(collection) {
-      return collection.getFilteredByGlob("./src/es/work/*.md");
-    });
+  eleventyConfig.addCollection("work_es", function(collection) {
+    return collection.getFilteredByGlob("./src/es/work/*.md");
+  });
+
+  eleventyConfig.addCollection("destacados", function (collectionApi) {
+    return collectionApi.getFilteredByTags("work", "destacado", "es");
+  });
+
+  eleventyConfig.addCollection("featured", function (collectionApi) {
+    return collectionApi.getFilteredByTags("work", "destacado", "en");
+  });
+
+
   
 
   /*  Cierre eleventy image */
-
   eleventyConfig.addPassthroughCopy('./src/styles');
   eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addPassthroughCopy('./src/admin');

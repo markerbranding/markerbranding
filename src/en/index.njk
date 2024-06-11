@@ -215,7 +215,7 @@ label: en
       <h3 class="subtitle">Proyectos destacados</h3>
       <div class="circle">Más info</div>
       <ul role="list" class="work__list">
-        {%- for latestwork in collections.destacado | reverse -%}
+        {%- for latestwork in collections.featured | reverse -%}
           {% include 'latestwork-snippet.njk' %}
         {%- endfor -%}
       </ul>

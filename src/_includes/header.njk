@@ -40,6 +40,16 @@
                 <li><a href="{{ "/nosotros/" | locale_url }}">Nosotros</a></li>
                 <li><a href="{{ "/blog/" | locale_url }}">Blog</a></li>
             </ul>
+            <ul>
+                {% for item in navigation[page.lang] %}
+                <li>
+                  <a href="{{ item.url }}">{{ item.text }}</a>
+                </li>
+                {% endfor %}
+                <li>
+                  <a href="https://github.com/madrilene/eleventy-i18n">GitHub</a>
+                </li>
+              </ul>
         </nav>
         <div class="header__lang">
             <ul role="list">
