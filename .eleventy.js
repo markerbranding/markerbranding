@@ -84,6 +84,20 @@ module.exports = function (eleventyConfig) {
 		
   eleventyConfig.setLibrary('md', markdown)
 
+  /*  collection.locale */
+
+  
+    eleventyConfig.addCollection("work_en", function(collection) {
+      return collection.getFilteredByGlob("./src/en/work/*.md");
+    });
+  
+  
+  
+    eleventyConfig.addCollection("work_es", function(collection) {
+      return collection.getFilteredByGlob("./src/es/work/*.md");
+    });
+  
+
   /*  Cierre eleventy image */
 
   eleventyConfig.addPassthroughCopy('./src/styles');

@@ -1,4 +1,6 @@
 ---
+lang: es
+label: es
 title: Linmex
 date: 2023-08-15
 year: 2023 - 2024

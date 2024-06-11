@@ -23,7 +23,7 @@ label: es
 <section id="section__work__list">
   <div class="column__1">
     <ul role="list" class="work__list">
-      {%- for work in collections.work | reverse -%}
+      {%- for work in collections.work_es | reverse -%}
         {% include 'work-snippet.njk' %}
       {%- endfor -%}
     </ul>
