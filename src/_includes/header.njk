@@ -28,28 +28,19 @@
         </div>
         <nav class="header__nav">
             <ul role="list" class="nav-list flex-group">
-                <li><a href="{{ "/" | locale_url }}">Enfoque</a></li>
-                <li><a href="{{ "/work/" | locale_url }}">Work</a></li>
-                <li><a href="{{ "/servicios/" | locale_url }}">Servicios</a>
+                <li><a class="menu-{{lang}}" href="{{ "/" | locale_url }}"><span>Inicio</span><span>Home</span></a></li>
+                <li><a class="menu-{{lang}}" href="{{ "/work/" | locale_url }}"><span>Proyectos</span><span>Work</span></a></li>
+                <li><a class="menu-{{lang}}" href="{{ "/servicios/" | locale_url }}"><span>Servicios</span><span>Services</span></a>
                     <ul class="submenu">
 						<li><a href="">Branding</a></li>
 						<li><a href="">Web</a></li>
 						<li><a href="">Marketing</a></li>
 					</ul>
                 </li>
-                <li><a href="{{ "/nosotros/" | locale_url }}">Nosotros</a></li>
-                <li><a href="{{ "/blog/" | locale_url }}">Blog</a></li>
+                <li><a class="menu-{{lang}}" href="{{ "/nosotros/" | locale_url }}"><span>Nosotros</span><span>About</span></a></li>
+                <li><a class="menu-{{lang}}" href="{{ "/blog/" | locale_url }}">Blog</a></li>
             </ul>
-            <ul>
-                {% for item in navigation[page.lang] %}
-                <li>
-                  <a href="{{ item.url }}">{{ item.text }}</a>
-                </li>
-                {% endfor %}
-                <li>
-                  <a href="https://github.com/madrilene/eleventy-i18n">GitHub</a>
-                </li>
-              </ul>
+            
         </nav>
         <div class="header__lang">
             <ul role="list">

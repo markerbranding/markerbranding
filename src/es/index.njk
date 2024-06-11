@@ -38,7 +38,7 @@ label: es
     <div class="column__2 column__intro">
       <div class="col__left">
         <h3 class="subtitle">Enfoque</h3>
-        <h2>Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.
+        <h2 id="frase">Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.
           Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
       </div>
       <div class="col__right">
@@ -221,11 +221,7 @@ label: es
       </ul>
     </div>
     <div class="column__1 col__btn">
-      <span>Ver más proyectos de:
-        <a class="btn" href="/branding/">Branding</a>
-        <a class="btn" href="/web/">Web</a>
-        <a class="btn" href="/marketing/">Marketing</a>
-      </span>
+      <a class="btn" href="{{ "/work/" | locale_url }}">Ver todos los proyectos</a>
     </div>
   </section>
 
@@ -292,7 +288,6 @@ var splide = new Splide( '.splide', {
 splide.mount();
 
 //GSAP
-//var tl2 = gsap.timeline();
 
 //window.onload = function(){
   let hLogo = gsap.getProperty("#logoMarkerScale", "height");
@@ -387,6 +382,29 @@ splide.mount();
     }
   })
 
+  /*  frase index */
+  /*	Frase	*/
+  var tl2 = gsap.timeline(),
+  mySplitText = new SplitText("#frase", { type: "lines" }),
+  lines = mySplitText.lines; //an array of all the divs that wrap each character
+
+  gsap.set("#frase", { perspective: 400 });
+  tl2.from(lines, {
+  duration: 1.8,
+  opacity: 0,
+  transformOrigin: "0% 50% -50",
+  x: 80,
+  stagger: 1.5,
+  ease: "power2.out",
+    scrollTrigger: {
+    trigger: '#section__intro',
+    start: 'top 50%',
+    end: '20% 40%',
+    scrub: true,
+    }
+  });
+
+  /**/
   gsap.to("#canvas", {
     scrollTrigger:{
       trigger:".column__metodologia > .col__right",

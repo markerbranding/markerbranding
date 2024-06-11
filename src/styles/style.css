@@ -133,6 +133,7 @@ General
 
 main{
   opacity: 1;
+  transition: background-color 0.3s ease-in-out;
 }
 
 h1{
@@ -219,6 +220,10 @@ a{
   justify-content: center;
 }
 
+.header__nav li a span{
+  font-size: 16px;
+}
+
 .header__nav ul ul{
 	position: absolute;
 	top: 64px;
@@ -262,6 +267,20 @@ a{
 .header__lang li a{
   color:#111c4e;
   text-transform: uppercase;
+}
+
+.menu-es span:first-child{
+  display: block;
+}
+.menu-es span:last-child{
+  display: none;
+}
+
+.menu-en span:first-child{
+  display: none;
+}
+.menu-en span:last-child{
+  display: block;
 }
 
 .transition-1{
@@ -557,7 +576,7 @@ section{
 #section__intro h2{
   font-size: 3.2vw;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 400;
   position: relative;
   color:#111c4e;
 }
@@ -752,9 +771,10 @@ section{
 }
 
 .work__list li{
-  grid-column: span 5;
-  grid-row: span 1;
-  margin-bottom: 10%;
+  grid-column: span 4;
+  grid-row: span 5;
+  margin-bottom: 0%;
+  margin-left: 20%;
   opacity: 0;
 }
 
@@ -762,31 +782,37 @@ section{
   grid-column: span 5;
   grid-row: span 1;
   margin-left: 30%;
+  opacity: 0;
 }
 
 .work__list li:nth-child(5n+3){
   grid-column: span 10;
   grid-row: span 1;
-  margin-right: 20%;
-  margin-left: 50%;
+  margin-right: 25%;
+  margin-left: 45%;
+  opacity: 0;
 }
 
 .work__list li:nth-child(5n+4){
-  grid-column: span 5;
+  grid-column: span 4;
   grid-row: span 1;
   margin-left: 10%;
   margin-right: 20%;
+  opacity: 0;
 }
 
 .work__list li:nth-child(5n+5){
   grid-column: span 5;
-  grid-row: span 1;
-  margin-left: 10%;
+  grid-row: span 5;
+  margin-left: 30%;
+  opacity: 0;
 }
 
 .work__list li:nth-child(5n+6){
   grid-column: span 6;
   grid-row: span 1;
+  margin-left: 45%;
+  opacity: 0;
 }
 
 /*.work__list li:nth-child(5n+4){
@@ -862,7 +888,8 @@ section{
 }
 
 .col__btn{
-  align-items: flex-start;
+  display: flex;
+  justify-content: center;
   padding-top: 50px;
 }
 
@@ -1278,7 +1305,7 @@ form label{
 }
 
 .article__work section{
-  padding: 0px 50px 0px;
+  padding: 0px 50px 50px;
 }
 
 .main__article__work {
@@ -1358,6 +1385,10 @@ form label{
 
 .oscuro .header__nav li a, .oscuro .header__lang li a{
   color:#ffffffe0;
+}
+
+.oscuro #section__header{
+  filter: contrast(93%);
 }
 
 .oscuro .st10{

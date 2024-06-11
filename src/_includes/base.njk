@@ -23,6 +23,7 @@
         <script src="/assets/scripts/ScrollSmoother.min.js"></script>
         <script src="/assets/scripts/ScrollToPlugin.min.js"></script>
         <script src="/assets/scripts/DrawSVGPlugin.min.js"></script>
+        <script src="/assets/scripts/SplitText.min.js"></script>
         <link rel="stylesheet" href="/assets/scripts/splide.min.css">
 	    <link rel="stylesheet" href="/assets/scripts/splide-default.min.css">
         
@@ -54,7 +55,7 @@
         
             //GSAP ScrollSmoother init
 
-            gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin);
+            gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, SplitText);
 
             ScrollSmoother.create({
                 smooth: 1,
