@@ -5,7 +5,8 @@ title: Iotam
 date: 2024-07-15
 year: 2023 - 2024
 bodyClass: iotam
-tags: ["work", "branding", "destacado"]
+category: Web
+tags: ["work", "web", "destacado"]
 thumbnail: /assets/work/iotam/iotam_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales
 services: ["Estrategia", "Logo", "Identidad", "Sitio Web", "Marketing"]

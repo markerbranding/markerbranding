@@ -101,6 +101,14 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByTags("work", "destacado", "en");
   });
 
+  eleventyConfig.addCollection("branding_es", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("branding", "es");
+  });
+
+  eleventyConfig.addCollection("branding_en", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("branding", "en");
+  });
+
 
   
 

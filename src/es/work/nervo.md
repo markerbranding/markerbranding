@@ -3,6 +3,7 @@ title: Nervo
 date: 2019-05-24
 year: 2023 - 2024
 bodyClass: nervo
+category: Branding
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/nervo/nervo_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales

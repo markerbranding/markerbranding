@@ -3,6 +3,7 @@ title: Suhissa
 date: 2023-05-08
 year: 2023 - 2024
 bodyClass: suhissa
+category: Branding
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/suhissa/suhissa_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales

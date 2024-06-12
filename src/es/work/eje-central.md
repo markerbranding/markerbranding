@@ -3,6 +3,7 @@ title: Eje central
 date: 2024-03-24
 year: 2023 - 2024
 bodyClass: ejecentral
+category: Branding
 tags: ["work", "branding", "destacado"]
 thumbnail: /assets/work/eje-central/eje_central_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales
