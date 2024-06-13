@@ -1577,21 +1577,31 @@ form label{
 
 #section__hero__about{
   padding: 140px 50px 0px;
-  
 }
 
-#section__hero__about .column__1{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+#section__hero__about .column__2:first-child{
+  margin-bottom: 80px;
+}
+
+#section__hero__about .column__2:last-child .col__left{
+  padding-right: 25px;
+  width: 65%;
+}
+
+#section__hero__about .column__2:last-child .col__right{
+  padding-left: 25px;
+  width: 35%;
+}
+
+#section__hero__about .column__2:last-child .col__right img{
+  height: 80%;
+  width: auto;
+  object-fit: cover;
 }
 
 #section__hero__about img{
-  width: 40vw;
-  height: 100vh;
-  object-fit: cover;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
 }
 
