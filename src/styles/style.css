@@ -1210,6 +1210,7 @@ section{
 
 #section__contacto{
   padding: 5% 50px;
+  background-color: #1f222f;
 }
 
 #section__contacto .col__left{
@@ -1576,7 +1577,7 @@ form label{
 /*  About  */
 
 #section__hero__about{
-  padding: 140px 50px 0px;
+  padding: 140px 50px 3%;
 }
 
 #section__hero__about .column__2:first-child{
@@ -1605,23 +1606,24 @@ form label{
   border-radius: 20px;
 }
 
-#about__title__1{
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  font-size: 5vw;
+#section__motivacion{
+  padding: 5% 50px 5%;
 }
 
-#about__title__2{
-  position: absolute;
-  right: 10%;
-  top: 30%;
-  font-size: 7vw;
+#section__motivacion .col__left{
+  width: 35%;
 }
 
-#about__title__3{
-  position: absolute;
-  left: 15%;
-  top: 50%;
-  font-size: 9vw;
+#section__motivacion .col__right{
+  width: 65%;
+  padding-left: 5%;
+  padding-right: 10%;
+  justify-content: flex-end;
+}
+
+#section__motivacion .col__left img{
+  min-height: 80vh;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
