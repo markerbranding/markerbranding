@@ -7,7 +7,7 @@ barba: index
 label: es
 ---
 
-
+<div data-barba="container" data-barba-namespace="home">
   <section id="section__hero">
     <div class="column__2 column__hero__1">
       <div id="logoScale__container" class="col__left">
@@ -330,7 +330,7 @@ label: es
     </div>
   </section>
 
-  
+</div>
 
   
 
@@ -347,6 +347,7 @@ splide.mount();
 
 //GSAP
 
+let ctx = gsap.context(() => {
 //window.onload = function(){
   let hLogo = gsap.getProperty("#logoMarkerScale", "height");
   let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
@@ -702,4 +703,35 @@ splide.mount();
 	gsap.to('.cliente__slider2', { x:0, scrollTrigger: { trigger: '.cliente__slider2', start: 'top 100%', end: "bottom 0%", scrub: true}});
 
 //};
+})
+
+
+
+
+
+
+
+
+barba.init({
+  transitions: [{
+    name: 'default-transition',
+    async leave(data) {
+      ctx.kill();
+      await gsap.to(data.current.container, {
+        opacity: 0,
+        duration: 0.5
+      });
+    },
+    async enter(data) {
+      ctx.restart();
+      await gsap.from(data.next.container, {
+        opacity: 0,
+        duration: 0.5
+      });
+    }
+  }]
+});
+
+
+
 </script>

@@ -6,32 +6,35 @@ layout: 'base.njk'
 barba: work
 label: es
 ---
-
-<section id="section__hero__work__cat">
-  <div class="column__2">
-    <div class="col__left">
-      <h1>Branding, web, marketing y publicidad</h1>
-      <h2>PROYECTOS.</h2>
+<div data-barba="container" data-barba-namespace="work">
+  <section id="section__hero__work__cat">
+    <div class="column__2">
+      <div class="col__left">
+        <h1>Branding, web, marketing y publicidad</h1>
+        <h2>PROYECTOS.</h2>
+      </div>
+      <div class="col__right">
+      </div>
     </div>
-    <div class="col__right">
+  </section>
+
+  <section id="section__work__list">
+    <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
+    <div class="column__1">
+      <ul role="list" class="work__list">
+        {%- for work in collections.work_es | reverse -%}
+          {% include 'work-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
     </div>
-  </div>
-</section>
-
-<section id="section__work__list">
-  <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
-  <div class="column__1">
-    <ul role="list" class="work__list">
-      {%- for work in collections.work_es | reverse -%}
-        {% include 'work-snippet.njk' %}
-      {%- endfor -%}
-    </ul>
-  </div>
-</section>
-
+  </section>
+</div>
 
 
 <script>
+
+  
+let ctx = gsap.context(() => {
 
   gsap.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
@@ -64,6 +67,30 @@ label: es
 		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 	});
 
+})
+  
 
+
+
+
+barba.init({
+  transitions: [{
+    name: 'default-transition',
+    async leave(data) {
+      ctx.kill();
+      await gsap.to(data.current.container, {
+        opacity: 0,
+        duration: 0.5
+      });
+    },
+    async enter(data) {
+      ctx.restart();
+      await gsap.from(data.next.container, {
+        opacity: 0,
+        duration: 0.5
+      });
+    }
+  }]
+});
 
 </script>
