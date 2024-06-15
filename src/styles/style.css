@@ -131,6 +131,19 @@ select {
 General
 /////////////////////// */
 
+.transition{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  background-color: #0053bf;
+  z-index: 1000;
+  pointer-events: none;
+  opacity: 1;
+}
+
 main{
   opacity: 1;
   transition: background-color 0.3s ease-in-out;

@@ -1,7 +1,7 @@
 ---
 layout: 'base.njk'
 ---
-<div data-barba="container" data-barba-namespace="work" {{ bgcolor }}>
+<div data-barba="container" data-barba-namespace="workAll" {{ bgcolor }}>
 
 <article class="article__work">
   <div class="demo">
@@ -84,17 +84,25 @@ layout: 'base.njk'
 
 <script>
 
+  function workAllGsap() {
 
+    gsap.to(".transition", {
+      delay: 0.3,
+      width: "0%",
+      ease: "power4.out",
+      duration: 0.8
+    });
 
-  gsap.to("#section__header", {
-    scrollTrigger:{
-      trigger:"#section__header",
-      endTrigger: ".site-footer",
-      start: "top top",
-      end: "bottom top",
-      pin: "#section__header",
-      pinSpacing: false,
-    }
-  })
+    gsap.to("#section__header", {
+      scrollTrigger:{
+        trigger:"#section__header",
+        endTrigger: ".site-footer",
+        start: "top top",
+        end: "bottom top",
+        pin: "#section__header",
+        pinSpacing: false,
+      }
+    })
+  }
 
 </script>

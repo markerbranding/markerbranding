@@ -33,10 +33,19 @@ label: es
 
 <script>
 
-  
-let ctx = gsap.context(() => {
 
-  gsap.to("#section__header", {
+function workGsap() {
+
+  gsap.to(".transition", {
+    delay: 0.3,
+    width: "0%",
+    ease: "power4.out",
+    duration: 0.8
+  });
+
+  var tl = gsap.timeline();
+
+  tl.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
       trigger: ".column__hero__2",
@@ -46,7 +55,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#section__header", {
+  tl.to("#section__header", {
     scrollTrigger:{
       trigger:"#section__header",
       endTrigger: ".site-footer",
@@ -67,30 +76,12 @@ let ctx = gsap.context(() => {
 		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 	});
 
-})
+
+}
+
+
+
+
   
-
-
-
-
-barba.init({
-  transitions: [{
-    name: 'default-transition',
-    async leave(data) {
-      ctx.kill();
-      await gsap.to(data.current.container, {
-        opacity: 0,
-        duration: 0.5
-      });
-    },
-    async enter(data) {
-      ctx.restart();
-      await gsap.from(data.next.container, {
-        opacity: 0,
-        duration: 0.5
-      });
-    }
-  }]
-});
 
 </script>

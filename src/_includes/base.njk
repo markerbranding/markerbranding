@@ -31,7 +31,7 @@
         
     </head>
     <body class="page-{{ bodyClass }}" data-barba="wrapper">
-        <!--<div class="transition transition-1 is-active"></div>-->
+        <div class="transition"></div>
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 {% include 'header.njk' %}
@@ -93,7 +93,53 @@
 
 
 
+
+
+
+barba.init({
+    views: [
+        {
+            namespace: 'home',
+            afterEnter(data) {      
+                homeGsap();  
+            }, 
+        },
+        {
+            namespace: 'work',
+            afterEnter(data) { 
+                workGsap();
+            },
+        },
+        {
+            namespace: 'workAll',
+            afterEnter(data) { 
+                workAllGsap();
+            },
+        },
+    ],
+    transitions: [{
+        sync: false,
+        name: 'opacity-transition',
+        
+        async leave(data) {
+            await gsap.to(".transition", {
+                width: "100%",
+                ease: "power4.out",
+                duration: 0.8
+            });
+            await gsap.to(data.current.container, {
+                opacity: 0
+            });
             
+        },
+        async afterEnter(data) {
+            window.scrollTo(0, 0);
+            homeGsap();
+            workGsap();
+            workAllGsap();
+        }
+    }]
+});
 
 
 

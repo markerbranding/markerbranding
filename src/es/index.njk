@@ -347,7 +347,17 @@ splide.mount();
 
 //GSAP
 
-let ctx = gsap.context(() => {
+function homeGsap() {
+
+  gsap.to(".transition", {
+    delay: 0.3,
+    width: "0%",
+    ease: "power4.out",
+    duration: 0.8
+  });
+
+  var tl = gsap.timeline();
+
 //window.onload = function(){
   let hLogo = gsap.getProperty("#logoMarkerScale", "height");
   let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
@@ -355,7 +365,7 @@ let ctx = gsap.context(() => {
   let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
   //gsap.set("#section__header", { y: hLogo });
   
-  gsap.to("#logoMarkerScale", {
+  tl.to("#logoMarkerScale", {
     width:"200",
     y:"-80",
     scrollTrigger: {
@@ -368,7 +378,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#logoMarkerScale", {
+  tl.to("#logoMarkerScale", {
     opacity:0,
     scrollTrigger: {
       trigger: ".column__hero__1",
@@ -379,7 +389,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to(".header__nav", {
+  tl.to(".header__nav", {
     opacity:1,
     scrollTrigger: {
       trigger: "#logoScale__container",
@@ -390,7 +400,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to(".branding__word", {
+  tl.to(".branding__word", {
     opacity:0,
     scrollTrigger: {
       trigger: "#logoScale__container",
@@ -400,7 +410,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to(".header__lang", {
+  tl.to(".header__lang", {
     opacity:1,
     scrollTrigger: {
       trigger: "#logoScale__container",
@@ -410,7 +420,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#logoMarkerHeader", {
+  tl.to("#logoMarkerHeader", {
     opacity:1,
     scrollTrigger: {
       trigger: ".column__hero__1",
@@ -420,7 +430,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#section__header", {
+  tl.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
       trigger: ".column__hero__2",
@@ -430,7 +440,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#section__header", {
+  tl.to("#section__header", {
     scrollTrigger:{
       trigger:"#section__header",
       endTrigger: ".site-footer",
@@ -464,7 +474,7 @@ let ctx = gsap.context(() => {
   });
 
   /**/
-  gsap.to("#canvas", {
+  tl.to("#canvas", {
     scrollTrigger:{
       trigger:".column__metodologia > .col__right",
       start: "top top",
@@ -475,7 +485,7 @@ let ctx = gsap.context(() => {
     }
   })
 
-  gsap.to("#botella__real", {
+  tl.to("#botella__real", {
     opacity:1,
     scrollTrigger: {
       trigger: ".right__etapa__1",
@@ -486,7 +496,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__real", {
+  tl.to("#botella__real", {
     scale: 1,
     rotate:0,
     scrollTrigger: {
@@ -498,16 +508,16 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-  gsap.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-  gsap.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% 60%", end: "40% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+  tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+  tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+  tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% 60%", end: "40% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
 
-  gsap.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-  gsap.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-  gsap.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+  tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+  tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+  tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
 
 
-  gsap.to("#botella__real__img", {
+  tl.to("#botella__real__img", {
     css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
     scrollTrigger: {
       trigger: ".right__etapa__2",
@@ -518,7 +528,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__real__img", {
+  tl.to("#botella__real__img", {
     rotate:18,
     scrollTrigger: {
       trigger: ".right__etapa__2",
@@ -529,7 +539,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__real__img", {
+  tl.to("#botella__real__img", {
     scale: 0.4,
     yPercent: 8,
     scrollTrigger: {
@@ -541,7 +551,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.fromTo("#frases__boceto", {
+  tl.fromTo("#frases__boceto", {
     opacity:1,
     scrollTrigger: {
       trigger: ".right__etapa__1",
@@ -560,7 +570,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.fromTo(".sketch__bg", {
+  tl.fromTo(".sketch__bg", {
     opacity:0.4,
     scrollTrigger: {
       trigger: ".right__etapa__1",
@@ -579,7 +589,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__web__fondo", {
+  tl.to("#botella__web__fondo", {
     //x: 0,
     scale:1,
     scrollTrigger: {
@@ -591,7 +601,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__hoja1", {
+  tl.to("#botella__hoja1", {
     opacity:1,
     x:0,
     scrollTrigger: {
@@ -605,7 +615,7 @@ let ctx = gsap.context(() => {
 
   
 
-  gsap.to("#botella__hoja1", {
+  tl.to("#botella__hoja1", {
     rotate:-45,
     scale:0.3,
     scrollTrigger: {
@@ -617,7 +627,7 @@ let ctx = gsap.context(() => {
   });
 
 
-  gsap.to("#botella__hoja2", {
+  tl.to("#botella__hoja2", {
     opacity: 1,
     x:0,
     scrollTrigger: {
@@ -628,7 +638,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__hoja2", {
+  tl.to("#botella__hoja2", {
     rotate:45,
     scale:0.4,
     scrollTrigger: {
@@ -641,7 +651,7 @@ let ctx = gsap.context(() => {
 
   
 
-  gsap.to("#botella__web__contexto", {
+  tl.to("#botella__web__contexto", {
     opacity: 1,
     scrollTrigger: {
       trigger: ".right__etapa__3",
@@ -652,7 +662,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to("#botella__web__base", {
+  tl.to("#botella__web__base", {
     opacity: 1,
     scrollTrigger: {
       trigger: ".right__etapa__3",
@@ -663,7 +673,7 @@ let ctx = gsap.context(() => {
     }
   });
 
-  gsap.to(".canva__cover", {
+  tl.to(".canva__cover", {
     scale:1,
     scrollTrigger:{
       trigger:"#section__metodologia",
@@ -674,7 +684,7 @@ let ctx = gsap.context(() => {
     }
   })
 
-  gsap.to(".featured__cover", {
+  tl.to(".featured__cover", {
     scale:1,
     scrollTrigger:{
       trigger:"#section__featured",
@@ -699,38 +709,17 @@ let ctx = gsap.context(() => {
 
 
   // Clientes:
-  gsap.to('.cliente__slider1', { x:0, scrollTrigger: { trigger: '.cliente__slider1', start: 'top 100%', end: "bottom 0%", scrub: true}});
-	gsap.to('.cliente__slider2', { x:0, scrollTrigger: { trigger: '.cliente__slider2', start: 'top 100%', end: "bottom 0%", scrub: true}});
+  tl.to('.cliente__slider1', { x:0, scrollTrigger: { trigger: '.cliente__slider1', start: 'top 100%', end: "bottom 0%", scrub: true}});
+	tl.to('.cliente__slider2', { x:0, scrollTrigger: { trigger: '.cliente__slider2', start: 'top 100%', end: "bottom 0%", scrub: true}});
 
 //};
-})
+
+
+};
 
 
 
 
-
-
-
-
-barba.init({
-  transitions: [{
-    name: 'default-transition',
-    async leave(data) {
-      ctx.kill();
-      await gsap.to(data.current.container, {
-        opacity: 0,
-        duration: 0.5
-      });
-    },
-    async enter(data) {
-      ctx.restart();
-      await gsap.from(data.next.container, {
-        opacity: 0,
-        duration: 0.5
-      });
-    }
-  }]
-});
 
 
 
