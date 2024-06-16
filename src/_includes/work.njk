@@ -86,12 +86,7 @@ layout: 'base.njk'
 
   function workAllGsap() {
 
-    gsap.to(".transition", {
-      delay: 0.3,
-      width: "0%",
-      ease: "power4.out",
-      duration: 0.8
-    });
+    loadingDown();
 
     gsap.to("#section__header", {
       scrollTrigger:{

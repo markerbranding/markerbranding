@@ -109,6 +109,14 @@ module.exports = function (eleventyConfig) {
     return collectionBranding.getFilteredByTags("branding", "en");
   });
 
+  eleventyConfig.addCollection("team", function(collection) {
+    return collection.getFilteredByGlob("./src/en/team/*.md");
+  });
+
+  eleventyConfig.addCollection("equipo", function(collection) {
+    return collection.getFilteredByGlob("./src/es/team/*.md");
+  });
+
 
   
 

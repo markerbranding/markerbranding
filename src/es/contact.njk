@@ -1,13 +1,12 @@
 ---
-title: Nosotros
-description: Nos especializamos en comunicación visual
-bodyClass: about
+title: Contacto
+description: Demos inicio a tu proyecto de branding
+bodyClass: blog
 layout: 'base.njk'
-barba: index
 label: es
 ---
 
-<div data-barba="container" data-barba-namespace="about">
+<div data-barba="container" data-barba-namespace="contact">
   <section id="section__hero__about">
     <div class="column__2">
       <div class="col__left">
@@ -51,23 +50,11 @@ label: es
       </div>
     </div>
   </section>
-
-  <section id="section__team">
-    <div class="column__1">
-      <h3 class="subtitle">La agencia</h3>
-      <ul role="list" class="team__list">
-        {%- for team in collections.equipo -%}
-          {% include 'team-snippet.njk' %}
-        {%- endfor -%}
-      </ul>
-    </div>
-  </section>
-
 </div>
 
 <script>
 
-  function aboutGsap() {
+  function contactGsap() {
 
     loadingDown();
 

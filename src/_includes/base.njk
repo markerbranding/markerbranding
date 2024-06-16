@@ -31,7 +31,9 @@
         
     </head>
     <body class="page-{{ bodyClass }}" data-barba="wrapper">
-        <div class="transition"></div>
+        <div class="transition">
+            <div class="inner__transition"></div>
+        </div>
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 {% include 'header.njk' %}
@@ -42,21 +44,18 @@
             </div>
         </div>
         
-
         <script>
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-            if (!user) {
-                window.netlifyIdentity.on("login", () => {
-                document.location.href = "/admin/";
+            if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                    });
+                }
                 });
             }
-            });
-        }
-
-        
-            //GSAP ScrollSmoother init
-
+            
+            // GSAP ScrollSmoother init
             gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, SplitText);
 
             ScrollSmoother.create({
@@ -65,86 +64,100 @@
                 smoothTouch: 0.1,
             });
 
-            //Transition
+            // Loader Down
+            function loadingDown(){
 
-            /*window.onload = () => {
-                const transition_el = document.querySelector('.transition');
-                const anchors = document.querySelectorAll('a');
+                var tlLoad = gsap.timeline();
 
-                setTimeout(() => {
-                    transition_el.classList.remove('is-active');
-                }, 500);
+                tlLoad.to(".inner__transition", {
+                    delay: 0.3,
+                    height: "0%",
+                    ease: "power4.out",
+                    duration: 0.5
+                })
 
-                for (let i = 0; i < anchors.length; i++){
-                    const anchor = anchors[i];
-                    anchor.addEventListener('click', e => {
-                        e.preventDefault();
-                        let target = anchor.href;
-                        transition_el.classList.add('is-active');
+                tlLoad.to(".transition", {
+                    delay: 0,
+                    height: "0%",
+                    ease: "power4.out",
+                    duration: 0.7
+                }, "-=0.3");
+            }
+
+            // Barba init
+            barba.init({
+                views: [
+                    {
+                        namespace: 'home',
+                        afterEnter(data) {      
+                            homeGsap();  
+                        }, 
+                    },
+                    {
+                        namespace: 'work',
+                        afterEnter(data) { 
+                            workGsap();
+                        },
+                    },
+                    {
+                        namespace: 'workAll',
+                        afterEnter(data) { 
+                            workAllGsap();
+                        },
+                    },
+                    {
+                        namespace: 'about',
+                        afterEnter(data) { 
+                            aboutGsap();
+                        },
+                    },
+                    {
+                        namespace: 'blog',
+                        afterEnter(data) { 
+                            blogGsap();
+                        },
+                    },
+                    {
+                        namespace: 'contact',
+                        afterEnter(data) { 
+                            contactGsap();
+                        },
+                    },
+                ],
+                transitions: [{
+                    sync: false,
+                    name: 'opacity-transition',
+                    
+                    async leave(data) {
                         
-                        setTimeout(() => {
-                            window.location.href = target;
-                        }, 500)
-                    })
-                }
-            }*/
-
-
-
-
-
-
-
-
-barba.init({
-    views: [
-        {
-            namespace: 'home',
-            afterEnter(data) {      
-                homeGsap();  
-            }, 
-        },
-        {
-            namespace: 'work',
-            afterEnter(data) { 
-                workGsap();
-            },
-        },
-        {
-            namespace: 'workAll',
-            afterEnter(data) { 
-                workAllGsap();
-            },
-        },
-    ],
-    transitions: [{
-        sync: false,
-        name: 'opacity-transition',
-        
-        async leave(data) {
-            await gsap.to(".transition", {
-                width: "100%",
-                ease: "power4.out",
-                duration: 0.8
+                        await gsap.to(".transition", {
+                            
+                            height: "100%",
+                            ease: "power4.out",
+                            duration: 0.4
+                        });
+                        await gsap.to(".inner__transition", {
+                            delay: 0.0,
+                            height: "100%",
+                            ease: "power4.out",
+                            duration: 0.5
+                        });
+                        await gsap.to(data.current.container, {
+                            
+                            opacity: 0
+                        });
+                    },
+                    async afterEnter(data) {
+                        window.scrollTo(0, 0);
+                        homeGsap();
+                        workGsap();
+                        workAllGsap();
+                        aboutGsap();
+                        blogGsap();
+                        contactGsap();
+                    }
+                }]
             });
-            await gsap.to(data.current.container, {
-                opacity: 0
-            });
-            
-        },
-        async afterEnter(data) {
-            window.scrollTo(0, 0);
-            homeGsap();
-            workGsap();
-            workAllGsap();
-        }
-    }]
-});
-
-
-
         </script>
-        
-
     </body>
 </html>

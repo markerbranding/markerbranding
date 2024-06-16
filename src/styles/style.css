@@ -135,12 +135,22 @@ General
   position: fixed;
   width: 100%;
   height: 100%;
-  top: 0;
+  bottom: 0;
   left: 0;
   display: block;
-  background-color: #0053bf;
+  background-color: #c62e26;
   z-index: 1000;
   pointer-events: none;
+  opacity: 1;
+}
+
+.inner__transition{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #1f222f;
   opacity: 1;
 }
 
@@ -434,7 +444,7 @@ section{
   content:"";
   width: 8px;
   height: 8px;
-  background-color: #0053bf;
+  background-color: #e1251b;
   display: block;
   margin-right: 10px;
 }
@@ -1639,4 +1649,40 @@ form label{
   width: 100%;
   object-fit: cover;
   border-radius: 10px;
+}
+
+#section__team{
+  padding: 5% 50px;
+  background-color: #1f222f;
+}
+
+.team__list{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 50px;
+  grid-auto-rows: auto;
+}
+
+.team__list li{
+  grid-column: span 3;
+  grid-row: span 1;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  width: 100%;
+}
+
+.team__list li img{
+  border-radius: 10px;
+}
+
+.team__title{
+  font-size: 1.2vw;
+  color:#a5afbb;
+  margin-bottom: 0px;
+}
+
+.team__position{
+  font-size: 1vw;
+  color:#748fbb;
 }

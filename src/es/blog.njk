@@ -7,12 +7,54 @@ barba: blog
 label: es
 ---
 
-<div class="section container">
-  <h1 class="section-title">Recent articles</h1>
-
-  <ul role="list" class="articles__list flow">
-    {%- for blog in collections.blog | reverse -%}
-      {% include 'article-snippet.njk' %}
-    {%- endfor -%}
-  </ul>
+<div data-barba="container" data-barba-namespace="blog">
+  <div class="section container">
+    <h1 class="section-title">Recent articles</h1>
+    <ul role="list" class="articles__list flow">
+      {%- for blog in collections.blog | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+    </ul>
+  </div>
 </div>
+
+<script>
+
+  function blogGsap() {
+
+    loadingDown();
+
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: ".column__hero__2",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    });
+  
+    gsap.to("#section__header", {
+      scrollTrigger:{
+        trigger:"#section__header",
+        endTrigger: ".site-footer",
+        start: "top top",
+        end: "bottom top",
+        pin: "#section__header",
+        pinSpacing: false,
+      }
+    })
+  
+    ScrollTrigger.batch(".blog__list li", {
+      trigger: ".blog__list",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+    });
+
+  }
+  
+</script>

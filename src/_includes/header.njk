@@ -44,7 +44,7 @@
         </nav>
         <div class="header__lang">
             <ul role="list">
-                <li><a href="/contacto">Contacto</a></li>
+                <li><a class="menu-{{lang}}" href="{{ "/contact/" | locale_url }}"><span>Contacto</span><span>Contact</span></a></li>
                 <li>
                     {% for link in page.url | locale_links %}
                     {%- if not loop.first %},{% endif %}

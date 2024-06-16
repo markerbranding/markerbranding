@@ -47,6 +47,17 @@ label: es
     </div>
   </section>
 
+  <!--<section class="section__hands">
+    <div class="column__2">
+      <div class="col__left">
+        <img id="" src="/assets/enfoque/hand_left.png" alt="Agencia de diseño en Mérida Yucatán" />
+      </div>
+      <div class="col__right">
+        <img id="" src="/assets/enfoque/hand_right.png" alt="Agencia de diseño en Mérida Yucatán" />
+      </div>
+    </div>
+  </section>-->
+
   <section id="section__metodologia">
     <div class="column__1">
       <h3 class="subtitle">Metodología</h3>
@@ -232,7 +243,7 @@ label: es
             <img id="botella__web__fondo" src="/assets/enfoque/web_context_border.png" alt="Desarrollo de sitios web" />
             <div id="botella_gradiente_fondo"></div>
           </div>
-          <div class="sketch__bg"></div>
+          <!--<div class="sketch__bg"></div>-->
         </div>
         <div class="canva__cover"></div>
       </div>
@@ -349,12 +360,7 @@ splide.mount();
 
 function homeGsap() {
 
-  gsap.to(".transition", {
-    delay: 0.3,
-    width: "0%",
-    ease: "power4.out",
-    duration: 0.8
-  });
+  loadingDown();
 
   var tl = gsap.timeline();
 
@@ -716,11 +722,5 @@ function homeGsap() {
 
 
 };
-
-
-
-
-
-
 
 </script>
