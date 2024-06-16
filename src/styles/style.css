@@ -1676,6 +1676,10 @@ form label{
   border-radius: 10px;
 }
 
+.team__description{
+  padding: 20px 0px;
+}
+
 .team__title{
   font-size: 1.2vw;
   color:#a5afbb;
@@ -1685,4 +1689,58 @@ form label{
 .team__position{
   font-size: 1vw;
   color:#748fbb;
+}
+
+#section__values{
+  padding: 5% 50px;
+}
+
+.value__list{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-auto-rows: auto;
+  margin-top: 50px;
+  padding: 0%;
+}
+
+.value{
+  grid-column: span 3;
+  grid-row: span 1;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  width: 100%;
+  border-right: 1px solid #748fbb;
+  padding: 5%;
+  border-radius: 0px;
+}
+
+.value img{
+  margin-bottom: 50px;
+}
+
+.value h2{
+  font-size: 1.4vw;
+}
+
+.value p{
+  font-size: 1.1vw;
+}
+
+.value:nth-child(1){
+  border-bottom: 1px solid #748fbb;
+}
+
+.value:nth-child(2){
+  border-bottom: 1px solid #748fbb;
+}
+
+.value:nth-child(3){
+  border-right: 0px solid #748fbb;
+  border-bottom: 1px solid #748fbb;
+}
+
+.value:nth-child(6){
+  border-right: 0px solid #748fbb;
 }
