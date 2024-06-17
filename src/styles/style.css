@@ -301,6 +301,10 @@ a{
   text-transform: uppercase;
 }
 
+.header__lang li a span{
+  font-size: 16px;
+}
+
 .menu-es span:first-child{
   display: block;
 }
@@ -1236,6 +1240,20 @@ section{
   background-color: #1f222f;
 }
 
+#section__contacto .subtitle{
+  color:#e0e5ed;
+}
+
+#section__contacto h2{
+  color:#748fbb;
+}
+
+#section__contacto h3{
+  color:#748fbb;
+  margin-bottom: 0px;
+  margin-top: 30px;
+}
+
 #section__contacto .col__left{
   width: 35%;
   padding-right: 10%;
@@ -1246,6 +1264,7 @@ section{
   line-height: 1.2;
   margin-bottom: 16px;
   font-weight: 400;
+  color:#e0e5ed;
 }
 
 #section__contacto .col__right{
@@ -1263,7 +1282,7 @@ form input{
   font-size: 1.2vw;
   padding: 20px 0px;
   border:0;
-  border-bottom: 1px solid #111c4e2b;
+  border-bottom: 1px solid #748fbb;
   background-color: transparent;
   color:#0053bf;
 }
@@ -1273,7 +1292,7 @@ form textarea{
   font-size: 1.2vw;
   padding: 20px 0px;
   border:0;
-  border-bottom: 1px solid #111c4e2b;
+  border-bottom: 1px solid #748fbb;
   background-color: transparent;
   color:#0053bf;
 }
@@ -1283,7 +1302,7 @@ form select{
   background-color: transparent;
   border:0;
   font-size: 0.9vw;
-  border-bottom: 1px solid #111c4e2b;
+  border-bottom: 1px solid #748fbb;
   margin-top: 10px;
   font-weight: 300;
   padding: 20px 0px;
@@ -1317,7 +1336,7 @@ form select{
 
 form input:focus, form textarea:focus{
   outline: none;
-  border-bottom: 1px solid #0053bf;
+  border-bottom: 1px solid #CB4B16;
 }
 
 form > div{
@@ -1330,6 +1349,7 @@ form label{
   font-size: 0.7vw;
   text-transform: uppercase;
   margin-top: 20px;
+  color:#e0e5ed;
 }
 
 /*  Footer */
@@ -1367,10 +1387,19 @@ form label{
   font-size: 10vw;
   line-height: 1;
   font-weight: 600;
+  text-transform: uppercase;
+}
+
+#section__hero__work__cat h2 span{
+  font-size: 10vw;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#c62e26;
 }
 
 #section__work__list{
-  padding: 0px 50px 0px;
+  padding: 0px 50px 5%;
 }
 
 #section__work__list .work__list .snippet__description h2{
@@ -1398,7 +1427,7 @@ form label{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-bottom: 100px;
+  margin-bottom: 5%;
   margin-top: -22px;
 }
 
