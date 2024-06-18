@@ -1773,3 +1773,38 @@ form label{
 .value:nth-child(6){
   border-right: 0px solid #748fbb;
 }
+
+/*  Footer */
+#site__footer{
+  margin-top: -3px;
+  padding: 50px;
+  background-color: #1f222f;
+}
+
+#site__footer span{
+  color:#8c98aa;
+  font-size: 15px;
+}
+
+#site__footer > div > span{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.foot-es span:first-child{
+  display: block;
+}
+
+.foot-es span:last-child{
+  display: none;
+}
+
+.foot-en span:first-child{
+  display: none;
+}
+
+.foot-en span:last-child{
+  display: block;
+}
