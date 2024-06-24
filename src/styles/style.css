@@ -1242,6 +1242,7 @@ section{
 #section__contacto{
   padding: 5% 50px;
   background-color: #1f222f;
+  margin-top: -3px;
 }
 
 #section__contacto .subtitle{
@@ -1667,14 +1668,14 @@ form label{
 }
 
 #section__motivacion .col__left{
-  width: 35%;
+  width: 40%;
+  padding-right: 0%;
 }
 
 #section__motivacion .col__right{
-  width: 65%;
+  width: 60%;
   padding-left: 5%;
-  padding-right: 10%;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 #section__motivacion .col__left img{
@@ -1685,16 +1686,25 @@ form label{
 }
 
 #section__team{
-  padding: 5% 50px;
+  padding: 5% 0px;
   background-color: #1f222f;
+}
+
+#section__team .column__1:first-child{
+  padding: 0px 50px 30px;
+}
+
+#section__team h3{
+  color:#e0e5ed;
 }
 
 .team__list{
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
-  grid-gap: 50px;
+  grid-gap: 0px;
   grid-auto-rows: auto;
+  border-top: 1px solid #5966a2;
 }
 
 .team__list li{
@@ -1703,6 +1713,9 @@ form label{
   margin-bottom: 0%;
   margin-left: 0%;
   width: 100%;
+  border-right: 1px solid #5966a2;
+  border-bottom: 1px solid #5966a2;
+  padding: 50px;
 }
 
 .team__list li img{
@@ -1710,7 +1723,7 @@ form label{
 }
 
 .team__description{
-  padding: 20px 0px;
+  padding: 20px 0px 0px;
 }
 
 .team__title{
@@ -1722,31 +1735,43 @@ form label{
 .team__position{
   font-size: 1vw;
   color:#748fbb;
+  margin-bottom: 0px;
 }
 
 #section__values{
   padding: 5% 50px;
 }
 
+#section__values .col__left{
+  width: 40%;
+  padding-right: 10%;
+}
+
+#section__values .col__right{
+  width: 60%;
+  padding-left: 0%;
+  justify-content: flex-end;
+}
+
 .value__list{
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(8, 1fr);
   grid-template-rows: auto;
-  grid-gap: 0px;
+  grid-gap: 50px;
   grid-auto-rows: auto;
-  margin-top: 50px;
   padding: 0%;
 }
 
 .value{
-  grid-column: span 3;
+  grid-column: span 4;
   grid-row: span 1;
   margin-bottom: 0%;
   margin-left: 0%;
   width: 100%;
-  border-right: 1px solid #748fbb;
+  /*border-right: 1px solid #748fbb;*/
   padding: 5%;
-  border-radius: 0px;
+  border-radius: 10px;
+  background-color: #e7ebf2;
 }
 
 .value img{
@@ -1761,7 +1786,7 @@ form label{
   font-size: 1.1vw;
 }
 
-.value:nth-child(1){
+/*.value:nth-child(1){
   border-bottom: 1px solid #748fbb;
 }
 
@@ -1776,7 +1801,7 @@ form label{
 
 .value:nth-child(6){
   border-right: 0px solid #748fbb;
-}
+}*/
 
 /*  Footer */
 #site__footer{
