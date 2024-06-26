@@ -51,12 +51,12 @@
   left:0;
   bottom:0;
   right:0;
-  background:#092e29;
+  background:#1f222f;
   transition: opacity 0.6s;
 }
 #progress{
-  height:1px;
-  background:#fff;
+  height:2px;
+  background:#e1251b;
   position:absolute;
   width:0;
   top:50%;
