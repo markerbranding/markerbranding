@@ -31,6 +31,13 @@
         
     </head>
     <body class="page-{{ bodyClass }}" data-barba="wrapper">
+        <div id="overlay">
+            <div id="progstat"></div>
+            <div id="progress"></div>
+            <div id="logoloader">
+                <img src="/assets/enfoque/hoja1.png" alt="loader" />
+            </div>
+        </div>
         <div class="transition">
             <div class="inner__transition"></div>
         </div>
@@ -67,7 +74,55 @@
             // Loader Down
             function loadingDown(){
 
-                var tlLoad = gsap.timeline();
+
+                function id(v){return document.getElementById(v); }
+                function loadbar() {
+                    var ovrl = id("overlay"),
+                        log = id("logoloader"),
+                        prog = id("progress"),
+                        stat = id("progstat"),
+                        img = document.images,
+                        c = 0;
+                    tot = img.length;
+
+                    function imgLoaded(){
+                        c += 1;
+                        var perc = ((100/tot*c) << 0) +"%";
+                        prog.style.width = perc;
+                        stat.innerHTML = ""+ perc;
+                        if(c===tot) return doneLoading();
+                    }
+                    function doneLoading(){
+                        ovrl.style.opacity = 0;
+                        setTimeout(function(){ 
+                            ovrl.style.display = "none";
+                            var tlLoad = gsap.timeline();
+
+                            tlLoad.to(".inner__transition", {
+                                delay: 0.3,
+                                height: "0%",
+                                ease: "power4.out",
+                                duration: 0.5
+                            })
+
+                            tlLoad.to(".transition", {
+                                delay: 0,
+                                height: "0%",
+                                ease: "power4.out",
+                                duration: 0.7
+                            }, "-=0.3");
+                        }, 1200);
+                    }
+                    for(var i=0; i<tot; i++) {
+                        var tImg     = new Image();
+                        tImg.onload  = imgLoaded;
+                        tImg.onerror = imgLoaded;
+                        tImg.src     = img[i].src;
+                    }    
+                }
+                document.addEventListener('DOMContentLoaded', loadbar, false);
+
+                /*var tlLoad = gsap.timeline();
 
                 tlLoad.to(".inner__transition", {
                     delay: 0.3,
@@ -81,7 +136,7 @@
                     height: "0%",
                     ease: "power4.out",
                     duration: 0.7
-                }, "-=0.3");
+                }, "-=0.3");*/
             }
 
             // Barba init
