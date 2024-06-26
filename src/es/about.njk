@@ -93,7 +93,11 @@ label: es
     </div>
   </section>
 
-  
+  <section id="section__divisor__team">
+    <div class="column__1">
+      <img src="/assets/about/about_hero.jpg" alt="Somos un equipo multidisciplinario">
+    </div>
+  </section>
 
   <section id="section__team">
     <div class="column__1">
@@ -124,7 +128,7 @@ label: es
         scrub: true,
         end: "50% top",
       }
-    });
+    })
   
     gsap.to("#section__header", {
       scrollTrigger:{
@@ -134,6 +138,18 @@ label: es
         end: "bottom top",
         pin: "#section__header",
         pinSpacing: false,
+      }
+    })
+
+    gsap.from("#section__divisor__team img", {
+      scale: 0.6,
+      borderRadius: "20",
+      scrollTrigger:{
+        trigger:"#section__divisor__team",
+        scrub: true,
+        start: "top 90%",
+        end: "50% 50%",
+        ease: "power4.inOut",
       }
     })
   

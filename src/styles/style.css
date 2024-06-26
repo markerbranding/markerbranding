@@ -111,9 +111,9 @@ select {
   font: inherit;
 }
 
-#smooth-content{
+/*#smooth-content{
   background-image: url(../assets/bg_noise.svg);
-}
+}*/
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 /*@media (prefers-reduced-motion: reduce) {
@@ -1685,61 +1685,8 @@ form label{
   border-radius: 10px;
 }
 
-#section__team{
-  padding: 5% 0px;
-  background-color: #1f222f;
-}
-
-#section__team .column__1:first-child{
-  padding: 0px 50px 30px;
-}
-
-#section__team h3{
-  color:#e0e5ed;
-}
-
-.team__list{
-  display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: auto;
-  grid-gap: 0px;
-  grid-auto-rows: auto;
-  border-top: 1px solid #5966a2;
-}
-
-.team__list li{
-  grid-column: span 3;
-  grid-row: span 1;
-  margin-bottom: 0%;
-  margin-left: 0%;
-  width: 100%;
-  border-right: 1px solid #5966a2;
-  border-bottom: 1px solid #5966a2;
-  padding: 50px;
-}
-
-.team__list li img{
-  border-radius: 10px;
-}
-
-.team__description{
-  padding: 20px 0px 0px;
-}
-
-.team__title{
-  font-size: 1.2vw;
-  color:#a5afbb;
-  margin-bottom: 0px;
-}
-
-.team__position{
-  font-size: 1vw;
-  color:#748fbb;
-  margin-bottom: 0px;
-}
-
 #section__values{
-  padding: 5% 50px;
+  padding: 5% 50px 10%;
 }
 
 #section__values .col__left{
@@ -1802,6 +1749,67 @@ form label{
 .value:nth-child(6){
   border-right: 0px solid #748fbb;
 }*/
+
+#section__divisor__team img{
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+  transform-origin: top center;
+}
+
+#section__team{
+  padding: 5% 0px;
+  background-color: #1f222f;
+  margin-top: -3px;
+}
+
+#section__team .column__1:first-child{
+  padding: 0px 50px 30px;
+}
+
+#section__team h3{
+  color:#e0e5ed;
+}
+
+.team__list{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-auto-rows: auto;
+  border-top: 1px solid #424760;
+}
+
+.team__list li{
+  grid-column: span 3;
+  grid-row: span 1;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  width: 100%;
+  border-right: 1px solid #424760;
+  border-bottom: 1px solid #424760;
+  padding: 50px;
+}
+
+.team__list li img{
+  border-radius: 10px;
+}
+
+.team__description{
+  padding: 20px 0px 0px;
+}
+
+.team__title{
+  font-size: 1.2vw;
+  color:#a5afbb;
+  margin-bottom: 0px;
+}
+
+.team__position{
+  font-size: 1vw;
+  color:#748fbb;
+  margin-bottom: 0px;
+}
 
 /*  Footer */
 #site__footer{
