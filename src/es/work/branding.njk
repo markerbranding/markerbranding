@@ -7,33 +7,33 @@ barba: work
 label: es
 ---
 
-<section id="section__hero__work__cat">
-  <div class="column__2">
-    <div class="col__left">
-      <h1>Estrategia de marca, logo e identidad corporativa</h1>
-      <h2>BRANDING.</h2>
+<div data-barba="container" data-barba-namespace="branding">
+  <section id="section__hero__work__cat">
+    <div class="column__2">
+      <div class="col__left">
+        <h1>Estrategia de marca, logo e identidad corporativa</h1>
+        <h2>BRANDING.</h2>
+      </div>
+      <div class="col__right">
+      </div>
     </div>
-    <div class="col__right">
+  </section>
+
+  <section id="section__work__list">
+    <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
+    <div class="column__1">
+      <ul role="list" class="work__list">
+        {%- for work in collections.branding_es | reverse -%}
+          {% include 'work-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
     </div>
-  </div>
-</section>
-
-<section id="section__work__list">
-  <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
-  <div class="column__1">
-    <ul role="list" class="work__list">
-      {%- for work in collections.branding_es | reverse -%}
-        {% include 'work-snippet.njk' %}
-      {%- endfor -%}
-    </ul>
-  </div>
-</section>
+  </section>
+</div>
 
 
-
+<script src="../../../assets/scripts/loader.js"></script>
 <script>
-
-
 
   gsap.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed

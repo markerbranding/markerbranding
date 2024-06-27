@@ -51,16 +51,29 @@
   left:0;
   bottom:0;
   right:0;
-  background:#1f222f;
+  background-color:#111c4e;
   transition: opacity 0.6s;
 }
 #progress{
   height:2px;
-  background:#e1251b;
+  background-color:#e1251b;
   position:absolute;
   width:0;
   top:50%;
+  z-index: 1;
 }
+
+#progress__bg{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  height: 2px;
+  background-color: #1f222f;
+  display: block;
+  left: 0;
+  z-index: 0;
+}
+
 #progstat{
   font-size:20px;
   letter-spacing: 1px;
@@ -199,7 +212,7 @@ General
   height: 100%;
   bottom: 0;
   left: 0;
-  background-color: #1f222f;
+  background-color: #111c4e;
   opacity: 1;
 }
 
@@ -1435,7 +1448,7 @@ form label{
 
 #section__hero__work__cat h2{
   font-size: 10vw;
-  line-height: 1;
+  line-height: 0.8;
   font-weight: 600;
   text-transform: uppercase;
 }

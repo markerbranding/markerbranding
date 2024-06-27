@@ -18,11 +18,10 @@ label: es
   </div>
 </div>
 
+<script src="../../assets/scripts/loader.js"></script>
 <script>
 
   function blogGsap() {
-
-    loadingDown();
 
     gsap.to("#section__header", {
       backgroundColor:"#edf1f9",//#e0e5ed
@@ -32,7 +31,7 @@ label: es
         scrub: true,
         end: "50% top",
       }
-    });
+    })
   
     gsap.to("#section__header", {
       scrollTrigger:{
