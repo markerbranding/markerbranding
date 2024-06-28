@@ -350,8 +350,6 @@ label: es
 <script src="../../assets/scripts/loader.js"></script>
 <script>
 
-
-
 var splide = new Splide( '.splide', {
   type: 'loop',
   perPage: 1,
@@ -461,29 +459,38 @@ function homeGsap() {
     }
   })
 
-  /*  frase index */
   /*	Frase	*/
   var tl2 = gsap.timeline(),
-  mySplitText = new SplitText("#frase", { type: "lines" }),
-  lines = mySplitText.lines; //an array of all the divs that wrap each character
+  mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
+  chars = mySplitText.chars;
 
   gsap.set("#frase", { perspective: 400 });
-  tl2.from(lines, {
+  tl2.from(chars, {
   duration: 1.8,
-  opacity: 0,
+  opacity: 0.2,
   transformOrigin: "0% 50% -50",
-  x: 80,
+  x: 0,
   stagger: 1.5,
   ease: "power2.out",
     scrollTrigger: {
     trigger: '#section__intro',
-    start: 'top 50%',
-    end: '20% 40%',
+    start: 'top 55%',
+    end: '30% 35%',
     scrub: true,
     }
   });
 
-  /**/
+  tl2.from("#frase > div > div", {
+    y: 100,
+    scrollTrigger: {
+      trigger: "#section__intro",
+      start: 'top 60%',
+      end: '10% 50%',
+      scrub: true,
+      ease: "power1.inOut",
+    }
+  })
+
   tl.to("#canvas", {
     scrollTrigger:{
       trigger:".column__metodologia > .col__right",

@@ -99,6 +99,15 @@ label: es
     </div>
   </section>
 
+  <section id="section__why__marker">
+    <div class="column__1">
+      <h2>¿Por qué el nombre Marker?</h2>
+      <p>
+        
+      </p>
+    </div>
+  </section>
+
   <section id="section__team">
     <div class="column__1">
       <h3 class="subtitle">La agencia</h3>
@@ -118,6 +127,39 @@ label: es
 <script>
 
   function aboutGsap() {
+
+    /*	Frase	*/
+    var tl2 = gsap.timeline(),
+    mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
+    chars = mySplitText.chars;
+
+    gsap.set("#frase", { perspective: 400 });
+    tl2.from(chars, {
+      duration: 1.8,
+      opacity: 0.2,
+      transformOrigin: "0% 50% -50",
+      x: 0,
+      color: "#0053bf",
+      stagger: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: '#section__intro',
+        start: 'top 55%',
+        end: '30% 35%',
+        scrub: true,
+      }
+    });
+
+    tl2.from("#frase > div > div", {
+      y: 100,
+      scrollTrigger: {
+        trigger: "#section__intro",
+        start: 'top 60%',
+        end: '10% 50%',
+        scrub: true,
+        ease: "power1.inOut",
+      }
+    })
 
     gsap.to("#section__header", {
       backgroundColor:"#edf1f9",//#e0e5ed
@@ -161,7 +203,7 @@ label: es
       onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
       onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
     });
-
+  
   }
   
 </script>
