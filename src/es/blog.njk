@@ -26,7 +26,7 @@ label: es
     gsap.to("#section__header", {
       backgroundColor:"#edf1f9",//#e0e5ed
       scrollTrigger: {
-        trigger: ".column__hero__2",
+        trigger: "main",
         start: "top top",
         scrub: true,
         end: "50% top",
@@ -36,7 +36,7 @@ label: es
     gsap.to("#section__header", {
       scrollTrigger:{
         trigger:"#section__header",
-        endTrigger: ".site-footer",
+        endTrigger: "#site__footer",
         start: "top top",
         end: "bottom top",
         pin: "#section__header",

@@ -9,10 +9,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MARKER branding | {{ title }} - {{ description }}</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="../../assets/favicon/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../assets/favicon/favicon-16x16.png">
-        <link rel="manifest" href="../../assets/favicon/site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/assets/favicon/site.webmanifest">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
@@ -72,107 +72,131 @@
                 smoothTouch: 0.1,
             });
 
-            // Loader Down
-            function loadingDown(){
-
-                
-
-
-
-
-
-                /*var tlLoad = gsap.timeline();
-
-                tlLoad.to(".inner__transition", {
-                    delay: 0.3,
-                    height: "0%",
-                    ease: "power4.out",
-                    duration: 0.5
-                })
-
-                tlLoad.to(".transition", {
-                    delay: 0,
-                    height: "0%",
-                    ease: "power4.out",
-                    duration: 0.7
-                }, "-=0.3");*/
-
-
-            }
-
             // Barba init
             barba.init({
                 views: [
                     {
                         namespace: 'home',
-                        afterEnter(data) {      
+                        async afterEnter(data) {      
                             homeGsap();  
                         }, 
                     },
                     {
                         namespace: 'work',
-                        afterEnter(data) { 
+                        async afterEnter(data) { 
                             workGsap();
                         },
                     },
                     {
                         namespace: 'workAll',
-                        afterEnter(data) { 
+                        async afterEnter(data) { 
                             workAllGsap();
                         },
                     },
                     {
                         namespace: 'about',
-                        afterEnter(data) { 
+                        async afterEnter(data) { 
                             aboutGsap();
                         },
                     },
                     {
                         namespace: 'blog',
-                        afterEnter(data) { 
+                        async afterEnter(data) { 
                             blogGsap();
                         },
                     },
                     {
                         namespace: 'contact',
-                        afterEnter(data) { 
+                        async afterEnter(data) { 
                             contactGsap();
                         },
                     },
                 ],
-                transitions: [{
-                    sync: false,
-                    name: 'opacity-transition',
-                    
-                    async leave(data) {
-                        
-                        await gsap.to(".transition", {
-                            
-                            height: "100%",
-                            ease: "power4.out",
-                            duration: 0.4
-                        });
-                        await gsap.to(".inner__transition", {
-                            delay: 0.0,
-                            height: "100%",
-                            ease: "power4.out",
-                            duration: 0.5
-                        });
-                        await gsap.to(data.current.container, {
-                            
-                            opacity: 0
-                        });
+                transitions: [
+                    {
+                        sync: false,
+                        name: 'home',
+                        to: { namespace: ['home'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 }); },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            homeGsap();
+                        }
                     },
-                    async afterEnter(data) {
-                        window.scrollTo(0, 0);
-                        homeGsap();
-                        workGsap();
-                        workAllGsap();
-                        aboutGsap();
-                        blogGsap();
-                        contactGsap();
-                    }
-                }]
+                    {
+                        sync: false,
+                        name: 'work',
+                        to: { namespace: ['work'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            workGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'workAll',
+                        to: { namespace: ['workAll'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            workAllGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'about',
+                        to: { namespace: ['about'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            aboutGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'blog',
+                        to: { namespace: ['blog'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            blogGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'contact',
+                        to: { namespace: ['contact'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            contactGsap();
+                        }
+                    },
+                ],
             });
         </script>
     </body>

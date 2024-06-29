@@ -441,7 +441,7 @@ function homeGsap() {
   tl.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
-      trigger: ".column__hero__2",
+      trigger: "main",
       start: "top top",
       scrub: true,
       end: "50% top",
@@ -451,7 +451,7 @@ function homeGsap() {
   tl.to("#section__header", {
     scrollTrigger:{
       trigger:"#section__header",
-      endTrigger: ".site-footer",
+      endTrigger: "#site__footer",
       start: "top top",
       end: "bottom top",
       pin: "#section__header",
@@ -470,6 +470,7 @@ function homeGsap() {
   opacity: 0.2,
   transformOrigin: "0% 50% -50",
   x: 0,
+  color: "#0053bf",
   stagger: 1.5,
   ease: "power2.out",
     scrollTrigger: {
@@ -526,11 +527,11 @@ function homeGsap() {
   });
 
   tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-  tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+  //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
   tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% 60%", end: "40% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
 
   tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-  tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+  //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
   tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
 
 
@@ -585,9 +586,9 @@ function homeGsap() {
       scrub: true,
       end: "10% center",
     }
-  });
+  })
 
-  tl.fromTo(".sketch__bg", {
+  /*tl.fromTo(".sketch__bg", {
     opacity:0.4,
     scrollTrigger: {
       trigger: ".right__etapa__1",
@@ -604,7 +605,7 @@ function homeGsap() {
       scrub: true,
       end: "50% center",
     }
-  });
+  });*/
 
   tl.to("#botella__web__fondo", {
     //x: 0,
