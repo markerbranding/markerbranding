@@ -1,6 +1,8 @@
 <li class="type__{{ work.data.category }}">
     <a href="{{ work.url }}" class="snippet">
-        <img src="{{ work.data.thumbnail }}" alt="{{ work.data.description }}" class="snippet__image" />
+        <div class="work__img__wrappper">
+            <img src="{{ work.data.thumbnail }}" alt="{{ work.data.description }}" class="snippet__image" />
+        </div>
         <div class="snippet__description">
             <h2 class="snippet__title">{{ work.data.title }}</h2>
             <p class="snippet__body">{{ work.data.description }}</p>

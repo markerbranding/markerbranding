@@ -50,7 +50,7 @@ label: es
       </div>
       <div class="col__right">
         <h3 class="subtitle">Qué nos motiva</h3>
-        <h2>Nos gusta crear marcas que impacten, que brinden una solución real a sus consumidores mediante la difusión
+        <h2 class="title">Nos gusta crear marcas que impacten, que brinden una solución real a sus consumidores mediante la difusión
           de sus valores y beneficios. Nos motiva tu empresa y lo que puede llegar a ser. Nuestro objetivo es brindar un
           servicio creativo profesional con alto compromiso y un enfoque basado en resultados cuantificables.</h2>
       </div>
@@ -61,7 +61,7 @@ label: es
     <div class="column__2">
       <div class="col__left">
         <h3 class="subtitle">Nuestros valores fundamentales</h3>
-        <h2>Qué opinan nuestros clientes</h2>
+        <h2 class="title">Qué opinan nuestros clientes</h2>
       </div>
       <div class="col__right">
         <ul role="list" class="value__list">
@@ -153,10 +153,9 @@ label: es
     gsap.set("#frase", { perspective: 400 });
     tl2.from(chars, {
       duration: 1.8,
-      opacity: 0.2,
       transformOrigin: "0% 50% -50",
       x: 0,
-      color: "#0053bf",
+      color: "#bcc6d8",
       stagger: 1.5,
       ease: "power2.out",
       scrollTrigger: {
@@ -220,6 +219,28 @@ label: es
       onEnterBack: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),
       onLeave: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),
       onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, y: 50, stagger: 0.2 }),
+    });
+
+    gsap.set(".subtitle", { opacity: 0, x: -50 }),
+    ScrollTrigger.batch(".subtitle", {
+      trigger: ".subtitle",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, x: -50 }),
+    });
+
+    gsap.set(".title", { opacity: 0, y: 50 }),
+    ScrollTrigger.batch(".title", {
+      trigger: ".title",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, y: 50 }),
     });
 
     /*	Why Marker	*/

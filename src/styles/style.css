@@ -915,6 +915,12 @@ section{
   margin-bottom: 0%;
   margin-left: 10%;
   opacity: 0;
+  transform-origin: center bottom;
+}
+
+.work__img__wrappper{
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .work__list li:nth-child(5n+2){
@@ -963,6 +969,10 @@ section{
   width: auto;
 }
 
+.work__list li a:hover .snippet__image{
+  transform: scale(1.15);
+}
+
 /*.work__list li:nth-child(5n+4){
   grid-row: span 1;
   grid-column: span 6;
@@ -978,7 +988,7 @@ section{
 .snippet__image{
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  transition: transform 0.5s ease-out;
 }
 
 .work__list .snippet__description{
@@ -1442,6 +1452,47 @@ form label{
 
 /*    WORK VIEW   */
 
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: #1f222f;
+  opacity: 0;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cursor-follower span{
+  font-size: 16px;
+  text-transform: uppercase;
+  color:#edf0f7;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:3px;
+}
+
+.cursor-follower span::after{
+  content:"";
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../assets/arrow_btn_red.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 #section__hero__work__cat{
   padding: 130px 50px 100px;
   background-color: #ccd5e0;
@@ -1472,6 +1523,18 @@ form label{
 
 #section__work__list .work__list .snippet__description h2{
   color:#111c4e;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.work__list .snippet__description h2::after{
+  content:"";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #111c4e;
+  left: 0;
+  bottom: 0;
 }
 
 #section__work__list .work__list .snippet__description p{
