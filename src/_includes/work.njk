@@ -1,5 +1,6 @@
 ---
 layout: 'base.njk'
+
 ---
 <div data-barba="container" data-barba-namespace="workAll" {{ bgcolor }}>
 
@@ -66,17 +67,10 @@ layout: 'base.njk'
   </section>
 
   <section>
-
-
-    <!-- in v2.0.0 the page argument is optional -->
-    {% set previousPost = collections.work | getPreviousCollectionItem %}
-    {% set nextPost = collections.work | getNextCollectionItem %}
-    
-    <!-- in v2.0.0 the page argument is optional -->
-    {% if previousPost %} Previous Blog Post: <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
-    {% if nextPost %} Next Blog Post: <a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
-    
+    {% previous collections, tags, page %}&nbsp;|&nbsp;{% next collections, tags, page %}
   </section>
+
+  
 
 </article>
 </div>

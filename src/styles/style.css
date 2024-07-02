@@ -1493,7 +1493,7 @@ form label{
 .work__list .snippet__description h2{
   color:#111c4e;
   font-weight: 400;
-  font-size: 1.1vw;
+  font-size: 1.3vw;
   margin: 0px;
   padding: 0px;
 }
@@ -2010,16 +2010,31 @@ form label{
 }
 
 #footer__contacto p{
-  font-size: 2.4vw;
+  font-size: 1.9vw;
   line-height: 1.2;
   font-weight: 400;
 }
 
 #footer__contacto a{
-  font-size: 2.4vw;
+  font-size: 1.9vw;
   line-height: 1.2;
   font-weight: 400;
   color:#0053bf;
+  transition: color 0.2s ease-in-out;
+}
+
+#footer__contacto a:hover{
+  color:#c62e26;
+}
+
+.link__wrapper{
+  position: relative;
+  width: fit-content;
+  display: block;
+}
+
+.link__wrapper:hover .underline__title{
+  width: 100%;
 }
 
 #section__footer__menu{
@@ -2036,14 +2051,15 @@ form label{
   font-size: 1.2vw;
   line-height: 1.6;
   color:#111c4e;
+  transition: color 0.2s ease-in-out;
 }
 
 .menu__footer a:hover, .menu__footer a:hover span{
-  color: #0053bf;
+  color: #c62e26;
 }
 
 #section__footer__menu .col__left{
-  padding-right: 5%;
+  padding-right: 10%;
 }
 
 #section__footer__menu .col__left form{

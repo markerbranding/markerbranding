@@ -1,5 +1,5 @@
 ---
-title: Eje central
+title: Eje Central
 date: 2024-03-24
 year: 2023 - 2024
 bodyClass: ejecentral
