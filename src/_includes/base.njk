@@ -95,6 +95,12 @@
                         },
                     },
                     {
+                        namespace: 'branding',
+                        async afterEnter(data) { 
+                            brandingGsap();
+                        },
+                    },
+                    {
                         namespace: 'about',
                         async afterEnter(data) { 
                             aboutGsap();
@@ -153,6 +159,20 @@
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
                             workAllGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'branding',
+                        to: { namespace: ['branding'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            brandingGsap();
                         }
                     },
                     {

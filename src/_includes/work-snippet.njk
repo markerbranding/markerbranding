@@ -4,7 +4,10 @@
             <img src="{{ work.data.thumbnail }}" alt="{{ work.data.description }}" class="snippet__image" />
         </div>
         <div class="snippet__description">
-            <h2 class="snippet__title">{{ work.data.title }}</h2>
+            <div class="snippet__title__wrapper">
+                <h2 class="snippet__title">{{ work.data.title }}</h2>
+                <div class="underline__title"></div>
+            </div>
             <p class="snippet__body">{{ work.data.description }}</p>
             <div class="snippet__services">
                 {%- for service in work.data.services -%}

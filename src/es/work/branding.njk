@@ -11,8 +11,8 @@ label: es
   <section id="section__hero__work__cat">
     <div class="column__2">
       <div class="col__left">
-        <h1>Estrategia de marca, logo e identidad corporativa</h1>
-        <h2>BRANDING.</h2>
+        <h1>Te presentamos nuestros proyectos de</h1>
+      <h2>Branding,</h2><h2>Logo e</h2><h2>Identidad.</h2>
       </div>
       <div class="col__right">
       </div>
@@ -35,37 +35,39 @@ label: es
 <script src="../../../assets/scripts/loader.js"></script>
 <script>
 
-  gsap.to("#section__header", {
-    backgroundColor:"#edf1f9",//#e0e5ed
-    scrollTrigger: {
-      trigger: "main",
-      start: "top top",
-      scrub: true,
-      end: "50% top",
-    }
-  });
+  function brandingGsap() {
 
-  gsap.to("#section__header", {
-    scrollTrigger:{
-      trigger:"#section__header",
-      endTrigger: "#site__footer",
-      start: "top top",
-      end: "bottom top",
-      pin: "#section__header",
-      pinSpacing: false,
-    }
-  })
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: "main",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    });
 
-  ScrollTrigger.batch(".work__list li", {
-		trigger: ".work__list",
-		start: "top, 70%",
-		end: "top, 60%",
-  	onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-		onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-		onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
-	});
+    gsap.to("#section__header", {
+      scrollTrigger:{
+        trigger:"#section__header",
+        endTrigger: "#site__footer",
+        start: "top top",
+        end: "bottom top",
+        pin: "#section__header",
+        pinSpacing: false,
+      }
+    })
 
+    ScrollTrigger.batch(".work__list li", {
+      trigger: ".work__list",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+    });
 
+  }
 
 </script>

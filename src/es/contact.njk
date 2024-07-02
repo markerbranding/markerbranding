@@ -7,56 +7,81 @@ label: es
 ---
 
 <div data-barba="container" data-barba-namespace="contact">
-  <section id="section__hero__about">
-    <div class="column__2">
-      <div class="col__left">
-        <h1>Agencia especializada en comunicación visual</h1>
-        <h2>Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
-        <a class="btn btn__hero">Conoce más de la agencia</a>
-      </div>
-      <div class="col__right">
-      </div>
+  <section id="section__contacto">
+    <div class="column__1">
+      <h3 class="subtitle">Contáctanos</h3>
+      <h2>Posicionemos tu marca</h2>
     </div>
     <div class="column__2">
       <div class="col__left">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        <div class="bloque__contacto">
+          <h3>Oficina</h3>
+          <a>Periférico Norte. Calle 11 #306 x 12-A Santa Gertrudis Copó, C.P. 97305, Mérida, Yucatán. México.</a>
+        </div>
+        <div class="bloque__contacto">
+          <h3>Teléfono / WhatsApp</h3>
+          <a>999 331 4062</a>
+        </div>
+        <div class="bloque__contacto">
+          <h3>Correo electrónico</h3>
+          <a>hola@marker.com.mx</a>
+        </div>
+        <!--<ul class="nav__footer">
+          <li><a href="/">Enfoque</a></li>
+          <li><a href="/branding/">Branding</a></li>
+          <li><a href="/web/">Web</a></li>
+          <li><a href="/publicidad/">Publicidad</a></li>
+          <li><a href="/nosotros/">Nosotros</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contacto/">Contacto</a></li>
+        </ul>-->
       </div>
       <div class="col__right">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
-      </div>
-    </div>
-  </section>
-
-  <section id="section__intro">
-    <div class="column__2 column__intro">
-      <div class="col__left">
-        <h3 class="subtitle">Qué nos define</h3>
-        <h2 id="frase">Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.
-          Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
-      </div>
-      <div class="col__right">
-      </div>
-    </div>
-  </section>
-
-  <section id="section__motivacion">
-    <div class="column__2">
-      <div class="col__left">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
-      </div>
-      <div class="col__right">
-        <h3 class="subtitle">Qué nos motiva</h3>
-        <h2>Nos gusta crear marcas que impacten, que brinden una solución real a sus consumidores mediante la difusión de sus valores y beneficios. Nos motiva tu empresa y lo que puede llegar a ser. Nuestro objetivo es brindar un servicio creativo profesional con alto compromiso y un enfoque basado en resultados cuantificables.</h2>
+        <form name="contacto" method="POST" data-netlify="true">
+          <div>
+            <label>Nombre:</label>
+            <input type="text" name="name" />
+          </div>
+          <div>
+            <label>Empresa:</label>
+            <input type="text" name="empresa" />
+          </div>
+          <div>
+            <label>Teléfono:</label>
+            <input type="text" name="telefono" />
+          </div>
+          <div>
+            <label>Correo electrónico:</label>
+            <input type="email" name="email" />
+          </div>
+          <div>
+            <label>Elige un servicio de interés:</label>
+            <div class="select__wrapper">
+              <select name="role[]" >
+                <option disabled selected value>-- Selecciona una opción --</option>
+                <option value="branding">Branding</option>
+                <option value="web">Sitio Web</option>
+                <option value="marketing">Marketing / Publicidad</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label>Comentarios (opcional):</label>
+            <textarea name="message"></textarea>
+          </div>
+          <div>
+            <button class="btn" type="submit">Enviar mensaje</button>
+          </div>
+        </form>
       </div>
     </div>
   </section>
 </div>
 
+<script src="../../assets/scripts/loader.js"></script>
 <script>
 
   function contactGsap() {
-
-    loadingDown();
 
     gsap.to("#section__header", {
       backgroundColor:"#edf1f9",//#e0e5ed

@@ -722,8 +722,27 @@ function homeGsap() {
 		onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 	});
 
-  
+  gsap.set(".subtitle", { opacity: 0, x: -50 }),
+    ScrollTrigger.batch(".subtitle", {
+      trigger: ".subtitle",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 1, x: 0 }),
+      onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, x: -50 }),
+    });
 
+    gsap.set(".title", { opacity: 0, y: 50 }),
+    ScrollTrigger.batch(".title", {
+      trigger: ".title",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 1, y: 0 }),
+      onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, y: 50 }),
+    });
 
   // Clientes:
   tl.to('.cliente__slider1', { x:0, scrollTrigger: { trigger: '.cliente__slider1', start: 'top 100%', end: "bottom 0%", scrub: true}});
