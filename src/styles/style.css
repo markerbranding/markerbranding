@@ -1747,6 +1747,78 @@ form label{
   margin-bottom: 50px;
 }
 
+#section__prev__next{
+  padding: 0px 0px;
+  border-top: 1px solid #4d526b;
+  border-bottom: 1px solid #4d526b;
+}
+
+#section__prev__next h2{
+  color: #111c4e;
+  font-size: 1.3vw;
+}
+
+#section__prev__next .col__left{
+  padding-right: 5%;
+  border-right: 1px solid #4d526b;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#section__prev__next .col__right{
+  padding-left: 5%;
+  text-align: right;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.previous__project{
+  width: 100%;
+}
+
+.next__project{
+  width: 100%;
+}
+
+.next__prev__wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.next__prev__img__wrapper{
+  overflow: hidden;
+  width: 50%;
+}
+
+#section__prev__next .col__left .next__prev__img__wrapper{
+  border-radius: 0px 20px 20px 0px;
+}
+
+#section__prev__next .col__right .next__prev__img__wrapper{
+  border-radius: 20px 0px 0px 20px;
+}
+
+.next__prev__description__wrapper{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#section__prev__next .col__left .next__prev__description__wrapper{
+  padding-left: 5%;
+}
+
+#section__prev__next .col__right .next__prev__description__wrapper{
+  padding-right: 5%;
+}
+
+.next__prev__img__wrapper img{
+  width: 100%;
+  height: auto;
+}
+
 .oscuro article p, .oscuro article h2, .oscuro article span{
   color:#ffffffe0;
   opacity: 0.8;

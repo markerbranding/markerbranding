@@ -116,6 +116,20 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("equipo", function(collection) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
+
+  eleventyConfig.addCollection("work_next_prev", function(collection) {
+    const coll = collection.getFilteredByTag("work");
+  
+    for(let i = 0; i < coll.length ; i++) {
+      const prevPost = coll[i - 2];
+      const nextPost = coll[i + 2];
+  
+      coll[i].data["prevPost"] = prevPost;
+      coll[i].data["nextPost"] = nextPost;
+    }
+  
+    return coll;
+  });
   
 
   /*  Cierre eleventy image */

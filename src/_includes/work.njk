@@ -72,27 +72,40 @@ barba: workAll
   </article>
 
   <section id="section__prev__next">
-    <!--<div class="column__2">
-      {% set previousPost = collections.work | getPreviousCollectionItem %}
-      {% set nextPost = collections.work | getNextCollectionItem %}
+    <div class="column__2">
       <div class="col__left">
-        {% if previousPost %}
-          <a onclick="workAllGsap()" href="{{ previousPost.url }}">
-            <img src="{{ previousPost.data.thumbnail }}" alt="Ver proyecto para la empresa {{ previousPost.data.title }}" />
-            <h3>{{ previousPost.data.title }}</h3>
+        {% if prevPost.url %}
+          <a class="previous__project" href="javascript:delay('{{ prevPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__img__wrapper">
+                <img src="{{ prevPost.data.thumbnail }}" />
+              </div>
+              <div class="next__prev__description__wrapper">
+                <h2>Proyecto previo:</h2>
+                <h3>Cliente: {{ prevPost.data.title }}</h3>
+              </div>
+            </div>
           </a>
-        {% endif %}
+	      {% endif %}
       </div>
       <div class="col__right">
-        {% if nextPost %}
-        <a onclick="workAllGsap()" href="{{ nextPost.url }}">
-          <img src="{{ nextPost.data.thumbnail }}" alt="Ver proyecto para la empresa {{ nextPost.data.title }}" />
-          <h3>{{ nextPost.data.title }}</h3>
-        </a>
-        {% endif %}
+        {% if nextPost.url %}
+          <a class="next__project" href="javascript:delay('{{ nextPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__description__wrapper">
+                <h2>Proyecto siguiente:</h2>
+                <h3>Cliente: {{ nextPost.data.title }}</h3>
+              </div>
+              <div class="next__prev__img__wrapper">
+                <img src="{{ nextPost.data.thumbnail }}" />
+              </div>
+            </div>
+          </a>
+	      {% endif %}
       </div>
-    </div>-->
-    <a href="javascript:delay('{{ "/work/eje-central" | locale_url }}')" data-barba-prevent="self">Ver Eje Central</a>
+    </div>
   </section>
 
 </div>
@@ -108,6 +121,43 @@ function delay (URL) {
 }
 
   function workAllGsap() {
+
+    // Check if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window;
+    const createCursorFollower = () => {
+      const $el = document.querySelector('.cursor-follower');
+      window.addEventListener('mouseover', (e) => {
+        gsap.from($el, {
+          duration: 1,
+          rotate: 0,
+        });
+      });
+      window.addEventListener('mousemove', (e) => {
+        const { target, x, y } = e;
+        const isTargetLinkOrBtn = target?.closest('.previous__project') || target?.closest('.next__project');
+        gsap.to($el, {
+          x: x - 50,
+          y: y - 70,
+          duration: 1,
+          ease: 'power4',
+          opacity: isTargetLinkOrBtn ? 1 : 0,
+          transform: `scale(${isTargetLinkOrBtn ? 1 : 0})`,
+        });
+      });
+      // Hidding the cursor element when the mouse cursor
+      // is moved out of the page
+      document.addEventListener('mouseleave', (e) => {
+        gsap.to($el, {
+          duration: 0.5,
+          opacity: 0,
+          rotate: 0,
+        });
+      });
+    };
+    // Only invoke the function if isn't a touch device
+    if (!isTouchDevice) {
+      createCursorFollower();
+    }
 
     gsap.to("#section__header", {
       scrollTrigger:{
