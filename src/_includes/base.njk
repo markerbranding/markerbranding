@@ -30,7 +30,7 @@
         <script src="https://unpkg.com/@barba/core"></script>
         
     </head>
-    <body class="page-{{ bodyClass }}" data-barba="wrapper">
+    <body class="page-{{bodyClass}}" data-barba="wrapper">
         <div id="overlay">
             <div id="progstat"></div>
             <div id="progress"></div>
@@ -46,7 +46,7 @@
         <div id="smooth-wrapper">
             <div id="smooth-content">
                 {% include 'header.njk' %}
-                <main {{ bgcolor }}>
+                <main>
                     {{ content | safe }}
                 </main>
                 {% include 'footer.njk' %}

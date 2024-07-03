@@ -1,10 +1,13 @@
 ---
+layout: work.njk 
+lang: es
+label: es
 title: Nervo
 date: 2019-05-24
 year: 2023 - 2024
 bodyClass: nervo
 category: Branding
-tags: ["work", "branding", "destacado"]
+tags: ["work", "branding", "destacado", "es"]
 thumbnail: /assets/work/nervo/nervo_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales
 services: ["Estrategia", "Logo", "Identidad", "Sitio Web", "Marketing"]

@@ -1,4 +1,5 @@
 ---
+layout: work.njk 
 lang: es
 label: es
 title: Linmex
@@ -8,7 +9,7 @@ bodyClass: linmex oscuro
 bgcolor: 'style= background-color:#181c1f;'
 textcolor: 'style= color:#ea4100;'
 category: Branding
-tags: ["work", "branding", "destacado"]
+tags: ["work", "branding", "destacado", "es"]
 thumbnail: /assets/work/linmex/linmex_tb.jpg
 description: Rebranding para una empresa desarrolladora de proyectos inmobiliarios
 services: ["Estrategia de posicionamiento", "Rediseño de logo", "Identidad Corporativa", "Desarrollo de sitio Web"]

@@ -1,10 +1,13 @@
 ---
+layout: work.njk 
+lang: es
+label: es
 title: Eje Central
 date: 2024-03-24
 year: 2023 - 2024
 bodyClass: ejecentral
 category: Branding
-tags: ["work", "branding", "destacado"]
+tags: ["work", "branding", "destacado", "es"]
 thumbnail: /assets/work/eje-central/eje_central_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales
 services: ["Estrategia", "Logo", "Identidad", "Sitio Web", "Marketing"]

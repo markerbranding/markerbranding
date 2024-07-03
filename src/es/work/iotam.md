@@ -1,4 +1,5 @@
 ---
+layout: work.njk 
 lang: es
 label: es
 title: Iotam
@@ -6,7 +7,7 @@ date: 2024-07-15
 year: 2023 - 2024
 bodyClass: iotam
 category: Web
-tags: ["work", "web", "destacado"]
+tags: ["work", "web", "destacado", "es"]
 thumbnail: /assets/work/iotam/iotam_tb.jpg
 description: Rebranding para una empresa de soluciones hidráulicas industriales
 services: ["Estrategia", "Logo", "Identidad", "Sitio Web", "Marketing"]

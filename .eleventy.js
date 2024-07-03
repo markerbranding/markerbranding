@@ -116,30 +116,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("equipo", function(collection) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
-
-  eleventyConfig.addShortcode('previous', (collections, [tag], {inputPath}) => {
-    // Assumes the first tag to be the filter for the post to be "paginated".
-    const collec = collections[tag];
-  
-    for (let i = 0; i <= collec.length; i++) {
-      if (collec[i+2] && collec[i+2].data.page.inputPath === inputPath) {
-        return `<a href="${ collec[i].data.page.url }">Previous</a>`;
-      }
-    }
-  });
-  
-  eleventyConfig.addShortcode('next', (collections, [tag], {inputPath}) => {
-    // Assumes the first tag to be the filter for the post to be "paginated".
-    const collec = collections[tag];
-  
-    for (let i = 1; i <= collec.length-1; i++) {
-      if (collec[i-1] && collec[i-1].data.page.inputPath === inputPath) {
-        return `<a href="${ collec[i].data.page.url }">Next</a>`;
-      }
-    }
-  });
-
-
   
 
   /*  Cierre eleventy image */

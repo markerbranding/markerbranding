@@ -1,82 +1,111 @@
 ---
+title: Proyecto
+description: Proyectos de branding, web y marketing
+bodyClass: workAll
 layout: 'base.njk'
+barba: workAll
 
 ---
-<div data-barba="container" data-barba-namespace="workAll" {{ bgcolor }}>
+<div id="barba__wrapper" data-barba="container" data-barba-namespace="workAll">
 
-<article class="article__work">
-  <div class="demo">
-    {{ html | safe }}
-    </div>
-  
-  <section id="section__hero__work">
-    <div class="column__1 work__title">
-      <span>Proyectos / <a href="../../work/">{{ tags[0] }}</a> /</span>
-      <h1 {{ textcolor }}>{{ title }}</h1>
-    </div>
-    <div class="column__2">
+  <article class="article__work" {{ bgcolor }}>
+    <div class="demo">
+      {{ html | safe }}
+      </div>
+    
+    <section id="section__hero__work">
+      <div class="column__1 work__title">
+        <span>Proyectos / <a href="../../work/">{{ tags[0] }}</a> /</span>
+        <h1 {{ textcolor }}>{{ title }}</h1>
+      </div>
+      <div class="column__2">
+        <div class="col__left">
+          <h3 {{ textcolor }}>Sector</h3>
+          <h2>{{ sector }}</h2>
+        </div>
+        <div class="col__right">
+          <h3 {{ textcolor }}>Descripción del cliente</h3>
+          <p class="basics">{{ basics }}</p>
+        </div>
+      </div>
+      <div class="column__1">
+        <img src="{{ image1 }}" alt="{{ description }}" class="snippet__image" />
+      </div>
+    </section>
+
+    <section id="section__issue__work">
+      <div class="column__2">
+        <div class="col__left">
+          <h3 {{ textcolor }}>Año</h3>
+          <p>{{ year }}</p>
+        </div>
+        <div class="col__right">
+          <h3 {{ textcolor }}>El reto</h3>
+          <p class="basics">{{ issue }}</p>
+        </div>
+      </div>
+      <div class="column__1">
+        <img src="{{ image2 }}" alt="{{ description }}" class="snippet__image" />
+      </div>
+    </section>
+
+    <section id="section__solution__work">
+      <div class="column__2">
+        <div class="col__left">
+          <h3 {{ textcolor }}>Servicios</h3>
+          {%- for service in services -%}
+            <span>{{ service }}</span>
+          {%- endfor -%}
+        </div>
+        <div class="col__right">
+          <h3 {{ textcolor }}>La solución</h3>
+          <p class="basics">{{ solution }}</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section__work__list">
+      <div class="column__1">
+        {{ content | safe }}
+      </div>
+    </section>
+  </article>
+
+  <section id="section__prev__next">
+    <!--<div class="column__2">
+      {% set previousPost = collections.work | getPreviousCollectionItem %}
+      {% set nextPost = collections.work | getNextCollectionItem %}
       <div class="col__left">
-        <h3 {{ textcolor }}>Sector</h3>
-        <h2>{{ sector }}</h2>
+        {% if previousPost %}
+          <a onclick="workAllGsap()" href="{{ previousPost.url }}">
+            <img src="{{ previousPost.data.thumbnail }}" alt="Ver proyecto para la empresa {{ previousPost.data.title }}" />
+            <h3>{{ previousPost.data.title }}</h3>
+          </a>
+        {% endif %}
       </div>
       <div class="col__right">
-        <h3 {{ textcolor }}>Descripción del cliente</h3>
-        <p class="basics">{{ basics }}</p>
+        {% if nextPost %}
+        <a onclick="workAllGsap()" href="{{ nextPost.url }}">
+          <img src="{{ nextPost.data.thumbnail }}" alt="Ver proyecto para la empresa {{ nextPost.data.title }}" />
+          <h3>{{ nextPost.data.title }}</h3>
+        </a>
+        {% endif %}
       </div>
-    </div>
-    <div class="column__1">
-      <img src="{{ image1 }}" alt="{{ description }}" class="snippet__image" />
-    </div>
+    </div>-->
+    <a href="javascript:delay('{{ "/work/eje-central" | locale_url }}')" data-barba-prevent="self">Ver Eje Central</a>
   </section>
 
-  <section id="section__issue__work">
-    <div class="column__2">
-      <div class="col__left">
-        <h3 {{ textcolor }}>Año</h3>
-        <p>{{ year }}</p>
-      </div>
-      <div class="col__right">
-        <h3 {{ textcolor }}>El reto</h3>
-        <p class="basics">{{ issue }}</p>
-      </div>
-    </div>
-    <div class="column__1">
-      <img src="{{ image2 }}" alt="{{ description }}" class="snippet__image" />
-    </div>
-  </section>
-
-  <section id="section__solution__work">
-    <div class="column__2">
-      <div class="col__left">
-        <h3 {{ textcolor }}>Servicios</h3>
-        {%- for service in services -%}
-          <span>{{ service }}</span>
-        {%- endfor -%}
-      </div>
-      <div class="col__right">
-        <h3 {{ textcolor }}>La solución</h3>
-        <p class="basics">{{ solution }}</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="section__work__list">
-    <div class="column__1">
-      {{ content | safe }}
-    </div>
-  </section>
-
-  <section>
-    {% previous collections, tags, page %}&nbsp;|&nbsp;{% next collections, tags, page %}
-  </section>
-
-  
-
-</article>
 </div>
 
 <script src="../../../assets/scripts/loader.js"></script>
 <script>
+
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 1000 );
+  gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+  gsap.to(".inner__transition", { delay: 0.4, height: "100%", ease: "power4.out", duration: 0.5 });
+  gsap.to(data.current.container, { opacity: 0 });
+}
 
   function workAllGsap() {
 

@@ -36,7 +36,7 @@
                     ease: "power4.out",
                     duration: 0.7
                 }, "-=0.3");
-			}, 1200);/**/
+			}, 500);/**/
 		}
 		for(var i=0; i<tot; i++) {
 			var tImg     = new Image();

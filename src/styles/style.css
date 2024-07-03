@@ -1747,7 +1747,7 @@ form label{
   margin-bottom: 50px;
 }
 
-.oscuro p, .oscuro h2, .oscuro span{
+.oscuro article p, .oscuro article h2, .oscuro article span{
   color:#ffffffe0;
   opacity: 0.8;
 }
