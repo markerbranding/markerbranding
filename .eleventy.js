@@ -130,7 +130,11 @@ module.exports = function (eleventyConfig) {
   
     return coll;
   });
-  
+
+  /*  Wrap md with html tags 
+  eleventyConfig.addShortcode("testCode", function(code) {
+    return `<div class="some-class">{% code %}</div>`;
+  });*/
 
   /*  Cierre eleventy image */
   eleventyConfig.addPassthroughCopy('./src/styles');

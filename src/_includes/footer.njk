@@ -30,12 +30,14 @@
       <h2 class="title">Suscríbete a nuestro Newsletter</h2>
       <form name="newsletter" method="POST" data-netlify="true">
         <div>
-          <label>Nombre:</label>
-          <input type="text" name="name_newsletter" />
+          <label for="name_newsletter">Nombre:
+            <input id="name_newsletter" type="text" name="name_newsletter" />
+          </label>
         </div>
         <div>
-          <label>Correo electrónico:</label>
-          <input type="email" name="email_newsletter" />
+          <label for="email_newsletter">Correo electrónico:
+            <input id="email_newsletter" type="email" name="email_newsletter" />
+          </label>
         </div>
         <div>
           <button class="btn" type="submit">Suscribirse</button>

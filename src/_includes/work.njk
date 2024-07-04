@@ -8,7 +8,7 @@ barba: workAll
 ---
 <div id="barba__wrapper" data-barba="container" data-barba-namespace="workAll">
 
-  <article class="article__work" {{ bgcolor }}>
+  <article class="article__work">
     <div class="demo">
       {{ html | safe }}
       </div>
@@ -25,41 +25,7 @@ barba: workAll
         </div>
         <div class="col__right">
           <h3 {{ textcolor }}>Descripción del cliente</h3>
-          <p class="basics">{{ basics }}</p>
-        </div>
-      </div>
-      <div class="column__1">
-        <img src="{{ image1 }}" alt="{{ description }}" class="snippet__image" />
-      </div>
-    </section>
-
-    <section id="section__issue__work">
-      <div class="column__2">
-        <div class="col__left">
-          <h3 {{ textcolor }}>Año</h3>
-          <p>{{ year }}</p>
-        </div>
-        <div class="col__right">
-          <h3 {{ textcolor }}>El reto</h3>
-          <p class="basics">{{ issue }}</p>
-        </div>
-      </div>
-      <div class="column__1">
-        <img src="{{ image2 }}" alt="{{ description }}" class="snippet__image" />
-      </div>
-    </section>
-
-    <section id="section__solution__work">
-      <div class="column__2">
-        <div class="col__left">
-          <h3 {{ textcolor }}>Servicios</h3>
-          {%- for service in services -%}
-            <span>{{ service }}</span>
-          {%- endfor -%}
-        </div>
-        <div class="col__right">
-          <h3 {{ textcolor }}>La solución</h3>
-          <p class="basics">{{ solution }}</p>
+          <h2 class="basics">{{ basics }}</h2>
         </div>
       </div>
     </section>
@@ -83,7 +49,11 @@ barba: workAll
               </div>
               <div class="next__prev__description__wrapper">
                 <h2>Proyecto previo:</h2>
-                <h3>Cliente: {{ prevPost.data.title }}</h3>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ prevPost.data.title }}</h3>
+                  <div class="underline__title"></div>
+                </div>
+                <p>{{ prevPost.data.description }}</p>
               </div>
             </div>
           </a>
@@ -96,7 +66,11 @@ barba: workAll
             <div class="next__prev__wrapper">
               <div class="next__prev__description__wrapper">
                 <h2>Proyecto siguiente:</h2>
-                <h3>Cliente: {{ nextPost.data.title }}</h3>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ nextPost.data.title }}</h3>
+                  <div class="underline__title"></div>
+                </div>
+                <p>{{ prevPost.data.description }}</p>
               </div>
               <div class="next__prev__img__wrapper">
                 <img src="{{ nextPost.data.thumbnail }}" />
