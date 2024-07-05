@@ -7,8 +7,8 @@ permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-03-24
 year: 2023 - 2024
 bodyClass: ejecentral claro
-bgcolor: '#efefef'
-textcolor: '#000'
+bgcolor: '#bcbcbc'
+textcolor: '#272727'
 category: Branding
 tags: ["work", "branding", "destacado", "es"]
 thumbnail: /assets/work/eje-central/eje_central_tb.jpg
@@ -20,27 +20,14 @@ issue: Enim nulla aliquet porttitor lacus luctus accumsan. Vulputate mi sit amet
 solution: In iaculis nunc sed augue lacus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Consectetur adipiscing elit ut aliquam. Tortor consequat id porta nibh venenatis cras sed. Integer enim neque volutpat ac tincidunt. Pellentesque pulvinar pellentesque habitant morbi. Ut enim blandit volutpat maecenas. Risus quis varius quam quisque id. Turpis tincidunt id aliquet risus. Congue eu consequat ac felis donec. Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis egestas sed tempus. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Enim diam vulputate ut pharetra sit amet aliquam. Est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Nec ultrices dui sapien eget mi proin sed libero enim. Sed sed risus pretium quam vulputate. Sit amet luctus venenatis lectus magna.
 ---
 
-![Diseño de tarjetas de presentación Linmex](/assets/work/linmex/linmex_imagotipo.jpg)
+![Diseño de tarjetas de presentación Linmex](/assets/work/eje-central/eje_central_tarjeta.jpg)
 
 ### El reto con la marca
 ## {{ issue }}
 
-![Diseño de tarjetas de presentación Linmex](/assets/work/linmex/linmex_imagotipo.jpg)
+![Diseño de tarjetas de presentación Linmex](/assets/work/eje-central/eje_central_logo_bordado.jpg)
 
 ### La solución y el resultado
 ## {{ solution }}
 
-![Diseño de tarjetas de presentación Linmex](/assets/work/linmex/linmex_tarjetas.jpg)
-![Diseño de carpeta de presentación y papelería Linmex](/assets/work/linmex/linmex_folder.jpg)
-![Diseño de agenda Linmex](/assets/work/linmex/linmex_agenda.jpg)
-![Diseño de hoodie para Linmex](/assets/work/linmex/linmex_hoodie.jpg)
-![Gorras para uniforme Linmex](/assets/work/linmex/linmex_gorras.jpg)
-![Casco de constructor para Linmex](/assets/work/linmex/linmex_casco.jpg)
-![Diseño de uniformes para Linmex](/assets/work/linmex/linmex_uniformes.jpg)
-![Diseño de sombrero para Linmex](/assets/work/linmex/linmex_sombrero.jpg)
-![Tazas para Linmex](/assets/work/linmex/linmex_taza.jpg)
-![Diseño de tapial y lonas para Linmex](/assets/work/linmex/linmex_paneles.jpg)
-![Diseño de espectacular para Linmex](/assets/work/linmex/linmex_espectacular.jpg)
-![Lona de ventas para Linmex](/assets/work/linmex/linmex_lona.jpg)
-![Estrategia de contenidos para las redes sociales de Linmex](/assets/work/linmex/linmex_instagram.jpg)
-![Diseño de sitio web para Linmex](/assets/work/linmex/linmex_web.jpg)
+![Diseño de tarjetas de presentación Linmex](/assets/work/eje-central/eje_central_piedra_logo.jpg)
