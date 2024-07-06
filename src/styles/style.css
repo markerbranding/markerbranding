@@ -1914,7 +1914,7 @@ form label{
 }
 
 .claro article h2, .claro article span{
-  color:#555555;
+  color:#5d5d5d;
 }
 
 .claro #section__header{
@@ -2132,6 +2132,56 @@ form label{
   font-size: 1vw;
   color:#748fbb;
   margin-bottom: 0px;
+}
+
+/*  BLOG  */
+
+.blog__list{
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 0px;
+  grid-auto-rows: auto;
+  border-top: 1px solid #424760;
+}
+
+.blog__list li{
+  grid-column: span 3;
+  grid-row: span 1;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  width: 100%;
+  border-right: 1px solid #424760;
+  border-bottom: 1px solid #424760;
+  padding: 50px;
+}
+
+#section__hero__blog{
+  padding: 120px 50px 60px;
+  background-color: #1f222f;
+}
+
+#section__hero__blog h1{
+  color:#4d526b;
+  text-align: left;
+}
+
+#section__hero__blog h2{
+  font-size: 5vw;
+  line-height: 0.8;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#4d526b;
+  text-align: left;
+  /*text-shadow: 0px 8px 20px rgba(0,0,0,0.2);*/
+}
+
+#section__hero__blog h2 span{
+  font-size: 10vw;
+  line-height: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#c62e26;
 }
 
 /*  Footer */

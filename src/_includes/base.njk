@@ -31,7 +31,8 @@
 
         <style>
             #section__header, .article__work{background-color: {{ bgcolor }} !important;}
-            .article__work h3, .work__title h1, .work__title span a{color: {{ textcolor }} !important;}
+            .work__title h1{color: {{ namecolor }} !important;}
+            .article__work h3, .work__title span a{color: {{ textcolor }} !important;}
         </style>
         
     </head>
@@ -115,6 +116,12 @@
                         namespace: 'blog',
                         async afterEnter(data) { 
                             blogGsap();
+                        },
+                    },
+                    {
+                        namespace: 'blogAll',
+                        async afterEnter(data) { 
+                            blogAllGsap();
                         },
                     },
                     {
@@ -206,6 +213,20 @@
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
                             blogGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'blogAll',
+                        to: { namespace: ['blogAll'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            workAllGsap();
                         }
                     },
                     {

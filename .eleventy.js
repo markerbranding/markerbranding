@@ -93,6 +93,14 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/es/work/*.md");
   });
 
+  eleventyConfig.addCollection("blog_en", function(collectionBlog) {
+    return collectionBlog.getFilteredByGlob("./src/en/blog/*.md");
+  });
+
+  eleventyConfig.addCollection("blog_es", function(collectionBlog) {
+    return collectionBlog.getFilteredByGlob("./src/es/blog/*.md");
+  });
+
   eleventyConfig.addCollection("destacados", function (collectionApi) {
     return collectionApi.getFilteredByTags("work", "destacado", "es");
   });

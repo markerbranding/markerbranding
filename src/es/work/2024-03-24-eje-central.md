@@ -7,8 +7,9 @@ permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-03-24
 year: 2023 - 2024
 bodyClass: ejecentral claro
-bgcolor: '#bcbcbc'
-textcolor: '#272727'
+bgcolor: '#e0e0e0'
+namecolor: '#272727'
+textcolor: '#DD3E26'
 category: Branding
 tags: ["work", "branding", "destacado", "es"]
 thumbnail: /assets/work/eje-central/eje_central_tb.jpg
