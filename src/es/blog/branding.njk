@@ -1,14 +1,13 @@
 ---
-title: Blog
-description: Artículos sobre branding, marketing y negocios
-bodyClass: blog
+title: Artículos de Branding
+description: Categorías para los {{ title}}
+bodyClass: blog-category
 layout: 'base.njk'
-barba: blog
+barba: blogBranding
 label: es
-locale: es
 ---
 
-<div data-barba="container" data-barba-namespace="blog">
+<div data-barba="container" data-barba-namespace="{{ barba }}">
 
   <section id="section__hero__blog">
     <div class="column__2">
@@ -23,22 +22,16 @@ locale: es
 
   <section id="section__filter">
     <div class="column__1">
-      <div class="filter__select">
-        <span>Ver artículos por categoría</span>
-        <div class="custom-select">
-          {% include 'filter.njk' %}
-        </div>
-      </div>
-      
+      {% include 'filter.njk' %}
     </div>
-    
   </section>
 
   <section>
     <div class="section container">
+      
       <ul role="list" class="blog__list flow">
-        {%- for blog in collections.blog_es | reverse -%}
-          {% include 'blog-snippet.njk' %}
+        {%- for branding_articles in collections.blog_branding | reverse -%}
+          {% include 'blog-branding-snippet.njk' %}
         {%- endfor -%}
       </ul>
     </div>
@@ -46,34 +39,23 @@ locale: es
   
 </div>
 
-<script src="../../assets/scripts/loader.js"></script>
+<script src="../../../assets/scripts/loader.js"></script>
 <script>
 
-  function blogGsap() {
+  function blogBrandingGsap() {
 
-    // Custom select
-    const dropdown = document.querySelector('.select__dropdown');
-    const input = document.querySelector('input');
-    const listOfOptions = document.querySelectorAll('.option');
-    const body = document.body;
-    const toggleDropdown = (event) => {
-      event.stopPropagation();
-      dropdown.classList.toggle('opened');
-    };
-    const selectOption = (event) => {
-      input.value = event.currentTarget.textContent;
-    };
-    const closeDropdownFromOutside = () => {
-      if (dropdown.classList.contains('opened')) {
-        dropdown.classList.remove('opened');
-      }
-    };
-    body.addEventListener('click', closeDropdownFromOutside);
-    listOfOptions.forEach((option) => {
-      option.addEventListener('click', selectOption);
+    /*  Filter */
+    $(function(){
+      // bind change event to select
+      $('#dynamic_select').on('change', function () {
+          var url = $(this).val(); // get selected value
+          if (url) { // require a URL
+              window.location = url; // redirect
+          }
+          return false;
+      });
     });
-    dropdown.addEventListener('click', toggleDropdown);
-    
+
     /*  gsap */
     gsap.to("#section__header", {
       backgroundColor:"#edf1f9",//#e0e5ed

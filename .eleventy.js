@@ -2,9 +2,6 @@ const { DateTime } = require("luxon");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
-
-
-
 const Image = require('@11ty/eleventy-img')
 const markdown = require('markdown-it')()
 
@@ -47,8 +44,8 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
   const widths = [450, 780, 962, 1400, 1920]
   const imgOpts = {
     widths: widths
-      //.concat(widths.map((w) => w * 2)) // generate 2x sizes
-      .filter((v, i, s) => s.indexOf(v) === i), // dedupe
+    //.concat(widths.map((w) => w * 2)) // generate 2x sizes
+    .filter((v, i, s) => s.indexOf(v) === i), // dedupe
     formats: ['webp', 'jpeg'], // TODO: add avif when support is good enough
     urlPath: '/assets/img/',
     outputDir: './public/assets/img/'
@@ -125,6 +122,7 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
 
+  /* Next Prev Work */
   eleventyConfig.addCollection("work_next_prev", function(collection) {
     const coll = collection.getFilteredByTag("work");
   
@@ -139,10 +137,15 @@ module.exports = function (eleventyConfig) {
     return coll;
   });
 
-  /*  Wrap md with html tags 
-  eleventyConfig.addShortcode("testCode", function(code) {
-    return `<div class="some-class">{% code %}</div>`;
-  });*/
+  /* Filter blogs */
+
+  eleventyConfig.addCollection("blog_branding_es", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "blog_branding", "es");
+  });
+
+  eleventyConfig.addCollection("blog_branding_en", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "blog_branding", "en");
+  });
 
   /*  Cierre eleventy image */
   eleventyConfig.addPassthroughCopy('./src/styles');

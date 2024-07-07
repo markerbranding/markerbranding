@@ -1,0 +1,14 @@
+<li>
+    <article class="blog__snippet">
+        <a href="{{ branding_articles.url }}">
+            <h3 class="snippet__title">{{ branding_articles.data.title }}</h3>
+        </a>
+        <a href="{{ branding_articles.url }}">
+            <img src="{{ branding_articles.data.thumbnail }}" alt="{{ branding_articles.data.title }}" class="snippet__image" />
+        </a>
+        
+        <p class="snippet__meta">Escrito por <span>{{ branding_articles.data.author }}</span> el <span>{{ branding_articles.date | postDate }}</span></p>
+        <p class="snippet__body">{{ branding_articles.data.description }}</p>
+        <a href="{{ branding_articles.url }}" class="btn btn--primary">Continuar leyendo</a>
+    </article>
+</li>

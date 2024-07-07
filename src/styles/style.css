@@ -2184,6 +2184,109 @@ form label{
   color:#c62e26;
 }
 
+#section__filter{
+  padding: 20px 50px;
+}
+
+.filter__select{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.select__dropdown {
+  width: 280px;
+  height: 44px;
+  background: white;
+  border-radius: 0px;
+  position: relative;
+  border:0px solid #0053bf;
+  margin-left: 10px;
+}
+
+.select__dropdown::before {
+  content: "";
+  position: absolute;
+  right: 14px;
+  top: 13px;
+  z-index: 9999;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #0053bf;
+  border-top: transparent;
+  border-right: transparent;
+  transform: rotate(-45deg);
+  pointer-events: none;
+  transition: all 0.3s linear;
+}
+
+.select__dropdown input {
+  width: 100%;
+  height: 100%;
+  padding: 0px 14px;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  z-index: 5;
+  border:2px solid #0053bf;
+}
+
+.select__dropdown .options {
+  margin: 0;
+  width: 100%;
+  border-radius: 0px;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  overflow: hidden;
+  position: absolute;
+  top: 44px;
+  transition: all 0.5s ease;  
+  background-color:#2e6dbf;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  opacity: 0;
+  transform: translateY(-50px);
+  visibility: hidden;
+  z-index: 4;
+  list-style: none;
+}
+
+.select__dropdown .options .option {
+  padding: 16px;
+  border-radius: 9px;
+  transition: all 0.2s ease;
+  color: #292d34;
+}
+
+.select__dropdown .options .option:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.select__dropdown .options .option:hover {
+  color: white;
+  background: #5bc5fa;
+  box-shadow: 0 10px 25px rgba(42, 179, 248, 0.4);
+}
+
+.select__dropdown.opened .options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  z-index: 4;
+}
+
+.select__dropdown.opened::before {
+  transform: rotate(-225deg);
+  top: 17px;
+}
+
 /*  Footer */
 
 #footer__contacto{
