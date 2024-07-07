@@ -12,7 +12,7 @@ label: es
   <section id="section__hero__blog">
     <div class="column__2">
       <div class="col__left">
-        <h1>Artículos recientes</h1>
+        <h1>Artículos de branding</h1>
       </div>
       <div class="col__right">
         
@@ -22,7 +22,12 @@ label: es
 
   <section id="section__filter">
     <div class="column__1">
-      {% include 'filter.njk' %}
+      <div class="filter__select">
+        <span>Ver artículos por categoría</span>
+        <div class="custom-select">
+          {% include 'filter.njk' %}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -30,8 +35,8 @@ label: es
     <div class="section container">
       
       <ul role="list" class="blog__list flow">
-        {%- for branding_articles in collections.blog_branding | reverse -%}
-          {% include 'blog-branding-snippet.njk' %}
+        {%- for blog in collections.blog_branding | reverse -%}
+          {% include 'blog-snippet.njk' %}
         {%- endfor -%}
       </ul>
     </div>
@@ -44,17 +49,39 @@ label: es
 
   function blogBrandingGsap() {
 
-    /*  Filter */
-    $(function(){
-      // bind change event to select
-      $('#dynamic_select').on('change', function () {
-          var url = $(this).val(); // get selected value
-          if (url) { // require a URL
-              window.location = url; // redirect
-          }
-          return false;
-      });
+    // Custom select
+    const dropdown = document.querySelector('.select__dropdown');
+    const input = document.querySelector('input');
+    const listOfOptions = document.querySelectorAll('.option');
+    const body = document.body;
+    const toggleDropdown = (event) => {
+      event.stopPropagation();
+      dropdown.classList.toggle('opened');
+    };
+    const selectOption = (event) => {
+      input.value = event.currentTarget.textContent;
+    };
+    const closeDropdownFromOutside = () => {
+      if (dropdown.classList.contains('opened')) {
+        dropdown.classList.remove('opened');
+      }
+    };
+    body.addEventListener('click', closeDropdownFromOutside);
+    listOfOptions.forEach((option) => {
+      option.addEventListener('click', selectOption);
     });
+    dropdown.addEventListener('click', toggleDropdown);
+    
+    /*  gsap */
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: "main",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    })
 
     /*  gsap */
     gsap.to("#section__header", {

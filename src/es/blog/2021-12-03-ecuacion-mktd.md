@@ -7,8 +7,9 @@ permalink: "/{{ label }}/blog/{{ title | slugify }}/"
 author: Andrea Tovar
 date: 2021-12-03
 tags: ["post", "featured"]
-thumbnail: /assets/blog/blog1/article-1.jpg
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio aliquam?
+category: ["Marketing y publicidad"]
+thumbnail: /assets/blog/blog1/blog1_tb.jpg
+description: El mercado se ha vuelto más digital a medida que la tecnología avanza. Una gran parte de la población está conectada a internet en busca de todo tipo de información, haciendo del marketing digital una forma ideal para captar clientes.
 ---
 
 ![El logo no tiene por qué comunicar, pero sí identificar](/assets/blog/blog1/article-1.jpg)
