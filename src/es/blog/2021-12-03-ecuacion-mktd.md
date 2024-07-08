@@ -8,7 +8,7 @@ author: Andrea Tovar
 date: 2021-12-03
 tags: ["post", "featured"]
 category: ["Marketing y publicidad"]
-thumbnail: /assets/blog/blog1/blog1_tb.jpg
+thumbnail: /assets/blog/blog3/blog3_tb.jpg
 description: El mercado se ha vuelto más digital a medida que la tecnología avanza. Una gran parte de la población está conectada a internet en busca de todo tipo de información, haciendo del marketing digital una forma ideal para captar clientes.
 ---
 
@@ -20,7 +20,7 @@ No obstante, el crecimiento desmesurado de las tecnologías y las redes sociales
 
 ## Y te preguntarás, ¿cómo saber si tu negocio cuenta con una?
 
-ay muchos factores que integran una estrategia exitosa. Pero necesitarás por lo menos la sumatoria de cuatro elementos: desarrollo de marca + contenido + experiencia de usuario + compromiso.
+Hay muchos factores que integran una estrategia exitosa. Pero necesitarás por lo menos la sumatoria de cuatro elementos: desarrollo de marca + contenido + experiencia de usuario + compromiso.
 
 Te explicamos cada una:
 

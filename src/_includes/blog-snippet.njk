@@ -1,15 +1,20 @@
 <li>
     <article class="blog__snippet">
-        <a href="{{ blog.url }}">
-            <h2 class="blog__snippet__title">{{ blog.data.title }}</h2>
-        </a>
-        <span>{{ blog.data.category }}</span>
-        <a href="{{ blog.url }}">
-            <img src="{{ blog.data.thumbnail }}" alt="{{ blog.data.title }}" class="blog__snippet__image" />
-        </a>
-        
-        <p class="blog__snippet__meta">Escrito por <span>{{ blog.data.author }}</span> el <span>{{ blog.date | postDate }}</span></p>
-        <p class="blog__snippet__body">{{ blog.data.description }}</p>
-        <a href="{{ blog.url }}" class="btn btn--primary">Continuar leyendo</a>
+        <div>
+            <span class="blog__snippet__cat">{{ blog.data.category }}</span>
+            <a href="{{ blog.url }}">
+                <h2 class="blog__snippet__title">{{ blog.data.title }}</h2>
+            </a>
+        </div>
+        <div>
+            <div>
+                <a href="{{ blog.url }}">
+                    <img src="{{ blog.data.thumbnail }}" alt="{{ blog.data.title }}" class="blog__snippet__image" />
+                </a>
+                <p class="blog__snippet__author">Escrito por <span>{{ blog.data.author }}</span> el <span>{{ blog.date | postDate }}</span></p>
+                <p class="blog__snippet__description">{{ blog.data.description }}</p>
+            </div>
+            <a href="{{ blog.url }}" class="btn btn--primary">Continuar leyendo</a>
+        </div>
     </article>
 </li>
