@@ -35,31 +35,71 @@ barba: workAll
       </div>
     </section>
   </article>
-
+  
   <section id="section__prev__next">
+    {% set previoPost = collections.work_es | getPreviousCollectionItem %}
+    {% set siguientePost = collections.work_es | getNextCollectionItem %}
+    {% set previousPost = collections.work_en | getPreviousCollectionItem %}
+    {% set nextPost = collections.work_en | getNextCollectionItem %}
     <div class="column__2">
       <div class="col__left">
-        {% if prevPost.url %}
-          <a class="previous__project" href="javascript:delay('{{ prevPost.url }}')" data-barba-prevent="self">
+        {% if previoPost %}
+          <a class="previous__project" href="javascript:delay('{{ previoPost.url }}')" data-barba-prevent="self">
             
             <div class="next__prev__wrapper">
               <div class="next__prev__img__wrapper">
-                <img src="{{ prevPost.data.thumbnail }}" />
+                <img src="{{ previoPost.data.thumbnail }}" />
               </div>
               <div class="next__prev__description__wrapper">
                 <h2>Proyecto previo:</h2>
                 <div class="snippet__title__wrapper">
-                  <h3>{{ prevPost.data.title }}</h3>
+                  <h3>{{ previoPost.data.title }}</h3>
                   <div class="underline__title"></div>
                 </div>
-                <p>{{ prevPost.data.description }}</p>
+                <p>{{ previoPost.data.description }}</p>
               </div>
             </div>
           </a>
-	      {% endif %}
+        {% endif %}
+        {% if previousPost %}
+          <a class="previous__project" href="javascript:delay('{{ previousPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__img__wrapper">
+                <img src="{{ previousPost.data.thumbnail }}" />
+              </div>
+              <div class="next__prev__description__wrapper">
+                <h2>Proyecto previo:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ previousPost.data.title }}</h3>
+                  <div class="underline__title"></div>
+                </div>
+                <p>{{ previousPost.data.description }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
       </div>
       <div class="col__right">
-        {% if nextPost.url %}
+        {% if siguientePost %}
+          <a class="next__project" href="javascript:delay('{{ siguientePost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__description__wrapper">
+                <h2>Proyecto siguiente:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ siguientePost.data.title }}</h3>
+                  <div class="underline__title"></div>
+                </div>
+                <p>{{ siguientePost.data.description }}</p>
+              </div>
+              <div class="next__prev__img__wrapper">
+                <img src="{{ siguientePost.data.thumbnail }}" />
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        {% if nextPost %}
           <a class="next__project" href="javascript:delay('{{ nextPost.url }}')" data-barba-prevent="self">
             
             <div class="next__prev__wrapper">
@@ -69,14 +109,14 @@ barba: workAll
                   <h3>{{ nextPost.data.title }}</h3>
                   <div class="underline__title"></div>
                 </div>
-                <p>{{ prevPost.data.description }}</p>
+                <p>{{ nextPost.data.description }}</p>
               </div>
               <div class="next__prev__img__wrapper">
                 <img src="{{ nextPost.data.thumbnail }}" />
               </div>
             </div>
           </a>
-	      {% endif %}
+        {% endif %}
       </div>
     </div>
   </section>

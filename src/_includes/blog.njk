@@ -9,12 +9,42 @@ barba: blogAll
 <div id="barba__wrapper" data-barba="container" data-barba-namespace="blogAll">
   
   <section id="section__article__hero">
+    <h2>{{ category }}</h2>
     <h1>{{ title }}</h1>
   </section>
   
   <section id="section__article__content">
     <div class="column__1">
       {{ content | safe }}
+    </div>
+  </section>
+
+  <section id="section__article__caller">
+    <div class="column__1">
+      <p>{{ closure }}</p>
+      <p>
+        <a class="menu-{{lang}} btn" href="{{ "/contact/" | locale_url }}"><span>Entra en contacto con nosotros</span><span>Get in touch with us</span></a>
+      </p>
+    </div>
+  </section>
+
+  <section id="section__article__footer">
+    <div class="column__2">
+      <div class="col__left">
+        <h2>Autor:</h2>
+        <p>{{ author }}</p>
+      </div>
+      <div class="col__right">
+        <h2>Compartir en:</h2>
+        
+        
+        <p>
+          <a href="https://www.facebook.com/sharer.php?u={{ pageUrl }}">Facebook</a>
+          <a href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}">Twitter</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}">LinkedIn</a> 
+          <a href="https://reddit.com/submit?url={{pageUrl}}&title={{stitle}}">Reddit</a>
+        </p>
+      </div>
     </div>
   </section>
 

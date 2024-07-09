@@ -68,6 +68,10 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 
 module.exports = function (eleventyConfig) {
 
+  /*  Global URLs social */
+  eleventyConfig.addGlobalData("rootURL", "https://markerbranding.netlify.app/es/");
+
+
   /*  Language  */
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		// any valid BCP 47-compatible language tag is supported
@@ -99,11 +103,11 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("destacados", function (collectionApi) {
-    return collectionApi.getFilteredByTags("work", "destacado", "es");
+    return collectionApi.getFilteredByTags("destacado", "es");
   });
 
   eleventyConfig.addCollection("featured", function (collectionApi) {
-    return collectionApi.getFilteredByTags("work", "destacado", "en");
+    return collectionApi.getFilteredByTags("destacado", "en");
   });
 
   eleventyConfig.addCollection("branding_es", function (collectionBranding) {
@@ -122,20 +126,7 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
 
-  /* Next Prev Work */
-  eleventyConfig.addCollection("work_next_prev", function(collection) {
-    const coll = collection.getFilteredByTag("work");
   
-    for(let i = 0; i < coll.length ; i++) {
-      const prevPost = coll[i - 2];
-      const nextPost = coll[i + 2];
-  
-      coll[i].data["prevPost"] = prevPost;
-      coll[i].data["nextPost"] = nextPost;
-    }
-  
-    return coll;
-  });
 
   /* Filter blogs */
 
