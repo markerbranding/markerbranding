@@ -9,9 +9,20 @@ barba: blogAll
 <div id="barba__wrapper" data-barba="container" data-barba-namespace="blogAll">
   
   <section id="section__article__hero">
-    <h2>{{ category }}</h2>
-    <h1>{{ title }}</h1>
+    <div class="column__1">
+      <div class="blog__breadcrumb">
+        <a href="{{ "/blog/" | locale_url }}">Blog</a>
+        <span> / </span>
+        <a href="../{{ category | slugify }}/">{{ category }}</a>
+      </div>
+      <h1>{{ title }}</h1>
+      <div class="blog__tags">
+        Tags: <span>{{tags}}</span>
+      </div>
+    </div>
   </section>
+
+  
   
   <section id="section__article__content">
     <div class="column__1">
@@ -31,18 +42,20 @@ barba: blogAll
   <section id="section__article__footer">
     <div class="column__2">
       <div class="col__left">
-        <h2>Autor:</h2>
+        <h2><span>Autor:</span><span>Author:</span></h2>
         <p>{{ author }}</p>
       </div>
       <div class="col__right">
-        <h2>Compartir en:</h2>
+        <h2><span>Compartir:</span><span>Share:</span></h2>
         
         
-        <p>
-          <a href="https://www.facebook.com/sharer.php?u={{ pageUrl }}">Facebook</a>
-          <a href="https://twitter.com/intent/tweet?url={{ pageUrl }}&text={{ stitle }}">Twitter</a>
-          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ pageUrl }}">LinkedIn</a> 
-          <a href="https://reddit.com/submit?url={{pageUrl}}&title={{stitle}}">Reddit</a>
+        <p class="social__share">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ rootURL }}{{ page.url }}" title="Linked In" target="_blank"><img src="/assets/blog/share/share_linkedin.svg" width="44px" height="44px" alt="Share in linkedin" /></a>
+          <a href="https://www.facebook.com/sharer.php?u={{ rootURL }}{{ page.url }}" title="Facebook" target="_blank"><img src="/assets/blog/share/share_facebook.svg" width="44px" height="44px" alt="Share in facebook" /></a>
+          <a href="https://twitter.com/intent/tweet?url={{ rootURL }}{{ page.url }}&text={{ title }}" title="X" target="_blank"><img src="/assets/blog/share/share_x.svg" width="44px" height="44px" alt="Share in x" /></a>
+          <a href="https://reddit.com/submit?url={{ rootURL }}{{ page.url }}&title={{ title }}" title="Reddit" target="_blank"><img src="/assets/blog/share/share_reddit.svg" width="44px" height="44px" alt="Share in reddit" /></a>
+          <a href="mailto:?subject={{title}}&body={{ rootURL }}{{ page.url }}" title="Email" target="_blank"><img src="/assets/blog/share/share_email.svg" width="44px" height="44px" alt="Send to email" /></a>
+          <a href="https://api.whatsapp.com/send?text={{title}}%20{{ rootURL }}{{ page.url }}" title="WhatsApp" target="_blank"><img src="/assets/blog/share/share_whatsapp.svg" width="44px" height="44px" alt="Send to whatsapp" /></a>
         </p>
       </div>
     </div>

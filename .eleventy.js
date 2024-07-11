@@ -69,7 +69,7 @@ markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
 module.exports = function (eleventyConfig) {
 
   /*  Global URLs social */
-  eleventyConfig.addGlobalData("rootURL", "https://markerbranding.netlify.app/es/");
+  eleventyConfig.addGlobalData("rootURL", "https://markerbranding.netlify.app");
 
 
   /*  Language  */

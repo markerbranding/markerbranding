@@ -2411,10 +2411,18 @@ form label{
   justify-content: center;
 }
 
-#section__article__hero h2{
+.blog__breadcrumb a{
   font-size: 22px;
   text-align: center;
   color:#c62e26;
+}
+
+.lang-es h2 span:nth-child(2){
+  display: none;
+}
+
+.lang-en h2 span:nth-child(1){
+  display: none;
 }
 
 #section__article__hero h1{
@@ -2552,12 +2560,26 @@ form label{
 #section__article__footer h2{
   font-size: 16px;
   margin-bottom: 0px;
+}
+
+#section__article__footer h2 span{
+  font-size: 16px;
+  margin-bottom: 0px;
   text-transform: uppercase;
   color: #0053bf;
 }
 
 #section__article__footer p{
    font-size: 24px;
+}
+
+.social__share{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  gap: 2px;
 }
 
 /*  Footer */
