@@ -1,22 +1,21 @@
 ---
-title: Blog
-description: Artículos sobre branding, marketing y negocios
-bodyClass: blog
+title: Artículos sobre Identidad y Logo
+description: Categorías para los {{ title}}
+bodyClass: blog-category
 layout: 'base.njk'
-barba: blog
+barba: blogLogo
 label: es
 locale: es
 ---
 
-<div data-barba="container" data-barba-namespace="blog">
+<div data-barba="container" data-barba-namespace="{{ barba }}">
 
   <section id="section__hero__blog">
     <div class="column__2">
       <div class="col__left">
-        <h1>Artículos de branding, web marketing y publicidad</h1>
-        <h2>Todos los</h2>
-        <h2>articulos</h2>
-        <h2>de blog.</h2>
+        <h1>Artículos de blog</h1>
+        <h2>Articulos</h2>
+        <h2>de branding.</h2>
       </div>
       <div class="col__right">
         
@@ -27,7 +26,7 @@ locale: es
   <section id="section__filter">
     <div class="column__1">
       <div class="filter__select">
-        <span>Ver artículos por categoría:</span>
+        <span>Ver artículos por categoría</span>
         <div class="custom-select">
           {% include 'filtro.njk' %}
         </div>
@@ -37,8 +36,9 @@ locale: es
 
   <section>
     <div class="section container">
+      
       <ul role="list" class="blog__list flow">
-        {%- for blog in collections.blog_es | reverse -%}
+        {%- for blog in collections.blog_logo_es | reverse -%}
           {% include 'blog-snippet.njk' %}
         {%- endfor -%}
       </ul>
@@ -47,7 +47,7 @@ locale: es
   
 </div>
 
-<script src="../../assets/scripts/loader.js"></script>
+<script src="../../../assets/scripts/loader.js"></script>
 <script>
 
   function delay (URL) {
@@ -57,7 +57,7 @@ locale: es
     gsap.to(data.current.container, { opacity: 0 });
   }
 
-  function blogGsap() {
+  function blogLogoGsap() {
 
     // Custom select
     const dropdown = document.querySelector('.select__dropdown');
@@ -92,6 +92,17 @@ locale: es
         end: "50% top",
       }
     })
+
+    /*  gsap */
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: "main",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    })
   
     gsap.to("#section__header", {
       scrollTrigger:{
@@ -104,7 +115,7 @@ locale: es
       }
     })
   
-    /*ScrollTrigger.batch(".blog__list li", {
+    ScrollTrigger.batch(".blog__list li", {
       trigger: ".blog__list",
       start: "top, 70%",
       end: "top, 60%",
@@ -112,7 +123,7 @@ locale: es
       onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
       onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
       onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
-    });*/
+    });
 
   }
   

@@ -131,6 +131,24 @@
                         },
                     },
                     {
+                        namespace: 'blogLogo',
+                        async afterEnter(data) { 
+                            blogLogoGsap();
+                        },
+                    },
+                    {
+                        namespace: 'blogWeb',
+                        async afterEnter(data) { 
+                            blogWebGsap();
+                        },
+                    },
+                    {
+                        namespace: 'blogMarketing',
+                        async afterEnter(data) { 
+                            blogMarketingGsap();
+                        },
+                    },
+                    {
                         namespace: 'contact',
                         async afterEnter(data) { 
                             contactGsap();
@@ -246,7 +264,49 @@
                         },
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
-                            workBrandingGsap();
+                            blogBrandingGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'blogWeb',
+                        to: { namespace: ['blogWeb'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            blogWebGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'blogLogo',
+                        to: { namespace: ['blogLogo'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            blogLogoGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'blogMarketing',
+                        to: { namespace: ['blogMarketing'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            blogMarketingGsap();
                         }
                     },
                     {

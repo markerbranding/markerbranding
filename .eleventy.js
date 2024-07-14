@@ -131,11 +131,35 @@ module.exports = function (eleventyConfig) {
   /* Filter blogs */
 
   eleventyConfig.addCollection("blog_branding_es", function (collectionBlogBranding) {
-    return collectionBlogBranding.getFilteredByTags("blog", "blog_branding", "es");
+    return collectionBlogBranding.getFilteredByTags("blog", "branding", "es");
   });
 
   eleventyConfig.addCollection("blog_branding_en", function (collectionBlogBranding) {
-    return collectionBlogBranding.getFilteredByTags("blog", "blog_branding", "en");
+    return collectionBlogBranding.getFilteredByTags("blog", "branding", "en");
+  });
+
+  eleventyConfig.addCollection("blog_web_es", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "web", "es");
+  });
+
+  eleventyConfig.addCollection("blog_web_en", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "web", "en");
+  });
+
+  eleventyConfig.addCollection("blog_logo_es", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "logo", "es");
+  });
+
+  eleventyConfig.addCollection("blog_logo_en", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "logo", "en");
+  });
+
+  eleventyConfig.addCollection("blog_marketing_es", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "marketing", "es");
+  });
+
+  eleventyConfig.addCollection("blog_marketing_en", function (collectionBlogBranding) {
+    return collectionBlogBranding.getFilteredByTags("blog", "marketing", "en");
   });
 
   /*  Cierre eleventy image */

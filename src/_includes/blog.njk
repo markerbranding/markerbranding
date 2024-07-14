@@ -17,7 +17,11 @@ barba: blogAll
       </div>
       <h1>{{ title }}</h1>
       <div class="blog__tags">
-        Tags: <span>{{tags}}</span>
+        <p>Tags:
+          {% for tag in tags %}
+            <span>{{ tag }}</span>
+          {%- endfor -%}
+        </p>
       </div>
     </div>
   </section>
@@ -44,6 +48,8 @@ barba: blogAll
       <div class="col__left">
         <h2><span>Autor:</span><span>Author:</span></h2>
         <p>{{ author }}</p>
+        <h2><span>Fecha de publicación:</span><span>Publication date:</span></h2>
+        <p>{{ fecha }}</p>
       </div>
       <div class="col__right">
         <h2><span>Compartir:</span><span>Share:</span></h2>
@@ -61,9 +67,89 @@ barba: blogAll
     </div>
   </section>
 
+  <section id="section__prev__next">
+    {% set previoPost = collections.blog_es | getPreviousCollectionItem %}
+    {% set siguientePost = collections.blog_es | getNextCollectionItem %}
+    {% set previousPost = collections.blog_en | getPreviousCollectionItem %}
+    {% set nextPost = collections.blog_en | getNextCollectionItem %}
+    <div class="column__2">
+      <div class="col__left">
+        {% if previoPost %}
+          <a class="previous__project" href="javascript:delay('{{ previoPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__img__wrapper">
+                <img src="{{ previoPost.data.thumbnail }}" />
+              </div>
+              <div class="next__prev__description__wrapper">
+                <h2>Artículo previo:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ previoPost.data.title }}</h3>
+                </div>
+                <p>{{ category }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        {% if previousPost %}
+          <a class="previous__project" href="javascript:delay('{{ previousPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__img__wrapper">
+                <img src="{{ previousPost.data.thumbnail }}" />
+              </div>
+              <div class="next__prev__description__wrapper">
+                <h2>Previous blog article:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ previousPost.data.title }}</h3>
+                </div>
+                <p>{{ category }}</p>
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+      <div class="col__right">
+        {% if siguientePost %}
+          <a class="next__project" href="javascript:delay('{{ siguientePost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__description__wrapper">
+                <h2>Artículo siguiente:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ siguientePost.data.title }}</h3>
+                </div>
+                <p>{{ category }}</p>
+              </div>
+              <div class="next__prev__img__wrapper">
+                <img src="{{ siguientePost.data.thumbnail }}" />
+              </div>
+            </div>
+          </a>
+        {% endif %}
+        {% if nextPost %}
+          <a class="next__project" href="javascript:delay('{{ nextPost.url }}')" data-barba-prevent="self">
+            
+            <div class="next__prev__wrapper">
+              <div class="next__prev__description__wrapper">
+                <h2>Next blog article:</h2>
+                <div class="snippet__title__wrapper">
+                  <h3>{{ nextPost.data.title }}</h3>
+                </div>
+                <p>{{ category }}</p>
+              </div>
+              <div class="next__prev__img__wrapper">
+                <img src="{{ nextPost.data.thumbnail }}" />
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
 </div>
 
-<article class="main-article">
 <script src="../../../assets/scripts/loader.js"></script>
 <script>
 

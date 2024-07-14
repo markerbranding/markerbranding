@@ -1,10 +1,11 @@
 ---
-title: Artículos de Branding
+title: Artículos sobre Branding
 description: Categorías para los {{ title}}
 bodyClass: blog-category
 layout: 'base.njk'
 barba: blogBranding
 label: es
+locale: es
 ---
 
 <div data-barba="container" data-barba-namespace="{{ barba }}">
@@ -12,7 +13,9 @@ label: es
   <section id="section__hero__blog">
     <div class="column__2">
       <div class="col__left">
-        <h1>Artículos de branding</h1>
+        <h1>Artículos de blog</h1>
+        <h2>Articulos</h2>
+        <h2>de branding.</h2>
       </div>
       <div class="col__right">
         
@@ -25,7 +28,7 @@ label: es
       <div class="filter__select">
         <span>Ver artículos por categoría</span>
         <div class="custom-select">
-          {% include 'filter.njk' %}
+          {% include 'filtro.njk' %}
         </div>
       </div>
     </div>
@@ -35,7 +38,7 @@ label: es
     <div class="section container">
       
       <ul role="list" class="blog__list flow">
-        {%- for blog in collections.blog_branding | reverse -%}
+        {%- for blog in collections.blog_branding_es | reverse -%}
           {% include 'blog-snippet.njk' %}
         {%- endfor -%}
       </ul>
@@ -46,6 +49,13 @@ label: es
 
 <script src="../../../assets/scripts/loader.js"></script>
 <script>
+
+  function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1000 );
+    gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+    gsap.to(".inner__transition", { delay: 0.4, height: "100%", ease: "power4.out", duration: 0.5 });
+    gsap.to(data.current.container, { opacity: 0 });
+  }
 
   function blogBrandingGsap() {
 
