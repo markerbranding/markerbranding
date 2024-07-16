@@ -1,0 +1,387 @@
+---
+title: Desarrollo Web
+description: Servicios de Desarrollo y Diseño Web
+bodyClass: services
+layout: 'base.njk'
+barba: servicesWeb
+label: es
+---
+<div data-barba="container" data-barba-namespace="{{ barba }}">
+  <section id="section__hero__services">
+    <div class="column__2">
+        <div class="col__left">
+            <h1>Desarrollo web</h1>
+            <h2>Creamos sitios web que se posicionan en los primeros lugares de búsqueda en Google (SEO).</h2>
+            <a class="btn btn__hero">Conoce más de este servicio</a>
+        </div>
+        <div class="col__right">
+            <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        </div>
+    </div>
+  </section>
+
+  <div class="service__wrapper">
+
+    <ul role="list" id="menu__services">
+        <li><a id="to__what"><span>Descripción</span><div class="underline__services"></div></a></li>
+        <li><a id="to__how"><span>Proceso</span><div class="underline__services"></div></a></li>
+        <li><a id="to__why"><span>Relevancia</span><div class="underline__services"></div></a></li>
+        <li><a id="to__forwhat"><span>Proyectos</span><div class="underline__services"></div></a></li>
+        <li><a id="to__faq"><span>¿Dudas?</span><div class="underline__services"></div></a></li>
+        <li><a id="to__contact"><span>Contacto</span><div class="underline__services"></div></a></li>
+    </ul>
+
+    <section id="section__description">
+        <div class="column__2">
+            <div class="col__left">
+                <h3 class="subtitle">Descripción general</h3>
+                <h2>Por qué es importante tener un sitio web bien optimizado para tu negocio</h2>
+            </div>
+            <div class="col__right">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae.
+                </p>
+            </div>
+        </div>
+      </section>
+    
+      <section id="section__data__service">
+        <div class="column__1">
+            <div class="data__wrapper">
+                <h3>65%</h3>
+                <p>mejora de resultados</p>
+            </div>
+            <div class="data__wrapper">
+                <h3>65%</h3>
+                <p>mejora de resultados</p>
+            </div>
+            <div class="data__wrapper">
+                <h3>65%</h3>
+                <p>mejora de resultados</p>
+            </div>
+        </div>
+      </section>
+    
+      <section id="section__process">
+        <div class="column__1">
+            <h3 class="subtitle">Nuestro proceso</h3>
+            <h2>Cómo llevamos a cabo nuestros sitios web</h2>
+        </div>
+        <div class="column__2">
+            <div class="col__left">
+                <h3>Paso 1: investigación</h3>
+            </div>
+            <div class="col__right">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+                </p>
+            </div>
+        </div>
+        <div class="column__2">
+            <div class="col__left">
+                <h3>Paso 2</h3>
+            </div>
+            <div class="col__right">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+                </p>
+            </div>
+        </div>
+        <div class="column__2">
+            <div class="col__left">
+                <h3>Paso 3</h3>
+            </div>
+            <div class="col__right">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                    molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+                </p>
+            </div>
+        </div>
+      </section>
+
+      <section id="section__why">
+        <div class="column__2 column__intro">
+          <div class="col__left">
+            <h3 class="subtitle">Por qué es importante</h3>
+            <h2 id="frase">Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.
+              Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
+          </div>
+          <div class="col__right">
+            
+          </div>
+        </div>
+      </section>
+
+      <section id="section__work__list">
+        <div class="column__1">
+            <h3 class="subtitle">Proyectos web realizados</h3>
+            <ul role="list" class="work__list">
+                {%- for work in collections.work_es | reverse -%}
+                {% include 'work-snippet.njk' %}
+                {%- endfor -%}
+            </ul>
+        </div>
+      </section>
+
+      <section id="section__faq">
+        <div class="column__1">
+            <h3 class="subtitle">Preguntas frecuentes</h3>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
+                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
+                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
+                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
+            </p>
+        </div>
+      </section>
+
+  </div>
+
+
+  
+
+</div>
+
+<script src="../../../assets/scripts/loader.js"></script>
+<script>
+  
+  function servicesWebGsap() {
+
+    // Check if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window;
+    const createCursorFollower = () => {
+      const $el = document.querySelector('.cursor-follower');
+      window.addEventListener('mouseover', (e) => {
+        gsap.from($el, {
+          duration: 1,
+          rotate: 0,
+        });
+      });
+      window.addEventListener('mousemove', (e) => {
+        const { target, x, y } = e;
+        const isTargetLinkOrBtn = target?.closest('.work__list a');
+        gsap.to($el, {
+          x: x - 50,
+          y: y - 70,
+          duration: 1,
+          ease: 'power4',
+          opacity: isTargetLinkOrBtn ? 1 : 0,
+          transform: `scale(${isTargetLinkOrBtn ? 1 : 0})`,
+        });
+      });
+      // Hidding the cursor element when the mouse cursor
+      // is moved out of the page
+      document.addEventListener('mouseleave', (e) => {
+        gsap.to($el, {
+          duration: 0.5,
+          opacity: 0,
+          rotate: 0,
+        });
+      });
+    };
+    // Only invoke the function if isn't a touch device
+    if (!isTouchDevice) {
+      createCursorFollower();
+    }
+
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: "main",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    })
+
+    gsap.to("#section__header", {
+      scrollTrigger:{
+        trigger:"#section__header",
+        endTrigger: "#site__footer",
+        start: "top top",
+        end: "bottom top",
+        pin: "#section__header",
+        pinSpacing: false,
+      }
+    });
+
+    gsap.to("#menu__services", {
+      scrollTrigger:{
+        trigger:".service__wrapper",
+        endTrigger: "#site__footer",
+        start: "135 50%",
+        end: "bottom top",
+        pin: "#menu__services",
+        pinSpacing: false,
+      }
+    });
+
+    ScrollTrigger.batch(".work__list li", {
+      trigger: ".work__list",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+    });
+
+
+    let menuServices = jQuery('#menu__services > li > a');
+	menuServices[0].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__description", offsetY: 60 } });
+	});
+    menuServices[1].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__process", offsetY: 60 } });
+	});
+	menuServices[2].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__why", offsetY: 60 } });
+	});
+	menuServices[3].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__work__list", offsetY: 60 } });
+	});
+	menuServices[4].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__faq", offsetY: 60 } });
+	});
+    menuServices[5].addEventListener("click", (e) => {
+		gsap.to(window, { duration: 0.5, scrollTo: { y: "#footer__contacto", offsetY: 60 } });
+	});
+
+
+    let menuServicesSpan = jQuery('#menu__services > li > a > span');
+    let menuServicesUnderline = jQuery('#menu__services > li > a > .underline__services');
+    gsap.set(menuServicesUnderline, { scaleX: "30%" });
+
+
+    ScrollTrigger.create({
+        trigger:"#section__description",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[0], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[0], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[0], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[0], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#section__description",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[0], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[0], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[0], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[0], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+    ScrollTrigger.create({
+        trigger:"#section__process",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[1], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[1], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[1], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[1], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#section__process",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[1], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[1], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[1], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[1], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+    ScrollTrigger.create({
+        trigger:"#section__why",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[2], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[2], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[2], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[2], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#section__why",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[2], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[2], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[2], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[2], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+    ScrollTrigger.create({
+        trigger:"#section__work__list",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[3], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[3], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[3], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[3], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#section__work__list",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[3], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[3], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[3], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[3], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+    ScrollTrigger.create({
+        trigger:"#section__faq",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[4], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[4], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[4], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[4], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#section__faq",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[4], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[4], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[4], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[4], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+    ScrollTrigger.create({
+        trigger:"#footer__contacto",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[5], { opacity: 1, duration:0.05 }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[5], { opacity: 1, duration:0.05 }),
+        onLeave: () =>	gsap.to(menuServicesSpan[5], { opacity: 0, duration:0.05 }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[5], { opacity: 0, duration:0.05 }),
+    });
+    ScrollTrigger.create({
+        trigger:"#footer__contacto",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[5], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[5], { scaleX: "100%", height: 3, backgroundColor:"#c62e26", duration:0.3 }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[5], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[5], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
+    });
+
+  }
+</script>

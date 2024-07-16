@@ -71,7 +71,7 @@
             }
             
             // GSAP ScrollSmoother init
-            gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, SplitText);
+            gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, ScrollToPlugin, SplitText);
 
             ScrollSmoother.create({
                 smooth: 1,
@@ -146,6 +146,30 @@
                         namespace: 'blogMarketing',
                         async afterEnter(data) { 
                             blogMarketingGsap();
+                        },
+                    },
+                    {
+                        namespace: 'services',
+                        async afterEnter(data) { 
+                            servicesGsap();
+                        },
+                    },
+                    {
+                        namespace: 'servicesBranding',
+                        async afterEnter(data) { 
+                            servicesBrandingGsap();
+                        },
+                    },
+                    {
+                        namespace: 'servicesWeb',
+                        async afterEnter(data) { 
+                            servicesWebGsap();
+                        },
+                    },
+                    {
+                        namespace: 'servicesMarketing',
+                        async afterEnter(data) { 
+                            servicesMarketingGsap();
                         },
                     },
                     {
@@ -307,6 +331,62 @@
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
                             blogMarketingGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'services',
+                        to: { namespace: ['services'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            servicesGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'servicesBranding',
+                        to: { namespace: ['servicesBranding'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            servicesBrandingGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'servicesWeb',
+                        to: { namespace: ['servicesWeb'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            servicesWebGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'servicesMarketing',
+                        to: { namespace: ['servicesMarketing'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            servicesMarketingGsap();
                         }
                     },
                     {

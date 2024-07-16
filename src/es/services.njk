@@ -1,0 +1,161 @@
+---
+title: Servicios
+description: Servicios de branding y marketing
+bodyClass: services
+layout: 'base.njk'
+barba: services
+label: es
+---
+<div data-barba="container" data-barba-namespace="services">
+  <section id="section__hero__services">
+    <div class="column__2">
+        <div class="col__left">
+            <h1>Te presentamos nuestros proyectos de</h1>
+            <h2>Branding,</h2><h2>Web &</h2><h2>Marketing.</h2>
+        </div>
+        <div class="col__right">
+            Imagen
+        </div>
+    </div>
+  </section>
+
+  <section id="section__description">
+    <div class="column__2">
+        <div class="col__left">
+            <h3 class="subtitle">Descripción</h3>
+            <h2>Porqué es importante el SEO</h2>
+        </div>
+        <div class="col__right">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio architecto nemo dicta eveniet culpa ipsam ipsum voluptatem
+                molestiae, possimus deserunt ratione dolores ad necessitatibus illum, a soluta provident! Consectetur, incidunt?
+            </p>
+        </div>
+    </div>
+  </section>
+
+  <section id="section__data__service">
+    <div class="column__1">
+        <div class="data__1">
+            <h3>65%</h3>
+            <p>mejora de resultados</p>
+        </div>
+        <div class="data__2">
+            <h3>65%</h3>
+            <p>mejora de resultados</p>
+        </div>
+        <div class="data__3">
+            <h3>65%</h3>
+            <p>mejora de resultados</p>
+        </div>
+    </div>
+  </section>
+
+  <section id="section__process">
+    <div class="column__2">
+        <div class="col__left">
+            
+        </div>
+        <div class="col__right">
+
+        </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="column__2">
+        <div class="col__left">
+
+        </div>
+        <div class="col__right">
+
+        </div>
+    </div>
+  </section>
+
+  <section id="section__work__list">
+    <div class="column__1">
+      <ul role="list" class="work__list">
+        {%- for work in collections.work_es | reverse -%}
+          {% include 'work-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+<script src="../../assets/scripts/loader.js"></script>
+<script>
+  
+  function servicesGsap() {
+
+    // Check if it's a touch device
+    const isTouchDevice = 'ontouchstart' in window;
+    const createCursorFollower = () => {
+      const $el = document.querySelector('.cursor-follower');
+      window.addEventListener('mouseover', (e) => {
+        gsap.from($el, {
+          duration: 1,
+          rotate: 0,
+        });
+      });
+      window.addEventListener('mousemove', (e) => {
+        const { target, x, y } = e;
+        const isTargetLinkOrBtn = target?.closest('.work__list a');
+        gsap.to($el, {
+          x: x - 50,
+          y: y - 70,
+          duration: 1,
+          ease: 'power4',
+          opacity: isTargetLinkOrBtn ? 1 : 0,
+          transform: `scale(${isTargetLinkOrBtn ? 1 : 0})`,
+        });
+      });
+      // Hidding the cursor element when the mouse cursor
+      // is moved out of the page
+      document.addEventListener('mouseleave', (e) => {
+        gsap.to($el, {
+          duration: 0.5,
+          opacity: 0,
+          rotate: 0,
+        });
+      });
+    };
+    // Only invoke the function if isn't a touch device
+    if (!isTouchDevice) {
+      createCursorFollower();
+    }
+
+    gsap.to("#section__header", {
+      backgroundColor:"#edf1f9",//#e0e5ed
+      scrollTrigger: {
+        trigger: "main",
+        start: "top top",
+        scrub: true,
+        end: "50% top",
+      }
+    })
+
+    gsap.to("#section__header", {
+      scrollTrigger:{
+        trigger:"#section__header",
+        endTrigger: "#site__footer",
+        start: "top top",
+        end: "bottom top",
+        pin: "#section__header",
+        pinSpacing: false,
+      }
+    });
+
+    ScrollTrigger.batch(".work__list li", {
+      trigger: ".work__list",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+    });
+  }
+</script>
