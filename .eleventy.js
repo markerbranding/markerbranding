@@ -126,6 +126,17 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
 
+
+  /*  FaQs  */
+
+  eleventyConfig.addCollection("preguntas_web_es", function (collectionFaQ) {
+    return collectionFaQ.getFilteredByTags("faq", "es", "web");
+  });
+
+  eleventyConfig.addCollection("faq_web_es", function (collectionFaQ) {
+    return collectionFaQ.getFilteredByTags("faq", "marketing", "en");
+  });
+
   
 
   /* Filter blogs */

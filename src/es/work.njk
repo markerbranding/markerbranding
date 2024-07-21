@@ -16,7 +16,7 @@ label: es
 
   <section id="section__work__list">
     <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
-    <div class="column__1">
+    <div class="column__1__work__list">
       <ul role="list" class="work__list">
         {%- for work in collections.work_es | reverse -%}
           {% include 'work-snippet.njk' %}

@@ -27,7 +27,7 @@ label: es
         <li><a id="to__how"><span>Proceso</span><div class="underline__services"></div></a></li>
         <li><a id="to__why"><span>Relevancia</span><div class="underline__services"></div></a></li>
         <li><a id="to__forwhat"><span>Proyectos</span><div class="underline__services"></div></a></li>
-        <li><a id="to__faq"><span>¿Dudas?</span><div class="underline__services"></div></a></li>
+        <li><a id="to__faq"><span>Preguntas</span><div class="underline__services"></div></a></li>
         <li><a id="to__contact"><span>Contacto</span><div class="underline__services"></div></a></li>
     </ul>
 
@@ -123,7 +123,7 @@ label: es
         </div>
       </section>
 
-      <section id="section__why">
+      <section id="section__why" class="dark__bg">
         <div class="column__2 column__intro">
           <div class="col__left">
             <h3 class="subtitle">Por qué es importante</h3>
@@ -138,30 +138,31 @@ label: es
 
       <section id="section__work__list">
         <div class="column__1">
-            <h3 class="subtitle">Proyectos web realizados</h3>
-            <ul role="list" class="work__list">
-                {%- for work in collections.work_es | reverse -%}
-                {% include 'work-snippet.njk' %}
-                {%- endfor -%}
-            </ul>
+          <h3 class="subtitle">Proyectos</h3>
+          <h2>Sitios web realizados</h2>
+        </div>
+        <div class="column__1__work__list">
+          <ul role="list" class="work__list">
+            {%- for work in collections.work_es | reverse -%}
+              {% include 'work-snippet.njk' %}
+            {%- endfor -%}
+          </ul>
         </div>
       </section>
 
       <section id="section__faq">
-        <div class="column__1">
+        <div class="column__2">
+          <div class="col__left">
             <h3 class="subtitle">Preguntas frecuentes</h3>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
-                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
-                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
-            </p>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Obcaecati sequi odio exercitationem est at perspiciatis
-                recusandae qui. Ea velit, vero dolorem, possimus, aut architecto maxime perspiciatis aperiam dignissimos ex eaque!
-            </p>
+            <h2>Respuestas a las preguntas más populares</h2>
+          </div>
+          <div class="col__right">
+            <div class="accordion">
+              {%- for faq in collections.preguntas_web_es -%}
+                {% include 'preguntas-snippet.njk' %}
+              {%- endfor -%}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -173,6 +174,7 @@ label: es
 </div>
 
 <script src="../../../assets/scripts/loader.js"></script>
+<script src="../../../assets/scripts/accordion.js"></script>
 <script>
   
   function servicesWebGsap() {
@@ -239,7 +241,7 @@ label: es
       scrollTrigger:{
         trigger:".service__wrapper",
         endTrigger: "#site__footer",
-        start: "135 50%",
+        start: "105 50%",
         end: "bottom top",
         pin: "#menu__services",
         pinSpacing: false,
@@ -258,24 +260,24 @@ label: es
 
 
     let menuServices = jQuery('#menu__services > li > a');
-	menuServices[0].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__description", offsetY: 60 } });
-	});
-    menuServices[1].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__process", offsetY: 60 } });
-	});
-	menuServices[2].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__why", offsetY: 60 } });
-	});
-	menuServices[3].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__work__list", offsetY: 60 } });
-	});
-	menuServices[4].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__faq", offsetY: 60 } });
-	});
-    menuServices[5].addEventListener("click", (e) => {
-		gsap.to(window, { duration: 0.5, scrollTo: { y: "#footer__contacto", offsetY: 60 } });
-	});
+    menuServices[0].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__description", offsetY: 60 } });
+    });
+      menuServices[1].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__process", offsetY: 60 } });
+    });
+    menuServices[2].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__why", offsetY: 60 } });
+    });
+    menuServices[3].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__work__list", offsetY: 60 } });
+    });
+    menuServices[4].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#section__faq", offsetY: 60 } });
+    });
+      menuServices[5].addEventListener("click", (e) => {
+      gsap.to(window, { duration: 0.5, scrollTo: { y: "#footer__contacto", offsetY: 60 } });
+    });
 
 
     let menuServicesSpan = jQuery('#menu__services > li > a > span');
@@ -396,6 +398,155 @@ label: es
         onLeave: () =>	gsap.to(menuServicesUnderline[5], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
         onLeaveBack: () => gsap.to(menuServicesUnderline[5], { scaleX: "30%", height: 1, backgroundColor:"#111c4e", duration:0.3 }),
     });
+
+    /*  Change color service__menu hover dark color  */
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "70 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[0], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[0], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[0], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[0], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "70 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[0], { backgroundColor:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[0], { backgroundColor:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[0], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[0], { backgroundColor:"#111c4e" }),
+    });
+
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "35 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[1], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[1], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[1], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[1], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "35 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[1], { backgroundColor:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[1], { backgroundColor:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[1], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[1], { backgroundColor:"#111c4e" }),
+    });
+
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[2], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[2], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[2], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[2], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "top 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[2], { backgroundColor:"#c62e26" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[2], { backgroundColor:"#c62e26" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[2], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[2], { backgroundColor:"#111c4e" }),
+    });
+
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-35 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[3], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[3], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[3], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[3], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-35 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[3], { backgroundColor:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[3], { backgroundColor:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[3], { backgroundColor:"#c62e26" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[3], { backgroundColor:"#111c4e" }),
+    });
+
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-70 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[4], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[4], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[4], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[4], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-70 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[4], { backgroundColor:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[4], { backgroundColor:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[4], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[4], { backgroundColor:"#111c4e" }),
+    });
+
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-105 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesSpan[5], { color:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesSpan[5], { color:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesSpan[5], { color:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesSpan[5], { color:"#111c4e" }),
+    });
+    ScrollTrigger.create({
+        trigger:".dark__bg",
+        start: "-105 50%",
+        end: "bottom 50%",
+        onEnter: () => gsap.to(menuServicesUnderline[5], { backgroundColor:"#e0e5ed" }),
+        onEnterBack: () =>	gsap.to(menuServicesUnderline[5], { backgroundColor:"#e0e5ed" }),
+        onLeave: () =>	gsap.to(menuServicesUnderline[5], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[5], { backgroundColor:"#111c4e" }),
+    });
+
+    /*	Frase	*/
+    var tl2 = gsap.timeline(),
+    mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
+    chars = mySplitText.chars;
+
+    gsap.set("#frase", { perspective: 400 });
+    tl2.from(chars, {
+    duration: 1.8,
+    transformOrigin: "0% 50% -50",
+    x: 0,
+    color: "#35394c",
+    stagger: 1.5,
+    ease: "power2.out",
+      scrollTrigger: {
+      trigger: '#section__why',
+      start: 'top 55%',
+      end: '30% 35%',
+      scrub: true,
+      }
+    });
+
+    tl2.from("#frase > div > div", {
+      y: 100,
+      scrollTrigger: {
+        trigger: "#section__why",
+        start: 'top 60%',
+        end: '10% 50%',
+        scrub: true,
+        ease: "power1.inOut",
+      }
+    })
+        
+    
 
   }
 </script>
