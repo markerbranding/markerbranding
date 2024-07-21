@@ -2080,26 +2080,52 @@ form label{
 }
 
 #section__process{
-  padding: 5% 50px 5%;
+  padding: 5% 250px 0% 50px;
 }
 
 #section__process h2{
   margin-bottom: 100px;
 }
 
-#section__process .col__left, #section__process .col__right{
+#section__process .col__left{
   width: 50%;
+  padding-right: 0%;
 }
 
-
+#section__process .col__right{
+  width: 50%;
+  padding-left: 5%;
+}
 
 .process__step{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner__step{
   border-bottom: 0px solid #c2ccdd;
   margin-bottom: 50px;
   padding-bottom: 50px;
   background-color: #d6dbe5;
   border-radius: 10px;
-  padding: 50px;
+  padding: 100px 50px;
+  position: relative;
+}
+
+.inner__step::before{
+  content:"";
+  position: absolute;
+  display: block;
+  height: 50px;
+  width: 42px;
+  top: calc(50% - 25px);
+  right: -40px;
+  background-color: #d6dbe5;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
 }
 
 .process__step h3{
@@ -2107,8 +2133,23 @@ form label{
   color: #0053bf;
 }
 
+
+
 .process__step:last-child{
   border-bottom: 0px solid #0053bf;
+  margin-bottom: 30vh;
+}
+
+.step__art{
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+}
+
+.step__art svg{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 #section__why{
