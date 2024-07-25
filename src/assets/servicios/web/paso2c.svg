@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="2" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <style type="text/css">
+        .step2c{fill:none;stroke:#CF5049;}
+    </style>
+    <g transform="matrix(1.05225,0,0,0.676384,144.153,40.4253)">
+        <path class="step2c" d="M337.538,295.212C346.528,292.811 420.326,290.818 420.763,290.767" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.05225,0,0,0.676384,144.153,40.4253)">
+        <path class="step2c" d="M338.736,296.059C339.186,306.983 340.252,306.663 340.968,317.748" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.05225,0,0,0.676384,144.153,40.4253)">
+        <path class="step2c" d="M340.339,316.91C380.03,312.943 379.877,313.169 419.678,314.772" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.05225,0,0,0.676384,144.153,40.4253)">
+        <path class="step2c" d="M419.678,314.772C422.998,308.904 422.011,295.409 422.042,294.156" style="fill:none;"/>
+    </g>
+    <g transform="matrix(0.678399,0,0,0.525961,342.078,514.842)">
+        <path class="step2c" d="M337.538,295.212C346.528,292.811 420.326,290.818 420.763,290.767" style="fill:none;"/>
+    </g>
+    <g transform="matrix(0.678399,0,0,0.525961,342.078,514.842)">
+        <path class="step2c" d="M338.736,296.059C339.186,306.983 340.252,306.663 340.968,317.748" style="fill:none;"/>
+    </g>
+    <g transform="matrix(0.678399,0,0,0.525961,342.078,514.842)">
+        <path class="step2c" d="M340.339,316.91C380.03,312.943 379.877,313.169 419.678,314.772" style="fill:none;"/>
+    </g>
+    <g transform="matrix(0.678399,0,0,0.525961,342.078,514.842)">
+        <path class="step2c" d="M419.678,314.772C422.998,308.904 422.011,295.409 422.042,294.156" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.05161,-0.0368105,0.0368105,1.05161,141.884,-51.8677)">
+        <path class="step2c" d="M199.503,153.988C199.143,160.019 199.224,165.601 199.536,166.661C206.951,165.832 204.726,166.741 212.03,166.741" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.05161,-0.0368105,0.0368105,1.05161,141.884,-51.8677)">
+        <path class="step2c" d="M200.729,154.129C206.751,153.584 206.754,154.846 212.718,154.129C213.187,160.316 212.977,160.649 212.03,166.661" style="fill:none;"/>
+    </g>
+    <g transform="matrix(1.06489,-0.0336331,0.0315679,0.999502,-20.7075,2.06552)">
+        <path class="step2c" d="M166.169,457.495C160.057,457.751 87.398,458.676 74.639,480.527C58.051,508.933 106.029,521.028 164.969,522.926C186.77,523.628 251.827,527.063 253.755,496.54C254.891,478.544 217.776,462.273 135.736,462.273" style="fill:none;"/>
+    </g>
+    <g transform="matrix(0.889245,0,0,0.828347,46.3177,54.0437)">
+        <path class="step2c" d="M129.928,42.699C121.452,42.919 88.915,50.441 80.744,71.933C58.739,129.813 167.26,118.327 179.993,110.187C252.637,63.753 133.613,32.772 98.858,44.783" style="fill:none;"/>
+    </g>
+</svg>
