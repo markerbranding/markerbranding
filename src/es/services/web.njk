@@ -1907,57 +1907,136 @@ label: es
       }
     });
 
-    /* Entradas Draw */
-    gsap.from(".step1a", {scrollTrigger: {trigger: "#step__content__1", start: "15% 90%", end: "20% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step1b", {scrollTrigger: {trigger: "#step__content__1", start: "20% 90%", end: "25% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step1c", {scrollTrigger: {trigger: "#step__content__1", start: "10% 90%", end: "25% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
+    /*  Draw In Outs  */
+    gsap.set(".step1a", { drawSVG: "100%" });
+    gsap.set(".step1b", { drawSVG: "100%" });
+    gsap.set(".step1c", { opacity: 1 });
+    gsap.set(".step2a", { drawSVG: "0% 0%" });
+    gsap.set(".step2b", { drawSVG: "0% 0%" });
+    gsap.set(".step2c", { drawSVG: "0% 0%" });
+    gsap.set(".step2d", { opacity: 0 });
+    gsap.set(".step2e", { opacity: 0 });
+    gsap.set(".step2f", { opacity: 0 });
+    gsap.set(".step3a", { opacity: 0 });
+    gsap.set(".step3b", { drawSVG: "0% 0%" });
+    gsap.set(".step3c", { drawSVG: "0% 0%" });
+    gsap.set(".step3d", { drawSVG: "0% 0%" });
+    gsap.set(".step3e", { opacity: 0 });
+    gsap.set(".step4a", { opacity: 0 });
+    gsap.set(".step4b", { drawSVG: "0% 0%" });
+    gsap.set(".step4c", { drawSVG: "0% 0%" });
+    gsap.set(".step4d", { drawSVG: "0% 0%" });
+    gsap.set(".step4e", { opacity: 0 });
+    const globalStagger = 0.01;
+    const globalStagger2 = 0.002;
 
-    gsap.from(".step2a", {scrollTrigger: {trigger: "#step__content__2", start: "55% 90%", end: "60% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step2b", {scrollTrigger: {trigger: "#step__content__2", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step2c", {scrollTrigger: {trigger: "#step__content__2", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step2d", {scrollTrigger: {trigger: "#step__content__2", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
-    gsap.from(".step2e", {scrollTrigger: {trigger: "#step__content__2", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
-    gsap.from(".step2f", {scrollTrigger: {trigger: "#step__content__2", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
+    function step1In() {
+        gsap.to(".step1a", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step1b", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step1c", { opacity: 1, stagger: globalStagger2, duration:0.2 });
+    }
 
-    gsap.from(".step3a", {scrollTrigger: {trigger: "#step__content__3", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
-    gsap.from(".step3b", {scrollTrigger: {trigger: "#step__content__3", start: "55% 90%", end: "60% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step3c", {scrollTrigger: {trigger: "#step__content__3", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step3d", {scrollTrigger: {trigger: "#step__content__3", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step3e", {scrollTrigger: {trigger: "#step__content__3", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
+    function step1Out() {
+        gsap.to(".step1a", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step1b", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step1c", { opacity: 0, stagger: globalStagger2, duration:0.2 });
+    }
 
-    gsap.from(".step4a", {scrollTrigger: {trigger: "#step__content__4", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
-    gsap.from(".step4b", {scrollTrigger: {trigger: "#step__content__4", start: "55% 90%", end: "60% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step4c", {scrollTrigger: {trigger: "#step__content__4", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step4d", {scrollTrigger: {trigger: "#step__content__4", start: "60% 90%", end: "65% 85%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "100% 100%"}, {drawSVG:"0% 100%"})
-    gsap.from(".step4e", {scrollTrigger: {trigger: "#step__content__4", start: "65% 90%", end: "70% 85%", scrub: 1}, ease: "none", opacity: 0, stagger: 0.1})
+    function step2In() {
+        gsap.to(".step2a", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step2b", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step2c", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step2d", { opacity: 1, stagger: globalStagger2 });
+        gsap.to(".step2e", { opacity: 1, stagger: globalStagger2 });
+        gsap.to(".step2f", { opacity: 1, stagger: globalStagger2 });
+    }
+
+    function step2Out() {
+        gsap.to(".step2a", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step2b", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step2c", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step2d", { opacity: 0, stagger: globalStagger2 });
+        gsap.to(".step2e", { opacity: 0, stagger: globalStagger2 });
+        gsap.to(".step2f", { opacity: 0, stagger: globalStagger2 });
+    }
+
+    function step3In() {
+        gsap.to(".step3a", { opacity: 1, stagger: globalStagger2 });
+        gsap.to(".step3b", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step3c", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step3d", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step3e", { opacity: 1, stagger: globalStagger2 });
+    }
+
+    function step3Out() {
+        gsap.to(".step3a", { opacity: 0, stagger: globalStagger2 });
+        gsap.to(".step3b", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step3c", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step3d", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step3e", { opacity: 0, stagger: globalStagger2 });
+    }
+
+    function step4In() {
+        gsap.to(".step4a", { opacity: 1, stagger: globalStagger2 });
+        gsap.to(".step4b", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step4c", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step4d", { drawSVG: "100%", stagger: globalStagger });
+        gsap.to(".step4e", { opacity: 1, stagger: globalStagger2 });
+    }
+
+    function step4Out() {
+        gsap.to(".step4a", { opacity: 0, stagger: globalStagger2 });
+        gsap.to(".step4b", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step4c", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step4d", { drawSVG: "0%", stagger: globalStagger });
+        gsap.to(".step4e", { opacity: 0, stagger: globalStagger2 });
+    }
+
+    ScrollTrigger.create({
+        trigger:"#step__content__1",
+        start: "top 50%",
+        end: "bottom 50%",
+        scrub: 1,
+        onEnter: step1In,
+        onEnterBack: step1In,
+        onLeave: step1Out,
+        onLeaveBack: step1Out,
+    });
+
+    ScrollTrigger.create({
+        trigger:"#step__content__2",
+        start: "top 50%",
+        end: "bottom 50%",
+        scrub: 1,
+        onEnter: step2In,
+        onEnterBack: step2In,
+        onLeave: step2Out,
+        onLeaveBack: step2Out,
+    });
+
+    ScrollTrigger.create({
+        trigger:"#step__content__3",
+        start: "top 50%",
+        end: "bottom 50%",
+        scrub: 1,
+        onEnter: step3In,
+        onEnterBack: step3In,
+        onLeave: step3Out,
+        onLeaveBack: step3Out,
+    });
+
+    ScrollTrigger.create({
+        trigger:"#step__content__4",
+        start: "top 50%",
+        end: "bottom 50%",
+        scrub: 1,
+        onEnter: step4In,
+        onEnterBack: step4In,
+        onLeave: step4Out,
+        onLeaveBack: step4Out,
+    });
+
     
-
-    /* Salidas Draw */
-    gsap.from(".step1a", {scrollTrigger: {trigger: "#step__content__2", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step1b", {scrollTrigger: {trigger: "#step__content__2", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step1c", {scrollTrigger: {trigger: "#step__content__2", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1});
-
-    gsap.from(".step2a", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step2b", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step2c", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step2d", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-    gsap.from(".step2e", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-    gsap.from(".step2f", {scrollTrigger: {trigger: "#step__content__3", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-
-    gsap.from(".step3a", {scrollTrigger: {trigger: "#step__content__4", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-    gsap.from(".step3b", {scrollTrigger: {trigger: "#step__content__4", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step3c", {scrollTrigger: {trigger: "#step__content__4", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step3d", {scrollTrigger: {trigger: "#step__content__4", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step3e", {scrollTrigger: {trigger: "#step__content__4", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-
-    gsap.from(".step4a", {scrollTrigger: {trigger: "#section__why", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-    gsap.from(".step4b", {scrollTrigger: {trigger: "#section__why", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step4c", {scrollTrigger: {trigger: "#section__why", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step4d", {scrollTrigger: {trigger: "#section__why", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", stagger: 0.1, drawSVG: "0% 100%"}, {drawSVG:"100% 100%"})
-    gsap.from(".step4e", {scrollTrigger: {trigger: "#section__why", start: "10% 70%", end: "15% 65%", scrub: 1}, ease: "none", opacity: 1, stagger: 0.1})
-    
-    
-
     /*  menu services  */
 
     gsap.to("#menu__services", {
