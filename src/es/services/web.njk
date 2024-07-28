@@ -15,7 +15,24 @@ label: es
             <a class="btn btn__hero">Conoce más de este servicio</a>
         </div>
         <div class="col__right">
-            <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+            <div class="browser__service__wrapper">
+                <div class="banner__service__col__top">
+                    <div class="search__bar">
+                        <div class="search__bar__p__wrapper">
+                            <p id="search__p__1" class="search__service">ropa deportiva</p>
+                            <p id="search__p__2" class="search__service">cosméticos</p>
+                            <p id="search__p__3" class="search__service">coches</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner__service__col__bottom">
+                    <img id="search__img__1" src="/assets/servicios/web/ropa_deportiva.jpg" alt="Somos una agencia especializada en comunicación visual" />
+                    <img id="search__img__2" src="/assets/servicios/web/ropa_deportiva.jpg" alt="Somos una agencia especializada en comunicación visual" />
+                    <img id="search__img__3" src="/assets/servicios/web/ropa_deportiva.jpg" alt="Somos una agencia especializada en comunicación visual" />
+                    <div class="search__warning">Buscando en Google...</div>
+                </div>
+            </div>
+            
         </div>
     </div>
   </section>
@@ -1836,6 +1853,42 @@ label: es
   
   function servicesWebGsap() {
 
+    /*	search p	*/
+    
+    mySplitP1 = new SplitText("#search__p__1", { type: "chars" }),
+    p1chars = mySplitP1.chars;
+    mySplitP2 = new SplitText("#search__p__2", { type: "chars" }),
+    p2chars = mySplitP2.chars;
+    mySplitP3 = new SplitText("#search__p__3", { type: "chars" }),
+    p3chars = mySplitP3.chars;
+
+    gsap.set("#search__p__1 > div", { opacity: 0, display:"none" });
+    gsap.set("#search__p__2 > div", { opacity: 0, display:"none" });
+    gsap.set("#search__p__3 > div", { opacity: 0, display:"none" });
+    gsap.set("#search__img__1", { opacity: 0 });
+    gsap.set("#search__img__2", { opacity: 0 });
+    gsap.set("#search__img__3", { opacity: 0 });
+
+    p1start();
+
+    function p1start() {
+        var tl3 = gsap.timeline();
+        tl3.to(p1chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
+        tl3.to("#search__img__1", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to(p1chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
+        tl3.to("#search__img__1", {duration: 0.2, opacity: 0});
+        
+        tl3.to(p2chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
+        tl3.to("#search__img__2", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to(p2chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
+        tl3.to("#search__img__2", {duration: 0.2, opacity: 0});
+
+        tl3.to(p3chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
+        tl3.to("#search__img__3", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to(p3chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
+        tl3.to("#search__img__3", {duration: 0.2, opacity: 0, onComplete: p1start});
+    }
+
     // Check if it's a touch device
     const isTouchDevice = 'ontouchstart' in window;
     const createCursorFollower = () => {
@@ -1895,7 +1948,6 @@ label: es
     });
 
     /*  steps  */
-
     gsap.to(".step__art", {
       scrollTrigger:{
         trigger:"#section__process > .column__2 > .col__right",
@@ -2000,7 +2052,7 @@ label: es
         onEnter: step1In,
         onEnterBack: step1In,
         onLeave: step1Out,
-        onLeaveBack: step1Out,
+        onLeaveBack: step1In,
     });
 
     ScrollTrigger.create({
@@ -2032,7 +2084,7 @@ label: es
         scrub: 1,
         onEnter: step4In,
         onEnterBack: step4In,
-        onLeave: step4Out,
+        onLeave: step4In,
         onLeaveBack: step4Out,
     });
 
