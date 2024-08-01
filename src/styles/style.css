@@ -1925,6 +1925,7 @@ form label{
 
 .service__wrapper{
   position: relative;
+  margin-top: -3px;
 }
 
 #menu__services{
@@ -1978,7 +1979,7 @@ form label{
   padding: 140px 50px 50px 50px;
   background-color: #c2ccdd;
   position: relative;
-  overflow: hidden;
+  z-index: 0;
 }
 
 #section__hero__services::before{
@@ -2000,9 +2001,9 @@ form label{
   content:"";
   background-color: #e0e5ed;
   width: 100%;
-  height: 140px;
+  height: 160px;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
 }
 
@@ -2023,13 +2024,14 @@ form label{
 
 #section__hero__services .col__left{
   justify-content: center;
-  padding-right: 10%;
-  width: 45%;
+  padding-right: 5%;
+  width: 35%;
+  padding-bottom: 120px;
 }
 
 #section__hero__services .col__right{
-  width: 55%;
-  padding-right: 5%;
+  width: 65%;
+  padding-right: 0%;
 }
 
 #section__hero__services .col__right img{
@@ -2055,6 +2057,7 @@ form label{
 
 .laptop__base{
   margin-top: -3px;
+  width: 100%;
 }
 
 .banner__service__col__top{
@@ -2149,6 +2152,7 @@ form label{
   width: 100%;
   position: relative;
   background-color: #b2b6ba;
+  overflow: hidden;
 }
 
 .search__warning{
@@ -2175,6 +2179,10 @@ form label{
 
 #section__description{
   padding: 5% 250px 8% 50px;
+  margin-top: -3px;
+  position: relative;
+  z-index: 1;
+  background-color: #e0e5ed;
 }
 
 #section__description .col__left{
@@ -2230,9 +2238,10 @@ form label{
 .data__wrapper{
   width: 100%;
   /*border-right: 1px solid #cad2db;*/
-  padding: 50px;
+  padding: 70px 50px 50px 50px;
   text-align: center;
   background-color: #d6dbe5;
+  position: relative;
 }
 
 .data__wrapper:first-child{
@@ -2243,11 +2252,30 @@ form label{
   border-radius: 0px 10px 10px 0px;
 }
 
+.data__wrapper > div {
+  position: absolute;
+  background-color: #060d30;
+  border-radius: 10px;
+  padding: 20px;
+  left: calc(50% - 50px);
+  top: -40px;
+}
+
+.data__wrapper img{
+  width: 50px;
+  height: auto;
+}
+
 .data__wrapper h3{
   font-size: 3vw;
   font-weight: 600;
-  color: #0053bf;
+  color: #c62e26;
   margin-bottom: 0px;
+}
+
+.data__wrapper h3 span{
+  font-size: 1.5vw;
+  color:#c62e26;
 }
 
 .data__wrapper p{
@@ -2269,7 +2297,8 @@ form label{
 
 #section__process .col__right{
   width: 50%;
-  padding-left: 5%;
+  padding-left: 7%;
+  padding-right: 3%;
 }
 
 .process__step{
@@ -2346,11 +2375,13 @@ form label{
 }
 
 #section__why .col__left{
-  width: 70%;
+  width: 60%;
 }
 
 #section__why .col__right{
-  width: 30%;
+  width: 40%;
+  padding-left: 3%;
+  padding-right: 50px;
 }
 
 #section__why h3{
@@ -2363,6 +2394,33 @@ form label{
   font-weight: 400;
   position: relative;
   color:#a5afbb !important;
+}
+
+.why__mobile__wrapper{
+  position: relative;
+}
+
+.why__mobile__wrapper img{
+  position: absolute;
+  width: 100%;
+  height: auto;
+}
+
+.why__mobile__wrapper img:first-child{
+  z-index: 2;
+  transform: translate(-70px,-150px);
+  opacity: 1;
+}
+
+.why__mobile__wrapper img:nth-child(2){
+  z-index: 1;
+  opacity: 1;
+}
+
+.why__mobile__wrapper img:last-child{
+  position: relative;
+  z-index: 0;
+  transform: translate(70px,150px);
 }
 
 .page-services #section__work__list{

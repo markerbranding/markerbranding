@@ -20,17 +20,17 @@ label: es
                     <img src="/assets/servicios/web/google_logo.svg" />
                     <div class="search__bar">
                         <div class="search__bar__p__wrapper">
-                            <p id="search__p__1" class="search__service">Ropa deportiva</p>
+                            <p id="search__p__1" class="search__service">Restaurante</p>
                             <p id="search__p__2" class="search__service">Cosméticos</p>
-                            <p id="search__p__3" class="search__service">Coches</p>
+                            <p id="search__p__3" class="search__service">Vacaciones</p>
                         </div>
                     </div>
                     <img src="/assets/servicios/web/google_btns.svg" />
                 </div>
                 <div class="banner__service__col__bottom">
-                    <img id="search__img__1" src="/assets/servicios/web/ropa_deportiva.jpg" alt="Somos una agencia especializada en comunicación visual" />
+                    <img id="search__img__1" src="/assets/servicios/web/restaurante.jpg" alt="Somos una agencia especializada en comunicación visual" />
                     <img id="search__img__2" src="/assets/servicios/web/cosmeticos.jpg" alt="Somos una agencia especializada en comunicación visual" />
-                    <img id="search__img__3" src="/assets/servicios/web/ropa_deportiva.jpg" alt="Somos una agencia especializada en comunicación visual" />
+                    <img id="search__img__3" src="/assets/servicios/web/vacaciones.jpg" alt="Somos una agencia especializada en comunicación visual" />
                     <div class="search__warning">Buscando en Google...</div>
                 </div>
             </div>
@@ -78,16 +78,19 @@ label: es
         <div class="column__1">
           <div class="data__banner">
             <div class="data__wrapper">
-              <h3>65%</h3>
-              <p>mejora de resultados</p>
+                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
+                <h3>65<span>%</span></h3>
+                <p>mejora de resultados</p>
             </div>
             <div class="data__wrapper">
-              <h3>65%</h3>
-              <p>mejora de resultados</p>
+                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
+                <h3>65<span>%</span></h3>
+                <p>mejora de resultados</p>
             </div>
             <div class="data__wrapper">
-              <h3>65%</h3>
-              <p>mejora de resultados</p>
+                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
+                <h3>65<span>%</span></h3>
+                <p>mejora de resultados</p>
             </div>
           </div>
             
@@ -1810,7 +1813,11 @@ label: es
               Somos una agencia de Branding conformada por creativos y nos apasiona el aspecto gráfico, funcional y estético de las cosas.</h2>
           </div>
           <div class="col__right">
-            
+            <div class="why__mobile__wrapper">
+                <img id="why__c" src="/assets/servicios/web/why__c.png" />
+                <img id="why__b" src="/assets/servicios/web/why__b.png" />
+                <img id="why__a" src="/assets/servicios/web/why__a.png" />
+            </div>
           </div>
         </div>
       </section>
@@ -1870,28 +1877,28 @@ label: es
     gsap.set("#search__p__1 > div", { opacity: 0, display:"none" });
     gsap.set("#search__p__2 > div", { opacity: 0, display:"none" });
     gsap.set("#search__p__3 > div", { opacity: 0, display:"none" });
-    gsap.set("#search__img__1", { opacity: 0 });
-    gsap.set("#search__img__2", { opacity: 0 });
-    gsap.set("#search__img__3", { opacity: 0 });
+    gsap.set("#search__img__1", { opacity: 0, scale: 1.05 });
+    gsap.set("#search__img__2", { opacity: 0, scale: 1.05 });
+    gsap.set("#search__img__3", { opacity: 0, scale: 1.05 });
 
     p1start();
 
     function p1start() {
         var tl3 = gsap.timeline();
         tl3.to(p1chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-        tl3.to("#search__img__1", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to("#search__img__1", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
         tl3.to(p1chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-        tl3.to("#search__img__1", {duration: 0.2, opacity: 0});
+        tl3.to("#search__img__1", {duration: 0.2, opacity: 0, scale: 1.05});
         
         tl3.to(p2chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-        tl3.to("#search__img__2", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to("#search__img__2", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
         tl3.to(p2chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-        tl3.to("#search__img__2", {duration: 0.2, opacity: 0});
+        tl3.to("#search__img__2", {duration: 0.2, opacity: 0, scale: 1.05});
 
         tl3.to(p3chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-        tl3.to("#search__img__3", {duration: 0.2, opacity: 1}, "+=0.5")
+        tl3.to("#search__img__3", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
         tl3.to(p3chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-        tl3.to("#search__img__3", {duration: 0.2, opacity: 0, onComplete: p1start});
+        tl3.to("#search__img__3", {duration: 0.2, opacity: 0, scale: 1.05, onComplete: p1start});
     }
 
     // Check if it's a touch device
@@ -2093,6 +2100,46 @@ label: es
         onLeaveBack: step4Out,
     });
 
+    /*  why mobile */
+
+    gsap.from("#why__a", {
+        x: 0,
+        y: 0,
+        opacity: 1,
+        scrollTrigger:{
+            trigger:"#section__why > .column__2 > .col__left",
+            /*endTrigger: "#site__footer",*/
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
+        }
+    });
+
+    gsap.from("#why__b", {
+        x: 0,
+        y: 0,
+        opacity: 0.8,
+        scrollTrigger:{
+            trigger:"#section__why > .column__2 > .col__left",
+            /*endTrigger: "#site__footer",*/
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
+        }
+    });
+
+    gsap.from("#why__c", {
+        x: 0,
+        y: 0,
+        opacity: 0.8,
+        scrollTrigger:{
+            trigger:"#section__why > .column__2 > .col__left",
+            /*endTrigger: "#site__footer",*/
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
+        }
+    });
     
     /*  menu services  */
 
@@ -2294,7 +2341,7 @@ label: es
         onEnter: () => gsap.to(menuServicesUnderline[1], { backgroundColor:"#e0e5ed" }),
         onEnterBack: () =>	gsap.to(menuServicesUnderline[1], { backgroundColor:"#e0e5ed" }),
         onLeave: () =>	gsap.to(menuServicesUnderline[1], { backgroundColor:"#111c4e" }),
-        onLeaveBack: () => gsap.to(menuServicesUnderline[1], { backgroundColor:"#111c4e" }),
+        onLeaveBack: () => gsap.to(menuServicesUnderline[1], { backgroundColor:"#c62e26" }),
     });
 
     ScrollTrigger.create({
