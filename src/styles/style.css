@@ -2764,7 +2764,7 @@ form label{
 }
 
 #section__filter{
-  padding: 30px 50px;
+  padding: 2% 50px;
 }
 
 .filter__select{
@@ -2919,7 +2919,7 @@ form label{
   width: 100%;
   border-right: 1px solid #424760;
   border-bottom: 1px solid #424760;
-  padding: 50px;
+  padding: 10%;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
