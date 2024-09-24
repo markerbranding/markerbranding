@@ -27,24 +27,11 @@
             </svg>
         </div>
         <nav class="header__nav">
-            <ul role="list" class="nav-list flex-group">
-                <li><a class="menu-{{lang}}" href="{{ "/" | locale_url }}"><span>Enfoque</span><span>Approach</span></a></li>
-                <li><a class="menu-{{lang}}" href="{{ "/work/" | locale_url }}"><span>Proyectos</span><span>Work</span></a></li>
-                <li><a class="menu-{{lang}}" href="{{ "/services/" | locale_url }}"><span>Servicios</span><span>Services</span></a>
-                    <ul class="submenu">
-						<li><a href="{{ "/services/branding/" | locale_url }}">Branding</a></li>
-						<li><a href="{{ "/services/web/" | locale_url }}">Web</a></li>
-						<li><a href="{{ "/services/marketing/" | locale_url }}">Marketing</a></li>
-					</ul>
-                </li>
-                <li><a class="menu-{{lang}}" href="{{ "/about/" | locale_url }}"><span>Nosotros</span><span>About</span></a></li>
-                <li><a class="menu-{{lang}}" href="{{ "/blog/" | locale_url }}">Blog</a></li>
-            </ul>
-            
+            {% include 'nav.njk' %}
         </nav>
         <div class="header__lang">
             <ul role="list">
-                <li><a class="menu-{{lang}}" href="{{ "/contact/" | locale_url }}"><span>Contacto</span><span>Contact</span></a></li>
+                <li><a class="menu-{{lang}}" href="https://wa.me/+5219993314062"><span>Mensaje</span><span>Message</span></a></li>
                 <li>
                     {% for link in page.url | locale_links %}
                     {%- if not loop.first %},{% endif %}

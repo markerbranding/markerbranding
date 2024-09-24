@@ -386,6 +386,16 @@ function homeGsap() {
     }
   });
 
+  tl.to(".column__hero__1", {
+    zIndex: 101,
+    scrollTrigger: {
+      trigger: "#section__hero",
+      start: "40 top",
+      end: "500 top",
+      scrub: true,
+    }
+  })
+
   tl.to("#logoMarkerScale", {
     opacity:0,
     scrollTrigger: {

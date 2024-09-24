@@ -1,11 +1,11 @@
 {# `{{lang}}` must be set by you in the data cascade, see above note #}
 <!doctype html>
 <html lang="{{lang}}">
-  <head>
-    <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
-  {% for link in page.url | locale_links %}
-    <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
-  {% endfor %}
+    <head>
+        <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
+        {% for link in page.url | locale_links %}
+            <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
+        {% endfor %}
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MARKER branding | {{ title }} - {{ description }}</title>
@@ -25,17 +25,16 @@
         <script src="/assets/scripts/DrawSVGPlugin.min.js"></script>
         <script src="/assets/scripts/SplitText.min.js"></script>
         <link rel="stylesheet" href="/assets/scripts/splide.min.css">
-	    <link rel="stylesheet" href="/assets/scripts/splide-default.min.css">
+        <link rel="stylesheet" href="/assets/scripts/splide-default.min.css">
         <script src="https://merida.altozano.com.mx/assets/jquery-3.7.1.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
-
         <style>
             #section__header, .article__work{background-color: {{ bgcolor }} !important;}
             .work__title h1{color: {{ namecolor }} !important;}
             .article__work h3, .work__title span a{color: {{ textcolor }} !important;}
         </style>
-        
     </head>
+    
     <body class="page-{{bodyClass}} lang-{{label}}" data-barba="wrapper">
         <div id="overlay">
             <div id="progstat"></div>
