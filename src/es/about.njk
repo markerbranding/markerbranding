@@ -24,7 +24,7 @@ label: es
         <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
       </div>
       <div class="col__right">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        <img src="/assets/about/about_hero_b.jpg" alt="Somos una agencia especializada en comunicación visual" />
       </div>
     </div>
   </section>
@@ -46,7 +46,7 @@ label: es
   <section id="section__motivacion">
     <div class="column__2">
       <div class="col__left">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        <img src="/assets/about/about_motivation.jpg" alt="Somos una agencia especializada en comunicación visual" />
       </div>
       <div class="col__right">
         <h3 class="subtitle">Qué nos motiva</h3>
@@ -108,7 +108,7 @@ label: es
 
   <section id="section__divisor__team">
     <div class="column__1">
-      <img src="/assets/about/about_hero.jpg" alt="Somos un equipo multidisciplinario">
+      <img src="/assets/about/about_divisor.jpg" alt="Somos un equipo multidisciplinario">
     </div>
   </section>
 
@@ -122,10 +122,8 @@ label: es
           propuesta de valor hacia un público bien segmentado.</p>
       </div>
       <div class="col__right">
-        <img id="marker__red" src="/assets/about/marker_red.png" alt="Somos MARKER branding y creamos marcas memorables"/>
-        <svg id="marker__paint" width="100%" height="100%" viewBox="0 0 700 639" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
-          <path class="st4" d="M69.242,566.265C70.156,567.839 70.799,569.611 71.062,571.41C71.841,576.741 69.418,581.032 69.002,581.768C68.522,582.617 65.647,587.709 59.277,589.126C58.152,589.377 51.3,590.902 45.467,585.023C41.335,580.86 40.663,575.221 40.103,568.691C37.855,542.505 37.777,469.778 38.188,444.26C39.651,353.43 43.283,319.339 43.847,311.773C45.862,284.767 46.227,252.617 46.223,217.31C46.223,216.588 46.103,201.423 46.036,189.142C46.029,187.696 45.765,181.501 45.41,168.224C45.267,162.868 43.962,134.836 44.96,112.402C45.253,105.823 46.041,99.393 46.18,98.267C46.875,92.594 47.293,91.011 48.001,88.049C50.016,79.612 53.711,65.974 61.422,51.576C76.881,22.712 96.346,15.143 102.796,12.593C103.807,12.193 104.77,11.855 104.773,11.855C106.567,11.603 108.348,11.006 110.157,11.107C110.985,11.154 115.75,11.42 119.499,15.581C123.367,19.875 123.09,24.787 123.042,25.639C122.727,31.225 119.183,34.425 118.568,34.98C115.925,37.367 115.682,37.009 112.389,38.367C112.367,38.377 108.657,39.986 104.242,43.986C90.424,56.503 84.91,78.066 83.23,84.574C81.28,92.128 80.604,97.137 80.094,99.463C79.72,101.174 78.487,106.802 76.909,121.129C75.092,137.632 73.826,160.919 73.408,173.882C73.369,175.096 72.968,187.513 72.971,189.054C73.022,219.71 73.139,225.416 73.193,232.606C73.729,303.39 71.758,311.408 70.42,338.258C68.11,384.592 68.002,449.831 68.001,450.119C67.996,451.404 67.484,491.305 68.041,530.229C68.342,551.214 68.867,561.416 69.242,566.265ZM42.579,569.923L42.534,569.91L42.515,569.981C42.537,569.962 42.558,569.942 42.579,569.923Z" style="fill:rgb(159,18,2);"/>
-        </svg>
+        <div id="marker__red"><img src="/assets/about/marker_red.png" alt="Somos MARKER branding y creamos marcas memorables"/></div>
+        
       </div>
     </div>
   </section>
@@ -278,25 +276,16 @@ label: es
       }
     })
 
-    gsap.from("#marker__red", {
-      xPercent:100,
-      scrollTrigger: {
-        trigger: "#section__why__name .col__right",
-        start: 'top 60%',
-        end: '5% 50%',
-        scrub: true,
-        ease: "power1.inOut",
-      },
-    })
+    
 
     gsap.from("#marker__red", {
-      yPercent:-100,
+      yPercent:-200,
       scrollTrigger: {
         trigger: "#section__why__name .col__right",
         start: 'top 60%',
         end: '70% 50%',
         scrub: true,
-        ease: "power1.inOut",
+        ease: "power1.out",
       },
     })
 

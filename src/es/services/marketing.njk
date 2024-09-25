@@ -16,8 +16,17 @@ label: es
         </div>
         <div class="col__right flex__row">
             <div class="cel__wrapper">
-                <img src="/assets/servicios/marketing/cel_account_izq.png" />
-                <img src="/assets/servicios/marketing/cel_metrics_der.png" />
+                <div class="chart chart1">
+                    <div id="lottie-container"></div>
+                </div>
+                <div class="chart chart2">
+                    <div id="lottie-container2"></div>
+                </div>
+                <div class="chart chart3">
+                    <div id="lottie-container3"></div>
+                </div>
+                <div class="cel__left"><img src="/assets/servicios/marketing/cel_account_izq.png" /></div>
+                <div class="cel__right"><img src="/assets/servicios/marketing/cel_metrics_der.png" /></div>
             </div>
         </div>
     </div>
@@ -1845,6 +1854,40 @@ label: es
 <script>
   
     function servicesMarketingGsap() {
+
+        /*  Lottie  */
+
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function() {
+                var animation = lottie.loadAnimation({
+                    container: document.getElementById('lottie-container'), // ID del contenedor
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: '/assets/servicios/marketing/pie_chart.json' // Ruta del archivo JSON de la animación
+                });
+            }, 2000);
+
+            setTimeout(function() {
+                var animation = lottie.loadAnimation({
+                    container: document.getElementById('lottie-container2'), // ID del contenedor
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: '/assets/servicios/marketing/pie_chart.json' // Ruta del archivo JSON de la animación
+                });
+            }, 3000);
+
+            setTimeout(function() {
+                var animation = lottie.loadAnimation({
+                    container: document.getElementById('lottie-container3'), // ID del contenedor
+                    renderer: 'svg',
+                    loop: false,
+                    autoplay: true,
+                    path: '/assets/servicios/marketing/pie_chart.json' // Ruta del archivo JSON de la animación
+                });
+            }, 4000);
+        });
 
         /*	search p	*/
         

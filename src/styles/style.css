@@ -2233,7 +2233,7 @@ section{
 
 #section__description .col__right{
   width: 60%;
-  padding-top: 240px;
+  padding-top: 40px;
 }
 
 #section__data__service{
@@ -2390,7 +2390,7 @@ section{
   border-bottom: 0px solid #c2ccdd;
   margin-bottom: 50px;
   padding-bottom: 50px;
-  background-color: #e9edf6;
+  background-color: #f4f8ff;
   border-radius: 10px;
   padding: 180px 50px;
   position: relative;
@@ -2404,7 +2404,7 @@ section{
   width: 42px;
   top: calc(50% - 25px);
   right: -40px;
-  background-color: #e9edf6;
+  background-color: #f4f8ff;
   clip-path: polygon(0 0, 0% 100%, 100% 50%);
 }
 
@@ -2665,14 +2665,10 @@ section{
 /*  Servicio Marketing  */
 
 
-
-.section__hero__services__marketing .col__left{
-  width: 40% !important;
+#section__hero__services__marketing{
+  padding: 140px 50px 100px 50px;
 }
 
-.section__hero__services__marketing .col__right{
-  width: 60% !important;
-}
 
 .cel__wrapper{
   padding: 0% 10%;
@@ -2688,31 +2684,72 @@ section{
 .cel__wrapper::before{
   content: "";
   position: absolute;
-  height: 100%;
+  height: 180%;
   aspect-ratio: 1/1;
   background: rgb(71,82,129);
   background: radial-gradient(circle, rgba(71,82,129,1) 0%, rgba(31,34,47,1) 70%);
   object-fit: contain;
+  opacity: 0.7;
 }
 
-.cel__wrapper img{
-  height: 80% !important;
-  width: auto !important;
-  object-fit: contain !important;
-  position: relative !important;
-}
-
-.cel__wrapper img:first-child{
+.cel__wrapper .cel__left{
+  height: 85%;
+  width: auto;
+  position: relative;
   transform: rotate(-30deg);
-  top:5%;
+  top:8%;
   left: -15%;
 }
 
-.cel__wrapper img:last-child{
+.cel__wrapper .cel__left img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  animation-name: rotaCel1;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotaCel1 {
+  0%{
+    transform: translate(0px) rotate(0deg);
+  }
+  25%{
+    transform: translate(5%) rotate(5deg);
+  }
+  50%{
+    transform: translate(0px) rotate(0deg);
+  }
+  75%{
+    transform: translate(-5%) rotate(-5deg);
+  }
+  100%{
+    transform: translate(0px) rotate(0deg);
+  }
+}
+
+.cel__wrapper .cel__right{
+  height: 85%;
+  width: auto;
+  position: relative;
   transform: rotate(20deg);
-  top:-15%;
+  top:-12%;
   right: -15%;
 }
+
+.cel__wrapper .cel__right img{
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  animation-name: rotaCel1;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-delay: 8s;
+}
+
+
 
 .social__mkt{
   display: flex;
@@ -2737,6 +2774,28 @@ section{
   padding: 4px !important;
 }
 
+.chart{
+  background-color: #0707076b;
+  backdrop-filter: saturate(180%) blur(10px);
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+  height: 20%;
+  aspect-ratio: 1/0.6;
+  border-radius: 10px;
+}
+
+.chart1{
+  top: 10%;
+}
+
+.chart2{
+  top: 32%;
+}
+
+.chart3{
+  top: 54%;
+}
 
 
 
@@ -2842,6 +2901,11 @@ section{
   font-size: 1.1vw;
 }
 
+#section__divisor__team{
+  position: relative;
+  z-index: 2;
+}
+
 #section__divisor__team img{
   width: 100%;
   height: auto;
@@ -2854,6 +2918,9 @@ section{
   background-color: #1f222f;
   color:#7c93b5;
   padding: 5% 0px 8% 50px;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
 
 #section__why__name .col__left{
@@ -2874,6 +2941,26 @@ section{
   height: auto;
   position: relative;
   z-index: 1;
+}
+
+#marker__red img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+}
+
+#marker__red::before{
+  content:"";
+  display: block;
+  position: absolute;
+  width: 5%;
+  height: 300vh;
+  bottom: 11%;
+  left: 3%;
+  background-color: #a40f01;
+  z-index: 0;
 }
 
 #marker__paint{
@@ -2930,7 +3017,7 @@ section{
   width: 100%;
   border-right: 1px solid #424760;
   border-bottom: 1px solid #424760;
-  padding: 50px;
+  padding: 10%;
 }
 
 .team__list li img{
