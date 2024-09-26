@@ -2,7 +2,7 @@
 lang: es
 label: es
 tags: ["faq", "es", "web"]
-pregunta: ¿Cuánto cuesta un sitio web?
+pregunta: ¿Cuánto cuestan sus páginas web?
 
 ---
 

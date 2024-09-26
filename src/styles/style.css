@@ -407,17 +407,20 @@ a{
   flex-direction: row !important;
   align-items: center !important;
   justify-content: center;
-  gap: 4px;
+  gap: 6px;
   position: relative;
 
 }
 
 .has__submenu::after{
   content:"";
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   position: relative;
-  background-image: url(/assets/arrow_btn.svg);
+  border-bottom: 2px solid #060d30;
+  border-right: 2px solid #060d30;
+  transform: rotate(45deg);
+  top: -3px;
 }
 
 .header__nav > ul > li > a::before{
@@ -2392,7 +2395,7 @@ section{
   padding-bottom: 50px;
   background-color: #f4f8ff;
   border-radius: 10px;
-  padding: 180px 50px;
+  padding: 110px 50px;
   position: relative;
 }
 
@@ -2452,6 +2455,7 @@ section{
 
 #section__why .col__left{
   width: 60%;
+  justify-content: center;
 }
 
 #section__why .col__right{
@@ -2465,7 +2469,7 @@ section{
 }
 
 #section__why #frase{
-  font-size: 3.2vw;
+  font-size: 2.8vw;
   line-height: 1.2;
   font-weight: 400;
   position: relative;
@@ -2693,12 +2697,13 @@ section{
 }
 
 .cel__wrapper .cel__left{
-  height: 85%;
+  height: 90%;
   width: auto;
   position: relative;
-  transform: rotate(-30deg);
-  top:8%;
-  left: -15%;
+  transform: rotate(-26deg);
+  top:0%;
+  left: -19%;
+  z-index: 2;
 }
 
 .cel__wrapper .cel__left img{
@@ -2709,6 +2714,7 @@ section{
   animation-duration: 40s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
+  filter: drop-shadow(20px 30px 22px rgba(0,0,0,0.4));
 }
 
 @keyframes rotaCel1 {
@@ -2730,12 +2736,14 @@ section{
 }
 
 .cel__wrapper .cel__right{
-  height: 85%;
+  height: 68%;
   width: auto;
   position: relative;
   transform: rotate(20deg);
-  top:-12%;
-  right: -15%;
+  top:-10%;
+  right: -10%;
+  z-index: 0;
+  filter: blur(2px);
 }
 
 .cel__wrapper .cel__right img{
@@ -2783,6 +2791,7 @@ section{
   height: 20%;
   aspect-ratio: 1/0.6;
   border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.2);
 }
 
 .chart1{
@@ -2790,11 +2799,11 @@ section{
 }
 
 .chart2{
-  top: 32%;
+  top: 35%;
 }
 
 .chart3{
-  top: 54%;
+  top: 60%;
 }
 
 

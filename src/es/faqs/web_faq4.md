@@ -2,8 +2,9 @@
 lang: es
 label: es
 tags: ["faq", "es", "web"]
-pregunta: ¿Como saber si ofrecen un mejor producto que otras agencias?
+pregunta: ¿Qué plataformas y tecnologías utilizan?
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat.
+Usamos lenguajes de programación estandarizados, así como frameworks modernos. Nuestro trabajo se enfoca en seguridad y optimización, por lo tanto recurrimos a tecnologías que funcionan mediante la generación de sitios estáticos a través de herramientas dinámicas.
+NextJs y Gatsby (React) o Eleventy son algunos de los frameworks que más utilizamos, pero preferimos que esto lo determine el enfoque de cada proyecto.
