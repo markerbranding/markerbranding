@@ -795,7 +795,7 @@ section{
 }
 
 #section__intro h2{
-  font-size: 3.2vw;
+  font-size: 2.8vw;
   line-height: 1.2;
   font-weight: 400;
   position: relative;
@@ -1066,11 +1066,11 @@ section{
 /*  Clientes */
 
 #section__clientes{
-  padding: 5% 0px 0px;
+  padding: 5% 0px 3%;
 }
 
 #section__clientes .column__1{
-  padding: 0 50px;
+  padding: 0 50px 3%;
 }
 
 .col__clientes > div:first-child{
@@ -1138,7 +1138,9 @@ section{
 }
 
 .col__testimonio p{
-  font-weight: 300;
+  font-size: 1.8vw;
+  line-height: 1.4;
+  font-weight: 400;
 }
 
 .col__testimonio span{
@@ -1415,6 +1417,7 @@ section{
   grid-gap: 50px;
   grid-auto-rows: auto;
   padding: 0 8%;
+  width: 100%;
 }
 
 .work__list li{
@@ -1435,7 +1438,7 @@ section{
   grid-column: span 5;
   grid-row: span 1;
   margin-left: 40%;
-  margin-top: 30%;
+  margin-top: 10%;
   opacity: 0;
 }
 
@@ -1453,7 +1456,7 @@ section{
   grid-row: span 1;
   margin-left: 10%;
   margin-right: 20%;
-  margin-top: 40%;
+  margin-top: 25%;
   opacity: 0;
 }
 
@@ -1464,13 +1467,13 @@ section{
   opacity: 0;
 }
 
-.work__list li:nth-child(5n+6){
+/*.work__list li:nth-child(5n+6){
   grid-column: span 6;
   grid-row: span 1;
   margin-left: 45%;
   margin-top: 3%;
   opacity: 0;
-}
+}*/
 
 .work__list li a{
   height: auto;
@@ -1689,12 +1692,10 @@ section{
 
 .page-work .work__list li:first-child, .page-work-branding .work__list li:first-child, .page-work-web .work__list li:first-child, .page-work-marketing .work__list li:first-child{
   opacity: 1 !important;
-  transform: translateY(0px) !important;
 }
 
 .page-work .work__list li:nth-child(2), .page-work-branding .work__list li:nth-child(2), .page-work-web .work__list li:nth-child(2), .page-work-marketing .work__list li:nth-child(2){
   opacity: 1 !important;
-  transform: translateY(0px) !important;
 }
 
 /*  WORK DETAIL  */
@@ -2903,7 +2904,10 @@ section{
 }
 
 .value h2{
-  font-size: 1.4vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #0053bf;
 }
 
 .value p{

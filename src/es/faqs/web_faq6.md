@@ -2,8 +2,10 @@
 lang: es
 label: es
 tags: ["faq", "es", "web"]
-pregunta: ¿Como saber si ofrecen un mejor producto que otras agencias?
+pregunta: Necesito usar Wordpress o Webflow ¿Pueden trabajar con estas plataformas?
 
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Risus commodo viverra maecenas accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat.
+**Sí podemos trabajar con estas plataformas** así como opciones similares como Joomla o Drupal, aunque te recomendamos la seguridad de nuestros Frameworks. No obstante, nuestro acercamiento con Wordpress se basa en **programar las funcionalidades del sitio** para que sean a la medida, optando por un uso moderado de plugins de terceros, solo lo realmente necesario.  
+Además, implementamos medidas que **refuerzan la seguridad del backend** (panel de administración), para reducir al mínimo la peligrosidad de posibles ataques provenientes desde el frontend.  
+Webflow es una plataforma más segura y recomendable que Wordpress, con la que nos sentimos cómodos para elaborar tu sitio web.
