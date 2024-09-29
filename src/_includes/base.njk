@@ -101,15 +101,23 @@
                     bgActive.classList.toggle('show');
                 });
             });
-            
-            // GSAP ScrollSmoother init
+
+
             gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, ScrollToPlugin, SplitText);
 
-            ScrollSmoother.create({
-                smooth: 1,
-                effects: true,
-                smoothTouch: 0.1,
+            let mm = gsap.matchMedia();
+
+            mm.add("(min-width: 1025px)", () => {
+                // GSAP ScrollSmoother init
+            
+                ScrollSmoother.create({
+                    smooth: 1,
+                    effects: true,
+                    smoothTouch: 0.1,
+                });
             });
+            
+            
 
             // Barba init
             barba.init({

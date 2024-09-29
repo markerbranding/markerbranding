@@ -1231,6 +1231,7 @@ section{
 #section__clientes{
   padding: 5% 0px 3%;
   position: relative;
+  overflow: hidden;
 }
 
 #section__clientes::before{
@@ -4147,6 +4148,12 @@ form label{
     font-size: 28px;
   }
 
+  p {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
   .btn{
     font-size: 18px;
   }
@@ -4166,6 +4173,11 @@ form label{
 
   .page-enfoque .column__hero__2{
     flex-direction: column;
+  }
+
+  .page-enfoque .column__hero__1 .col__right p{
+    font-size: 7vw;
+    line-height: 1;
   }
 
   .page-enfoque .column__hero__2 .col__right{
@@ -4282,18 +4294,10 @@ form label{
     padding-top: calc(50vh + 70px);
   }
 
-  
-
   .right__etapa h3 {
     font-size: 20px !important;
     margin-bottom: 10px;
     font-weight: 300;
-  }
-
-  p {
-    font-size: 20px !important;
-    margin-bottom: 10px;
-    font-weight: 400;
   }
 
   #section__featured{
