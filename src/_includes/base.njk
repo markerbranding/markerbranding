@@ -48,6 +48,24 @@
         <div class="transition">
             <div class="inner__transition"></div>
         </div>
+        <div id="mobile__trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="mobile__menu">
+        {% include 'nav.njk' %}
+        <ul role="list">
+            <li><a class="menu-{{lang}}" href="https://wa.me/+5219993314062"><span>Mensaje</span><span>Message</span></a></li>
+            <li>
+                {% for link in page.url | locale_links %}
+                {%- if not loop.first %},{% endif %}
+                <a href="{{link.url}}" lang="{{link.lang}}" hreflang="{{link.lang}}">{{link.lang}}</a>
+                {% endfor %}
+            </li>
+        </ul>
+    </div>
+    <div id="mobile__active"></div>
         <div class="cursor-follower"><span>Ver</span></div>
         <div id="smooth-wrapper">
             <div id="smooth-content">
@@ -69,6 +87,20 @@
                 }
                 });
             }
+
+            // Mobile menu:
+            var check = document.querySelector('#mobile__trigger');
+            var menu = document.querySelector('#mobile__menu');
+            var bgActive = document.querySelector('#mobile__active');
+            var both = [check, bgActive];
+            both.forEach(function(element) {
+                element.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    check.classList.toggle('active');
+                    menu.classList.toggle('show');
+                    bgActive.classList.toggle('show');
+                });
+            });
             
             // GSAP ScrollSmoother init
             gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, ScrollToPlugin, SplitText);

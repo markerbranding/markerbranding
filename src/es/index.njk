@@ -385,6 +385,15 @@ splide.mount();
 
 function homeGsap() {
 
+  
+
+  // later, if we need to revert all the animations/ScrollTriggers...
+
+
+
+
+
+
   //loadingDown();
 
   var tl = gsap.timeline();
@@ -535,193 +544,345 @@ function homeGsap() {
     }
   })
 
-  tl.to("#botella__real", {
-    opacity:1,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "20% center",
-      scrub: true,
-      end: "40% center",
-      ease: "power4.inOut",
-    }
+  let mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1025px)", () => {
+    
+    tl.to("#botella__real", {
+      opacity:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "20% center",
+        scrub: true,
+        end: "40% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__real", {
+      scale: 1,
+      rotate:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "top center",
+        scrub: true,
+        end: "bottom+=20% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+    //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% 60%", end: "40% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+
+    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+    //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+
+
+    tl.to("#botella__real__img", {
+      css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "top center",
+        scrub: true,
+        end: "40% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__real__img", {
+      rotate:18,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "20% center",
+        scrub: true,
+        end: "bottom+=50% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__real__img", {
+      scale: 0.4,
+      yPercent: 8,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "50% center",
+        scrub: true,
+        end: "bottom+=50% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.fromTo("#frases__boceto", {
+      opacity:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "25% center",
+        scrub: true,
+        end: "50% center",
+      }
+    },
+    {
+      opacity:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "top center",
+        scrub: true,
+        end: "10% center",
+      }
+    })
+
+    tl.to("#botella__web__fondo", {
+      scale:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "top center",
+        scrub: true,
+        end: "30% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__hoja1", {
+      opacity:1,
+      x:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "15% center",
+        scrub: true,
+        end: "45% center",
+        ease: "expoScale(0.5,7,none)",
+      }
+    });
+
+    tl.to("#botella__hoja1", {
+      rotate:-45,
+      scale:0.3,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "100% center",
+        scrub: true,
+        end: "250% center",
+      }
+    });
+
+    tl.to("#botella__hoja2", {
+      opacity: 1,
+      x:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "20% center",
+        scrub: true,
+        end: "40% center",
+      }
+    });
+
+    tl.to("#botella__hoja2", {
+      rotate:45,
+      scale:0.4,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "100% center",
+        scrub: true,
+        end: "250% center",
+      }
+    });
+
+    tl.to("#botella__web__contexto", {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "30% center",
+        scrub: true,
+        end: "45% center",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__web__base", {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "30% center",
+        scrub: true,
+        end: "45% center",
+        ease: "power4.inOut",
+      }
+    });
+    
   });
 
-  tl.to("#botella__real", {
-    scale: 1,
-    rotate:0,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "top center",
-      scrub: true,
-      end: "bottom+=20% center",
-      ease: "power4.inOut",
-    }
-  });
-
-  tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-  //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% 60%", end: "30% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-  tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% 60%", end: "40% 45%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-
-  tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-  //tl.from(".st1", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-  tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% 50%", end: "90% 40%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+  mm.add("(max-width: 1024px)", () => {
 
 
-  tl.to("#botella__real__img", {
-    css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "top center",
-      scrub: true,
-      end: "40% center",
-      ease: "power4.inOut",
-    }
-  });
+    tl.to("#botella__real", {
+      opacity:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "20% bottom",
+        scrub: true,
+        end: "40% bottom",
+        ease: "power4.inOut",
+        markers: true,
+      }
+    });
 
-  tl.to("#botella__real__img", {
-    rotate:18,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "20% center",
-      scrub: true,
-      end: "bottom+=50% center",
-      ease: "power4.inOut",
-    }
-  });
+    tl.to("#botella__real", {
+      scale: 1,
+      rotate:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "top bottom",
+        scrub: true,
+        end: "bottom+=20% bottom",
+        ease: "power4.inOut",
+      }
+    });
 
-  tl.to("#botella__real__img", {
-    scale: 0.4,
-    yPercent: 8,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "50% center",
-      scrub: true,
-      end: "bottom+=50% center",
-      ease: "power4.inOut",
-    }
-  });
+    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% bottom", end: "30% 90%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% bottom", end: "40% 90%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
 
-  tl.fromTo("#frases__boceto", {
-    opacity:1,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "25% center",
-      scrub: true,
-      end: "50% center",
-    }
-  },
-  {
-    opacity:0,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "top center",
-      scrub: true,
-      end: "10% center",
-    }
-  })
+    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% bottom", end: "90% 90%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% bottom", end: "90% 90%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
 
-  /*tl.fromTo(".sketch__bg", {
-    opacity:0.4,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "25% center",
-      scrub: true,
-      end: "50% center",
-    }
-  },
-  {
-    opacity:0,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "top center",
-      scrub: true,
-      end: "50% center",
-    }
-  });*/
 
-  tl.to("#botella__web__fondo", {
-    //x: 0,
-    scale:1,
-    scrollTrigger: {
-      trigger: ".right__etapa__3",
-      start: "top center",
-      scrub: true,
-      end: "30% center",
-      ease: "power4.inOut",
-    }
-  });
+    tl.to("#botella__real__img", {
+      css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "top bottom",
+        scrub: true,
+        end: "40% bottom",
+        ease: "power4.inOut",
+      }
+    });
 
-  tl.to("#botella__hoja1", {
-    opacity:1,
-    x:0,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "15% center",
-      scrub: true,
-      end: "45% center",
-      ease: "expoScale(0.5,7,none)",
-    }
+    tl.to("#botella__real__img", {
+      rotate:18,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "20% bottom",
+        scrub: true,
+        end: "bottom+=50% bottom",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__real__img", {
+      scale: 0.4,
+      yPercent: 8,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "50% bottom",
+        scrub: true,
+        end: "bottom+=50% bottom",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.fromTo("#frases__boceto", {
+      opacity:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "25% bottom",
+        scrub: true,
+        end: "50% bottom",
+      }
+    },
+    {
+      opacity:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "top bottom",
+        scrub: true,
+        end: "10% bottom",
+      }
+    })
+
+    tl.to("#botella__web__fondo", {
+      scale:1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "top bottom",
+        scrub: true,
+        end: "30% bottom",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__hoja1", {
+      opacity:1,
+      x:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "15% bottom",
+        scrub: true,
+        end: "45% bottom",
+        ease: "expoScale(0.5,7,none)",
+      }
+    });
+
+    tl.to("#botella__hoja1", {
+      rotate:-45,
+      scale:0.3,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "100% bottom",
+        scrub: true,
+        end: "250% bottom",
+      }
+    });
+
+    tl.to("#botella__hoja2", {
+      opacity: 1,
+      x:0,
+      scrollTrigger: {
+        trigger: ".right__etapa__2",
+        start: "20% bottom",
+        scrub: true,
+        end: "40% bottom",
+      }
+    });
+
+    tl.to("#botella__hoja2", {
+      rotate:45,
+      scale:0.4,
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        start: "100% bottom",
+        scrub: true,
+        end: "250% bottom",
+      }
+    });
+
+    tl.to("#botella__web__contexto", {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "30% bottom",
+        scrub: true,
+        end: "45% bottom",
+        ease: "power4.inOut",
+      }
+    });
+
+    tl.to("#botella__web__base", {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "30% bottom",
+        scrub: true,
+        end: "45% bottom",
+        ease: "power4.inOut",
+      }
+    });
+    
+
+
   });
 
   
-
-  tl.to("#botella__hoja1", {
-    rotate:-45,
-    scale:0.3,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "100% center",
-      scrub: true,
-      end: "250% center",
-    }
-  });
-
-
-  tl.to("#botella__hoja2", {
-    opacity: 1,
-    x:0,
-    scrollTrigger: {
-      trigger: ".right__etapa__2",
-      start: "20% center",
-      scrub: true,
-      end: "40% center",
-    }
-  });
-
-  tl.to("#botella__hoja2", {
-    rotate:45,
-    scale:0.4,
-    scrollTrigger: {
-      trigger: ".right__etapa__1",
-      start: "100% center",
-      scrub: true,
-      end: "250% center",
-    }
-  });
-
-  
-
-  tl.to("#botella__web__contexto", {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".right__etapa__3",
-      start: "30% center",
-      scrub: true,
-      end: "45% center",
-      ease: "power4.inOut",
-    }
-  });
-
-  tl.to("#botella__web__base", {
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".right__etapa__3",
-      start: "30% center",
-      scrub: true,
-      end: "45% center",
-      ease: "power4.inOut",
-    }
-  });
 
   tl.to(".canva__cover", {
     scale:1,
