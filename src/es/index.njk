@@ -533,20 +533,22 @@ function homeGsap() {
     }
   })
 
-  tl.to("#canvas", {
-    scrollTrigger:{
-      trigger:".column__metodologia > .col__right",
-      start: "top top",
-      end: `bottom bottom`,
-      endTrigger: ".right__etapa__3",
-      pin: "#canvas",
-      pinSpacing: false,
-    }
-  })
+  // GSAP Responsivo:
 
   let mm = gsap.matchMedia();
-
+  // Desktop
   mm.add("(min-width: 1025px)", () => {
+
+    tl.to("#canvas", {
+      scrollTrigger:{
+        trigger:".column__metodologia > .col__right",
+        start: "top top",
+        end: `bottom bottom`,
+        endTrigger: ".right__etapa__3",
+        pin: "#canvas",
+        pinSpacing: false,
+      }
+    })
     
     tl.to("#botella__real", {
       opacity:1,
@@ -713,8 +715,37 @@ function homeGsap() {
     
   });
 
+  // Mobile
   mm.add("(max-width: 1024px)", () => {
 
+    /*tl.to("#section__metodologia .column__metodologia", {
+      scrollTrigger:{
+        trigger:"#section__metodologia .column__metodologia",
+        start: "top top",
+        end: `+=300%`,
+        endTrigger: ".right__etapa__3",
+        pin: "#section__metodologia .column__metodologia",
+        pinSpacing: false,
+      }
+    })*/
+
+    const sections = gsap.utils.toArray(".right__etapa");
+    let maxWidth = 0;
+    sections.forEach((section) => {
+      maxWidth += section.offsetWidth;
+    });
+
+    gsap.to(sections, {
+      x: () => `-${maxWidth - window.innerWidth}`,
+      ease: "none",
+      scrollTrigger: {
+        trigger: "#section__metodologia .column__metodologia",
+        pin: true,
+        scrub: 1,
+        end: () => `+=${maxWidth}`
+      }
+    });
+    console.log(maxWidth);
 
     tl.to("#botella__real", {
       opacity:1,
