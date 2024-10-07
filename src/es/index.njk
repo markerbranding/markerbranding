@@ -718,17 +718,7 @@ function homeGsap() {
   // Mobile
   mm.add("(max-width: 1024px)", () => {
 
-    /*tl.to("#section__metodologia .column__metodologia", {
-      scrollTrigger:{
-        trigger:"#section__metodologia .column__metodologia",
-        start: "top top",
-        end: `+=300%`,
-        endTrigger: ".right__etapa__3",
-        pin: "#section__metodologia .column__metodologia",
-        pinSpacing: false,
-      }
-    })*/
-
+    // horizontal scroll
     const sections = gsap.utils.toArray(".right__etapa");
     let maxWidth = 0;
     sections.forEach((section) => {
@@ -741,11 +731,17 @@ function homeGsap() {
       scrollTrigger: {
         trigger: "#section__metodologia .column__metodologia",
         pin: true,
+        pinSpacing: true,
         scrub: 1,
-        end: () => `+=${maxWidth}`
+        end: () => `+=${maxWidth}`,
+        snap: {
+          snapTo: 1 / (sections.length - 1),
+          inertia: true,
+          duration: {min: 0.1, max: 0.5}
+        },
       }
     });
-    console.log(maxWidth);
+    // cierre hscroll
 
     tl.to("#botella__real", {
       opacity:1,
@@ -766,24 +762,85 @@ function homeGsap() {
         start: "top bottom",
         scrub: true,
         end: "bottom+=20% bottom",
+        
         ease: "power4.inOut",
       }
     });
 
-    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "20% bottom", end: "30% 90%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
-    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "35% bottom", end: "40% 90%", scrub: 1}, ease: "none", drawSVG: "100% 100%"}, {drawSVG:"0% 100%"});
+    tl.from(".st0", {
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        //start: "20% bottom",
+        //end: "30% 90%",
+        start: "top bottom",
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+        scrub: 1
+      },
+      ease: "none",
+      drawSVG: "100% 100%"
+    },
+    {
+      drawSVG:"0% 100%",
+    });
 
-    tl.from(".st0", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% bottom", end: "90% 90%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
-    tl.from(".st2", {scrollTrigger: {trigger: ".right__etapa__1", start: "70% bottom", end: "90% 90%", scrub: 1}, ease: "none", drawSVG: "0% 100%"}, {drawSVG:"100% 100%"});
+    tl.from(".st2", {
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        //start: "35% bottom",
+        //end: "40% 90%",
+        start: "top bottom",
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 40 / 100) )}px center`,
+        scrub: 1
+      },
+      ease: "none",
+      drawSVG: "100% 100%"
+    },
+    {
+      drawSVG:"0% 100%"
+    });
+
+    tl.from(".st0", {
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        //start: "70% bottom",
+        //end: "90% 90%",
+        start: "top bottom",
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 90 / 100) )}px center`,
+        scrub: 1
+      },
+      ease: "none",
+      drawSVG: "0% 100%"
+    },
+    {
+      drawSVG:"100% 100%"
+    });
+
+    tl.from(".st2", {
+      scrollTrigger: {
+        trigger: ".right__etapa__1",
+        //start: "70% bottom",
+        //end: "90% 90%",
+        start: "top bottom",
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 90 / 100) )}px center`,
+        scrub: 1
+      },
+      ease: "none",
+      drawSVG: "0% 100%"
+    },
+    {
+      drawSVG:"100% 100%"
+    });
 
 
     tl.to("#botella__real__img", {
       css: { 'filter': 'grayscale(0%)','-webkit-filter': 'grayscale(0%)', opacity:1 },    
       scrollTrigger: {
-        trigger: ".right__etapa__2",
-        start: "top bottom",
+        trigger: ".right__etapa__1",
+        //start: "top bottom",
         scrub: true,
-        end: "40% bottom",
+        //end: "40% bottom",
+        start: "bottom bottom",
+        end: "110% bottom",
         ease: "power4.inOut",
       }
     });
@@ -792,9 +849,11 @@ function homeGsap() {
       rotate:18,
       scrollTrigger: {
         trigger: ".right__etapa__2",
-        start: "20% bottom",
+        //start: "20% bottom",
         scrub: true,
-        end: "bottom+=50% bottom",
+        //end: "bottom+=50% bottom",
+        start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 150 / 100) )}px center`,
         ease: "power4.inOut",
       }
     });
@@ -804,9 +863,11 @@ function homeGsap() {
       yPercent: 8,
       scrollTrigger: {
         trigger: ".right__etapa__2",
-        start: "50% bottom",
+        //start: "50% bottom",
         scrub: true,
-        end: "bottom+=50% bottom",
+        //end: "bottom+=50% bottom",
+        start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 50 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 150 / 100) )}px center`,
         ease: "power4.inOut",
       }
     });
@@ -815,18 +876,22 @@ function homeGsap() {
       opacity:1,
       scrollTrigger: {
         trigger: ".right__etapa__1",
-        start: "25% bottom",
+        //start: "25% bottom",
         scrub: true,
-        end: "50% bottom",
+        //end: "50% bottom",
+        start: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 25 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 50 / 100) )}px center`,
       }
     },
     {
       opacity:0,
       scrollTrigger: {
         trigger: ".right__etapa__2",
-        start: "top bottom",
+        //start: "top bottom",
         scrub: true,
-        end: "10% bottom",
+        //end: "10% bottom",
+        start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 10 / 100) )}px center`,
       }
     })
 
@@ -834,10 +899,10 @@ function homeGsap() {
       scale:1,
       scrollTrigger: {
         trigger: ".right__etapa__3",
-        start: "top bottom",
         scrub: true,
-        end: "30% bottom",
         ease: "power4.inOut",
+        start: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
       }
     });
 
@@ -846,9 +911,11 @@ function homeGsap() {
       x:0,
       scrollTrigger: {
         trigger: ".right__etapa__2",
-        start: "15% bottom",
+        //start: "15% bottom",
         scrub: true,
-        end: "45% bottom",
+        //end: "45% bottom",
+        start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 15 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 45 / 100) )}px center`,
         ease: "expoScale(0.5,7,none)",
       }
     });
@@ -858,9 +925,11 @@ function homeGsap() {
       scale:0.3,
       scrollTrigger: {
         trigger: ".right__etapa__1",
-        start: "100% bottom",
+        //start: "100% bottom",
         scrub: true,
-        end: "250% bottom",
+        //end: "250% bottom",
+        start: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 250 / 100) )}px center`,
       }
     });
 
@@ -869,9 +938,11 @@ function homeGsap() {
       x:0,
       scrollTrigger: {
         trigger: ".right__etapa__2",
-        start: "20% bottom",
+        //start: "20% bottom",
         scrub: true,
-        end: "40% bottom",
+        //end: "40% bottom",
+        start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 20 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 40 / 100) )}px center`,
       }
     });
 
@@ -880,9 +951,11 @@ function homeGsap() {
       scale:0.4,
       scrollTrigger: {
         trigger: ".right__etapa__1",
-        start: "100% bottom",
+        //start: "100% bottom",
         scrub: true,
-        end: "250% bottom",
+        //end: "250% bottom",
+        start: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 250 / 100) )}px center`,
       }
     });
 
@@ -890,20 +963,27 @@ function homeGsap() {
       opacity: 1,
       scrollTrigger: {
         trigger: ".right__etapa__3",
-        start: "30% bottom",
+        //start: "30% bottom",
         scrub: true,
-        end: "45% bottom",
+        //end: "45% bottom",
+        start: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 45 / 100) )}px center`,
         ease: "power4.inOut",
       }
     });
+
+    //end: `${hLogo}px top`,
+
 
     tl.to("#botella__web__base", {
       opacity: 1,
       scrollTrigger: {
         trigger: ".right__etapa__3",
-        start: "30% bottom",
+        //start: "30% bottom",
         scrub: true,
-        end: "45% bottom",
+        //end: "45% bottom",
+        start: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 45 / 100) )}px center`,
         ease: "power4.inOut",
       }
     });

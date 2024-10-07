@@ -536,7 +536,7 @@ a{
   height: 100dvh;
   background-color: #c2ccdd;
   transform: translateX(100vw);
-  z-index: 101;
+  z-index: 102;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -547,7 +547,7 @@ a{
 #mobile__active{
   display: none;
   position: fixed;
-  z-index: 100;
+  z-index: 101;
   background-color: #000;
   top: 0;
   left: 0;
@@ -3936,6 +3936,7 @@ form label{
   font-size: 0.7vw;
   text-transform: uppercase;
   margin-top: 20px;
+  width: 100%;
 }
 
 
@@ -4067,13 +4068,14 @@ form label{
 }
 
 #site__footer > div > span{
-  display: flex;
+  display: inline-block;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
 
 #site__footer a{
+  display: inline-block;
   color: #111c4e;
   text-decoration: underline;
 }
@@ -4237,33 +4239,22 @@ form label{
   }
 
   #section__metodologia .column__metodologia .col__left{
-    width: 100vw;
-    height: 100%;
+    width: 100%;
+    height: calc(40vh + 60px);
     position: relative;
     top: 0;
     left: 0;
   }
 
   #canvas{
-    height: calc(40vh - 60px) !important;
+    height: calc(40vh + 60px) !important;
     top: 80px !important;
     padding: 30px;
     width: calc(100% - 60px);
     left: 30px;
     z-index: 3;
-  }
-
-  #canvas::after{
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #d4dbe7;
-    border-radius: 20px;
-    z-index: -1;
+    transform: scale(1.5);
+    transform-origin: top center;
   }
 
   #botella__real{
@@ -4276,13 +4267,13 @@ form label{
     height: calc(60vh - 60px);
     padding-top: 0vh;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0px;
   }
 
   #section__metodologia .right__etapa{
-    padding-bottom: 20%;
-    justify-content: flex-start;
+    padding-bottom: 0%;
+    justify-content: center;
     padding-left: 15px;
     padding-right: 15px;
     height: 100%;
@@ -4293,6 +4284,10 @@ form label{
     font-size: 20px !important;
     margin-bottom: 10px;
     font-weight: 300;
+  }
+
+  .right__etapa h2{
+    font-size: 24px !important;
   }
 
   #section__featured{
@@ -4512,7 +4507,7 @@ form label{
   }
 
   h2{
-    font-size: 26px;
+    font-size: 24px;
   }
 
   p {
@@ -4553,10 +4548,25 @@ form label{
   }
 
   #canvas {
+    height: calc(30vh - 60px) !important;
     padding: 15px;
     width: calc(100% - 30px);
     left: 15px;
     z-index: 3;
+  }
+
+  #section__metodologia .column__metodologia .col__right{
+    height: calc(70vh - 60px);
+  }
+
+  .right__etapa h3 {
+    font-size: 16px !important;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+
+  .right__etapa h2{
+    font-size: 20px !important;
   }
 
   #section__featured{
@@ -4638,5 +4648,85 @@ form label{
     padding: 15% 15px;
   }
 
+  #section__testimonios .splide__track{
+    margin-right: 0px;
+  }
+
+  #section__testimonios .splide__arrow{
+    width: 40px;
+    height: 40px;
+  }
+
+  #section__testimonios .splide__arrow--prev{
+    top: 10px !important;
+    right: 60px;
+  }
+
+  #section__testimonios .splide__arrow--next{
+    right: 10px !important;
+  }
+
+  .col__testimonio {
+    padding: 50px 15px 15px 15px;
+  }
+
+  .col__testimonio p{
+    font-size: 18px;
+  }
+
+  .splide__pagination{
+    width: 100%;
+  }
+
+  #footer__contacto{
+    padding: 12% 15px;
+  }
+
+  #footer__contacto .column__2{
+    flex-direction: column;
+  }
+
+  #footer__contacto .col__left{
+    width: 100%;
+    padding-right: 0;
+  }
+
+  #footer__contacto .col__right{
+    width: 100%;
+    padding-left: 0;
+  }
+
+  #section__footer__menu{
+    padding: 12% 15px;
+  }
+  
+  #section__footer__menu .col__left form{
+    flex-direction: column;
+  }
+
+  #section__footer__menu .col__right{
+    padding-top: 12%;
+    padding-right: 0px;
+  }
+
+  .menu__footer{
+    width: 100%;
+  }
+
+  .menu__footer h2{
+    font-size: 18px;
+  }
+
+  .menu__footer a, .menu__footer a span{
+    font-size: 16px;
+  }
+
+  #site__footer span{
+    font-size: 15px;
+  }
+
+  #site__footer{
+    padding: 12% 15px;
+  }
 
 }
