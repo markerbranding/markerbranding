@@ -245,6 +245,8 @@ label: es
             <img id="botella__web__base" src="/assets/enfoque/web_context_base.png" alt="Diseño de sitios web" />
             <img id="botella__web__fondo" src="/assets/enfoque/web_context_border.png" alt="Desarrollo de sitios web" />
             <div id="botella_gradiente_fondo"></div>
+            <div id="animationWindow"></div>
+            <div id="animationWindow__bottom"></div>
           </div>
           <!--<div class="sketch__bg"></div>-->
         </div>
@@ -252,19 +254,20 @@ label: es
       </div>
       <div class="col__right">
         <div class="right__etapa right__etapa__1">
-          <h3><strong>Etapa 1:</strong> Estrategia de marca</h3>
           <div>
-            <h2>Construimos la comunicación de la marca para lograr su posicionamiento</h2>
-            <p>
-              Para lograrlo partimos de la esencia de la marca: quién es, qué hace, cómo lo hace,
-              para quién lo hace, qué lo motiva, a quién debe interesarle, por qué debe interesarle,
-              son algunos de los cuestionamiento que debemos formularnos para dar inicio a la estrategia.
-            </p>
-            <p>Posteriormente definimos qué y cómo debemos comunicarlo, tomando como base al contexto
-              que rodea a la marca, pero también al entorno del público con quien se desea lograr un vínculo.
-            </p>
-          </div>
-          
+            <h3><strong>Etapa 1:</strong> Estrategia de marca</h3>
+            <!--<div>-->
+              <h2>Construimos la comunicación de la marca para lograr su posicionamiento</h2>
+              <p>
+                Para lograrlo partimos de la esencia de la marca: quién es, qué hace, cómo lo hace,
+                para quién lo hace, qué lo motiva, a quién debe interesarle, por qué debe interesarle,
+                son algunos de los cuestionamiento que debemos formularnos para dar inicio a la estrategia.
+              </p>
+              <p>Posteriormente definimos qué y cómo debemos comunicarlo, tomando como base al contexto
+                que rodea a la marca, pero también al entorno del público con quien se desea lograr un vínculo.
+              </p>
+            </div>
+          <!--</div>-->
         </div>
         <div class="right__etapa right__etapa__2">
           <h3><strong>Etapa 2:</strong> Identidad de marca</h3>
@@ -342,6 +345,22 @@ label: es
         <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_emeka.svg" />
       </div>
     </div>
+    <div class="cliente__grid">
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_nervo.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_fotoideas.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_suhissa.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_nestea.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_altozano.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_nonacsa.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_iotam.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_proalmex.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_linmex.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_grandmarina.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_sany.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_rivero.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_deliciosa.svg" />
+      <img class="cliente__logo" src="/assets/enfoque/clientes/cliente_emeka.svg" />
+    </div>
   </section>
 
   <section id="section__testimonios">
@@ -403,7 +422,8 @@ function homeGsap() {
   let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
   let b1 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,35,35,0) 100%)";
   let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
-  //gsap.set("#section__header", { y: hLogo });
+  gsap.set("#botella__hoja1", { opacity: 0 });
+  gsap.set("#botella__hoja2", { opacity: 0 });
   
   tl.to("#logoMarkerScale", {
     width:"200",
@@ -568,7 +588,7 @@ function homeGsap() {
         trigger: ".right__etapa__1",
         start: "top center",
         scrub: true,
-        end: "bottom+=20% center",
+        end: "bottom+=40% center",
         ease: "power4.inOut",
       }
     });
@@ -646,6 +666,32 @@ function homeGsap() {
       }
     });
 
+    LottieScrollTrigger({
+      target: "#animationWindow",
+      path: "/assets/lotties/splash.json",
+      speed: "slow",      
+      trigger: ".right__etapa__2",
+      start: "35% center",
+      end: "85% center",
+      scrub: true,
+      pin: false,
+      ease: "power1.inOut",      
+    });
+
+    LottieScrollTrigger({
+      target: "#animationWindow__bottom",
+      path: "/assets/lotties/splash.json",
+      speed: "slow",      
+      trigger: ".right__etapa__2",
+      start: "30% center",
+      end: "80% center",
+      scrub: true,
+      pin: false,
+      ease: "power1.inOut",
+    });
+
+    
+
     tl.to("#botella__hoja1", {
       opacity:1,
       x:0,
@@ -669,6 +715,18 @@ function homeGsap() {
       }
     });
 
+    tl.to("#botella__hoja1", {
+      immediateRender: false,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "top center",
+        end: "30% center",
+        scrub: true,
+      }
+    });
+
     tl.to("#botella__hoja2", {
       opacity: 1,
       x:0,
@@ -688,6 +746,18 @@ function homeGsap() {
         start: "100% center",
         scrub: true,
         end: "250% center",
+      }
+    })
+
+    tl.to("#botella__hoja2", {
+      immediateRender: false,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        start: "top center",
+        end: "30% center",
+        scrub: true,
       }
     });
 
@@ -1053,6 +1123,52 @@ function homeGsap() {
 	tl.to('.cliente__slider2', { x:0, scrollTrigger: { trigger: '.cliente__slider2', start: 'top 100%', end: "bottom 0%", scrub: true}});
 
 //};
+
+  // Lottie function helper:
+
+  function LottieScrollTrigger(vars) {
+    let playhead = { frame: 0 },
+      target = gsap.utils.toArray(vars.target)[0],
+      speeds = { slow: "+=2000", medium: "+=1000", fast: "+=500" },
+      st = {
+        trigger: target,
+        pin: true,
+        start: "top top",
+        end: speeds[vars.speed] || "+=1000",
+        scrub: 1,
+      },
+      ctx = gsap.context && gsap.context(),
+      animation = lottie.loadAnimation({
+        container: target,
+        renderer: vars.renderer || "svg",
+        loop: false,
+        autoplay: false,
+        path: vars.path,
+        rendererSettings: vars.rendererSettings || {
+          preserveAspectRatio: "xMidYMid slice",
+        },
+      });
+    for (let p in vars) {
+      // let users override the ScrollTrigger defaults
+      st[p] = vars[p];
+    }
+    animation.addEventListener("DOMLoaded", function () {
+      let createTween = function () {
+        animation.frameTween = gsap.to(playhead, {
+          frame: animation.totalFrames - 1,
+          ease: "none",
+          onUpdate: () => animation.goToAndStop(playhead.frame, true),
+          scrollTrigger: st,
+        });
+        return () => animation.destroy && animation.destroy();
+      };
+      ctx && ctx.add ? ctx.add(createTween) : createTween();
+      // in case there are any other ScrollTriggers on the page and the loading of this Lottie asset caused layout changes
+      ScrollTrigger.sort();
+      ScrollTrigger.refresh();
+    });
+    return animation;
+  }
 
 
 };

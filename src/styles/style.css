@@ -925,7 +925,7 @@ section{
   background-size: contain;
   background-position: top left;
   z-index: -1;
-  opacity: 0.5;
+  opacity: 1;
 }
 
 #section__metodologia .column__1{
@@ -951,7 +951,7 @@ section{
 }
 
 #section__metodologia .right__etapa{
-  padding-left: 10%;
+  padding-left: 0%;
 }
 
 #section__intro h2{
@@ -973,7 +973,19 @@ section{
   align-items: flex-start;
   justify-content: center;
   height: 100vh;
+  
 }
+
+/*.right__etapa > div{
+  height: auto;
+  background-color: #e9edf6;
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.1);
+  padding: 8%;
+  border-radius: 20px;
+  background-color: #ffffff40;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}*/
 
 .right__etapa h3{
   color:#0053bf;
@@ -1006,22 +1018,24 @@ section{
 #botella__hoja1{
   position: absolute;
   top: 25%;
-  left: 13%;
+  left: 8%;
   z-index: 4;
   width: 20%;
   height: auto;
   opacity: 0;
   transform: translateX(40%), scale(1);
+  filter: blur(1px) drop-shadow(52px 54px 40px rgba(0,0,0,0.4));
 }
 
 #botella__hoja2{
   position: absolute;
   top: 33%;
-  left: 67%;
+  left: 70%;
   z-index: 4;
   width: 25%;
   opacity: 0;
   transform: translateX(-10%);
+  filter: blur(2px) drop-shadow(52px 54px 40px rgba(0,0,0,0.4));
 }
 
 #botella__real{
@@ -1031,7 +1045,7 @@ section{
   object-fit: contain;
   position: relative;
   opacity: 0;
-  transform: scale(0.7) rotate(10deg);
+  transform: scale(0.7) rotate(20deg);
 }
 
 #botella__trazo__svg{
@@ -1105,6 +1119,28 @@ section{
   transform: scale(0);
   z-index: 1;
   object-fit: contain;
+}
+
+#animationWindow{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0%;
+  transform: translate(0) scale(1.3) !important;
+  z-index: 4;
+  filter: brightness(0.9);
+}
+
+#animationWindow__bottom{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 10%;
+  transform: translate(0) rotate(-105deg) scale(1.3) !important;
+  z-index: 0;
+  filter: brightness(0.8) blur(1px);
 }
 
 #botella_gradiente_fondo{
@@ -1288,6 +1324,19 @@ section{
   width: 14.28%;
   height: auto;
   padding: 1% 3%;
+}
+
+.cliente__grid{
+  padding: 8% 30px;
+  display: none;
+  grid-template-columns: repeat(4, 4fr);
+  grid-template-rows: auto;
+  grid-gap: 50px;
+}
+
+.cliente__grid .cliente__logo{
+  width: 100%;
+  height: auto;
 }
 
 /*  Testimonios */
@@ -4253,8 +4302,6 @@ form label{
     width: calc(100% - 60px);
     left: 30px;
     z-index: 3;
-    transform: scale(1.5);
-    transform-origin: top center;
   }
 
   #botella__real{
@@ -4360,8 +4407,16 @@ form label{
     font-size: 13px;
   }
 
+  .col__clientes{
+    display: none;
+  }
+
   #section__clientes .column__1{
     padding: 0 30px 0%;
+  }
+
+  .cliente__grid{
+    display: grid;
   }
 
   #section__testimonios{
@@ -4553,6 +4608,8 @@ form label{
     width: calc(100% - 30px);
     left: 15px;
     z-index: 3;
+    transform: scale(1.5);
+    transform-origin: top center;
   }
 
   #section__metodologia .column__metodologia .col__right{
