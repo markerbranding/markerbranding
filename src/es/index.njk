@@ -21,7 +21,13 @@ label: es
         <div class="col__left">
           <h1>Somos una agencia de branding en Mérida</h1>
           <h2>Creamos estrategias para construir marcas</h2>
-          <h2>profesionales</h2>
+          <h2 class="anim__hero__h2">
+            <span>profesionales</span>
+            <span>carismáticas</span>
+            <span>divertidas</span>
+            <span>emotivas</span>
+            <span>confiables</span>
+          </h2>
           <a class="btn btn__hero">Conoce nuestro enfoque</a>
         </div>
         <div class="col__right">
@@ -424,6 +430,53 @@ function homeGsap() {
   let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
   gsap.set("#botella__hoja1", { opacity: 0 });
   gsap.set("#botella__hoja2", { opacity: 0 });
+  mySplitP1 = new SplitText(".anim__hero__h2 span:nth-child(1)", { type: "chars" }),
+  p1chars = mySplitP1.chars;
+  mySplitP2 = new SplitText(".anim__hero__h2 span:nth-child(2)", { type: "chars" }),
+  p2chars = mySplitP2.chars;
+  mySplitP3 = new SplitText(".anim__hero__h2 span:nth-child(3)", { type: "chars" }),
+  p3chars = mySplitP3.chars;
+  mySplitP4 = new SplitText(".anim__hero__h2 span:nth-child(4)", { type: "chars" }),
+  p4chars = mySplitP3.chars;
+  mySplitP5 = new SplitText(".anim__hero__h2 span:nth-child(5)", { type: "chars" }),
+  p5chars = mySplitP3.chars;
+
+  gsap.set(".anim__hero__h2 span:nth-child(1) > div", { opacity: 1, display:"unset" });
+  gsap.set(".anim__hero__h2 span:nth-child(2) > div", { opacity: 0 });
+  gsap.set(".anim__hero__h2 span:nth-child(3) > div", { opacity: 0 });
+  gsap.set(".anim__hero__h2 span:nth-child(4) > div", { opacity: 0 });
+  gsap.set(".anim__hero__h2 span:nth-child(5) > div", { opacity: 0 });
+
+  p1start();
+
+  function p1start() {
+      var tl3 = gsap.timeline();
+      tl3.to(p1chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      tl3.to(p1chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+      
+      tl3.to(p2chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      tl3.to(p2chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+
+      tl3.to(p3chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      tl3.to(p3chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+
+      tl3.to(p4chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      tl3.to(p4chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+
+      tl3.to(p5chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      tl3.to(p5chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1, onComplete: p1start})
+  }
+
+  tl.to("#videoHero", {
+    x: 300,
+    scrollTrigger: {
+      trigger: "#section__hero",
+      start: "top top",
+      end: "bottom top",
+      ease: "power4.out",
+      scrub: true,
+    }
+  })
   
   tl.to("#logoMarkerScale", {
     width:"200",
@@ -976,6 +1029,34 @@ function homeGsap() {
       }
     });
 
+    LottieScrollTrigger({
+      target: "#animationWindow",
+      path: "/assets/lotties/splash.json",
+      speed: "slow",      
+      trigger: ".right__etapa__2",
+      //start: "35% center",
+      //end: "85% center",
+      start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 35 / 100) )}px center`,
+      end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 85 / 100) )}px center`,
+      scrub: true,
+      pin: false,
+      ease: "power1.inOut",      
+    });
+
+    LottieScrollTrigger({
+      target: "#animationWindow__bottom",
+      path: "/assets/lotties/splash.json",
+      speed: "slow",      
+      trigger: ".right__etapa__2",
+      //start: "30% center",
+      //end: "80% center",
+      start: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+      end: `${(document.querySelector(".right__etapa__2").offsetLeft + (window.innerWidth * 80 / 100) )}px center`,
+      scrub: true,
+      pin: false,
+      ease: "power1.inOut",
+    });
+
     tl.to("#botella__hoja1", {
       opacity:1,
       x:0,
@@ -1003,6 +1084,20 @@ function homeGsap() {
       }
     });
 
+    tl.to("#botella__hoja1", {
+      immediateRender: false,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        //start: "top center",
+        //end: "30% center",
+        start: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+        scrub: true,
+      }
+    });
+
     tl.to("#botella__hoja2", {
       opacity: 1,
       x:0,
@@ -1026,6 +1121,20 @@ function homeGsap() {
         //end: "250% bottom",
         start: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
         end: `${(document.querySelector(".right__etapa__1").offsetLeft + (window.innerWidth * 250 / 100) )}px center`,
+      }
+    });
+
+    tl.to("#botella__hoja2", {
+      immediateRender: false,
+      opacity: 0,
+      duration: 0.5,
+      scrollTrigger: {
+        trigger: ".right__etapa__3",
+        //start: "top center",
+        //end: "30% center",
+        start: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+        end: `${(document.querySelector(".right__etapa__3").offsetLeft + (window.innerWidth * 30 / 100) )}px center`,
+        scrub: true,
       }
     });
 
