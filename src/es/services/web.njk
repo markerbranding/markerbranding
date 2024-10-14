@@ -79,18 +79,24 @@ label: es
           <div class="data__banner">
             <div class="data__wrapper">
                 <div><img src="/assets/servicios/web/indicador1.svg" /></div>
-                <h3>60<span>%</span></h3>
-                <p>de los prospectos compra tras una buena experiencia en el sitio web</p>
+                <div>
+                    <h3>60<span>%</span></h3>
+                    <p>de los prospectos compra tras una buena experiencia en el sitio web</p>
+                </div>
             </div>
             <div class="data__wrapper">
                 <div><img src="/assets/servicios/web/indicador2.svg" /></div>
-                <h3>67<span>%</span></h3>
-                <p>de los usuarios verán a tu competencia antes de realizar una compra</p>
+                <div>
+                    <h3>67<span>%</span></h3>
+                    <p>de los usuarios verán a tu competencia antes de realizar una compra</p>
+                </div>
             </div>
             <div class="data__wrapper">
                 <div><img src="/assets/servicios/web/indicador3.svg" /></div>
-                <h3>5.0<span></span></h3>
-                <p>segundos son los que tienes para lograr una buena primera impresión</p>
+                <div>
+                    <h3>5.0<span></span></h3>
+                    <p>segundos son los que tienes para lograr una buena primera impresión</p>
+                </div>
             </div>
           </div>
             
@@ -98,10 +104,12 @@ label: es
       </section>
     
       <section id="section__process">
+        <div class="column__1">
+            <h3 class="subtitle">Nuestro proceso</h3>
+            <h2>Cómo llevamos a cabo nuestros sitios web</h2>
+        </div>
         <div class="column__2">
             <div class="col__left">
-              <h3 class="subtitle">Nuestro proceso</h3>
-              <h2>Cómo llevamos a cabo nuestros sitios web</h2>
               <div class="process__step">
                 <div id="step__content__1" class="inner__step">
                   <h3><strong>Paso 1:</strong> Investigación y mapa del sitio</h3>
@@ -175,7 +183,7 @@ label: es
             </div>
             <div class="col__right">
                 <div class="step__art">
-                    <div class="step1__svg">
+                    <div class="step__svg step1__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="3" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <style type="text/css">
                                 .step1a{stroke:#c62e26;}
@@ -578,7 +586,7 @@ label: es
                             </g>
                         </svg>
                     </div>
-                    <div class="step2__svg">
+                    <div class="step__svg step2__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="3" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <style type="text/css">
                                 .step2a{fill:none;stroke:#111C4E;}
@@ -945,7 +953,7 @@ label: es
                             </g>
                         </svg>
                     </div>
-                    <div class="step3__svg">
+                    <div class="step__svg step3__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <g transform="matrix(1,0,0,1,558.291,-153.318)">
                                 <g transform="matrix(25,0,0,25,-184.559,308.746)">
@@ -1524,7 +1532,7 @@ label: es
                             </g>
                         </svg>
                     </div>
-                    <div class="step4__svg">
+                    <div class="step__svg step4__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <g transform="matrix(1,0,0,1,20.6609,-142.916)">
                                 <g transform="matrix(75,0,0,75,68.1537,308.746)">
@@ -2076,49 +2084,7 @@ label: es
         gsap.to(".step4e", { opacity: 0, stagger: globalStagger2 });
     }
 
-    ScrollTrigger.create({
-        trigger:"#step__content__1",
-        start: "top 50%",
-        end: "bottom 50%",
-        scrub: 1,
-        onEnter: step1In,
-        onEnterBack: step1In,
-        onLeave: step1Out,
-        onLeaveBack: step1In,
-    });
-
-    ScrollTrigger.create({
-        trigger:"#step__content__2",
-        start: "top 50%",
-        end: "bottom 50%",
-        scrub: 1,
-        onEnter: step2In,
-        onEnterBack: step2In,
-        onLeave: step2Out,
-        onLeaveBack: step2Out,
-    });
-
-    ScrollTrigger.create({
-        trigger:"#step__content__3",
-        start: "top 50%",
-        end: "bottom 50%",
-        scrub: 1,
-        onEnter: step3In,
-        onEnterBack: step3In,
-        onLeave: step3Out,
-        onLeaveBack: step3Out,
-    });
-
-    ScrollTrigger.create({
-        trigger:"#step__content__4",
-        start: "top 50%",
-        end: "bottom 50%",
-        scrub: 1,
-        onEnter: step4In,
-        onEnterBack: step4In,
-        onLeave: step4In,
-        onLeaveBack: step4Out,
-    });
+    
 
     /*  why mobile */
 
@@ -2160,19 +2126,160 @@ label: es
             scrub: 1,
         }
     });
-    
-    /*  menu services  */
 
-    gsap.to("#menu__services", {
-      scrollTrigger:{
-        trigger:".service__wrapper",
-        endTrigger: "#site__footer",
-        start: "105 50%",
-        end: "bottom top",
-        pin: "#menu__services",
-        pinSpacing: false,
-      }
+
+    // GSAP Responsivo:
+    
+    let mm = gsap.matchMedia();
+    // Desktop
+    mm.add("(min-width: 1025px)", () => {
+
+        /*  menu services  */
+        gsap.to("#menu__services", {
+        scrollTrigger:{
+            trigger:".service__wrapper",
+            endTrigger: "#site__footer",
+            start: "105 50%",
+            end: "bottom top",
+            pin: "#menu__services",
+            pinSpacing: false,
+        }
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__1",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step1In,
+            onEnterBack: step1In,
+            onLeave: step1Out,
+            onLeaveBack: step1In,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__2",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step2In,
+            onEnterBack: step2In,
+            onLeave: step2Out,
+            onLeaveBack: step2Out,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__3",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step3In,
+            onEnterBack: step3In,
+            onLeave: step3Out,
+            onLeaveBack: step3Out,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__4",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step4In,
+            onEnterBack: step4In,
+            onLeave: step4In,
+            onLeaveBack: step4Out,
+        });
+
     });
+
+    // Mobile
+    mm.add("(max-width: 1024px)", () => {
+
+        /*  menu services  */
+        gsap.to("#menu__services", {
+        scrollTrigger:{
+            trigger:".service__wrapper",
+            endTrigger: "#site__footer",
+            start: "-90 top",
+            end: "bottom top",
+            pin: "#menu__services",
+            pinSpacing: false,
+        }
+        });
+
+        // horizontal scroll
+        const sections2 = gsap.utils.toArray(".process__step");
+        let maxWidth = 0;
+        sections2.forEach((section2) => {
+        maxWidth += section2.offsetWidth;
+        });
+
+        gsap.to(sections2, {
+        x: () => `-${maxWidth - window.innerWidth}`,
+        ease: "none",
+        scrollTrigger: {
+            trigger: "#section__process > .column__2",
+            pin: true,
+            pinSpacing: true,
+            scrub: 1,
+            end: () => `+=${maxWidth}`,
+            snap: {
+                snapTo: 1 / (sections2.length - 1),
+                inertia: true,
+                duration: {min: 0.1, max: 0.5}
+            },
+        }
+        });
+        // cierre hscroll
+
+
+        ScrollTrigger.create({
+            trigger:"#step__content__1",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step1In,
+            onEnterBack: step1In,
+            onLeave: step1Out,
+            onLeaveBack: step1In,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__2",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step2In,
+            onEnterBack: step2In,
+            onLeave: step2Out,
+            onLeaveBack: step2Out,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__3",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step3In,
+            onEnterBack: step3In,
+            onLeave: step3Out,
+            onLeaveBack: step3Out,
+        });
+
+        ScrollTrigger.create({
+            trigger:"#step__content__4",
+            start: "top 50%",
+            end: "bottom 50%",
+            scrub: 1,
+            onEnter: step4In,
+            onEnterBack: step4In,
+            onLeave: step4In,
+            onLeaveBack: step4Out,
+        });
+
+    });
+    
+    
 
     ScrollTrigger.batch(".work__list li", {
       trigger: ".work__list",

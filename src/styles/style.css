@@ -2365,6 +2365,7 @@ section{
   background-color: #1f222f;
   position: relative;
   z-index: 0;
+  overflow: hidden;
   h1{
     color: #748fbb;
   }
@@ -2670,7 +2671,7 @@ section{
   border-radius: 0px 10px 10px 0px;
 }
 
-.data__wrapper > div {
+.data__wrapper > div:first-child {
   position: absolute;
   background-color: #060d30;
   border-radius: 10px;
@@ -2745,6 +2746,7 @@ section{
 #section__process .col__left{
   width: 50%;
   padding-right: 0%;
+  padding-top: 4%;
 }
 
 #section__process .col__right{
@@ -4300,20 +4302,21 @@ form label{
   }
 
   .header__content > .header__lang{
-      display: none;
+    display: none;
   }
 
   #mobile__trigger{
-      display: block;
+    display: block;
   }
 
   #mobile__active{
-      display: block;
+    display: block;
   }
 
   #mobile__menu{
-      display: flex;
+    display: flex;
   }
+
   #mobile__menu .cta__msn{
       margin-top: 20px;
       margin-left: 20px;
@@ -4668,6 +4671,223 @@ form label{
 
   #site__footer span{
     font-size: 16px;
+  }
+
+  #menu__services{
+    right: 30px;
+  }
+
+  #section__hero__services{
+    padding: 140px 30px 50px 30px;
+  }
+
+  #section__hero__services .column__2{
+    flex-direction: column;
+  }
+
+  #section__hero__services .column__2 .col__left{
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 80px;
+  }
+
+  #section__hero__services .column__2 .col__right{
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .section__hero__services__web::before{
+    width: 100%;
+    height: auto;
+    top: -50%;
+    right: -50%;
+    transform: scale(2);
+  }
+
+  #section__description{
+    padding: 5% 200px 12% 30px;
+  }
+
+  .page-services #section__description::before {
+    bottom: unset;
+    top: -20%;
+  }
+
+  #section__description .column__2{
+    flex-direction: column;
+  }
+
+  #section__description .column__2 .col__left{
+    width: 100%;
+  }
+
+  #section__description .column__2 .col__right{
+    width: 100%;
+  }
+
+  #section__data__service{
+    padding: 0px 200px 0px 30px;
+  }
+
+  .data__banner{
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .data__wrapper{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 20px;
+    border-radius: 20px !important;
+    border-right: 0px;
+  }
+
+  .data__wrapper > div:first-child{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .data__wrapper img{
+    width: 55px;
+    height: 55px;
+  }
+
+  .data__wrapper > div:last-child{
+    padding-left: 20px;
+    width: calc(100% - 100px);
+  }
+
+  .data__wrapper h3{
+    font-size: 40px;
+  }
+
+  .data__wrapper p{
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  #section__why{
+    padding: 10% 200px 10% 30px;
+  }
+
+  #section__why .column__2{
+    flex-direction: column-reverse;
+  }
+
+  #section__why .column__2 .col__left{
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  #section__why .column__2 .col__right{
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  #section__why #frase{
+    font-size: 34px;
+  }
+
+  #section__faq {
+    padding: 10% 200px 10% 30px;
+  }
+
+  #section__faq .column__2{
+    flex-direction: column;
+  }
+
+  #section__faq .column__2 .col__left{
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  #section__faq .column__2 .col__right{
+    width: 100%;
+    padding-left: 0px;
+  }
+
+  .accordion__title{
+    padding: 20px 60px 20px 0px;
+  }
+
+  .accordion__title span{
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .accordion__item .accordion__content{
+    padding: 0px 0px 15px 0px;
+  }
+
+  .accordion__content p{
+    font-size: 18px;
+  }
+
+  #section__process{
+    padding: 10% 0px 10% 0px;
+  }
+
+  #section__process .column__2{
+    flex-direction: column-reverse;
+    height: 100vh !important;
+    padding: 0px !important;
+    overflow: hidden;
+  }
+
+  #section__process .column__2 .col__right{
+    width: 100%;
+    height: 40vh;
+    padding-left: 0px;
+    padding-right: 200px;
+  }
+
+  #section__process .column__2 .col__left{
+    width: 400vw;
+    height: calc(60vh - 60px);
+    padding-top: 0vh;
+    display: inline-flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+
+  .step1__svg, .step2__svg, .step3__svg, .step4__svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .process__step{
+    width: 100vw;
+    padding: 30px 30px 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .inner__step::before{
+    height: 33px;
+    width: 50px;
+    top: -30px;
+    right: calc(50% - 25px);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+
+  #menu__services li a span{
+    font-size: 14px;
   }
 
 }
