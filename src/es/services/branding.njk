@@ -70,30 +70,35 @@ label: es
                 </p>
             </div>
         </div>
-      </section>
+    </section>
     
-      <section id="section__data__service">
+    <section id="section__data__service">
         <div class="column__1">
-          <div class="data__banner">
-            <div class="data__wrapper">
-                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
-                <h3>65<span>%</span></h3>
-                <p>mejora de resultados</p>
+            <div class="data__banner">
+                <div class="data__wrapper">
+                    <div><img src="/assets/servicios/web/indicador1.svg" /></div>
+                    <div>
+                        <h3>60<span>%</span></h3>
+                        <p>de los prospectos compra tras una buena experiencia en el sitio web</p>
+                    </div>
+                </div>
+                <div class="data__wrapper">
+                    <div><img src="/assets/servicios/web/indicador2.svg" /></div>
+                    <div>
+                        <h3>67<span>%</span></h3>
+                        <p>de los usuarios verán a tu competencia antes de realizar una compra</p>
+                    </div>
+                </div>
+                <div class="data__wrapper">
+                    <div><img src="/assets/servicios/web/indicador3.svg" /></div>
+                    <div>
+                        <h3>5.0<span></span></h3>
+                        <p>segundos son los que tienes para lograr una buena primera impresión</p>
+                    </div>
+                </div>
             </div>
-            <div class="data__wrapper">
-                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
-                <h3>65<span>%</span></h3>
-                <p>mejora de resultados</p>
-            </div>
-            <div class="data__wrapper">
-                <div><img src="/assets/servicios/web/arrow_btn_red.svg" /></div>
-                <h3>65<span>%</span></h3>
-                <p>mejora de resultados</p>
-            </div>
-          </div>
-            
         </div>
-      </section>
+    </section>
     
       <section id="section__process">
         <div class="column__1">
@@ -396,42 +401,6 @@ label: es
   
     function servicesBrandingGsap() {
 
-        /*	search p	*/
-        
-        mySplitP1 = new SplitText("#search__p__1", { type: "chars" }),
-        p1chars = mySplitP1.chars;
-        mySplitP2 = new SplitText("#search__p__2", { type: "chars" }),
-        p2chars = mySplitP2.chars;
-        mySplitP3 = new SplitText("#search__p__3", { type: "chars" }),
-        p3chars = mySplitP3.chars;
-
-        gsap.set("#search__p__1 > div", { opacity: 0, display:"none" });
-        gsap.set("#search__p__2 > div", { opacity: 0, display:"none" });
-        gsap.set("#search__p__3 > div", { opacity: 0, display:"none" });
-        gsap.set("#search__img__1", { opacity: 0, scale: 1.05 });
-        gsap.set("#search__img__2", { opacity: 0, scale: 1.05 });
-        gsap.set("#search__img__3", { opacity: 0, scale: 1.05 });
-
-        p1start();
-
-        function p1start() {
-            var tl3 = gsap.timeline();
-            tl3.to(p1chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-            tl3.to("#search__img__1", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
-            tl3.to(p1chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-            tl3.to("#search__img__1", {duration: 0.2, opacity: 0, scale: 1.05});
-            
-            tl3.to(p2chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-            tl3.to("#search__img__2", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
-            tl3.to(p2chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-            tl3.to("#search__img__2", {duration: 0.2, opacity: 0, scale: 1.05});
-
-            tl3.to(p3chars, {duration: 0.1, opacity: 1, display:"block", stagger: 0.05})
-            tl3.to("#search__img__3", {duration: 0.2, opacity: 1, scale: 1}, "+=0.5")
-            tl3.to(p3chars, {duration: 0.1, opacity: 0, display:"none", stagger: -0.05, delay: 3})
-            tl3.to("#search__img__3", {duration: 0.2, opacity: 0, scale: 1.05, onComplete: p1start});
-        }
-
         // Check if it's a touch device
         const isTouchDevice = 'ontouchstart' in window;
         const createCursorFollower = () => {
@@ -557,92 +526,205 @@ label: es
             gsap.to(".step3c", { drawSVG: "0%", stagger: globalStagger });
         }
 
-        ScrollTrigger.create({
-            trigger:"#step__content__1",
-            start: "top 50%",
-            end: "bottom 50%",
-            scrub: 1,
-            onEnter: step1In,
-            onEnterBack: step1In,
-            onLeave: step1Out,
-            onLeaveBack: step1In,
-        });
 
-        ScrollTrigger.create({
-            trigger:"#step__content__2",
-            start: "top 50%",
-            end: "bottom 50%",
-            scrub: 1,
-            onEnter: step2In,
-            onEnterBack: step2In,
-            onLeave: step2Out,
-            onLeaveBack: step2Out,
-        });
-
-        ScrollTrigger.create({
-            trigger:"#step__content__3",
-            start: "top 50%",
-            end: "bottom 50%",
-            scrub: 1,
-            onEnter: step3In,
-            onEnterBack: step3In,
-            onLeave: step3Out,
-            onLeaveBack: step3Out,
-        });
-
-        /*  why mobile */
-
-        gsap.from("#why__a", {
-            x: 0,
-            y: 0,
-            opacity: 1,
-            scrollTrigger:{
-                trigger:"#section__why > .column__2 > .col__left",
-                /*endTrigger: "#site__footer",*/
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1,
-            }
-        });
-
-        gsap.from("#why__b", {
-            x: 0,
-            y: 0,
-            opacity: 0.8,
-            scrollTrigger:{
-                trigger:"#section__why > .column__2 > .col__left",
-                /*endTrigger: "#site__footer",*/
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1,
-            }
-        });
-
-        gsap.from("#why__c", {
-            x: 0,
-            y: 0,
-            opacity: 0.8,
-            scrollTrigger:{
-                trigger:"#section__why > .column__2 > .col__left",
-                /*endTrigger: "#site__footer",*/
-                start: "top 80%",
-                end: "bottom 20%",
-                scrub: 1,
-            }
-        });
+        // GSAP Responsivo:
     
-        /*  menu services  */
+        let mm = gsap.matchMedia();
+        // Desktop
+        mm.add("(min-width: 1025px)", () => {
 
-        gsap.to("#menu__services", {
-        scrollTrigger:{
-            trigger:".service__wrapper",
-            endTrigger: "#site__footer",
-            start: "105 50%",
-            end: "bottom top",
-            pin: "#menu__services",
-            pinSpacing: false,
-        }
+            /*  menu services  */
+            gsap.to("#menu__services", {
+            scrollTrigger:{
+                trigger:".service__wrapper",
+                endTrigger: "#site__footer",
+                start: "105 50%",
+                end: "bottom top",
+                pin: "#menu__services",
+                pinSpacing: false,
+            }
+            });
+
+            ScrollTrigger.create({
+                trigger:"#step__content__1",
+                start: "top 50%",
+                end: "bottom 50%",
+                scrub: 1,
+                onEnter: step1In,
+                onEnterBack: step1In,
+                onLeave: step1Out,
+                onLeaveBack: step1In,
+            });
+
+            ScrollTrigger.create({
+                trigger:"#step__content__2",
+                start: "top 50%",
+                end: "bottom 50%",
+                scrub: 1,
+                onEnter: step2In,
+                onEnterBack: step2In,
+                onLeave: step2Out,
+                onLeaveBack: step2Out,
+            });
+
+            ScrollTrigger.create({
+                trigger:"#step__content__3",
+                start: "top 50%",
+                end: "bottom 50%",
+                scrub: 1,
+                onEnter: step3In,
+                onEnterBack: step3In,
+                onLeave: step3Out,
+                onLeaveBack: step3Out,
+            });
+
+            /*  why mobile */
+
+            gsap.from("#why__a", {
+                x: 0,
+                y: 0,
+                opacity: 1,
+                scrollTrigger:{
+                    trigger:"#section__why > .column__2 > .col__left",
+                    /*endTrigger: "#site__footer",*/
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    scrub: 1,
+                }
+            });
+
+            gsap.from("#why__b", {
+                x: 0,
+                y: 0,
+                opacity: 0.8,
+                scrollTrigger:{
+                    trigger:"#section__why > .column__2 > .col__left",
+                    /*endTrigger: "#site__footer",*/
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    scrub: 1,
+                }
+            });
+
+            gsap.from("#why__c", {
+                x: 0,
+                y: 0,
+                opacity: 0.8,
+                scrollTrigger:{
+                    trigger:"#section__why > .column__2 > .col__left",
+                    /*endTrigger: "#site__footer",*/
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    scrub: 1,
+                }
+            });
+
         });
+
+        // Mobile
+        mm.add("(max-width: 1024px)", () => {
+
+            let serviceHeight = gsap.getProperty(".service__wrapper", "height");
+
+            /*  menu services  */
+            gsap.to("#menu__services", {
+                scrollTrigger:{
+                    trigger:".service__wrapper",
+                    endTrigger: "#site__footer",
+                    start: "105 50%",
+                    end: "bottom top",
+                    end: `${serviceHeight}px top`,
+                    pin: "#menu__services",
+                    pinSpacing: false,
+                }
+            });
+
+
+            ScrollTrigger.batch("#section__process", {
+            start: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft)}px top`,
+            end: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth*2) ) -80}px top`,
+            onEnter: (batch) =>	gsap.to("#menu__services", { marginTop: "calc(-50% + 80px)", duration: 0.3 }),
+            onEnterBack: (batch) =>	gsap.to("#menu__services", { marginTop: "calc(-50% + 80px)", duration: 0.3 }),
+            onLeave: (batch) =>	gsap.to("#menu__services", { marginTop: "0%", duration: 0.3 }),
+            onLeaveBack: (batch) =>	gsap.to("#menu__services", { marginTop: "0%", duration: 0.3 }),
+        });
+
+            
+
+            console.log((document.querySelector(".process__step:nth-child(1)").offsetTop));
+
+            // horizontal scroll
+            const sections2 = gsap.utils.toArray(".process__step");
+            let maxWidth = 0;
+            sections2.forEach((section2) => {
+            maxWidth += section2.offsetWidth;
+            });
+
+            gsap.to(sections2, {
+            x: () => `-${maxWidth - window.innerWidth}`,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "#section__process > .column__2",
+                pin: true,
+                pinSpacing: true,
+                scrub: 1,
+                start: "top 60",
+                end: () => `+=${maxWidth}`,
+                snap: {
+                    snapTo: 1 / (sections2.length - 1),
+                    inertia: true,
+                    duration: {min: 0.1, max: 0.2}
+                },
+            }
+            });
+            // cierre hscroll
+
+
+            ScrollTrigger.create({
+                trigger:"#step__content__1",
+                //start: "top 50%",
+                //end: "bottom 50%",
+                start: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+                end: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+                scrub: 1,
+                onEnter: step1In,
+                onEnterBack: step1In,
+                onLeave: step1Out,
+                onLeaveBack: step1In,
+            });
+
+            ScrollTrigger.create({
+                trigger:"#step__content__2",
+                //start: "top 50%",
+                //end: "bottom 50%",
+                start: `${(document.querySelector(".process__step:nth-child(2)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+                end: `${(document.querySelector(".process__step:nth-child(2)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+                scrub: 1,
+                onEnter: step2In,
+                onEnterBack: step2In,
+                onLeave: step2Out,
+                onLeaveBack: step2Out,
+            });
+
+            ScrollTrigger.create({
+                trigger:"#step__content__3",
+                //start: "top 50%",
+                //end: "bottom 50%",
+                start: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+                end: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+                scrub: 1,
+                onEnter: step3In,
+                onEnterBack: step3In,
+                onLeave: step3Out,
+                onLeaveBack: step3Out,
+            });
+            
+
+        });
+
+        
+    
+        
 
         ScrollTrigger.batch(".work__list li", {
         trigger: ".work__list",
