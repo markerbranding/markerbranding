@@ -35,7 +35,7 @@ label: es
                 </div>
             </div>
             <div class="laptop__base">
-                <img src="/assets/servicios/web/laptop_base.png" />
+                <img src="/assets/servicios/web/laptop_base_b.png" />
             </div>
         </div>
     </div>
@@ -112,17 +112,17 @@ label: es
             <div class="col__left">
               <div class="process__step">
                 <div id="step__content__1" class="inner__step">
-                  <h3><strong>Paso 1:</strong> Investigación y mapa del sitio</h3>
-                  <p>
-                    El proceso inicia con una investigación específica del negocio para determinar cuál es
-                    la mejor ruta para organizar los contenidos, que información debe tener prioridad por
-                    su relevancia y en qué orden hace más sentido presentarla al usuario.
-                  </p>
-                  <p>
-                    Con base en lo anterior y a un análisis general de la competencia, así como de las tendencias
-                    del rubro del negocio, podremos diseñar un sitio web que ofrezca información pertinente
-                    a lo que el usuario busca.
-                  </p>
+                    <h3><strong>Paso 1:</strong> Investigación y mapa del sitio</h3>
+                    <p>
+                        El proceso inicia con una investigación específica del negocio para determinar cuál es
+                        la mejor ruta para organizar los contenidos, que información debe tener prioridad por
+                        su relevancia y en qué orden hace más sentido presentarla al usuario.
+                    </p>
+                    <p>
+                        Con base en lo anterior y a un análisis general de la competencia, así como de las tendencias
+                        del rubro del negocio, podremos diseñar un sitio web que ofrezca información pertinente
+                        a lo que el usuario busca.
+                    </p>
                 </div>
               </div>
 
@@ -1823,7 +1823,6 @@ label: es
                             </g>
                         </svg>
                     </div>
-                    
                 </div>
             </div>
         </div>
@@ -2084,48 +2083,12 @@ label: es
         gsap.to(".step4e", { opacity: 0, stagger: globalStagger2 });
     }
 
+
     
 
-    /*  why mobile */
 
-    gsap.from("#why__a", {
-        x: 0,
-        y: 0,
-        opacity: 1,
-        scrollTrigger:{
-            trigger:"#section__why > .column__2 > .col__left",
-            /*endTrigger: "#site__footer",*/
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 1,
-        }
-    });
 
-    gsap.from("#why__b", {
-        x: 0,
-        y: 0,
-        opacity: 0.8,
-        scrollTrigger:{
-            trigger:"#section__why > .column__2 > .col__left",
-            /*endTrigger: "#site__footer",*/
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 1,
-        }
-    });
 
-    gsap.from("#why__c", {
-        x: 0,
-        y: 0,
-        opacity: 0.8,
-        scrollTrigger:{
-            trigger:"#section__why > .column__2 > .col__left",
-            /*endTrigger: "#site__footer",*/
-            start: "top 80%",
-            end: "bottom 20%",
-            scrub: 1,
-        }
-    });
 
 
     // GSAP Responsivo:
@@ -2136,14 +2099,14 @@ label: es
 
         /*  menu services  */
         gsap.to("#menu__services", {
-        scrollTrigger:{
-            trigger:".service__wrapper",
-            endTrigger: "#site__footer",
-            start: "105 50%",
-            end: "bottom top",
-            pin: "#menu__services",
-            pinSpacing: false,
-        }
+            scrollTrigger:{
+                trigger:".service__wrapper",
+                endTrigger: "#site__footer",
+                start: "105 50%",
+                end: "bottom top",
+                pin: "#menu__services",
+                pinSpacing: false,
+            }
         });
 
         ScrollTrigger.create({
@@ -2190,22 +2153,81 @@ label: es
             onLeaveBack: step4Out,
         });
 
+
+        /*  why mobile */
+
+        gsap.from("#why__a", {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__left",
+                /*endTrigger: "#site__footer",*/
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
+        gsap.from("#why__b", {
+            x: 0,
+            y: 0,
+            opacity: 0.8,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__left",
+                /*endTrigger: "#site__footer",*/
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
+        gsap.from("#why__c", {
+            x: 0,
+            y: 0,
+            opacity: 0.8,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__left",
+                /*endTrigger: "#site__footer",*/
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
     });
 
     // Mobile
     mm.add("(max-width: 1024px)", () => {
 
+        let serviceHeight = gsap.getProperty(".service__wrapper", "height");
+
         /*  menu services  */
         gsap.to("#menu__services", {
-        scrollTrigger:{
-            trigger:".service__wrapper",
-            endTrigger: "#site__footer",
-            start: "-90 top",
-            end: "bottom top",
-            pin: "#menu__services",
-            pinSpacing: false,
-        }
+            scrollTrigger:{
+                trigger:".service__wrapper",
+                endTrigger: "#site__footer",
+                start: "105 50%",
+                end: "bottom top",
+                end: `${serviceHeight}px top`,
+                pin: "#menu__services",
+                pinSpacing: false,
+            }
         });
+
+        /*  menu services  */
+        
+
+        ScrollTrigger.batch("#section__process", {
+            start: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft)}px top`,
+            end: `${(document.querySelector(".process__step:nth-child(4)").offsetLeft + (window.innerWidth*2) ) -80}px top`,
+            onEnter: (batch) =>	gsap.to("#menu__services", { marginTop: "calc(-50% + 80px)", duration: 0.3 }),
+            onEnterBack: (batch) =>	gsap.to("#menu__services", { marginTop: "calc(-50% + 80px)", duration: 0.3 }),
+            onLeave: (batch) =>	gsap.to("#menu__services", { marginTop: "0%", duration: 0.3 }),
+            onLeaveBack: (batch) =>	gsap.to("#menu__services", { marginTop: "0%", duration: 0.3 }),
+        });
+
+        console.log((document.querySelector(".process__step:nth-child(1)").offsetTop));
 
         // horizontal scroll
         const sections2 = gsap.utils.toArray(".process__step");
@@ -2222,11 +2244,12 @@ label: es
             pin: true,
             pinSpacing: true,
             scrub: 1,
+            start: "top 60",
             end: () => `+=${maxWidth}`,
             snap: {
                 snapTo: 1 / (sections2.length - 1),
                 inertia: true,
-                duration: {min: 0.1, max: 0.5}
+                duration: {min: 0.1, max: 0.2}
             },
         }
         });
@@ -2235,8 +2258,10 @@ label: es
 
         ScrollTrigger.create({
             trigger:"#step__content__1",
-            start: "top 50%",
-            end: "bottom 50%",
+            //start: "top 50%",
+            //end: "bottom 50%",
+            start: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+            end: `${(document.querySelector(".process__step:nth-child(1)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
             scrub: 1,
             onEnter: step1In,
             onEnterBack: step1In,
@@ -2246,8 +2271,10 @@ label: es
 
         ScrollTrigger.create({
             trigger:"#step__content__2",
-            start: "top 50%",
-            end: "bottom 50%",
+            //start: "top 50%",
+            //end: "bottom 50%",
+            start: `${(document.querySelector(".process__step:nth-child(2)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+            end: `${(document.querySelector(".process__step:nth-child(2)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
             scrub: 1,
             onEnter: step2In,
             onEnterBack: step2In,
@@ -2257,8 +2284,10 @@ label: es
 
         ScrollTrigger.create({
             trigger:"#step__content__3",
-            start: "top 50%",
-            end: "bottom 50%",
+            //start: "top 50%",
+            //end: "bottom 50%",
+            start: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+            end: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
             scrub: 1,
             onEnter: step3In,
             onEnterBack: step3In,
@@ -2268,8 +2297,10 @@ label: es
 
         ScrollTrigger.create({
             trigger:"#step__content__4",
-            start: "top 50%",
-            end: "bottom 50%",
+            //start: "top 50%",
+            //end: "bottom 50%",
+            start: `${(document.querySelector(".process__step:nth-child(4)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
+            end: `${(document.querySelector(".process__step:nth-child(4)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
             scrub: 1,
             onEnter: step4In,
             onEnterBack: step4In,
@@ -2277,18 +2308,55 @@ label: es
             onLeaveBack: step4Out,
         });
 
+        /*  why */
+
+        gsap.from("#why__a", {
+            x: 0,
+            y: 0,
+            opacity: 1,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__right",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
+        gsap.from("#why__b", {
+            x: 0,
+            y: 0,
+            opacity: 0.8,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__right",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
+        gsap.from("#why__c", {
+            x: 0,
+            y: 0,
+            opacity: 0.8,
+            scrollTrigger:{
+                trigger:"#section__why > .column__2 > .col__right",
+                start: "top 80%",
+                end: "bottom 20%",
+                scrub: 1,
+            }
+        });
+
     });
-    
     
 
     ScrollTrigger.batch(".work__list li", {
       trigger: ".work__list",
       start: "top, 70%",
       end: "top, 60%",
-      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
     });
 
 

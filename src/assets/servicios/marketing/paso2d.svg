@@ -1,0 +1,28 @@
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="3" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+	<style type="text/css">
+		.step2d{fill:none; stroke:#CF5049;}
+	</style>
+    <g transform="matrix(1,0,0,1,0,47.0143)">
+        <g transform="matrix(1,0,0,1,-1.00297,-35.7821)">
+            <path class="step2d" d="M400.114,159.567C400.114,179.487 400.227,179.253 401.892,198.966" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-1.36578,-35.7821)">
+            <path class="step2d" d="M401.392,264.88C401.142,268.708 400.271,282.035 401.811,312.826" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-1.12227,-35.7821)">
+            <path class="step2d" d="M400.436,375.764C401.34,399.606 402.516,399.391 401.262,423.198" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0.157007,-35.7821)">
+            <path class="step2d" d="M399.172,480.432C402.203,504.476 399.142,503.082 399.195,527.476" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-1.33569,-35.7821)">
+            <path class="step2d" d="M401.333,584.891C401.814,609.23 401.168,609.068 401.161,633.293" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-0.459961,-32.3364)">
+            <path class="step2d" d="M569.551,667.771C644.447,623.425 668.093,560.475 668.093,503.275C668.093,427.178 613.478,346.97 566.909,346.97" style="fill:none;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,1.4541,187.807)">
+            <path class="step2d" d="M578.742,115.788C574.952,118.864 570.241,121.179 564.17,127.081C571.547,134.966 573.194,137.326 575.356,140.984" style="fill:none;"/>
+        </g>
+    </g>
+</svg>

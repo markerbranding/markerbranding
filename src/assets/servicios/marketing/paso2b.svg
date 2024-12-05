@@ -1,0 +1,10 @@
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="3" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+	<style type="text/css">
+		.step2b{fill:none; stroke:#111C4E;}
+	</style>
+    <g transform="matrix(1,0,0,1,0,5.5629)">
+        <g>
+            <path class="step2b" d="M38.278,66.092C147.403,63.349 760.654,53.598 757.407,66.092C743.214,120.701 726.091,127.977 653.43,389.065C638.186,443.841 638.094,467.944 590.493,657.128C581.712,692.028 572.052,734.513 565.624,734.71C548.511,735.232 336.379,743.456 245.538,734.71C236.906,714.061 201.581,589.581 162.262,456.839C128.384,342.462 78.355,158.914 57.165,50.159" style="fill:none;"/>
+        </g>
+    </g>
+</svg>
