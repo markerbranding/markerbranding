@@ -51,7 +51,7 @@ label: es
         <li><a id="to__contact"><span>Contacto</span><div class="underline__services"></div></a></li>
     </ul>
 
-    <section id="section__description">
+    <section id="section__description" class="section__description__branding">
         <div class="column__2">
             <div class="col__left">
                 <h3 class="subtitle">Descripción general</h3>
@@ -156,7 +156,7 @@ label: es
             </div>
             <div class="col__right">
                 <div class="step__art">
-                    <div class="step1__svg">
+                    <div class="step__svg step1__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <g transform="matrix(0.852011,0,0,0.852011,271.409,293.448)">
                                 <g>
@@ -206,7 +206,7 @@ label: es
                                 </g>
                         </svg>
                     </div>
-                    <div class="step2__svg">
+                    <div class="step__svg step2__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" stroke-width="10" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <style>
                                 .step2a{stroke:#CF5049;}
@@ -297,7 +297,7 @@ label: es
                         </svg>
                             
                     </div>
-                    <div class="step3__svg">
+                    <div class="step__svg step3__svg">
                         <svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
                             <g transform="matrix(0.852011,0,0,0.852011,157.057,393.708)">
                                 <g>
@@ -711,7 +711,7 @@ label: es
                 //start: "top 50%",
                 //end: "bottom 50%",
                 start: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 0 / 100) )}px center`,
-                end: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 100 / 100) )}px center`,
+                end: `${(document.querySelector(".process__step:nth-child(3)").offsetLeft + (window.innerWidth * 100 / 100) )}px top`,
                 scrub: 1,
                 onEnter: step3In,
                 onEnterBack: step3In,

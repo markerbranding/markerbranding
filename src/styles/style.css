@@ -2379,7 +2379,7 @@ section{
 }
 
 .section__hero__services__marketing{
-  background-color: #6c0909 !important;
+  background-color: #6c0000 !important;
 }
 
 .section__hero__services__web{
@@ -3048,6 +3048,15 @@ section{
   overflow: hidden;
 }
 
+.section__hero__services__branding .btn{
+  border-color: #fa4239 !important;
+  color: #e0e5ed;
+}
+
+.section__hero__services__branding .btn::before, .section__hero__services__branding .btn::after{
+  background-image: url(/assets/arrow_btn_red_clear.svg);
+}
+
 
 /*   Servicio Web   */
 .section__hero__services__web .btn{
@@ -3066,11 +3075,20 @@ section{
 .section__hero__services__marketing{
   padding: 140px 50px 100px 50px;
   h1{
-    color: #ce6f6a !important;
+    color: #f0938e !important;
   }
   h2{
-    color:#fad2d2 !important;
+    color:#e6d5d5 !important;
   }
+}
+
+.section__hero__services__marketing .btn{
+  border-color: #748fbb !important;
+  color: #e0e5ed;
+}
+
+.section__hero__services__marketing .btn::before, .section__hero__services__marketing .btn::after{
+  background-image: url(/assets/arrow_btn_clear.svg);
 }
 
 
@@ -3088,6 +3106,7 @@ section{
 .cel__wrapper::before{
   content: "";
   position: absolute;
+  z-index: -1;
   height: 180%;
   aspect-ratio: 1/1;
   background: rgb(71,82,129);
@@ -4787,6 +4806,10 @@ form label{
     padding: 5% 200px 12% 30px;
   }
 
+  .section__description__branding{
+    padding: 10% 200px 12% 30px !important;
+  }
+
   .search__warning{
     font-size: 16px;
   }
@@ -5049,6 +5072,28 @@ form label{
         }
         .container, .container2, .container3{
           height: 50vh;
+        }
+      }
+    }
+  }
+
+  .section__hero__services__marketing{
+    .column__2{
+      .col__right{
+        height: 50vh;
+        .cel__wrapper{
+          height: 100%;
+          .cel__left{
+            left: -10%;
+            transform: rotate(-20deg);
+          }
+          .cel__right{
+            height: 72%;
+            right: -5%;
+            transform: rotate(18deg);
+            top: -8%;
+            padding-left: 5%;
+          }
         }
       }
     }
@@ -5343,6 +5388,40 @@ form label{
     }
   }
 
+  .section__hero__services__branding {
+    padding: 100px 15px 0px 15px !important;
+    .column__2 {
+      .col__right {
+        .container, .container2, .container3 {
+          height: 30vh;
+        }
+        .container img, .container2 img, .container3 img{
+          padding: 5px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  .section__hero__services__marketing {
+    padding: 100px 15px 20px 15px !important;
+    .column__2 {
+      .col__right {
+        height: 35vh;
+        .cel__wrapper{
+          .cel__left{
+            height: 85%;
+          }
+          .cel__right{
+            right: -9%;
+            top: 0%;
+            transform: rotate(15deg);
+          }
+        }
+      }
+    }
+  }
+
   .browser__service__wrapper{
     border-radius: 11px 11px 0px 0px;
     padding: 6px 6px 18px;
@@ -5366,6 +5445,10 @@ form label{
 
   #section__description {
     padding: 5% 15px 12% 15px;
+  }
+
+  .section__description__branding{
+    padding: 15% 15px 12% 15px !important;
   }
 
   #section__data__service{
@@ -5431,12 +5514,12 @@ form label{
   }
 
   .accordion__title span {
-    font-size: 22px;
+    font-size: 18px;
     line-height: 1.4;
   }
 
   .accordion__content p{
-    font-size: 18px;
+    font-size: 17px;
   }
 
 }
