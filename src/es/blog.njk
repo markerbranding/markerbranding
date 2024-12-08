@@ -13,10 +13,8 @@ locale: es
   <section id="section__hero__blog">
     <div class="column__2">
       <div class="col__left">
-        <h1>Artículos de branding, web marketing y publicidad</h1>
-        <h2>Todos los</h2>
-        <h2>articulos</h2>
-        <h2>de blog.</h2>
+        <h1>Blog de branding, web, marketing y publicidad</h1>
+        <h2>Todo sobre branding, web y marketing.</h2>
       </div>
       <div class="col__right">
         
@@ -35,8 +33,8 @@ locale: es
     </div>
   </section>
 
-  <section>
-    <div class="section">
+  <section id="section__articles">
+    <div class="column__1">
       <ul role="list" class="blog__list flow">
         {%- for blog in collections.blog_es | reverse -%}
           {% include 'blog-snippet.njk' %}
