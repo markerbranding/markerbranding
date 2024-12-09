@@ -493,6 +493,10 @@ a{
   transition: transform 0.3s ease-in-out, left 0.3s ease-in-out, opacity 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+.oscuro #mobile__trigger span{
+  background-color: #ffffff90;
+}
+
 #mobile__trigger span:nth-child(2){
   top: calc(50% - 1px);
 }
@@ -2036,7 +2040,7 @@ section{
 }
 
 .page-work-branding #filter__branding a{
-  background-color: #111c4e;
+  background-color: #d22319;
   color: #fff;
 }
 
@@ -2045,7 +2049,7 @@ section{
 }
 
 .page-work-web #filter__web a{
-  background-color: #111c4e;
+  background-color: #d22319;
   color: #fff;
 }
 
@@ -2054,7 +2058,7 @@ section{
 }
 
 .page-work-marketing #filter__marketing a{
-  background-color: #111c4e;
+  background-color: #d22319;
   color: #fff;
 }
 
@@ -5460,7 +5464,7 @@ form label{
   }
 
   .next__prev__description__wrapper h2{
-    font-size: 14px;
+    font-size: 15px;
     margin-bottom: 5px;
   }
 
@@ -5472,6 +5476,16 @@ form label{
     font-size: 11px;
     line-height: 1.2;
   }
+
+  .next__prev__description__wrapper h3{
+    font-size: 20px;
+  }
+
+  .next__prev__description__wrapper p{
+    font-size: 16px;
+    line-height: 1.2;
+  }
+
 
   #section__article__content em{
     font-size: 15px;
@@ -5518,6 +5532,91 @@ form label{
         }
       }
     }
+  }
+
+  .work__list .snippet__description h2{
+    font-size: 24px;
+  }
+
+  #section__work__list p{
+    font-size: 14px !important;
+  }
+
+  .filter__work{
+    margin-top: -18px;
+    margin-bottom: 10%;
+  }
+
+  .filter__work li a{
+    font-size: 12px;
+    padding: 0px 10px;
+    height: 38px;
+  }
+
+  .filter__work li a span{
+    font-size: 12px;
+    padding: 0px 10px;
+  }
+
+  .filter__work li::after {
+    width: 18px;
+    height: 12px;
+    bottom: -11px;
+    left: calc(50% - 9px);
+  }
+
+  .article__work{
+    padding-top: 100px;
+  }
+
+  .work__title span, .work__title span a{
+    font-size: 13px;
+  }
+
+  .work__title h1{
+    font-size: 60px;
+  }
+
+  #section__hero__work{
+    padding: 0px 30px 0px;
+  }
+
+  .article__work .column__2{
+    flex-direction: column;
+    .col__left{
+      width: 100%;
+      padding-right: 0px;
+    }
+    .col__right{
+      width: 100%;
+      padding-left: 0px;
+    }
+  }
+
+  .article__work h3{
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .article__work h2{
+    font-size: 17px;
+  }
+
+  #section__work__list{
+    padding: 0px 30px 1px;
+  }
+
+  .article__work #section__work__list h3{
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .article__work #section__work__list h2{
+    width: 100%;
+  }
+
+  #section__work__list picture{
+    margin-bottom: 30px;
   }
 
 }
@@ -6143,13 +6242,13 @@ form label{
   }
 
   #section__prev__next .col__left{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   #section__prev__next .col__right{
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
   .next__prev__wrapper{
@@ -6211,6 +6310,68 @@ form label{
         }
       }
     }
+  }
+
+  .filter__work{
+    margin-bottom: 15%;
+  }
+
+  #section__hero__work{
+    padding: 0px 15px 0px;
+  }
+
+  .work__title h1 {
+    font-size: 40px;
+  }
+
+  #section__work__list{
+    padding: 0px 15px 1px;
+  }
+
+  .article__work h2{
+    font-size: 16px;
+  }
+
+  .article__work #section__work__list h3{
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+
+  .article__work #section__work__list h2{
+    margin-top: 0px;
+  }
+
+  #section__work__list picture{
+    margin-bottom: 15px;
+  }
+
+  .col__left .next__prev__description__wrapper{
+    padding-left: 20px;
+  }
+
+  .col__right .next__prev__description__wrapper{
+    padding-right: 20px;
+  }
+
+  .col__right .next__prev__wrapper{
+    flex-direction: column-reverse;
+  }
+
+  .next__prev__img__wrapper{
+    margin-bottom: 20px;
+  }
+
+  .next__prev__img__wrapper img{
+    height: 180px;
+    object-fit: cover;
+  }
+
+  #section__prev__next .col__left .next__prev__img__wrapper{
+    transform: translateX(-0px);
+  }
+
+  #section__prev__next .col__right .next__prev__img__wrapper{
+    transform: translateX(0px);
   }
 
 }
