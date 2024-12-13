@@ -327,7 +327,7 @@ a{
   margin: 0;
   padding: 0;
   min-width: 140px;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 10px;
   box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 }
 
@@ -774,6 +774,7 @@ section{
 
 .btn:hover{
   color:#0053bf;
+  border-color: #d22319;
 }
 
 .btn:hover::before{
@@ -827,7 +828,7 @@ section{
 .page-enfoque #section__hero{
   padding: 0 50px; 
   position: relative;
-  overflow: hidden;
+  
 }
 
 .page-enfoque #section__hero::before{
@@ -1740,18 +1741,18 @@ section{
 
 #section__hero__work__cat{
   padding: 120px 50px 60px;
-  background-color: #1f222f;
+  background-color: #c2ccdd;
 }
 
 #section__hero__work__cat .column__1{
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
 #section__hero__work__cat h1{
-  color:#7e84a3;
+  color:#111c4e;
   text-align: left;
   margin-bottom: 20px;
 }
@@ -1761,7 +1762,7 @@ section{
   line-height: 0.8;
   font-weight: 600;
   text-transform: uppercase;
-  color:#7e84a3;
+  color:#0053bf;
   text-align: left;
   /*text-shadow: 0px 8px 20px rgba(0,0,0,0.2);*/
 }
@@ -1919,14 +1920,14 @@ section{
 
 .article__work #section__work__list h3{
   width: 30%;
-  margin-top: calc(5% - 50px);
-  margin-bottom: 5%;
+  margin-top: calc(8% - 50px);
+  margin-bottom: 0%;
 }
 
 .article__work #section__work__list h2{
   width: 70%;
-  margin-top: calc(5% - 50px);
-  margin-bottom: 5%;
+  margin-top: 50px;
+  margin-bottom: 8%;
 }
 
 .snippet__title__wrapper{
@@ -2304,7 +2305,7 @@ section{
 }
 
 .claro article h2, .claro article span{
-  color:#5d5d5d;
+  color:#00000080;
 }
 
 .claro #section__header{

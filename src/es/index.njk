@@ -19,7 +19,7 @@ label: es
     </div>
     <div class="column__2 column__hero__2">
         <div class="col__left">
-          <h1>Somos una agencia de branding en Mérida</h1>
+          <h1>Agencia de branding en México</h1>
           <h2>Creamos estrategias para construir marcas</h2>
           <h2 class="anim__hero__h2">
             <span>profesionales</span>
@@ -28,12 +28,11 @@ label: es
             <span>emotivas</span>
             <span>confiables</span>
           </h2>
-          <a class="btn btn__hero">Conoce nuestro enfoque</a>
+          <button class="btn btn__hero">Conoce nuestro enfoque</button>
         </div>
         <div class="col__right">
-          <video id="videoHero" width="320" height="240" autoplay muted loop x-webkit-airplay="allow">
-            <source src="/assets/enfoque/video_prueba.mp4" type="video/mp4">
-            <!--<source src="movie.ogg" type="video/ogg">-->
+          <video id="videoHero" width="320" height="240" autoplay muted playsinline loop x-webkit-airplay="allow">
+            <source src="/assets/enfoque/marker_reel.mp4" type="video/mp4">
               Tu navegador no puede reproducir este video, considera actualizarlo a una versión más reciente
           </video> 
         </div>
@@ -45,9 +44,11 @@ label: es
       <div class="col__left">
         <h3 class="subtitle">Enfoque</h3>
         <h2 id="frase">
-          Nos especializamos en crear estrategias de posicionamiento para las marcas, mediante la identificación
-          de sus valores clave, para difundirlos a través del diseño de canales de comunicación relevantes,
-          el marketing y la publicidad a fin de alcanzar a un público interesado en interactuar y adquirir dichos valores.
+          Nos especializamos en crear marcas a través del diseño de estrategias de posicionamiento para
+          las empresas, con base en la identificación de sus valores y la estructura de diferenciadores
+          que les permitan destacar, ser memorables, conectar e interactuar con su audiencia,
+          mediante la creación de canales de comunicación relevantes como el desarrollo web,
+          el marketing y la publicidad.
         </h2>
       </div>
       <div class="col__right">
@@ -415,7 +416,11 @@ function homeGsap() {
   // later, if we need to revert all the animations/ScrollTriggers...
 
 
-
+  // Btn ScrollTo:
+  const heroBtn = document.querySelector('#section__hero .btn');
+  heroBtn.addEventListener('click', () => {
+      gsap.to(window, { duration: 0.5, scrollTo: "#section__intro", ease: "power4.out"});
+  });
 
 
 
@@ -437,9 +442,9 @@ function homeGsap() {
   mySplitP3 = new SplitText(".anim__hero__h2 span:nth-child(3)", { type: "chars" }),
   p3chars = mySplitP3.chars;
   mySplitP4 = new SplitText(".anim__hero__h2 span:nth-child(4)", { type: "chars" }),
-  p4chars = mySplitP3.chars;
+  p4chars = mySplitP4.chars;
   mySplitP5 = new SplitText(".anim__hero__h2 span:nth-child(5)", { type: "chars" }),
-  p5chars = mySplitP3.chars;
+  p5chars = mySplitP5.chars;
 
   gsap.set(".anim__hero__h2 span:nth-child(1) > div", { opacity: 1, display:"unset" });
   gsap.set(".anim__hero__h2 span:nth-child(2) > div", { opacity: 0 });
@@ -452,19 +457,19 @@ function homeGsap() {
   function p1start() {
       var tl3 = gsap.timeline();
       tl3.to(p1chars, {duration: 0.05, opacity: 1, stagger: 0.05})
-      tl3.to(p1chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+      .to(p1chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1.5})
       
-      tl3.to(p2chars, {duration: 0.05, opacity: 1, stagger: 0.05})
-      tl3.to(p2chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+      .to(p2chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      .to(p2chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1.5})
 
-      tl3.to(p3chars, {duration: 0.05, opacity: 1, stagger: 0.05})
-      tl3.to(p3chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+      .to(p3chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      .to(p3chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1.5})
 
-      tl3.to(p4chars, {duration: 0.05, opacity: 1, stagger: 0.05})
-      tl3.to(p4chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1})
+      .to(p4chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      .to(p4chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1.5})
 
-      tl3.to(p5chars, {duration: 0.05, opacity: 1, stagger: 0.05})
-      tl3.to(p5chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1, onComplete: p1start})
+      .to(p5chars, {duration: 0.05, opacity: 1, stagger: 0.05})
+      .to(p5chars, {duration: 0.05, opacity: 0, stagger: -0.05, delay: 1.5, onComplete: p1start})
   }
 
   tl.to("#videoHero", {
