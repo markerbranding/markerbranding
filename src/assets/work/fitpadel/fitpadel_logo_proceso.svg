@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1000 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(0.716608,0,0,0.716608,-227.119,-196.81)">
+        <g transform="matrix(0.176404,0,0,0.176404,1127.23,321.998)">
+            <g transform="matrix(1819.44,0,0,1819.44,2534.35,1751.72)">
+            </g>
+            <text x="1484.53px" y="1751.72px" style="font-family:'Poppins-SemiBold', 'Poppins';font-weight:600;font-size:1819.44px;fill:rgb(169,213,47);">T</text>
+        </g>
+        <g transform="matrix(-0.422472,0.613423,0.613423,0.422472,624.302,622.287)">
+            <path d="M-225.285,-173.894L129.61,-173.894L91.382,-118.388L-263.513,-118.389L-225.285,-173.894Z" style="fill:rgb(169,213,47);fill-rule:nonzero;"/>
+        </g>
+        <g transform="matrix(0.735015,0,0,0.735015,974.039,610.297)">
+            <path d="M0,-276.964L110.551,-276.964C163.321,-276.964 206.098,-234.186 206.098,-181.417L206.098,-70.866C206.098,-18.096 163.321,24.681 110.551,24.681L0,24.681C-52.769,24.681 -95.547,-18.096 -95.547,-70.866L-95.547,-181.417C-95.547,-234.186 -52.769,-276.964 0,-276.964ZM-0,-227.602C-25.507,-227.602 -46.185,-206.924 -46.185,-181.417L-46.185,-70.866C-46.185,-45.358 -25.507,-24.681 0,-24.681L110.551,-24.681C136.059,-24.681 156.736,-45.358 156.736,-70.866L156.736,-181.417C156.736,-206.924 136.059,-227.602 110.551,-227.602L-0,-227.602Z" style="fill:rgb(169,213,47);"/>
+        </g>
+        <g transform="matrix(3.75325,0,0,3.75325,-1476.7,-653.372)">
+            <g transform="matrix(10.4104,0,0,10.4104,807.781,372.218)">
+            </g>
+            <text x="766.232px" y="372.218px" style="font-family:'AeonikTRIAL-Regular', 'Aeonik TRIAL', sans-serif;font-size:10.41px;fill:rgb(15,73,157);">Simple<tspan x="797.36px 802.159px " y="372.218px 372.218px ">za</tspan></text>
+        </g>
+        <g transform="matrix(3.75325,0,0,3.75325,-1939.75,-653.372)">
+            <g transform="matrix(10.4104,0,0,10.4104,808.098,372.218)">
+            </g>
+            <text x="765.915px" y="372.218px" style="font-family:'AeonikTRIAL-Regular', 'Aeonik TRIAL', sans-serif;font-size:10.41px;fill:rgb(15,73,157);">Moderno</text>
+        </g>
+        <g transform="matrix(3.75325,0,0,3.75325,-2390.37,-653.372)">
+            <g transform="matrix(10.4104,0,0,10.4104,801.362,372.218)">
+            </g>
+            <text x="772.651px" y="372.218px" style="font-family:'AeonikTRIAL-Regular', 'Aeonik TRIAL', sans-serif;font-size:10.41px;fill:rgb(15,73,157);">A<tspan x="779.272px " y="372.218px ">c</tspan>tiv<tspan x="795.304px " y="372.218px ">o</tspan></text>
+        </g>
+    </g>
+</svg>

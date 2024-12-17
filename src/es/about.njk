@@ -11,12 +11,12 @@ label: es
   <section id="section__hero__about">
     <div class="column__2">
       <div class="col__left">
-        <h1>Agencia creativa</h1>
+        <h1>Agencia creativa especializada en branding y comunicación</h1>
         <h2>
-          En Marker encontrarás a un equipo de trabajo multidisciplinario apasionado
-          por lo que hace y motivado por lo que puede lograr por tu marca.
+          En Marker encontrarás a un equipo multidisciplinario apasionado
+          por lo que hace y motivado por lo que puede lograr para tu marca.
         </h2>
-        <a class="btn btn__hero">Conoce más de nosotros</a>
+        <button class="btn btn__hero">Conoce más de nosotros</button>
       </div>
       <div class="col__right">
       </div>
@@ -35,9 +35,14 @@ label: es
     <div class="column__2 column__intro">
       <div class="col__left">
         <h3 class="subtitle">Quiénes somos & qué hacemos</h3>
-        <h2 id="frase">Marker se creó en 2019 como una agencia especializada en branding, marketing y desarrollo web.
-          Nuestro enfoque se centra en la creación de estrategias que ayuden a las empresas a comunicar
-          de manera efectiva el valor que aportan a sus clientes.
+        <h2 id="frase">
+          Somos una agencia creativa que inicia en 2019 con la visión de ayudar a otras
+          empresas a lograr un posicionamiento en el mercado, a través de una comunicación efectiva
+          y relevante para su audiencia.
+          Lo hacemos mediante estrategias que logren identificar y conocer al consumidor meta,
+          los valores que persigue y desea obtener a cambio, y con ello podamos ayudar
+          a las empresas a moldear su personalidad y oferta, logrando un mayor grado de atracción
+          durante la etapa de compra.
         </h2>
       </div>
       <div class="col__right">
@@ -53,12 +58,15 @@ label: es
       <div class="col__right">
         <h3 class="subtitle">Qué nos motiva</h3>
         <h2 class="title">
-          Lograr los objetivos planteados para tu marca. Nuesto trabajo se rige mediante de indicadores que nos
-          permitan saber si se alcanzó la meta planteada.
+          Los retos… y el branding lo es. Nos motiva encarar cada proyecto de forma independiente e
+          integral porque ninguna marca es igual, desde su visión, valores, productos, servicios,
+          hasta su operación y forma de hacer las cosas, todo forma parte de la ecuación para alcanzar
+          un resultado exitoso.
         </h2>
-        <h2>
-          Nos apasiona diseñar, programar, comunicar, analizar, pero nos motiva más
-          cuando lo ponemos a prueba ante los retos de cada marca con la que trabajamos.
+        <h2 class="title">
+          Nos apasiona crear estrategias junto contigo, que te permitirán llamar la atención de aquellos
+          en busca de lo que ofreces. Nuestro objetivo es ayudarte a que tus clientes obtengan
+          la mejor versión de ti.
         </h2>
       </div>
     </div>
@@ -68,7 +76,10 @@ label: es
     <div class="column__2">
       <div class="col__left">
         <h3 class="subtitle">Nuestros valores fundamentales</h3>
-        <h2 class="title">Marker define su esencia a través de los siguientes valores</h2>
+        <h2 class="title">
+          En Marker nos regimos a partir de valores fundamentales que son parte de nuestra
+          esencia en cada proyecto que iniciamos.
+        </h2>
       </div>
       <div class="col__right">
         <ul role="list" class="value__list">
@@ -145,7 +156,7 @@ label: es
 
   <section id="section__team">
     <div class="column__1">
-      <h3 class="subtitle">Equipo Marker</h3>
+      <h3 class="subtitle">Quiénes integran a Marker</h3>
     </div>
     <div class="column__1">
       <ul role="list" class="team__list">
@@ -162,6 +173,12 @@ label: es
 <script>
 
   function aboutGsap() {
+
+    // Btn ScrollTo:
+    const heroBtn = document.querySelector('#section__hero__about .btn');
+    heroBtn.addEventListener('click', () => {
+        gsap.to(window, { duration: 0.5, scrollTo: "#section__intro", ease: "power4.out"});
+    });
 
     /*	Frase	*/
     var tl2 = gsap.timeline(),

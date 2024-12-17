@@ -2,69 +2,144 @@ const { DateTime } = require("luxon");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
 
-const Image = require('@11ty/eleventy-img')
-const markdown = require('markdown-it')()
+const Image = require('@11ty/eleventy-img');
+const markdownIt = require('markdown-it');
+const markdownItAttrs = require('markdown-it-attrs');
 
+// Configurar Markdown-it con atributos
+const markdown = markdownIt({
+  html: true,
+  linkify: true
+}).use(markdownItAttrs);
+
+// Renderizado personalizado para imágenes
 markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
-  const token = tokens[idx]
-  let imgSrc = token.attrGet('src')
-  const imgAlt = token.content
-  const imgTitle = token.attrGet('title')
+  const token = tokens[idx];
+  let imgSrc = token.attrGet('src');
+  const imgAlt = token.content;
+  const imgTitle = token.attrGet('title') || '';
 
-  const htmlOpts = { alt: imgAlt, loading: 'lazy', decoding: 'async' }
+  // Comprobar si el archivo es SVG
+  if (imgSrc.endsWith('.svg')) {
+    // Generar solo la etiqueta <img> sin procesar como webp o jpg
+    return `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async">`;
+  }
+
+  // Comprobar si el archivo es SVG
+  if (imgSrc.endsWith('.gif')) {
+    // Generar solo la etiqueta <img> sin procesar como webp o jpg
+    return `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async">`;
+  }
+
+  // Extraer atributos de clases, IDs y otros
+  const attributes = imgTitle.match(/(\.[\w-]+)|(\#[\w-]+)/g) || [];
+  const classes = attributes.filter(attr => attr.startsWith('.')).map(cls => cls.substring(1)).join(' ');
+  const id = attributes.find(attr => attr.startsWith('#'))?.substring(1);
+
+  const htmlOpts = {
+    alt: imgAlt,
+    loading: 'lazy',
+    decoding: 'async',
+    class: classes || null,
+    id: id || null
+  };
 
   if (imgSrc.startsWith('/assets')) {
-    imgSrc = 'src' + imgSrc
+    imgSrc = 'src' + imgSrc;
   }
 
-  const parsed = (imgTitle || '').match(
+  const parsed = (imgTitle || '').replace(/(\.[\w-]+)|(\#[\w-]+)/g, '').match(
     /^(?<skip>@skip(?:\[(?<width>\d+)x(?<height>\d+)\])? ?)?(?:\?\[(?<sizes>.*?)\] ?)?(?<caption>.*)/
-  ).groups
+  )?.groups || {};
 
   if (parsed.skip || imgSrc.startsWith('http')) {
-    const options = { ...htmlOpts }
+    const options = { ...htmlOpts };
     if (parsed.sizes) {
-      options.sizes = parsed.sizes
+      options.sizes = parsed.sizes;
     }
 
-    const metadata = { jpeg: [{ url: imgSrc }] }
+    const metadata = { jpeg: [{ url: imgSrc }] };
     if (parsed.width && parsed.height) {
-      metadata.jpeg[0].width = parsed.width
-      metadata.jpeg[0].height = parsed.height
+      metadata.jpeg[0].width = parsed.width;
+      metadata.jpeg[0].height = parsed.height;
     }
 
-    const generated = Image.generateHTML(metadata, options)
+    const generated = Image.generateHTML(metadata, options);
 
     if (parsed.caption) {
-      return figure(generated, parsed.caption)
+      return figure(generated, parsed.caption);
     }
-    return generated
+    return generated;
   }
 
-  const widths = [450, 780, 962, 1400, 1920]
+  const widths = [450, 780, 962, 1400, 1920];
   const imgOpts = {
     widths: widths
-    //.concat(widths.map((w) => w * 2)) // generate 2x sizes
-    .filter((v, i, s) => s.indexOf(v) === i), // dedupe
+      //.concat(widths.map((w) => w * 2)) // generate 2x sizes
+      .filter((v, i, s) => s.indexOf(v) === i), // dedupe
     formats: ['webp', 'jpeg'], // TODO: add avif when support is good enough
     urlPath: '/assets/img/',
     outputDir: './public/assets/img/'
-  }
+  };
 
-  Image(imgSrc, imgOpts)
+  Image(imgSrc, imgOpts);
 
-  const metadata = Image.statsSync(imgSrc, imgOpts)
+  const metadata = Image.statsSync(imgSrc, imgOpts);
 
   const generated = Image.generateHTML(metadata, {
     sizes: parsed.sizes || '(max-width: 1920px) 100vw, 1920px',
     ...htmlOpts
-  })
+  });
 
   if (parsed.caption) {
-    return figure(generated, parsed.caption)
+    return figure(generated, parsed.caption);
   }
-  return generated
-}
+  return generated;
+};
+
+// Personalizar párrafos que contienen imágenes
+markdown.renderer.rules.paragraph_open = function (tokens, idx, options, env, self) {
+  const nextToken = tokens[idx + 1];
+
+  // Verificar si el siguiente token es una imagen
+  if (nextToken && nextToken.type === "inline" && nextToken.children) {
+    const hasImage = nextToken.children.some(child => child.type === "image");
+    if (hasImage) {
+      // Buscar clases o IDs en la imagen
+      const imgToken = nextToken.children.find(child => child.type === "image");
+      if (imgToken) {
+        const imgAttrs = imgToken.attrs || [];
+        const pToken = tokens[idx];
+
+        // Mover clases e IDs al <p>
+        imgAttrs.forEach(attr => {
+          if (attr[0] === "class") {
+            pToken.attrPush(["class", attr[1]]);
+          }
+          if (attr[0] === "id") {
+            pToken.attrPush(["id", attr[1]]);
+          }
+        });
+      }
+    }
+  }
+
+  return self.renderToken(tokens, idx, options);
+};
+
+module.exports = function (eleventyConfig) {
+  // Usar la configuración de Markdown-it
+  eleventyConfig.setLibrary("md", markdown);
+
+  // Otras configuraciones (si es necesario)
+};
+
+module.exports = function (eleventyConfig) {
+  // Usar la configuración de Markdown-it
+  eleventyConfig.setLibrary("md", markdown);
+
+  // Otras configuraciones (si es necesario)
+};
 
 module.exports = function (eleventyConfig) {
 

@@ -94,10 +94,11 @@ label: es
       trigger: ".work__list",
       start: "top, 70%",
       end: "top, 60%",
-      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
+      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2, x:0 }),
+      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2, x:0 }),
+      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2, x:0 }),
+      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2, x:"initial" }),
     });
+
   }
 </script>

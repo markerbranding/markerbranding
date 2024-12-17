@@ -5,7 +5,7 @@ label: es
 title: Eje Central
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-03-24
-year: 2023 - 2024
+year: 2024
 bodyClass: ejecentral claro
 bgcolor: '#e0e0e0'
 namecolor: '#272727'
