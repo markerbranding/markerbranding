@@ -186,11 +186,27 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("branding_es", function (collectionBranding) {
-    return collectionBranding.getFilteredByTags("branding", "es");
+    return collectionBranding.getFilteredByTags("work", "branding", "es");
   });
 
   eleventyConfig.addCollection("branding_en", function (collectionBranding) {
-    return collectionBranding.getFilteredByTags("branding", "en");
+    return collectionBranding.getFilteredByTags("work", "branding", "en");
+  });
+
+  eleventyConfig.addCollection("web_es", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("work", "web", "es");
+  });
+
+  eleventyConfig.addCollection("web_en", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("work", "web", "en");
+  });
+
+  eleventyConfig.addCollection("marketing_es", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("work", "marketing", "es");
+  });
+
+  eleventyConfig.addCollection("marketing_en", function (collectionBranding) {
+    return collectionBranding.getFilteredByTags("work", "marketing", "en");
   });
 
   eleventyConfig.addCollection("team", function(collection) {

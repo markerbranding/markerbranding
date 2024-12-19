@@ -147,6 +147,18 @@
                         },
                     },
                     {
+                        namespace: 'web',
+                        async afterEnter(data) { 
+                            webGsap();
+                        },
+                    },
+                    {
+                        namespace: 'marketing',
+                        async afterEnter(data) { 
+                            marketingGsap();
+                        },
+                    },
+                    {
                         namespace: 'about',
                         async afterEnter(data) { 
                             aboutGsap();
@@ -273,6 +285,34 @@
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
                             brandingGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'web',
+                        to: { namespace: ['web'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            webGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'marketing',
+                        to: { namespace: ['marketing'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            marketingGsap();
                         }
                     },
                     {

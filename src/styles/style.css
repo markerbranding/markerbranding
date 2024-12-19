@@ -2148,10 +2148,33 @@ section{
   width: 100%;
 }
 
+#section__work__list video{
+  width: 100%;
+  height: auto;
+}
+
 #section__work__list picture{
   margin-bottom: 50px;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.catWeb #section__work__list{
+  padding: 0px 0px 0px;
+  .web__wrapper{
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.catWeb #section__work__list picture{
+  margin-bottom: 0px;
+  border-radius: 0px;
+  margin-top: -3px;
+}
+
+.web__wrapper{
+  padding: 0px 50px;
 }
 
 #section__prev__next{
