@@ -921,6 +921,10 @@ section{
   max-width: 1400px;
 }
 
+.main__container{
+  overflow: hidden;
+}
+
 /*  ENFOQUE  */
 
 .page-enfoque #section__drag{
@@ -942,7 +946,6 @@ section{
 .page-enfoque #section__hero{
   padding: 0 50px; 
   position: relative;
-  
 }
 
 .page-enfoque #section__hero::before{
@@ -1126,7 +1129,6 @@ section{
 
 #section__metodologia{
   position: relative;
-  overflow: hidden;
 }
 
 #section__metodologia::before{
@@ -1431,7 +1433,6 @@ section{
   border-top:0px solid #111c4e1a;
   padding: 5% 50px 5%;
   position: relative;
-  overflow: hidden;
 }
 
 #section__featured h3{
@@ -1447,8 +1448,15 @@ section{
   font-size: 1.2vw;
 }
 
-#section__featured .work__list{
-  margin-top: 5%;
+#section__featured{
+  .work__list{
+    margin-top: 5%;
+    li{
+      &:nth-child(2n+2){
+        margin-top: 50%;
+      }
+    }
+  }
 }
 
 .featured__cover{
@@ -1853,6 +1861,10 @@ section{
   background-position: center;
 }
 
+.hidden{
+  display: none !important;
+}
+
 #section__hero__work__cat{
   padding: 120px 50px 60px;
   background-color: #c2ccdd;
@@ -1901,11 +1913,12 @@ section{
 
 .work__list{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   grid-template-rows: auto;
   grid-auto-rows: auto;
   padding: 0 15%;
   width: 100%;
+  grid-column-gap: 20%;
 }
 
 .work__list li{
@@ -1917,13 +1930,18 @@ section{
   grid-row: span 1;
   opacity: 0;
   transform-origin: center bottom;
+  transform: translateY(100px);
+}
+
+.hidden {
+  display: none;
 }
 
 .work__img__wrappper{
   overflow: hidden;
   border-radius: 10px;
 }
-
+/*
 .work__list li:nth-child(2n+1){
   grid-column-start: 1;
   grid-column-end: 3;
@@ -1934,6 +1952,8 @@ section{
   grid-column-start: 4;
   grid-column-end: 6;
 }
+*/
+
 
 .work__list li a{
   height: auto;
@@ -2080,25 +2100,13 @@ section{
   position: relative;
 }
 
-.filter__work li::after{
-  content:"";
-  position: absolute;
-  width: 22px;
-  height: 13px;
-  bottom:-12px;
-  left: calc(50% - 11px);
-  background-image: url(../assets/tab_arrow.svg);
-  background-repeat: no-repeat;
-  display: none;
-}
-
-.filter__work li a, .filter__work li a span{
+.filter__work li a, .filter__work li button span{
   font-size: 15px;
   text-transform: uppercase;
   display: block;
 }
 
-.filter__work li a{
+.filter__work li button{
   padding: 0px 20px;
   height: 44px;
   display: flex;
@@ -2107,13 +2115,43 @@ section{
   justify-content: center;
   color:#111c4e;
   transition: color 0.2s ease-in-out;
+  border: 0px;
+  text-transform: uppercase;
 }
 
-.filter__work li a:hover{
+.filter__work li:first-child button{
+  border-radius: 10px 0px 0px 10px;
+}
+.filter__work li:last-child button{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.filter__work li.activo button{
+  background-color: #d22319;
+  color: #ffffff;
+}
+
+.filter__work li.activo button:hover{
+  color: #ffffff;
+}
+
+.filter__work li.activo::after{
+  content:"";
+  display: block;
+  position: absolute;
+  width: 22px;
+  height: 13px;
+  bottom:-12px;
+  left: calc(50% - 11px);
+  background-image: url(../assets/tab_arrow.svg);
+  background-repeat: no-repeat;
+}
+
+.filter__work li button:hover{
   color: #d22319;
 }
 
-.page-work #filter__all{
+.page-work #filter__all button{
   background-color: #d22319;
   border-radius: 10px 0px 0px 10px;
 }
@@ -2126,7 +2164,8 @@ section{
   display: block;
 }
 
-.page-work-branding #filter__branding a{
+/*
+.page-work-branding #filter__branding button{
   background-color: #d22319;
   color: #fff;
 }
@@ -2135,7 +2174,7 @@ section{
   display: block;
 }
 
-.page-work-web #filter__web a{
+.page-work-web #filter__web button{
   background-color: #d22319;
   color: #fff;
 }
@@ -2144,7 +2183,7 @@ section{
   display: block;
 }
 
-.page-work-marketing #filter__marketing a{
+.page-work-marketing #filter__marketing button{
   background-color: #d22319;
   color: #fff;
   border-radius: 0px 10px 10px 0px;
@@ -2153,6 +2192,7 @@ section{
 .page-work-marketing #filter__marketing::after{
   display: block;
 }
+*/
 
 .page-work .work__list li:first-child, .page-work-branding .work__list li:first-child, .page-work-web .work__list li:first-child, .page-work-marketing .work__list li:first-child{
   opacity: 1 !important;

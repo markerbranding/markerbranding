@@ -90,15 +90,77 @@ label: es
       }
     });
 
-    ScrollTrigger.batch(".work__list li", {
-      trigger: ".work__list",
-      start: "top, 70%",
-      end: "top, 60%",
-      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
-    });
+    
+    let batchInstance;
+
+    // Función para destruir y crear un nuevo batch
+    function createBatch() {
+        // Si ya existe un batch, destrúyelo
+        if (batchInstance) {
+            ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Elimina todos los triggers asociados
+            batchInstance = null; // Resetear la instancia
+        }
+
+        // Crear un nuevo batch solo con los elementos visibles
+        const visibleItems = document.querySelectorAll(".work__list li:not([style*='display: none'])");
+        batchInstance = ScrollTrigger.batch(visibleItems, {
+            start: "top 70%",
+            end: "top 60%",
+            onEnter: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+            onEnterBack: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+            onLeave: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+            onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, stagger: 0.2, y:100 }),
+        });
+
+        // Actualizar posiciones de ScrollTrigger
+        ScrollTrigger.refresh();
+    }
+
+    // Función para actualizar márgenes de los elementos visibles
+    function updateMargins() {
+        const $visibleItems = $(".work__list li:not([style*='display: none'])"); // Seleccionar solo los visibles
+        $visibleItems.css("margin-top", "0"); // Resetear márgenes antes de aplicar los nuevos
+
+        $visibleItems.each(function (index) {
+            if ((index + 1) % 2 === 0) {
+                $(this).css("margin-top", "50%"); // Aplicar margen superior a cada 2do visible
+            }
+        });
+    }
+
+    // Filtros
+    function applyFilter(filterClass) {
+        // Mostrar/ocultar según el filtro seleccionado
+        if (filterClass === "all") {
+            $(".work__list li").show();
+            $(".filter__work li").removeClass("activo");
+            $(".filtrar__All").addClass("activo");
+            
+        } else {
+            $(".work__list li").hide();
+            $(`.type__${filterClass}`).show();
+            $(".filter__work li").removeClass("activo");
+            $(`.filtrar__${filterClass}`).addClass("activo");
+        }
+
+        updateMargins(); // Recalcular márgenes después de mostrar/ocultar
+        setTimeout(() => {
+            createBatch(); // Reiniciar el batch con los elementos visibles
+            ScrollTrigger.refresh(); // Forzar la actualización de posiciones
+        }, 0); // Timeout para asegurar que el DOM se ha actualizado
+    }
+
+    // Asociar filtros a los botones
+    $("#filtrar__todos").click(() => applyFilter("all"));
+    $("#filtrar__branding").click(() => applyFilter("Branding"));
+    $("#filtrar__web").click(() => applyFilter("Web"));
+    $("#filtrar__marketing").click(() => applyFilter("Marketing"));
+
+    // Inicializar el batch al cargar la página
+    createBatch();
+    updateMargins();
 
   }
 </script>
+
+
