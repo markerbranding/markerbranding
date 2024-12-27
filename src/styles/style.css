@@ -619,8 +619,8 @@ a{
   height: 7px;
   border-bottom: 2px solid #0053bf;
   border-right: 2px solid #0053bf;
-  transform: rotate(-45deg);
-  top: 0px;
+  transform: rotate(45deg);
+  top: -3px;
 }
 
 #mobile__menu > ul:last-child{
@@ -4578,6 +4578,10 @@ form label{
       margin-left: 20px;
   }
 
+  .oscuro #mobile__menu .submenu{
+    background-color: transparent !important;
+  }
+
   h1{
     font-size: 24px;
     line-height: 1.1;
@@ -4745,15 +4749,8 @@ form label{
   }
 
   .work__list{
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0% 0% 10%;
-    grid-gap: 30px;
-  }
-
-  .work__list li:nth-child(2n+2) {
-    grid-column-start: 3;
-    grid-column-end: 5;
-    margin-top: 0;
+    padding: 0% 0% 0%;
+    grid-column-gap: 10%;
   }
 
   #section__featured h2{
@@ -5662,13 +5659,13 @@ form label{
     margin-bottom: 10%;
   }
 
-  .filter__work li a{
+  .filter__work li button{
     font-size: 12px;
     padding: 0px 10px;
     height: 38px;
   }
 
-  .filter__work li a span{
+  .filter__work li button span{
     font-size: 12px;
     padding: 0px 10px;
   }
@@ -5690,6 +5687,13 @@ form label{
 
   .work__title h1{
     font-size: 60px;
+  }
+
+  .catWeb #section__work__list {
+    & .web__wrapper {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 
   #section__hero__work{
@@ -5732,6 +5736,41 @@ form label{
 
   #section__work__list picture{
     margin-bottom: 30px;
+  }
+
+  #section__hero__work__cat h2{
+    font-size: 50px;
+    line-height: 0.7;
+  }
+
+  .column__3__mkt{
+    padding: 30px;
+    gap: 30px;
+    margin-bottom: 30px;
+    p, .video__wrapper {
+      picture, .picture {
+        padding: 45px 5px 40px;
+        &::before {
+          background-size: 26px;
+        }
+        &::after {
+          background-position: 0px 0px, 22px 0px, 44px 0px, right 0px;
+          background-size: 18px;
+          bottom: 6px;
+        }
+      }
+      em {
+        font-size: 12px;
+        top: 8px;
+        left: 40px;
+        z-index: 2;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 
 }
@@ -5867,8 +5906,14 @@ form label{
     margin-top: 0;
   }
 
+  .catWeb #section__work__list {
+    & .web__wrapper {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
   .snippet__image{
-    aspect-ratio: 1/1;
     object-fit: cover;
   }
 
@@ -6455,6 +6500,20 @@ form label{
 
   #section__prev__next .col__right .next__prev__img__wrapper{
     transform: translateX(0px);
+  }
+
+  #section__hero__work__cat h2{
+    font-size: 35px;
+    line-height: 0.6;
+  }
+
+  .column__3__mkt{
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    p, .video__wrapper{
+      width: 100%;
+    }
   }
 
 }

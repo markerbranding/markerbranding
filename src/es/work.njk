@@ -116,6 +116,8 @@ label: es
         ScrollTrigger.refresh();
     }
 
+
+    
     // Función para actualizar márgenes de los elementos visibles
     function updateMargins() {
         const $visibleItems = $(".work__list li:not([style*='display: none'])"); // Seleccionar solo los visibles
@@ -123,7 +125,14 @@ label: es
 
         $visibleItems.each(function (index) {
             if ((index + 1) % 2 === 0) {
+
+              if (window.matchMedia("(max-width: 767px)").matches) { // If media query matches
+                $(this).css("margin-top", "0%"); // Aplicar margen superior a cada 2do visible
+              } else {
                 $(this).css("margin-top", "50%"); // Aplicar margen superior a cada 2do visible
+              }
+
+                
             }
         });
     }
@@ -159,6 +168,10 @@ label: es
     // Inicializar el batch al cargar la página
     createBatch();
     updateMargins();
+
+    $(window).on('resize', function () {
+      updateMargins();
+    });
 
   }
 </script>
