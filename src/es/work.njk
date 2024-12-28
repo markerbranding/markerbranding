@@ -5,6 +5,7 @@ bodyClass: work
 layout: 'base.njk'
 barba: work
 label: es
+id: all
 ---
 <div data-barba="container" data-barba-namespace="work">
   <section id="section__hero__work__cat">
@@ -31,6 +32,17 @@ label: es
 <script>
   
   function workGsap() {
+
+    /*  Referrer  */
+    document.addEventListener("DOMContentLoaded", function () {
+      const projectLinks = document.querySelectorAll("a.snippet");
+
+      projectLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+              sessionStorage.setItem("previousPage", window.location.pathname);
+          });
+      });
+    });
 
     // Check if it's a touch device
     const isTouchDevice = 'ontouchstart' in window;

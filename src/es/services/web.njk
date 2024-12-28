@@ -10,9 +10,9 @@ label: es
   <section id="section__hero__services" class="section__hero__services__web">
     <div class="column__2">
         <div class="col__left">
-            <h1>Diseño web, SEO & desarrollo</h1>
+            <h1>SEO, diseño y desarrollo web</h1>
             <h2>Creamos páginas web seguras y que se posicionan en los primeros lugares de búsqueda en Google.</h2>
-            <a class="btn btn__hero">Conoce más de este servicio</a>
+            <button class="btn btn__hero">Conoce más de este servicio</button>
         </div>
         <div class="col__right">
             <div class="browser__service__wrapper">
@@ -64,7 +64,7 @@ label: es
                     productos y servicios a un público masivo, pero a diferencia de las redes sociales, lo hace con quienes ya buscan de manera directa lo que tú ofreces.
                 </p>
                 <p>
-                    Sin embargo, para que lo anterior funcione no basta con tener un sitio web atractivo, conocido por ti y por quienes ya son tus clientes conozcan.
+                    Sin embargo, para que lo anterior funcione no basta con tener un sitio web atractivo, conocido por ti y por quienes ya son tus clientes.
                     Tiene que aparecer para nuevos prospectos a través de <strong>búsquedas orgánicas en Google</strong>, tiene que posicionarse bien porque con ello proyectas confianza, porque no cualquiera aparece en los primeros lugares de búsqueda.
                 </p>
                 <p>
@@ -1830,7 +1830,7 @@ label: es
       <section id="section__why" class="dark__bg">
             <div class="column__2 column__intro">
                 <div class="col__left">
-                        <h3 class="subtitle">Por qué considerarnos como tu mejor opción</h3>
+                        <h3 class="subtitle">Por qué somos tu mejor opción</h3>
                         <h2 id="frase">
                             Somos una agencia de Branding con experiencia en desarrollo web, es decir,
                             no solo obtendrás un sitio web que lucirá profesional y acorde a la identidad de tu marca,
@@ -1855,7 +1855,7 @@ label: es
         </div>
         <div class="column__1__work__list">
           <ul role="list" class="work__list">
-            {%- for work in collections.work_es | reverse -%}
+            {%- for work in collections.web_es | reverse -%}
               {% include 'work-snippet.njk' %}
             {%- endfor -%}
           </ul>
@@ -1890,6 +1890,23 @@ label: es
 <script>
   
   function servicesWebGsap() {
+
+    // Btn ScrollTo:
+    const heroBtn = document.querySelector('#section__hero__services .btn');
+    heroBtn.addEventListener('click', () => {
+        gsap.to(window, { duration: 0.5, scrollTo: "#section__description", ease: "power4.out"});
+    });
+
+    /*  Referrer  */
+    document.addEventListener("DOMContentLoaded", function () {
+            const projectLinks = document.querySelectorAll("a.snippet");
+
+            projectLinks.forEach((link) => {
+                link.addEventListener("click", function () {
+                    sessionStorage.setItem("previousPage", window.location.pathname);
+                });
+            });
+        });
 
     /*	search p	*/
     

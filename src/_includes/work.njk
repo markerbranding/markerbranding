@@ -14,16 +14,22 @@ barba: workAll
     
     <section id="section__hero__work">
       <div class="column__1 work__title">
-        <span><a href="../../work/">Todos los Proyectos</a></span>
-        <h1 {{ textcolor }}>{{ title }}</h1>
+        <!--
+        <span><a href="../../work/">Regresar a Proyectos</a> /</span>
+        -->
+
+
+        <span><a href="../../work/" class="btn-back">Regresar</a> /</span>
+
+        <h1 style="color: {{ textcolor }};" >{{ title }}</h1>
       </div>
       <div class="column__2">
         <div class="col__left">
-          <h3 {{ textcolor }}>Sector</h3>
+          <h3 style="color: {{ textcolor }};">Sector</h3>
           <h2>{{ sector }}</h2>
         </div>
         <div class="col__right">
-          <h3 {{ textcolor }}>Descripción del cliente</h3>
+          <h3 style="color: {{ textcolor }};">Descripción del cliente</h3>
           <h2 class="basics">{{ basics }}</h2>
         </div>
       </div>
@@ -132,6 +138,33 @@ function delay (URL) {
   gsap.to(".inner__transition", { delay: 0.4, height: "100%", ease: "power4.out", duration: 0.5 });
   gsap.to(data.current.container, { opacity: 0 });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const backButton = document.querySelector(".btn-back");
+  const previousPage = sessionStorage.getItem("previousPage");
+
+  // Si existe un valor almacenado, úsalo como enlace del botón
+  if (previousPage) {
+    backButton.href = previousPage;
+  } else {
+    // Si no existe, usar un valor por defecto (el listado general de proyectos)
+    backButton.href = "../../work/";
+  }
+
+  // Poblar texto del botón back
+  if (previousPage.includes("/branding/")) {
+    backButton.text = "Regresar al servicio de Branding";
+  } else if (previousPage.includes("/web/")) {
+    backButton.text = "Regresar al servicio de Web";
+  } if (previousPage.includes("/marketing/")) {
+    backButton.text = "Regresar al servicio de Marketing";
+  } if (previousPage.includes("/work/")) {
+    backButton.text = "Regresar a todos los Proyectos";
+  }
+
+});
+
+
 
   function workAllGsap() {
 
