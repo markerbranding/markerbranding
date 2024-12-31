@@ -388,6 +388,12 @@ label: es
   
     function servicesBrandingGsap() {
 
+        // Btn ScrollTo:
+        const heroBtn = document.querySelector('#section__hero__services .btn');
+        heroBtn.addEventListener('click', () => {
+            gsap.to(window, { duration: 0.5, scrollTo: "#section__description", ease: "power4.out"});
+        });
+
         // Función para actualizar márgenes de los elementos visibles
         function updateMargins() {
             const $visibleItems = $(".work__list li:not([style*='display: none'])"); // Seleccionar solo los visibles
