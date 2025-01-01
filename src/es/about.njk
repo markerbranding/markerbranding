@@ -223,15 +223,15 @@ label: es
     })
 
     gsap.to("#section__header", {
-      scrollTrigger: {
-        trigger: "#section__header",
-        endTrigger: "#site__footer",
-        start: "top top",
-        end: "bottom top",
-        pin: "#section__header",
-        pinSpacing: false,
+      scrollTrigger:{
+          trigger:"#section__header",
+          endTrigger: "#smooth-wrapper",
+          start: "top top",
+          end: "max",
+          pin: "#section__header",
+          pinSpacing: false,
       }
-    })
+    });
 
     gsap.from("#section__divisor__team img", {
       scale: 0.6,
