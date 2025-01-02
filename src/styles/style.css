@@ -230,6 +230,7 @@ General
   z-index: 1000;
   pointer-events: none;
   opacity: 1;
+  transform-origin: bottom center;
 }
 
 .inner__transition{
@@ -240,6 +241,7 @@ General
   left: 0;
   background-color: #111c4e;
   opacity: 1;
+  transform-origin: bottom center;
 }
 
 main{
@@ -5447,9 +5449,6 @@ form label{
         #why{
           font-size: 26px;
         }
-      }
-      .col__right{
-        
       }
     }
   }

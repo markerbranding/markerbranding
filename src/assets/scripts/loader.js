@@ -25,14 +25,14 @@
 
                 tlLoad.to(".inner__transition", {
                     delay: 0.3,
-                    height: "0%",
+					scaleY: 0,
                     ease: "power4.out",
                     duration: 0.5
                 })
 
                 tlLoad.to(".transition", {
                     delay: 0,
-                    height: "0%",
+					scaleY: 0,
                     ease: "power4.out",
                     duration: 0.7
                 }, "-=0.3");
