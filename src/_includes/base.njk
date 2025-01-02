@@ -233,6 +233,18 @@
                             contactGsap();
                         },
                     },
+                    {
+                        namespace: 'thanks',
+                        async afterEnter(data) { 
+                            thanksGsap();
+                        },
+                    },
+                    {
+                        namespace: 'privacy',
+                        async afterEnter(data) { 
+                            privacyGsap();
+                        },
+                    },
                 ],
                 transitions: [
                     {
@@ -484,6 +496,34 @@
                         async afterEnter(data) {
                             window.scrollTo(0, 0);
                             contactGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'thanks',
+                        to: { namespace: ['thanks'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            thanksGsap();
+                        }
+                    },
+                    {
+                        sync: false,
+                        name: 'privacy',
+                        to: { namespace: ['privacy'] },
+                        async leave(data) {
+                            await gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
+                            await gsap.to(".inner__transition", { delay: 0.0, height: "100%", ease: "power4.out", duration: 0.5 });
+                            await gsap.to(data.current.container, { opacity: 0 });
+                        },
+                        async afterEnter(data) {
+                            window.scrollTo(0, 0);
+                            privacyGsap();
                         }
                     },
                 ],

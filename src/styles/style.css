@@ -4545,6 +4545,50 @@ form label{
   display: block;
 }
 
+#section__hero__thanks{
+  padding: 250px 50px 250px;
+  .column__2{
+    .col__left{
+      h1{
+        font-size: 4vw;
+        color: #0053bf;
+        span{
+          font-size: inherit;
+          color: #d22319;
+        }
+      }
+    }
+  }
+}
+
+#section__hero__privacy{
+  padding: 120px 50px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .column__1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 1000px;
+    h1{
+      font-size: 50px;
+      color: #0053bf;
+      margin-bottom: 30px;
+    }
+    h2{
+      margin-top: 20px;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #0053bf;
+    }
+    p{
+      font-size: 20px;
+    }
+  }
+}
+
 
 
 
@@ -4568,6 +4612,10 @@ form label{
 /*  Tableta  */
 
 @media only screen and (max-width: 1024px) {
+
+  #mobile__menu > ul:last-child li{
+    display: none;
+  }
 
   .page-enfoque #section__header{
     z-index: 99;
@@ -5833,6 +5881,42 @@ form label{
     }
   }
 
+  #section__hero__thanks{
+    padding: 110px 30px 50px;
+    .column__2{
+      .col__left{
+        width: 70%;
+        img{
+          width: 80px;
+          height: 80px;
+          margin-bottom: 20px;
+        }
+        h1{
+          font-size: 44px;
+          color: #0053bf;
+        }
+      }
+      .col__right{
+        width: 30%;
+      }
+    }
+  }
+
+  #section__hero__privacy{
+    padding: 120px 30px 100px;
+    .column__1{
+      h1{
+        font-size: 40px;
+      }
+      h2{
+        font-size: 22px;
+      }
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+
 }
 
 
@@ -6614,6 +6698,42 @@ form label{
         .a__smaller{
           font-size: 18px;
         }
+      }
+    }
+  }
+
+  #section__hero__thanks{
+    padding: 110px 15px 50px;
+    .column__2{
+      .col__left{
+        width: 80%;
+        img{
+          width: 60px;
+          height: 60px;
+          margin-bottom: 20px;
+        }
+        h1{
+          font-size: 34px;
+          color: #0053bf;
+        }
+      }
+      .col__right{
+        width: 20%;
+      }
+    }
+  }
+
+  #section__hero__privacy{
+    padding: 100px 15px 100px;
+    .column__1{
+      h1{
+        font-size: 30px;
+      }
+      h2{
+        font-size: 18px;
+      }
+      p{
+        font-size: 17px;
       }
     }
   }
