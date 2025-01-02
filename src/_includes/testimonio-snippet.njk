@@ -2,7 +2,7 @@
     <img class="quote__svg" src="../assets/enfoque/quote.svg" alt="Testimonios de clientes satisfechos" />
     {{ testimonio.content | safe}}
     <div class="id__testimonio">
-        <div><img src="{{ testimonio.data.avatar }}" alt="{{ testimonio.data.nombre }} el {{ testimonio.data.puesto }}" /></div>
+        <div><img src="{{ testimonio.data.avatar }}" loading="lazy" alt="{{ testimonio.data.nombre }} el {{ testimonio.data.puesto }}" /></div>
         <div>
             <h2>{{ testimonio.data.nombre }}</h2>
             <h3>{{ testimonio.data.puesto }}</h3>
