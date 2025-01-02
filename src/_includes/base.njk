@@ -2,10 +2,19 @@
 <!doctype html>
 <html lang="{{lang}}">
     <head>
-        <link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
+        <!--<link rel="alternate" hreflang="{{lang}}" href="{{page.url}}">
         {% for link in page.url | locale_links %}
             <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
+        {% endfor %}-->
+
+
+        {% set hreflangs = [ { "lang": "es", "path": "/es/" }, { "lang": "en", "path": "/en/" }] %}
+        
+        {% for hreflang in hreflangs %}
+        <link rel="alternate" hreflang="{{ hreflang.lang }}" href="{{ site.url }}{{ hreflang.path }}" />
         {% endfor %}
+
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MARKER branding | {{ title }} - {{ description }}</title>
