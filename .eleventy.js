@@ -1,116 +1,45 @@
 const { DateTime } = require("luxon");
 const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const Image = require("@11ty/eleventy-img");
 
-const Image = require('@11ty/eleventy-img');
-const markdownIt = require('markdown-it');
-const markdownItAttrs = require('markdown-it-attrs');
+const markdownIt = require("markdown-it");
+const markdownItAttrs = require("markdown-it-attrs");
 
-// Configurar Markdown-it con atributos
+// 1. Importamos la función que creamos en utils
+const { renderImageSync } = require("./utils/responsiveImages");
+
+// 2. Configurar Markdown-it con atributos
 const markdown = markdownIt({
   html: true,
   linkify: true
 }).use(markdownItAttrs);
 
-// Renderizado personalizado para imágenes
-markdown.renderer.rules.image = function (tokens, idx, options, env, self) {
+// 2.1. Podemos crear aquí la función figure si la quieres local,
+//     pero vamos a usar la que viene dentro de `renderImageSync`.
+
+//
+// 3. Reemplazar la regla de Markdown para imágenes
+//
+markdown.renderer.rules.image = function (tokens, idx /*, options, env, self */) {
   const token = tokens[idx];
-  let imgSrc = token.attrGet('src');
+  const imgSrc = token.attrGet("src");
   const imgAlt = token.content;
-  const imgTitle = token.attrGet('title') || '';
-
-  // Comprobar si el archivo es SVG
-  if (imgSrc.endsWith('.svg')) {
-    // Generar solo la etiqueta <img> sin procesar como webp o jpg
-    return `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async">`;
-  }
-
-  // Comprobar si el archivo es SVG
-  if (imgSrc.endsWith('.gif')) {
-    // Generar solo la etiqueta <img> sin procesar como webp o jpg
-    return `<img src="${imgSrc}" alt="${imgAlt}" loading="lazy" decoding="async">`;
-  }
-
-  // Extraer atributos de clases, IDs y otros
-  const attributes = imgTitle.match(/(\.[\w-]+)|(\#[\w-]+)/g) || [];
-  const classes = attributes.filter(attr => attr.startsWith('.')).map(cls => cls.substring(1)).join(' ');
-  const id = attributes.find(attr => attr.startsWith('#'))?.substring(1);
-
-  const htmlOpts = {
-    alt: imgAlt,
-    loading: 'lazy',
-    decoding: 'async',
-    class: classes || null,
-    id: id || null
-  };
-
-  if (imgSrc.startsWith('/assets')) {
-    imgSrc = 'src' + imgSrc;
-  }
-
-  const parsed = (imgTitle || '').replace(/(\.[\w-]+)|(\#[\w-]+)/g, '').match(
-    /^(?<skip>@skip(?:\[(?<width>\d+)x(?<height>\d+)\])? ?)?(?:\?\[(?<sizes>.*?)\] ?)?(?<caption>.*)/
-  )?.groups || {};
-
-  if (parsed.skip || imgSrc.startsWith('http')) {
-    const options = { ...htmlOpts };
-    if (parsed.sizes) {
-      options.sizes = parsed.sizes;
-    }
-
-    const metadata = { jpeg: [{ url: imgSrc }] };
-    if (parsed.width && parsed.height) {
-      metadata.jpeg[0].width = parsed.width;
-      metadata.jpeg[0].height = parsed.height;
-    }
-
-    const generated = Image.generateHTML(metadata, options);
-
-    if (parsed.caption) {
-      return figure(generated, parsed.caption);
-    }
-    return generated;
-  }
-
-  const widths = [450, 780, 962, 1400, 1920];
-  const imgOpts = {
-    widths: widths
-      //.concat(widths.map((w) => w * 2)) // generate 2x sizes
-      .filter((v, i, s) => s.indexOf(v) === i), // dedupe
-    formats: ['webp', 'jpeg'], // TODO: add avif when support is good enough
-    urlPath: '/assets/img/',
-    outputDir: './public/assets/img/'
-  };
-
-  Image(imgSrc, imgOpts);
-
-  const metadata = Image.statsSync(imgSrc, imgOpts);
-
-  const generated = Image.generateHTML(metadata, {
-    sizes: parsed.sizes || '(max-width: 1920px) 100vw, 1920px',
-    ...htmlOpts
-  });
-
-  if (parsed.caption) {
-    return figure(generated, parsed.caption);
-  }
-  return generated;
+  const imgTitle = token.attrGet("title") || "";
+  // Llamamos a nuestra función
+  return renderImageSync({ src: imgSrc, alt: imgAlt, title: imgTitle });
 };
 
-// Personalizar párrafos que contienen imágenes
+// 3.1. Personalizar párrafos con imágenes
 markdown.renderer.rules.paragraph_open = function (tokens, idx, options, env, self) {
   const nextToken = tokens[idx + 1];
-
-  // Verificar si el siguiente token es una imagen
   if (nextToken && nextToken.type === "inline" && nextToken.children) {
     const hasImage = nextToken.children.some(child => child.type === "image");
     if (hasImage) {
-      // Buscar clases o IDs en la imagen
       const imgToken = nextToken.children.find(child => child.type === "image");
       if (imgToken) {
         const imgAttrs = imgToken.attrs || [];
         const pToken = tokens[idx];
-
         // Mover clases e IDs al <p>
         imgAttrs.forEach(attr => {
           if (attr[0] === "class") {
@@ -123,52 +52,39 @@ markdown.renderer.rules.paragraph_open = function (tokens, idx, options, env, se
       }
     }
   }
-
   return self.renderToken(tokens, idx, options);
 };
 
+//
+// 4. Exportamos la configuración principal Eleventy
+//
 module.exports = function (eleventyConfig) {
-  // Usar la configuración de Markdown-it
+
+  // 4.1. Asignar la librería Markdown-it
   eleventyConfig.setLibrary("md", markdown);
 
-  // Otras configuraciones (si es necesario)
-};
+  // 4.2. Filtro asíncrono para Nunjucks (usando la misma lógica sync)
+  eleventyConfig.addNunjucksFilter("responsiveImage", (src, alt="", title="") => {
+    return renderImageSync({ src, alt, title });
+  });
 
-module.exports = function (eleventyConfig) {
-  // Usar la configuración de Markdown-it
-  eleventyConfig.setLibrary("md", markdown);
-
-  // Otras configuraciones (si es necesario)
-};
-
-module.exports = function (eleventyConfig) {
-
-  /*  Global URLs social */
+  //
+  // 4.3. Plugins, data, colecciones que ya tenías
+  //
   eleventyConfig.addGlobalData("rootURL", "https://markerbranding.netlify.app");
 
-
-  /*  Language  */
-  eleventyConfig.addPlugin(EleventyI18nPlugin, {
-		// any valid BCP 47-compatible language tag is supported
-		defaultLanguage: "es", // Required, this site uses "en"
-	});
-
-  /*  eleventy html */
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
-
-  /*  eleventy image */
-  eleventyConfig.setLibrary('md', markdown)
-
-  
-  /*  collection.locale */
-  eleventyConfig.addCollection("work_en", function(collection) {
-    return collection.getFilteredByGlob("./src/en/work/*.md");
+  eleventyConfig.addPlugin(EleventyI18nPlugin, {
+    defaultLanguage: "es",
   });
 
-  eleventyConfig.addCollection("work_es", function(collection) {
-    return collection.getFilteredByGlob("./src/es/work/*.md");
-  });
-
+  // Example: colecciones
+  eleventyConfig.addCollection("work_en", (collection) =>
+    collection.getFilteredByGlob("./src/en/work/*.md")
+  );
+  eleventyConfig.addCollection("work_es", (collection) =>
+    collection.getFilteredByGlob("./src/es/work/*.md")
+  );
   eleventyConfig.addCollection("blog_en", function(collectionBlog) {
     return collectionBlog.getFilteredByGlob("./src/en/blog/*.md");
   });
@@ -264,21 +180,22 @@ module.exports = function (eleventyConfig) {
     return collectionBlogBranding.getFilteredByTags("blog", "marketing", "en");
   });
 
-  /*  Cierre eleventy image */
-  eleventyConfig.addPassthroughCopy('./src/styles');
-  eleventyConfig.addPassthroughCopy('./src/assets');
-  eleventyConfig.addPassthroughCopy('./src/admin');
-  eleventyConfig.addPassthroughCopy('./src/netlify.toml');
-  
+  // Passthrough
+  eleventyConfig.addPassthroughCopy("./src/styles");
+  eleventyConfig.addPassthroughCopy("./src/assets");
+  eleventyConfig.addPassthroughCopy("./src/admin");
+  eleventyConfig.addPassthroughCopy("./src/netlify.toml");
+
+  // Filtro para fechas
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
+  // 4.4. Retorno de configuración
   return {
     dir: {
       input: "src",
       output: "public",
     },
   };
-
 };

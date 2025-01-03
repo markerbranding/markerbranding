@@ -3417,16 +3417,24 @@ section{
   width: 35%;
 }
 
-#section__hero__about .column__2:last-child .col__right img{
+#section__hero__about .column__2:last-child .col__right picture{
   height: 80%;
   width: auto;
   object-fit: cover;
+  overflow: hidden;
+  img{
+    object-fit: cover;
+  }
 }
 
-#section__hero__about img{
+#section__hero__about picture{
   width: 100%;
   height: auto;
   border-radius: 20px;
+  overflow: hidden;
+  img{
+    object-fit: cover;
+  }
 }
 
 #section__motivacion{

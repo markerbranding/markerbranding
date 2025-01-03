@@ -25,10 +25,10 @@ label: es
     </div>
     <div class="column__2">
       <div class="col__left">
-        <img src="/assets/about/about_hero.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        {{ "/assets/about/about_hero.jpg" | responsiveImage("Somos una agencia especializada en diseño y comunicación visual") | safe }}
       </div>
       <div class="col__right">
-        <img src="/assets/about/about_hero_b.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        {{ "/assets/about/about_hero_b.jpg" | responsiveImage("Creamos estrategias para posicionar tu marca") | safe }}
       </div>
     </div>
   </section>
