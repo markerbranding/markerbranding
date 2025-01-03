@@ -91,6 +91,9 @@
         <script src="https://unpkg.com/@barba/core"></script>
         <script src="/assets/scripts/lottie.min.js"></script>
         <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
                 if (!user) {
@@ -538,6 +541,8 @@
                     },
                 ],
             });
+
+        });
         </script>
     </body>
 </html>
