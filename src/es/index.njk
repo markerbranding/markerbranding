@@ -246,13 +246,13 @@ label: es
                 c2.2-2.1,5.2-4,8.2-3.3c4.6,0.9,5.8,6.5,4.6,10.6c-2.5,8.4-11.1,14.7-20.4,16.4c-9.4,1.8-19.3-0.5-27.6-4.8
                 c-10.6-5.5-19.1-14.3-23.7-24.6"/>
             </svg>
-            <img id="botella__hoja1" src="/assets/enfoque/hoja1.png" alt="Agencia de diseño en Mérida Yucatán" />
-            <img id="botella__hoja2" src="/assets/enfoque/hoja2.png" alt="Agencia de diseño en Mérida Yucatán" />
-            <img id="frases__boceto" src="/assets/enfoque/frases_boceto.svg" alt="Estrategia de posicionamiento para empresas" />
-            <img id="botella__real__img" src="/assets/enfoque/botella_enfoque.png" alt="Agencia de diseño en Mérida Yucatán" />
-            <img id="botella__web__contexto" src="/assets/enfoque/web_context.png" alt="Diseño de paginas web" />
-            <img id="botella__web__base" src="/assets/enfoque/web_context_base.png" alt="Diseño de sitios web" />
-            <img id="botella__web__fondo" src="/assets/enfoque/web_context_border.png" alt="Desarrollo de sitios web" />
+            {{ "/assets/enfoque/hoja1.png" | responsiveImage("Agencia de diseño en Mérida Yucatán", "#botella__hoja1") | safe }}
+            {{ "/assets/enfoque/hoja2.png" | responsiveImage("Agencia de diseño en México", "#botella__hoja2") | safe }}
+            <img id="frases__boceto" src="/assets/enfoque/frases_boceto.svg" alt="Estrategia de posicionamiento para empresas" loading="lazy" />
+            {{ "/assets/enfoque/botella_enfoque.png" | responsiveImage("Agencia de diseño en Mérida Yucatán", "#botella__real__img") | safe }}
+            {{ "/assets/enfoque/web_context.png" | responsiveImage("Diseño de paginas web", "#botella__web__contexto") | safe }}
+            {{ "/assets/enfoque/web_context_base.png" | responsiveImage("Diseño de sitios web", "#botella__web__base") | safe }}
+            {{ "/assets/enfoque/web_context_border.png" | responsiveImage("Desarrollo de sitios web", "#botella__web__fondo") | safe }}
             <div id="botella_gradiente_fondo"></div>
             <div id="animationWindow"></div>
             <div id="animationWindow__bottom"></div>

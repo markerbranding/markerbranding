@@ -158,10 +158,13 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img,
-picture {
+img {
   max-width: 100%;
   display: block;
+}
+
+picture {
+  max-width: 100%;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -3630,8 +3633,14 @@ section{
   padding: 10%;
 }
 
-.team__list li img{
+.team__list li picture{
   border-radius: 10px;
+  overflow: hidden;
+  img{
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .team__description{

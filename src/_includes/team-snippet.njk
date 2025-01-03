@@ -1,5 +1,5 @@
 <li class="team__collaborator">
-    <img src="{{ team.data.image }}" alt="{{ team.data.name }}" class="team__picture" />
+    {{ team.data.image | responsiveImage(team.data.name, ".team__picture") | safe }}
     <div class="team__description">
         <h2 class="team__title">{{ team.data.name }}</h2>
         <p class="team__position">{{ team.data.position }}</p>

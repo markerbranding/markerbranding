@@ -1,7 +1,7 @@
 <li class="type__{{ work.data.category }}">
     <a href="{{ work.url }}" class="snippet">
         <div class="work__img__wrappper">
-            <img src="{{ work.data.thumbnail }}" alt="{{ work.data.description }}" class="snippet__image" />
+            {{ work.data.thumbnail | responsiveImage(work.data.description, ".snippet__image") | safe }}
         </div>
         <div class="snippet__description">
             <div class="snippet__title__wrapper">

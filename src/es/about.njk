@@ -55,7 +55,7 @@ label: es
   <section id="section__motivacion">
     <div class="column__2">
       <div class="col__left">
-        <img src="/assets/about/about_motivation.jpg" alt="Somos una agencia especializada en comunicación visual" />
+        {{ "/assets/about/about_motivation.jpg" | responsiveImage("Nos apasiona cada nuevo proyecto de branding") | safe }}
       </div>
       <div class="col__right">
         <h3 class="subtitle">Qué nos motiva</h3>
@@ -86,8 +86,7 @@ label: es
       <div class="col__right">
         <ul role="list" class="value__list">
           <li class="value">
-            <img src="/assets/about/valor_compromiso.svg"
-              alt="Somos una agencia especializada en comunicación visual" />
+            <img src="/assets/about/valor_compromiso.svg" alt="Somos una agencia creativa con compromiso" loading="lazy" />
             <div>
               <h2>Compromiso</h2>
               <p>
@@ -97,8 +96,7 @@ label: es
             </div>
           </li>
           <li class="value">
-            <img src="/assets/about/valor_honestidad.svg"
-              alt="Somos una agencia especializada en comunicación visual" />
+            <img src="/assets/about/valor_honestidad.svg" alt="La honestidad es un pilar en nuestro servicio" loading="lazy" />
             <div>
               <h2>Honestidad</h2>
               <p>
@@ -108,8 +106,7 @@ label: es
             </div>
           </li>
           <li class="value">
-            <img src="/assets/about/valor_calidad.svg"
-              alt="Somos una agencia especializada en comunicación visual" />
+            <img src="/assets/about/valor_calidad.svg" alt="Creamos proyectos de branding y marketing con calidad" loading="lazy" />
             <div>
               <h2>Calidad</h2>
               <p>
@@ -119,8 +116,7 @@ label: es
             </div>
           </li>
           <li class="value">
-            <img src="/assets/about/valor_creatividad.svg"
-              alt="Somos una agencia especializada en comunicación visual" />
+            <img src="/assets/about/valor_creatividad.svg" alt="Creamos soluciones creativas para las empresas" loading="lazy" />
             <div>
               <h2>Creatividad</h2>
               <p>
@@ -136,7 +132,7 @@ label: es
 
   <section id="section__divisor__team">
     <div class="column__1">
-      <img src="/assets/about/about_divisor.jpg" alt="Somos un equipo multidisciplinario">
+      {{ "/assets/about/about_divisor.jpg" | responsiveImage("Somos un equipo creativo multidisciplinario") | safe }}
     </div>
   </section>
 
@@ -150,8 +146,9 @@ label: es
           propuesta de valor hacia un público bien segmentado.</p>
       </div>
       <div class="col__right">
-        <div id="marker__red"><img src="/assets/about/marker_red.png" alt="Somos MARKER branding y creamos marcas memorables"/></div>
-        
+        <div id="marker__red">
+          {{ "/assets/about/marker_red.png" | responsiveImage("Somos MARKER branding y creamos marcas memorables") | safe }}
+        </div>
       </div>
     </div>
   </section>
@@ -163,7 +160,7 @@ label: es
     <div class="column__1">
       <ul role="list" class="team__list">
         {%- for team in collections.equipo -%}
-        {% include 'team-snippet.njk' %}
+          {% include 'team-snippet.njk' %}
         {%- endfor -%}
       </ul>
     </div>
@@ -250,6 +247,17 @@ label: es
     gsap.set(".value", { opacity: 0, y: 50 }),
     ScrollTrigger.batch(".value", {
       trigger: "value__list",
+      start: "top, 70%",
+      end: "top, 60%",
+      onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),
+      onEnterBack: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),
+      onLeave: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),
+      onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, y: 50, stagger: 0.2 }),
+    });
+
+    gsap.set(".team__collaborator", { opacity: 0, y: 50 }),
+    ScrollTrigger.batch(".team__collaborator", {
+      trigger: "team__list",
       start: "top, 70%",
       end: "top, 60%",
       onEnter: (batch) => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.2 }),

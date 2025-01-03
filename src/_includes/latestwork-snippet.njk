@@ -1,7 +1,7 @@
 <li>
     <a href="{{ latestwork.url }}" class="snippet">
         <div class="work__img__wrappper">
-            <img src="{{ latestwork.data.thumbnail }}" alt="{{ latestwork.data.description }}" class="snippet__image" />
+            {{ latestwork.data.thumbnail | responsiveImage(latestwork.data.description, ".snippet__image @nolazy") | safe }}
         </div>
         <div class="snippet__description">
             <h2 class="snippet__title">{{ latestwork.data.title }}</h2>
