@@ -1,0 +1,9 @@
+# Políticas específicas para la página del formulario
+/es/contact/
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://api.hsforms.com; connect-src 'self' https://api.hsforms.com https://www.google.com https://recaptcha.google.com;
+  Access-Control-Allow-Origin: *
+
+# Políticas globales para todo el sitio
+/
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google.com https://www.gstatic.com https://api.hsforms.com; connect-src 'self' https://api.hsforms.com https://www.google.com https://recaptcha.google.com;
+  Access-Control-Allow-Origin: *

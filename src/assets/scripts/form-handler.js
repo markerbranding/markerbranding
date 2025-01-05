@@ -1,5 +1,6 @@
 document.getElementById("custom-hubspot-form").addEventListener("submit", async (e) => {
     e.preventDefault();
+    console.log("Formulario enviado");
   
     // Sanitizar entradas
     function sanitizeInput(input) {
@@ -58,7 +59,7 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
   
     const portalId = "48702052";
     const formId = "34c53d9a-d627-49f1-b36f-bf19c5439c05";
-  
+    console.log("Datos enviados a HubSpot:", formData);
 
     // Enviar datos a HubSpot
     try {
@@ -72,11 +73,12 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
           body: JSON.stringify(formData),
         }
       );
-  
+    
       if (response.ok) {
         alert("Formulario enviado con éxito");
       } else {
-        console.error("Error al enviar formulario:", await response.json());
+        const errorData = await response.json();
+        console.error("Error al enviar formulario:", errorData);
         alert("Hubo un problema al enviar el formulario.");
       }
     } catch (err) {
