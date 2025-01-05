@@ -72,7 +72,11 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
       }
     );
 
-    if (!response.ok) {
+    if (response.ok) {
+      // Redirigir a la página de agradecimiento
+      window.location.href = "https://marker.com.mx/es/thank-you/";
+      return;
+    } else {
       const errorData = await response.json();
       console.error("Error al enviar formulario:", errorData);
       if (errorData.errors && errorData.errors[0]) {
@@ -80,10 +84,7 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
       } else {
         alert("Hubo un problema al enviar el formulario.");
       }
-      return;
     }
-
-    alert("Formulario enviado con éxito.");
   } catch (err) {
     console.error("Error:", err);
     alert("Error de conexión.");
