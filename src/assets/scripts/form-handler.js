@@ -25,8 +25,8 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
       alert("Nombre inválido. Solo se permiten letras y espacios.");
       return;
     }
-    if (!/^\d{10}$/.test(telefono)) {
-      alert("Teléfono inválido. Debe ser un número de 10 dígitos.");
+    if (!/^\+?[0-9\s-]+$/.test(telefono)) {
+      alert("Teléfono inválido. Por favor ingresa un número válido.");
       return;
     }
     if (!/^\S+@\S+\.\S+$/.test(email)) {
@@ -56,14 +56,13 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
       "g-recaptcha-response": recaptchaToken, // Incluye el token de reCAPTCHA
     };
   
-    const portalId = "48702052";
-    const formId = "34c53d9a-d627-49f1-b36f-bf19c5439c05";
-    console.log("Datos enviados a HubSpot:", formData);
+    console.log("Token de reCAPTCHA:", recaptchaToken);
+    
 
     // Enviar datos a HubSpot
     try {
       const response = await fetch(
-        `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`,
+        `https://api.hsforms.com/submissions/v3/integration/submit/48702052/34c53d9a-d627-49f1-b36f-bf19c5439c05`,
         {
           method: "POST",
           headers: {
@@ -72,16 +71,19 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
           body: JSON.stringify(formData),
         }
       );
-    
-      if (response.ok) {
-        alert("Formulario enviado con éxito");
-      } else {
+  
+      if (!response.ok) {
         const errorData = await response.json();
         console.error("Error al enviar formulario:", errorData);
-        alert("Hubo un problema al enviar el formulario.");
+        if (errorData.errors && errorData.errors[0]) {
+          alert(`Error: ${errorData.errors[0].message}`);
+        } else {
+          alert("Hubo un problema al enviar el formulario.");
+        }
+        return;
       }
     } catch (err) {
       console.error("Error:", err);
-      alert("Error de conexión con HubSpot.");
+      alert("Error de conexión.");
     }
   });
