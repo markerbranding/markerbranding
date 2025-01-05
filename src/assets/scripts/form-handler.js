@@ -50,7 +50,6 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
         { name: "message", value: message },
       ],
       context: {
-        hutk: document.cookie.match(/hubspotutk=([\w-]+)/)?.[1] || "", // Cookie de seguimiento de HubSpot
         pageUri: window.location.href,
         pageName: document.title,
       },
