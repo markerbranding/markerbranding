@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                                 ovrl.style.display = "none";
                                 gsap.to(".transition__top", { height: "0%", ease: "power1.in", duration: 0.7 });
                                 gsap.to(".transition__bottom", { height: "0%", ease: "power1.in", duration: 0.7 });
-                                gsap.from("#inner__header", { y: -100, ease: "power1.out", duration: 0.5, delay: 0.8 });
                             }, 500);/**/
                         }
                         for(var i=0; i<tot; i++) {
@@ -114,7 +113,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 const newCss = data.next.container.getAttribute('data-css');
                 if (newCss) {
                     const link = document.createElement('link');
-                    link.href = `/css/${newCss}.css`;
+                    link.href = `/styles/${newCss}.css`;
                     link.rel = 'stylesheet';
                     link.setAttribute('data-dynamic', 'true');
                     document.head.appendChild(link);
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 const newJs = data.next.container.getAttribute('data-js');
                 if (newJs) {
                 const script = document.createElement('script');
-                script.src = `/js/gsap/${newJs}.js`;
+                script.src = `/assets/scripts/pages/${newJs}.js`;
                 script.type = 'text/javascript';
                 script.async = true;
                 document.body.appendChild(script);
@@ -192,15 +191,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             });
 
 
-            // Batch Footer:
-            gsap.set(".footer__column", {opacity: 0, x: -50});
-            ScrollTrigger.batch(".footer__column", {
-                start: 'top 80%', end: 'top 80%',
-                onEnter: batch => gsap.to(batch, { opacity: 1, x: 0, stagger: Stagger, overwrite: true }),
-                onLeave: batch => gsap.to(batch, { opacity: 1, x: 0, stagger: Stagger, overwrite: true }),
-                onEnterBack: batch => gsap.to(batch, { opacity: 1, x: 0, stagger: Stagger, overwrite: true }),
-                onLeaveBack: batch => gsap.to(batch, { opacity: 0, x: -50, stagger: Stagger, overwrite: true })
-            });
 
                 // TERMINA GSAP GLOBAL ESCRITORIO
 
@@ -208,10 +198,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-        // Separación visual para telefonos:
-        telText = new SplitText(".tel__text", { type: "chars" }),
-        telTextChars = telText.chars;
-        gsap.to(telTextChars, {});
+        
 
 
     } // Termina función GSAP

@@ -318,6 +318,10 @@ a{
   width: 200px;
 }
 
+.page-enfoque #logoMarkerHeader{
+  opacity: 0;
+}
+
 .header__nav ul{
   display: flex;
   flex-direction: row;
