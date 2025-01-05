@@ -27,6 +27,7 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
         <link rel="manifest" href="/assets/favicon/site.webmanifest">
         <link rel="preload" href="/styles/style.css" as="style" onload="this.rel='stylesheet'">
+        {% if css %} <link rel="stylesheet" href="/styles/{{ css }}"> {% endif %}
         <script  src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         <link rel="stylesheet" href="/assets/scripts/splide.min.css">
         <link rel="stylesheet" href="/assets/scripts/splide-default.min.css">
@@ -41,17 +42,9 @@
     </head>
     
     <body class="page-{{bodyClass}} lang-{{label}} pro{{id}}" data-barba="wrapper">
-        <div id="overlay">
-            <div id="progstat"></div>
-            <div id="progress"></div>
-            <div id="progress__bg"></div>
-            <div id="logoloader">
-                <img src="/assets/loader.svg" alt="MARKER branding" loading="lazy" width="50" height="50" />
-            </div>
-        </div>
-        <div class="transition">
-            <div class="inner__transition"></div>
-        </div>
+       
+        {% include 'loader.njk' %}
+
         <div id="mobile__trigger">
             <span></span>
             <span></span>
@@ -81,15 +74,11 @@
             </div>
         </div>
         
+        <script src="/assets/scripts/loader.js"></script>
         <script src="/assets/scripts/jquery-3.7.1.min.js"></script>
-        <script src="/assets/scripts/gsap.min.js"></script>
-        <script src="/assets/scripts/ScrollTrigger.min.js"></script>
-        <script src="/assets/scripts/ScrollSmoother.min.js"></script>
-        <script src="/assets/scripts/ScrollToPlugin.min.js"></script>
-        <script src="/assets/scripts/DrawSVGPlugin.min.js"></script>
-        <script src="/assets/scripts/SplitText.min.js"></script>
         <script src="https://unpkg.com/@barba/core"></script>
-        <script src="/assets/scripts/lottie.min.js"></script>
+        <script src="/assets/scripts/main.min.js"></script>
+        <script src="/assets/scripts/base.js"></script>
         <script>
 
         document.addEventListener('DOMContentLoaded', (event) => {
@@ -104,21 +93,9 @@
                 });
             }
 
-            // Mobile menu:
-            var check = document.querySelector('#mobile__trigger');
-            var menu = document.querySelector('#mobile__menu');
-            var bgActive = document.querySelector('#mobile__active');
-            var both = [check, bgActive];
-            both.forEach(function(element) {
-                element.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    check.classList.toggle('active');
-                    menu.classList.toggle('show');
-                    bgActive.classList.toggle('show');
-                });
-            });
+            
 
-
+            /*
             gsap.registerPlugin(ScrollTrigger, ScrollSmoother, DrawSVGPlugin, ScrollToPlugin, SplitText);
 
             let mm = gsap.matchMedia();
@@ -540,7 +517,7 @@
                         }
                     },
                 ],
-            });
+            });*/
 
         });
         </script>

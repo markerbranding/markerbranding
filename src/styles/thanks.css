@@ -1,0 +1,90 @@
+#section__hero__thanks{
+    padding: 250px 50px 250px;
+    .column__2{
+      .col__left{
+        h1{
+          font-size: 4vw;
+          color: #0053bf;
+          span{
+            font-size: inherit;
+            color: #d22319;
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Tableta  */
+
+@media only screen and (max-width: 1024px) {
+
+    #section__hero__thanks{
+        padding: 110px 30px 50px;
+        .column__2{
+          .col__left{
+            width: 70%;
+            img{
+              width: 80px;
+              height: 80px;
+              margin-bottom: 20px;
+            }
+            h1{
+              font-size: 44px;
+              color: #0053bf;
+            }
+          }
+          .col__right{
+            width: 30%;
+          }
+        }
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*  Móvil  */
+
+@media only screen and (max-width: 768px) {
+
+    #section__hero__thanks{
+        padding: 110px 15px 50px;
+        .column__2{
+          .col__left{
+            width: 80%;
+            img{
+              width: 60px;
+              height: 60px;
+              margin-bottom: 20px;
+            }
+            h1{
+              font-size: 34px;
+              color: #0053bf;
+            }
+          }
+          .col__right{
+            width: 20%;
+          }
+        }
+      }
+
+}

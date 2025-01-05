@@ -9,7 +9,7 @@ id: privacy
 robots: "noindex"
 ---
 
-<div data-barba="container" data-barba-namespace="privacy">
+<div data-barba="container" data-barba-namespace="privacy" data-css="privacy" data-js="privacy">
     <section id="section__hero__privacy">
       <div class="column__1">
         <h1>Aviso de privacidad</h1>
@@ -24,31 +24,3 @@ robots: "noindex"
       </div>
     </section>
   </div>
-  
-  <script src="../../assets/scripts/loader.js"></script>
-  <script>
-      function privacyGsap() {
-  
-  
-          gsap.to("#section__header", {
-          backgroundColor:"#edf1f9",//#e0e5ed
-          scrollTrigger: {
-              trigger: "main",
-              start: "top top",
-              scrub: true,
-              end: "50% top",
-          }
-          })
-  
-          gsap.to("#section__header", {
-          scrollTrigger:{
-              trigger:"#section__header",
-              start: "top top",
-              end: "max",
-              pin: "#section__header",
-              pinSpacing: false,
-          }
-          });
-  
-      }
-  </script>

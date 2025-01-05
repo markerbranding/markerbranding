@@ -1,0 +1,554 @@
+#section__hero__about{
+    padding: 140px 50px 3%;
+    h1{
+      color: #0053bf;
+    }
+  }
+  
+  #section__hero__about .column__2:first-child{
+    margin-bottom: 80px;
+  }
+  
+  #section__hero__about .column__2:last-child .col__left{
+    padding-right: 25px;
+    width: 65%;
+  }
+  
+  #section__hero__about .column__2:last-child .col__right{
+    padding-left: 25px;
+    width: 35%;
+  }
+  
+  #section__hero__about .column__2:last-child .col__right picture{
+    height: 80%;
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+    }
+  }
+  
+  #section__hero__about picture{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+    }
+  }
+
+  #section__intro{
+    padding: 8% 50px 5%;
+    position: relative;
+  }
+  
+  #section__intro .col__left{
+    width: 70%;
+  }
+  
+  #section__intro .col__right{
+    width: 30%;
+  }
+
+  #section__intro h2{
+    font-size: 2.8vw;
+    line-height: 1.2;
+    font-weight: 400;
+    position: relative;
+    color:#111c4e;
+  }
+  
+  #frase > div{
+    overflow: hidden;
+  }
+  
+  #section__motivacion{
+    padding: 5% 50px 5%;
+  }
+  
+  #section__motivacion .col__left{
+    width: 40%;
+    padding-right: 0%;
+  }
+  
+  #section__motivacion .col__right{
+    width: 60%;
+    padding-left: 5%;
+    justify-content: center;
+  }
+  
+  #section__motivacion .col__left img{
+    min-height: 80vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  #section__values{
+    padding: 5% 50px 5%;
+  }
+  
+  #section__values .col__left{
+    width: 40%;
+    padding-right: 10%;
+  }
+  
+  #section__values .col__right{
+    width: 60%;
+    padding-left: 0%;
+    justify-content: flex-end;
+  }
+  
+  .value__list{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 50px;
+    grid-auto-rows: auto;
+    padding: 0%;
+  }
+  
+  .value{
+    grid-column: span 4;
+    grid-row: span 1;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    width: 100%;
+    /*border-right: 1px solid #748fbb;*/
+    padding: 5%;
+    border-radius: 10px;
+    background-color: #cad2e0;
+  }
+  
+  .value img{
+    margin-bottom: 50px;
+    width: 90px;
+    height: 90px;
+  }
+  
+  .value h2{
+    font-size: 1.6vw;
+    font-weight: 400;
+    color: #0053bf;
+  }
+  
+  .value p{
+    font-size: 1.1vw;
+  }
+  
+  #section__divisor__team{
+    position: relative;
+    z-index: 2;
+  }
+  
+  #section__divisor__team img{
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+    transform-origin: bottom center;
+  }
+  
+  #section__why__name{
+    margin-top: -3px;
+    background-color: #1f222f;
+    color:#7c93b5;
+    padding: 5% 0px 8% 50px;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  
+  #section__why__name .col__left{
+    width: 70%;
+    padding: 5% 0% 0%;
+  }
+  
+  #section__why__name .col__right{
+    width: 30%;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding-left: 5%;
+    position: relative;
+  }
+  
+  #marker__red{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #marker__red img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+  }
+  
+  #marker__red::before{
+    content:"";
+    display: block;
+    position: absolute;
+    width: 5%;
+    height: 300vh;
+    bottom: 11%;
+    left: 3%;
+    background-color: #a40f01;
+    z-index: 0;
+  }
+  
+  #marker__paint{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 5vw;
+    z-index: 0;
+  }
+  
+  #section__why__name h3{
+    color:#e0e5ed;
+  }
+  
+  #section__why__name p{
+    font-size: 2.6vw;
+    line-height: 1.3em;
+  }
+  
+  #why > div{
+    overflow: hidden;
+  }
+  
+  #section__team{
+    padding: 0% 0px 0%;
+    background-color: #1f222f;
+    margin-top: -3px;
+  }
+  
+  #section__team .column__1:first-child{
+    padding: 0px 50px 30px;
+  }
+  
+  #section__team h3{
+    color:#e0e5ed;
+  }
+  
+  .team__list{
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0px;
+    grid-auto-rows: auto;
+    border-top: 1px solid #424760;
+  }
+  
+  .team__list li{
+    grid-column: span 3;
+    grid-row: span 1;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    width: 100%;
+    border-right: 1px solid #424760;
+    border-bottom: 1px solid #424760;
+    padding: 10%;
+  }
+  
+  .team__list li picture{
+    border-radius: 10px;
+    overflow: hidden;
+    img{
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .team__description{
+    padding: 20px 0px 0px;
+  }
+  
+  .team__title{
+    font-size: 1.2vw;
+    color:#a5afbb;
+    margin-bottom: 0px;
+  }
+  
+  .team__position{
+    font-size: 1vw;
+    color:#748fbb;
+    margin-bottom: 0px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  Tableta  */
+
+@media only screen and (max-width: 1024px) {
+
+    #section__hero__about{
+        padding: 140px 30px 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        .column__2{
+          &:nth-child(2){
+            margin-bottom: 0px;
+            .col__left{
+              padding-right: 15px;
+              img{
+                border-radius: 10px;
+                height: 40vh;
+                object-fit: cover;
+              }
+            }
+            .col__right{
+              padding-left: 15px;
+              picture{
+                height: 100%;
+                img{
+                    border-radius: 10px;
+                    height: 100%;
+                  }
+              }
+            }
+          }
+          .col__left{
+            width: 100%;
+          }
+          .col__right{
+            width: 0%;
+          }
+        }
+      }
+    
+      .page-about #section__intro{
+        padding: 5% 30px;
+        .col__left{
+            width: 100%;
+        }
+        .col__right{
+            width: 0%;
+        }
+      }
+
+      #section__intro h2 {
+        font-size: 40px;
+    }
+    
+      #section__motivacion{
+        padding: 5% 30px;
+        .column__2{
+          flex-direction: column;
+          gap: 80px;
+          .col__left{
+            width: 100%;
+            padding-right: 0px;
+            picture{
+                width: 100%;
+                img{
+                    height: 40vh;
+                    min-height: unset;
+                  }
+            }
+          }
+          .col__right{
+            width: 100%;
+            padding-left: 0px;
+          }
+        }
+      }
+    
+      #section__values{
+        padding: 5% 30px 10%;
+        .column__2{
+          flex-direction: column;
+          .col__left{
+            width: 100%;
+            padding-right: 0px;
+          }
+          .col__right{
+            width: 100%;
+            .value__list{
+              gap:30px;
+              padding-top: 30px;
+              .value{
+                img{
+                  width: 70px;
+                  height: 70px;
+                }
+                h2{
+                  font-size: 22px;
+                }
+                p{
+                  font-size: 17px;
+                  margin-bottom: 0px;
+                }
+              }
+            }
+          }
+        }
+      }
+    
+      #section__why__name{
+        padding: 5% 0px 8% 30px;
+        .column__2{
+          .col__left{
+            #why{
+              font-size: 26px;
+            }
+          }
+        }
+      }
+    
+      #section__team{
+        padding: 10% 0 0;
+        .column__1{
+          &:first-child{
+            padding: 0px 30px 10px;
+          }
+        }
+        .team__list{
+          grid-template-columns: repeat(6, 1fr);
+          li{
+            padding: 30px;
+          }
+          h2{
+            font-size: 20px;
+          }
+          p{
+            font-size: 17px;
+          }
+        }
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+/*  Móvil  */
+
+@media only screen and (max-width: 768px) {
+
+
+    #section__hero__about{
+        padding: 100px 15px 50px;
+        .column__2{
+          &:first-child{
+            margin-bottom: 30px;
+            .col__left{
+              width: 100%;
+              padding-right: 0px;
+            }
+            .col__right{
+              width: 0;
+            }
+          }
+          &:last-child{
+            flex-direction: column;
+            gap: 15px;
+            .col__left{
+              padding-right: 0px;
+              width: 100%;
+              img{
+                height: 30vh;
+              }
+            }
+            .col__right{
+              padding-left: 0px;
+              width: 100%;
+              img{
+                height: 30vh;
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    
+      .page-about #section__intro{
+        padding: 10% 15px;
+      }
+
+      #section__intro h2 {
+        font-size: 24px;
+      }
+    
+      #section__motivacion{
+        padding: 5% 15px;
+        .column__2{
+          gap: 50px;
+          .col__left{
+            img{
+              height: 30vh;
+            }
+          }
+        }
+      }
+    
+      #section__values{
+        padding: 5% 15px;
+        .column__2{
+          .col__right{
+            .value__list{
+              grid-template-columns: repeat(4, 1fr);
+              gap: 15px;
+            }
+          }
+        }
+      }
+    
+      #section__why__name{
+        padding: 10% 0px 10% 15px;
+        .column__2 {
+          .col__left {
+            #why {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    
+      #section__team {
+        .column__1 {
+          &:first-child {
+            padding: 0px 15px 10px;
+          }
+        }
+        .team__list {
+          li {
+            padding: 15px;
+            h2{
+              font-size: 16px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+
+
+}

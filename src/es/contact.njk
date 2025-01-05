@@ -10,7 +10,7 @@ label: es
 locale: es
 ---
 
-<div data-barba="container" data-barba-namespace="contact">
+<div data-barba="container" data-barba-namespace="contact" data-css="contact" data-js="contact">
   <section id="section__hero__contacto">
     <div class="column__2">
       <div class="col__left">
@@ -91,6 +91,8 @@ locale: es
             <button class="btn" type="submit">Enviar mensaje</button>
           </div>
         </form>-->
+
+        
         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
         <script>
           hbspt.forms.create({
@@ -98,47 +100,13 @@ locale: es
             formId: "34c53d9a-d627-49f1-b36f-bf19c5439c05"
           });
         </script>
+      
+
+          
+          
+  
+          
       </div>
     </div>
   </section>
 </div>
-
-<script src="../../assets/scripts/loader.js"></script>
-<script>
-
-  function contactGsap() {
-
-    gsap.to("#section__header", {
-      backgroundColor:"#edf1f9",//#e0e5ed
-      scrollTrigger: {
-        trigger: ".column__hero__2",
-        start: "top top",
-        scrub: true,
-        end: "50% top",
-      }
-    });
-  
-    gsap.to("#section__header", {
-      scrollTrigger:{
-        trigger:"#section__header",
-        endTrigger: ".site-footer",
-        start: "top top",
-        end: "bottom top",
-        pin: "#section__header",
-        pinSpacing: false,
-      }
-    })
-  
-    ScrollTrigger.batch(".work__list li", {
-      trigger: ".work__list",
-      start: "top, 70%",
-      end: "top, 60%",
-      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
-      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
-    });
-
-  }
-  
-</script>
