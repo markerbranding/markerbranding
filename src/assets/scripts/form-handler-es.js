@@ -25,6 +25,7 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
   const email = sanitizeInput(document.getElementById("email").value);
   const role = sanitizeInput(document.getElementById("role").value);
   const message = sanitizeInput(document.getElementById("message").value);
+  const recaptchaToken = grecaptcha.getResponse();
 
   // Validaciones adicionales
   if (!/^[A-Za-z\s]+$/.test(name)) {
@@ -37,6 +38,11 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
   }
   if (!/^\S+@\S+\.\S+$/.test(email)) {
     alert("Correo electrónico inválido.");
+    return;
+  }
+  
+  if (!recaptchaToken) {
+    alert("Por favor, verifica que no eres un robot.");
     return;
   }
 

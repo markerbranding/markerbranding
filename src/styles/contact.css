@@ -102,36 +102,38 @@
   
   form input{
     width: 100%;
-    font-size: 1.2vw;
-    padding: 5px 0px;
+    font-size: 20px;
+    padding: 5px 10px;
     border:0;
-    border-bottom: 1px solid #111c4e;
-    background-color: transparent;
+    border: 1px solid #c9d3e3;
+    background-color: #efefef;
     color:#0053bf;
+    border-radius: 5px;
   }
   
   form textarea{
     width: 100%;
-    font-size: 1vw;
-    padding: 20px 0px;
+    font-size: 20px;
+    padding: 5px 10px;
     border:0;
-    border-bottom: 1px solid #748fbb;
-    background-color: transparent;
+    border: 1px solid #c9d3e3;
+    background-color: #efefef;
+    border-radius: 5px;
     color:#0053bf;
+    margin-bottom: 20px;
   }
   
   form select{
     width: 100%;
-    background-color: transparent;
-    border:0;
-    font-size: 0.9vw;
-    border-bottom: 1px solid #748fbb;
+    font-size: 20px;
+    border: 1px solid #c9d3e3;
+    background-color: #efefef;
     margin-top: 10px;
-    font-weight: 300;
-    padding: 20px 0px;
+    padding: 10px 10px;
     color:#0053bf;
     position: relative;
     width: 100%;
+    border-radius: 5px;
   }
   
   .select__wrapper{
@@ -140,6 +142,7 @@
     position: relative;
   }
   
+  /*
   .select__wrapper::before{
     content:"";
     position: absolute;
@@ -156,10 +159,11 @@
     background-size: 60%;
     pointer-events: none;
   }
+  */
   
-  form input:focus, form textarea:focus{
+  form input:focus, form textarea:focus, form select:focus{
     outline: none;
-    border-bottom: 1px solid #CB4B16;
+    border: 1px solid #0053bf;
   }
   
   form > div{
@@ -169,10 +173,14 @@
   }
   
   form label{
-    font-size: 0.7vw;
+    font-size: 0.6vw;
     text-transform: uppercase;
     margin-top: 20px;
     width: 100%;
+    span{
+      font-size: inherit;
+      color: #c62e26;
+    }
   }
 
 
