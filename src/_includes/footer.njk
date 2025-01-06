@@ -29,22 +29,29 @@
     <div class="col__left">
       <h2 class="title">Suscríbete a nuestro Newsletter</h2>
       <form id="custom-newsletter-form" name="newsletter" method="POST">
-        <div>
-          <label for="name_newsletter">Nombre:
-            <input id="name_newsletter" type="text" name="name_newsletter" />
-          </label>
-        </div>
-        <div>
-          <label for="email_newsletter">Correo electrónico:
-            <input id="email_newsletter" type="email" name="email_newsletter" />
-          </label>
-        </div>
-        <div>
-          <div style="display: none;">
-            <input type="text" name="honey-pot" tabindex="-1" autocomplete="off" />
+        <div class="column__2">
+          <div class="col__left">
+            <div>
+              <label for="name_newsletter">Nombre:
+                <input id="name_newsletter" type="text" name="name_newsletter" />
+              </label>
+            </div>
+            <div>
+              <label for="email_newsletter">Correo electrónico:
+                <input id="email_newsletter" type="email" name="email_newsletter" />
+              </label>
+            </div>
           </div>
-          <div class="g-recaptcha" data-sitekey="6LeRD68qAAAAAPQ0yEEdoApyKcaPKpo3ns0yVTk1"></div>
-          <button class="btn" type="submit">Suscribirse</button>
+          <div class="col__right">
+            <div>
+              <div style="display: none;">
+                <input type="text" name="honey-pot" tabindex="-1" autocomplete="off" />
+              </div>
+              <div class="g-recaptcha" data-sitekey="6LeRD68qAAAAAPQ0yEEdoApyKcaPKpo3ns0yVTk1"></div>
+              
+            </div>
+            <button class="btn" type="submit">Suscribirse</button>
+          </div>
         </div>
       </form>
       
