@@ -199,6 +199,7 @@ tl.to("#section__header", {
 })
 
 /*	Frase	*/
+
 var tl2 = gsap.timeline(),
 mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
 chars = mySplitText.chars;
