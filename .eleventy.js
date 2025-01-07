@@ -71,7 +71,7 @@ module.exports = function (eleventyConfig) {
   //
   // 4.3. Plugins, data, colecciones que ya tenías
   //
-  eleventyConfig.addGlobalData("rootURL", "https://markerbranding.netlify.app");
+  eleventyConfig.addGlobalData("rootURL", "https://marker.com.mx");
 
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
   eleventyConfig.addPlugin(EleventyI18nPlugin, {
@@ -180,6 +180,10 @@ module.exports = function (eleventyConfig) {
     return collectionBlogBranding.getFilteredByTags("blog", "marketing", "en");
   });
 
+  eleventyConfig.addCollection("allContent", function(collectionApi) {
+    return collectionApi.getAll();
+  });
+
   // Passthrough
   eleventyConfig.addPassthroughCopy("./src/styles");
   eleventyConfig.addPassthroughCopy("./src/assets");
@@ -189,6 +193,10 @@ module.exports = function (eleventyConfig) {
   // Filtro para fechas
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
+  eleventyConfig.addFilter("sitemapDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toISODate(); // Genera YYYY-MM-DD
   });
 
   // 4.4. Retorno de configuración
