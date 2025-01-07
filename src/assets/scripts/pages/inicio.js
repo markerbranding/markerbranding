@@ -48,12 +48,14 @@ const isTouchDevice = 'ontouchstart' in window;
 
 
 
+    
+
 //loadingDown();
 
 var tl = gsap.timeline();
 
 //window.onload = function(){
-let hLogo = gsap.getProperty("#logoMarkerScale", "height");
+
 let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
 let b1 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,35,35,0) 100%)";
 let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
@@ -107,6 +109,8 @@ tl.to("#videoHero", {
     }
 })
 
+
+
 tl.to("#logoMarkerScale", {
     width:"200",
     y:"-80",
@@ -141,6 +145,11 @@ tl.to("#logoMarkerScale", {
     }
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    let hLogo = gsap.getProperty("#logoMarkerScale", "height");
+
+
 tl.to(".header__nav", {
     opacity:1,
     scrollTrigger: {
@@ -170,6 +179,8 @@ tl.to(".header__lang", {
     scrub: true,
     end: `${hLogo}px top`,
     }
+});
+
 });
 
 tl.to("#logoMarkerHeader", {
@@ -862,6 +873,8 @@ tl.to('.cliente__slider1', { x:0, scrollTrigger: { trigger: '.cliente__slider1',
 
 //};
 
+
+
 // Lottie function helper:
 
 function LottieScrollTrigger(vars) {
@@ -909,3 +922,4 @@ function LottieScrollTrigger(vars) {
 }
 
 }
+
