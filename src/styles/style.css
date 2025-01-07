@@ -50,7 +50,90 @@
   font-display: swap;
 }
 
+
 /*	Loader	*/
+#overlay{
+  position:fixed;
+  z-index:103;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  transition: opacity 0.6s;
+}
+
+#progress{
+  height:3px;
+  background-color: #e1251b;
+  position:absolute;
+  width:0;
+  top:50%;
+  z-index: 104;
+}
+
+#progress__bg{
+  position: absolute;
+  top:50%;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  display: block;
+  left: 0;
+  z-index: 103;
+}
+
+#progstat{
+  font-size:20px;
+  letter-spacing: 1px;
+  position:absolute;
+  top:50%;
+  right: 10px;
+  margin-top:20px;
+  width:auto;
+  text-align:center;
+  color:#fff;
+}
+
+#logoloader{
+  position:absolute;
+  top:50%;
+  margin-top:-90px;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:center;
+}
+
+/*  Barba transition  */
+.transition__top{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #e1251b;
+  z-index: 101;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.transition__bottom{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: #111c4e;
+  z-index: 102;
+  pointer-events: none;
+  opacity: 1;
+}
+
+/*	Loader	*/
+/*
 #overlay{
   position:fixed;
   z-index:99999;
@@ -102,6 +185,8 @@
 	align-items:center;
 	justify-content:center;
 }
+
+*/
 
 .privacy-policy #overlay, .page-gracias #overlay{
 	display:none;

@@ -260,6 +260,7 @@
   .team__list li picture{
     border-radius: 10px;
     overflow: hidden;
+    display: block;
     img{
       object-fit: cover;
       width: 100%;
