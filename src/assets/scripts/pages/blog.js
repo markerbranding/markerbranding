@@ -28,6 +28,17 @@ listOfOptions.forEach((option) => {
 });
 dropdown.addEventListener('click', toggleDropdown);
 
+
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
+
+
+
 /*  gsap */
 gsap.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
@@ -58,3 +69,5 @@ gsap.to("#section__header", {
     onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
     onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 });*/
+
+}

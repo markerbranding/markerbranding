@@ -5,6 +5,12 @@ heroBtn.addEventListener('click', () => {
 });
 
 
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
 // Accordion
 $(function() {
 	//BEGIN
@@ -726,3 +732,6 @@ tl2.from("#frase > div > div", {
         ease: "power1.inOut",
     }
 })
+
+
+}

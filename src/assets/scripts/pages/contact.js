@@ -1,3 +1,10 @@
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
 gsap.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
@@ -27,3 +34,6 @@ ScrollTrigger.batch(".work__list li", {
     onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
     onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 });
+
+
+}

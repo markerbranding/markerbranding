@@ -4,6 +4,10 @@ heroBtn.addEventListener('click', () => {
     gsap.to(window, { duration: 0.5, scrollTo: "#section__intro", ease: "power4.out"});
 });
 
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
 
 // Check if it's a touch device
 const isTouchDevice = 'ontouchstart' in window;
@@ -902,4 +906,6 @@ function LottieScrollTrigger(vars) {
     ScrollTrigger.refresh();
     });
     return animation;
+}
+
 }

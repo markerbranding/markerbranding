@@ -1,3 +1,11 @@
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
+
 /*  Referrer  */
 document.addEventListener("DOMContentLoaded", function () {
     const projectLinks = document.querySelectorAll("a.snippet");
@@ -148,3 +156,7 @@ updateMargins();
 $(window).on('resize', function () {
     updateMargins();
 });
+
+
+
+}

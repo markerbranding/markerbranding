@@ -5,7 +5,6 @@ function delay (URL) {
     gsap.to(data.current.container, { opacity: 0 });
 }
 
-
 // Custom select
 const dropdown = document.querySelector('.select__dropdown');
 const input = document.querySelector('input');
@@ -28,6 +27,15 @@ listOfOptions.forEach((option) => {
     option.addEventListener('click', selectOption);
 });
 dropdown.addEventListener('click', toggleDropdown);
+
+
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
 
 /*  gsap */
 gsap.to("#section__header", {
@@ -70,3 +78,5 @@ ScrollTrigger.batch(".blog__list li", {
     onLeave: (batch) =>	gsap.to(batch, { opacity: 1, y:0, stagger: 0.2 }),
     onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, y:50, stagger: 0.2 }),
 });
+
+}

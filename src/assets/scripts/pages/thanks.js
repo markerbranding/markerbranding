@@ -1,3 +1,11 @@
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
+
 gsap.to("#section__header", {
     backgroundColor:"#edf1f9",//#e0e5ed
     scrollTrigger: {
@@ -18,3 +26,5 @@ gsap.to("#section__header", {
     }
 });
 
+
+}

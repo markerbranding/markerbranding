@@ -1,3 +1,10 @@
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
 function delay (URL) {
     setTimeout( function() { window.location = URL }, 1000 );
     gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
@@ -77,3 +84,6 @@ scrollTrigger:{
     pinSpacing: false,
 }
 })
+
+
+}

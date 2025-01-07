@@ -4,6 +4,11 @@ heroBtn.addEventListener('click', () => {
     gsap.to(window, { duration: 0.5, scrollTo: "#section__intro", ease: "power4.out"});
 });
 
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
 /*	Frase	*/
 var tl2 = gsap.timeline(),
 mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
@@ -154,3 +159,5 @@ gsap.from("#marker__red", {
     ease: "power1.out",
   },
 })
+
+}

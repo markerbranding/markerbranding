@@ -42,6 +42,13 @@ if (!isTouchDevice) {
 createCursorFollower();
 }
 
+
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
 gsap.to("#section__header", {
 scrollTrigger:{
     trigger:"#section__header",
@@ -51,3 +58,5 @@ scrollTrigger:{
     pinSpacing: false,
 }
 })
+
+}

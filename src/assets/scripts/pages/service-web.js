@@ -4,6 +4,14 @@ heroBtn.addEventListener('click', () => {
     gsap.to(window, { duration: 0.5, scrollTo: "#section__description", ease: "power4.out"});
 });
 
+
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
+
 // Accordion
 $(function() {
 	//BEGIN
@@ -815,3 +823,7 @@ tl2.from("#frase > div > div", {
     ease: "power1.inOut",
     }
 })
+
+
+
+}

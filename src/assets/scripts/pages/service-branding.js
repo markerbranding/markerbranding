@@ -5,6 +5,13 @@ heroBtn.addEventListener('click', () => {
 });
 
 
+
+gsapSoloAnimations();
+
+// GSAP:
+function gsapSoloAnimations() {
+
+
 // Accordion
 $(function() {
 	//BEGIN
@@ -985,3 +992,6 @@ tl.closestIndex(true);
 onChange && onChange(items[curIndex], curIndex);
 return tl;
 } // End Helper
+
+
+}
