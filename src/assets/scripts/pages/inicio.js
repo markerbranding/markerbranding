@@ -1,10 +1,16 @@
+window.addEventListener("load", () => {
+
 // Btn ScrollTo:
 const heroBtn = document.querySelector('#section__hero .btn');
 heroBtn.addEventListener('click', () => {
     gsap.to(window, { duration: 0.5, scrollTo: "#section__intro", ease: "power4.out"});
 });
 
+
+
 gsapSoloAnimations();
+
+
 
 // GSAP:
 function gsapSoloAnimations() {
@@ -56,6 +62,7 @@ var tl = gsap.timeline();
 
 //window.onload = function(){
 
+let hLogo = gsap.getProperty("#logoMarkerScale", "height");
 let hForCanvas = gsap.getProperty(".right__etapa__3", "height");
 let b1 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(208,35,35,0) 100%)";
 let b2 = "radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(35,208,35,0) 100%)";
@@ -145,11 +152,6 @@ tl.to("#logoMarkerScale", {
     }
 });
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    let hLogo = gsap.getProperty("#logoMarkerScale", "height");
-
-
 tl.to(".header__nav", {
     opacity:1,
     scrollTrigger: {
@@ -161,13 +163,13 @@ tl.to(".header__nav", {
     }
 });
 
-tl.to(".branding__word", {
+gsap.to(".branding__word", {
     opacity:0,
     scrollTrigger: {
-    trigger: "#logoScale__container",
-    start: `top top`,
-    scrub: true,
-    end: `${hLogo/2}px top`,
+        trigger: "#logoScale__container",
+        start: `top top`,
+        scrub: true,
+        end: `${hLogo/2}px top`,
     }
 });
 
@@ -179,8 +181,6 @@ tl.to(".header__lang", {
     scrub: true,
     end: `${hLogo}px top`,
     }
-});
-
 });
 
 tl.to("#logoMarkerHeader", {
@@ -923,3 +923,5 @@ function LottieScrollTrigger(vars) {
 
 }
 
+
+});
