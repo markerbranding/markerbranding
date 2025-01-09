@@ -107,42 +107,83 @@ function p1start() {
     tl3.to("#search__img__3", {duration: 0.2, opacity: 0, scale: 1.05, onComplete: p1start});
 }
 
-// Check if it's a touch device
-const isTouchDevice = 'ontouchstart' in window;
-const createCursorFollower = () => {
-    const $el = document.querySelector('.cursor-follower');
-    window.addEventListener('mouseover', (e) => {
-    gsap.from($el, {
-        duration: 1,
-        rotate: 0,
-    });
-    });
-    window.addEventListener('mousemove', (e) => {
-    const { target, x, y } = e;
-    const isTargetLinkOrBtn = target?.closest('.work__list a');
-    gsap.to($el, {
+
+
+
+// Cursor follower
+const isTouchDevice = "ontouchstart" in window;
+    if (isTouchDevice) return;
+  
+    const followerEl = document.querySelector(".cursor-follower");
+    let isSectionActive = false;
+  
+    function hideFollower() {
+      // Fuerza la opacidad 0 y scale 0 para asegurar que no se quede visible.
+      gsap.set(followerEl, { opacity: 0, transform: "scale(0)" });
+    }
+  
+    function onMouseMove(e) {
+      // Si la sección no está en viewport, no movemos el cursor-follower
+      if (!isSectionActive) return;
+  
+      const { target, x, y } = e;
+      // Verifica si el target es un link dentro de .work__list
+      const isTargetLink = target?.closest(".work__list a");
+  
+      gsap.to(followerEl, {
         x: x - 50,
         y: y - 70,
         duration: 1,
-        ease: 'power4',
-        opacity: isTargetLinkOrBtn ? 1 : 0,
-        transform: `scale(${isTargetLinkOrBtn ? 1 : 0})`,
+        ease: "power4",
+        opacity: isTargetLink ? 1 : 0,
+        transform: `scale(${isTargetLink ? 1 : 0})`,
+      });
+    }
+  
+    
+    ScrollTrigger.create({
+      trigger: ".work__list",
+      start: "top 80%",
+      end: "bottom 20%",
+
+      // Cuando entras en la sección, activas el cursor
+      onEnter: () => {
+        isSectionActive = true;
+      },
+      // Cuando sales, lo desactivas y fuerzas ocultar
+      onLeave: () => {
+        isSectionActive = false;
+        hideFollower();
+      },
+      // Si scrolleas de vuelta (desde abajo hacia arriba) y entras,
+      onEnterBack: () => {
+        isSectionActive = true;
+      },
+      // Si vas hacia arriba y sales de la sección,
+      onLeaveBack: () => {
+        isSectionActive = false;
+        hideFollower();
+      },
     });
+  
+    // Listeners de mouse
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mouseover", () => {
+      // Animación de "aparición" inicial si quieres
+      gsap.from(followerEl, { duration: 1, rotate: 0 });
     });
-    // Hidding the cursor element when the mouse cursor
-    // is moved out of the page
-    document.addEventListener('mouseleave', (e) => {
-    gsap.to($el, {
-        duration: 0.5,
-        opacity: 0,
-        rotate: 0,
+    document.addEventListener("mouseleave", () => {
+      // Cuando el puntero sale de la ventana, ocultar
+      gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
+    document.addEventListener("mouseout", () => {
+        // Cuando el puntero sale de la ventana, ocultar
+        gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
-};
-// Only invoke the function if isn't a touch device
-if (!isTouchDevice) {
-    createCursorFollower();
-}
+
+
+
+
 
 gsap.to("#section__header", {
     backgroundColor:"#edf1f9",
