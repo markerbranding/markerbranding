@@ -357,15 +357,10 @@
   }
   
   
-  .page-work .work__list li:first-child, .page-work-branding .work__list li:first-child, .page-work-web .work__list li:first-child, .page-work-marketing .work__list li:first-child{
+  .work__list:first-child li{
     opacity: 1 !important;
     transform: translateY(0px) !important;
   }
-  
-  .page-work .work__list li:nth-child(2), .page-work-branding .work__list li:nth-child(2), .page-work-web .work__list li:nth-child(2), .page-work-marketing .work__list li:nth-child(2){
-    opacity: 1 !important;
-    transform: translateY(0px) !important;
-}
 
 
 

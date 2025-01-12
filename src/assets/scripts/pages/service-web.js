@@ -548,15 +548,19 @@ mm.add("(max-width: 1024px)", () => {
 });
     
 
-ScrollTrigger.batch(".work__list li", {
-    trigger: ".work__list",
-    start: "top, 70%",
-    end: "top, 60%",
-    onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-    onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-    onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-    onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
+const visibleItems = document.querySelectorAll(".work__list li:not([style*='display: none'])");
+gsap.set(".work__list li", {y:100, opacity:0 });
+batchInstance = ScrollTrigger.batch(visibleItems, {
+    start: "top 90%",
+    end: "top 80%",
+    onEnter: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+    onEnterBack: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+    onLeave: (batch) => gsap.to(batch, { opacity: 1, stagger: 0.2, y:0 }),
+    onLeaveBack: (batch) => gsap.to(batch, { opacity: 0, stagger: 0.2, y:100 }),
 });
+
+// Actualizar posiciones de ScrollTrigger
+ScrollTrigger.refresh();
 
 
 let menuServices = jQuery('#menu__services > li > a');
