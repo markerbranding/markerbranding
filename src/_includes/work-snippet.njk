@@ -1,19 +1,22 @@
-<li class="type__{{ work.data.category }}">
+<li class="type__{{ work.data.category }}{% if loop.index == 1 %} big{% endif %}">
     <a href="{{ work.url }}" class="snippet">
-        <div class="work__img__wrappper">
-            {{ work.data.thumbnail | responsiveImage(work.data.description, ".snippet__image @nolazy") | safe }}
+      <div class="work__img__wrappper">
+        {# Manejar casos donde thumbnail puede no existir #}
+        {% if work.data.thumbnail %}
+          {{ work.data.thumbnail | responsiveImage(work.data.description, ".snippet__image @nolazy") | safe }}
+        {% endif %}
+      </div>
+      <div class="snippet__description">
+        <div class="snippet__title__wrapper">
+          <h2 class="snippet__title">{{ work.data.title }}</h2>
+          <div class="underline__title"></div>
         </div>
-        <div class="snippet__description">
-            <div class="snippet__title__wrapper">
-                <h2 class="snippet__title">{{ work.data.title }}</h2>
-                <div class="underline__title"></div>
-            </div>
-            <p class="snippet__body">{{ work.data.description }}</p>
-            <div class="snippet__services">
-                {%- for service in work.data.services -%}
-                    <span>{{ service }}</span>
-                {%- endfor -%}
-            </div>
-        </div>
+        <p class="snippet__body">{{ work.data.description }}</p>
+        <!--<div class="snippet__services">
+          {% for service in work.data.services %}
+            <span>{{ service }}</span>
+          {% endfor %}
+        </div>-->
+      </div>
     </a>
-</li>
+  </li>

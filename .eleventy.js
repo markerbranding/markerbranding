@@ -60,6 +60,16 @@ markdown.renderer.rules.paragraph_open = function (tokens, idx, options, env, se
 //
 module.exports = function (eleventyConfig) {
 
+  eleventyConfig.addFilter("chunk", function(arr, size) {
+    if(!Array.isArray(arr)) return arr;
+    const chunks = [];
+    for(let i = 0; i < arr.length; i += size) {
+      chunks.push(arr.slice(i, i + size));
+    }
+    return chunks;
+  });
+
+
   // 4.1. Asignar la librería Markdown-it
   eleventyConfig.setLibrary("md", markdown);
 
@@ -181,7 +191,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("allContent", function(collectionApi) {
-    return collectionApi.getAll();
+    return collectionApi.getAll().filter(item => item.data.robots !== "noindex");
   });
 
   // Passthrough

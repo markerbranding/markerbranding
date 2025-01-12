@@ -3,6 +3,7 @@ lang: es
 label: es
 tags: ["faq", "es", "web"]
 pregunta: Necesito usar Wordpress o Webflow ¿Pueden trabajar con estas plataformas?
+robots: "noindex"
 
 ---
 

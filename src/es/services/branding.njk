@@ -352,11 +352,14 @@ label: es
           <h2>Proyectos de branding realizados</h2>
         </div>
         <div class="column__1__work__list">
-          <ul role="list" class="work__list">
-            {%- for work in collections.branding_es | reverse -%}
-                {% include 'work-snippet.njk' %}
-            {%- endfor -%}
-          </ul>
+            {% set groups = collections.branding_es | reverse | chunk(5) %}
+            {% for group in groups %}
+              <ul role="list" class="work__list">
+                {% for work in group %}
+                  {% include "work-snippet.njk" %}
+                {% endfor %}
+              </ul>
+            {% endfor %}
         </div>
       </section>
 

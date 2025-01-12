@@ -1,3 +1,5 @@
+window.addEventListener("load", () => {
+
 gsapSoloAnimations();
 
 // GSAP:
@@ -7,7 +9,7 @@ function gsapSoloAnimations() {
 
 
 /*  Referrer  */
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
     const projectLinks = document.querySelectorAll("a.snippet");
 
     projectLinks.forEach((link) => {
@@ -19,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Cursor follower
+window.addEventListener("load", () => {
 const isTouchDevice = "ontouchstart" in window;
     if (isTouchDevice) return;
   
@@ -88,6 +91,7 @@ const isTouchDevice = "ontouchstart" in window;
         gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
 
+  });
 
     
 
@@ -140,6 +144,7 @@ function createBatch() {
 
 
 // Función para actualizar márgenes de los elementos visibles
+/*
 function updateMargins() {
     const $visibleItems = $(".work__list li:not([style*='display: none'])"); // Seleccionar solo los visibles
     $visibleItems.css("margin-top", "0"); // Resetear márgenes antes de aplicar los nuevos
@@ -156,7 +161,7 @@ function updateMargins() {
             
         }
     });
-}
+}*/
 
 // Filtros
 function applyFilter(filterClass) {
@@ -173,7 +178,7 @@ function applyFilter(filterClass) {
         $(`.filtrar__${filterClass}`).addClass("activo");
     }
 
-    updateMargins(); // Recalcular márgenes después de mostrar/ocultar
+    //updateMargins(); // Recalcular márgenes después de mostrar/ocultar
     setTimeout(() => {
         createBatch(); // Reiniciar el batch con los elementos visibles
         ScrollTrigger.refresh(); // Forzar la actualización de posiciones
@@ -188,12 +193,14 @@ $("#filtrar__marketing").click(() => applyFilter("Marketing"));
 
 // Inicializar el batch al cargar la página
 createBatch();
-updateMargins();
-
+//updateMargins();
+/*
 $(window).on('resize', function () {
     updateMargins();
 });
-
+*/
 
 
 }
+
+});

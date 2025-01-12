@@ -1,3 +1,5 @@
+window.addEventListener("load", () => {
+
 gsapSoloAnimations();
 
 // GSAP:
@@ -37,3 +39,5 @@ ScrollTrigger.batch(".work__list li", {
 
 
 }
+
+});

@@ -4,6 +4,7 @@ nombre: Luis May
 puesto: Fundador de Haustiere
 avatar: /assets/testimonios/haustiere/perfil.jpg
 sector: Veterinaria
+robots: "noindex"
 
 ---
 

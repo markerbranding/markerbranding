@@ -1,3 +1,5 @@
+window.addEventListener("load", () => {
+
 // Btn ScrollTo:
 const heroBtn = document.querySelector('#section__hero__about .btn');
 heroBtn.addEventListener('click', () => {
@@ -161,3 +163,5 @@ gsap.from("#marker__red", {
 })
 
 }
+
+});

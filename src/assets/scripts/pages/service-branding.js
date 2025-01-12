@@ -1,3 +1,5 @@
+window.addEventListener("load", () => {
+
 // Btn ScrollTo:
 const heroBtn = document.querySelector('#section__hero__services .btn');
 heroBtn.addEventListener('click', () => {
@@ -33,33 +35,11 @@ $(function() {
 	//END
 });
 
-// Función para actualizar márgenes de los elementos visibles
-function updateMargins() {
-    const $visibleItems = $(".work__list li:not([style*='display: none'])"); // Seleccionar solo los visibles
-    $visibleItems.css("margin-top", "0"); // Resetear márgenes antes de aplicar los nuevos
 
-    $visibleItems.each(function (index) {
-        if ((index + 1) % 2 === 0) {
 
-        if (window.matchMedia("(max-width: 767px)").matches) { // If media query matches
-            $(this).css("margin-top", "0%"); // Aplicar margen superior a cada 2do visible
-        } else {
-            $(this).css("margin-top", "50%"); // Aplicar margen superior a cada 2do visible
-        }
-
-            
-        }
-    });
-}
-
-updateMargins();
-
-$(window).on('resize', function () {
-    updateMargins();
-});
 
 /*  Referrer  */
-document.addEventListener("DOMContentLoaded", function () {
+window.addEventListener("load", () => {
     const projectLinks = document.querySelectorAll("a.snippet");
 
     projectLinks.forEach((link) => {
@@ -72,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // Cursor follower
+window.addEventListener("load", () => {
 const isTouchDevice = "ontouchstart" in window;
     if (isTouchDevice) return;
   
@@ -141,6 +122,7 @@ const isTouchDevice = "ontouchstart" in window;
         // Cuando el puntero sale de la ventana, ocultar
         gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
+});
 
 gsap.to("#section__header", {
 backgroundColor:"#edf1f9",
@@ -1030,3 +1012,5 @@ return tl;
 
 
 }
+
+});

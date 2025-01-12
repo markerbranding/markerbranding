@@ -1857,11 +1857,14 @@ label: es
           <h2>Casos de éxito en sitios web</h2>
         </div>
         <div class="column__1__work__list">
-          <ul role="list" class="work__list">
-            {%- for work in collections.web_es | reverse -%}
-              {% include 'work-snippet.njk' %}
-            {%- endfor -%}
-          </ul>
+            {% set groups = collections.web_es | reverse | chunk(5) %}
+            {% for group in groups %}
+              <ul role="list" class="work__list">
+                {% for work in group %}
+                  {% include "work-snippet.njk" %}
+                {% endfor %}
+              </ul>
+            {% endfor %}
         </div>
       </section>
 

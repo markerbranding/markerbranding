@@ -3,6 +3,7 @@ lang: es
 label: es
 tags: ["faq", "es", "web"]
 pregunta: ¿Cuánto cuestan sus sitios web?
+robots: "noindex"
 
 ---
 

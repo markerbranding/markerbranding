@@ -1,14 +1,14 @@
 <ul role="list">
-    <li class="filtrar__All activo">
-        <button class="menu-{{lang}}" id="filtrar__todos"><span>Todos</span><span>All</span></button>
+    <li class="filtrar__All">
+        <a class="menu-{{lang}}" id="filtrar__todos" href="{{ "/work/" | locale_url }}"><span>Todos</span><span>All</span></a>
     </li>
     <li class="filtrar__Branding">
-        <button class="menu-{{lang}}" id="filtrar__branding">Branding</button>
+        <a class="menu-{{lang}}" id="filtrar__branding" href="{{ "/work/branding/" | locale_url }}">Branding</a>
     </li>
     <li class="filtrar__Web">
-        <button class="menu-{{lang}}" id="filtrar__web">Web</button>
+        <a class="menu-{{lang}}" id="filtrar__web" href="{{ "/work/web/" | locale_url }}">Web</a>
     </li>
     <li class="filtrar__Marketing">
-        <button class="menu-{{lang}}" id="filtrar__marketing">Marketing</button>
+        <a class="menu-{{lang}}" id="filtrar__marketing" href="{{ "/work/marketing/" | locale_url }}">Marketing</a>
     </li>
 </ul>

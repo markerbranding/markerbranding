@@ -3,6 +3,7 @@ lang: es
 label: es
 tags: ["faq", "es", "web"]
 pregunta: ¿Cuánto tiempo les tomará el desarrollo de mi sitio web?
+robots: "noindex"
 
 ---
 

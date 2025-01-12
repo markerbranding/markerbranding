@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: true
   {% for item in collections.allContent %}
   <url>
     <loc>{{ site.url }}{{ item.url | url }}</loc>
-    <lastmod>{{ item.date | sitemapDate("yyyy-MM-dd") }}</lastmod>
+    <lastmod>{{ item.date | sitemapDate }}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

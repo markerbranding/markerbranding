@@ -3,6 +3,7 @@ lang: es
 label: es
 tags: ["faq", "es", "web"]
 pregunta: ¿Qué plataformas y tecnologías utilizan?
+robots: "noindex"
 
 ---
 

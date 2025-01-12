@@ -3,6 +3,7 @@ lang: es
 label: es
 tags: ["faq", "es", "web"]
 pregunta: ¿Me pueden garantizar que apareceré en el primer lugar de búsqueda?
+robots: "noindex"
 
 ---
 

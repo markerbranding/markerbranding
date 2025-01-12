@@ -1,73 +1,33 @@
 ---
-title: Marketing
-description: Proyectos de Marketing y publicidad
+title: Portafolio de Marketing y Publicidad
+description: Proyectos de marketing digital, campañas publicitarias y gestión de redes sociales
+seodescription: Te presentamos nuestro portafolio de proyectos de Marketing Digital.
+seokeywords: branding, marketing, diseño, identidad, estrategia, seo, web, marker, logo, logotipo, brand, publicidad, app, merida, yucatan, mexico
 bodyClass: work-marketing
 layout: 'base.njk'
+barba: work-marketing
 label: es
-eleventyExcludeFromCollections: true
+id: work-marketing
 ---
-
-<div data-barba="container" data-barba-namespace="marketing">
+<div data-barba="container" data-barba-namespace="work-marketing" data-css="work" data-js="work">
   <section id="section__hero__work__cat">
-    <div class="column__2">
-      <div class="col__left">
-        <h1>Te presentamos nuestros proyectos de</h1>
-      <h2>Marketing</h2><h2>& Publicidad.</h2>
-      </div>
-      <div class="col__right">
-      </div>
+    <div class="column__1">
+      <h1>Te presentamos nuestros proyectos de</h1>
+      <h2>Marketing</h2><h2>Publicidad &</h2><h2>Redes Sociales.</h2>
     </div>
   </section>
 
   <section id="section__work__list">
     <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
     <div class="column__1__work__list">
-      <ul role="list" class="work__list">
-        {%- for work in collections.marketing_es | reverse -%}
-          {% include 'work-snippet.njk' %}
-        {%- endfor -%}
-      </ul>
+      {% set groups = collections.marketing_es | reverse | chunk(5) %}
+      {% for group in groups %}
+        <ul role="list" class="work__list">
+          {% for work in group %}
+            {% include "work-snippet.njk" %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
     </div>
   </section>
 </div>
-
-
-<script src="../../../assets/scripts/loader.js"></script>
-<script>
-
-  function marketingGsap() {
-
-    gsap.to("#section__header", {
-      backgroundColor:"#edf1f9",//#e0e5ed
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        scrub: true,
-        end: "50% top",
-      }
-    });
-
-    gsap.to("#section__header", {
-      scrollTrigger:{
-          trigger:"#section__header",
-          endTrigger: "#smooth-wrapper",
-          start: "top top",
-          end: "max",
-          pin: "#section__header",
-          pinSpacing: false,
-      }
-    });
-
-    ScrollTrigger.batch(".work__list li", {
-      trigger: ".work__list",
-      start: "top, 70%",
-      end: "top, 60%",
-      onEnter: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onEnterBack: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeave: (batch) =>	gsap.to(batch, { opacity: 1, stagger: 0.2 }),
-      onLeaveBack: (batch) =>	gsap.to(batch, { opacity: 0, stagger: 0.2 }),
-    });
-
-  }
-
-</script>
