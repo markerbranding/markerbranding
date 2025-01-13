@@ -5,7 +5,7 @@
   }
   
   .article__work section{
-    padding: 0px 50px 0px;
+    padding: 0px 50px 50px;
   }
   
   .main__article__work {
@@ -261,6 +261,21 @@
   
   .claro #section__header{
     filter: contrast(93%);
+  }
+
+  .video__full__wrapper{
+    width: 100%;
+    height: auto;
+    padding: 0% 10%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000000c4;
+    iframe{
+      width: 100%;
+      height: auto;
+      max-height: 70vh;
+      aspect-ratio: 16/9;
+    }
   }
 
 

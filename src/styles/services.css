@@ -1043,6 +1043,10 @@
     margin: 0px;
     padding: 0px;
   }
+
+  .column__1__work__list{
+    padding-top: 80px;
+  }
   
   .work__list .snippet__services{
     margin-top: 8px;
@@ -1671,7 +1675,6 @@
       .page-services #section__work__list{
         padding: 10% 15px 10% 15px;
       }
-      
 
       .work__list{
         grid-template-columns: repeat(1, 1fr);
