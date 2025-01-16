@@ -117,6 +117,7 @@
   z-index: 101;
   pointer-events: none;
   opacity: 1;
+  transform-origin: bottom;
 }
 
 .transition__bottom{
@@ -130,6 +131,7 @@
   z-index: 102;
   pointer-events: none;
   opacity: 1;
+  transform-origin: bottom;
 }
 
 /*	Loader	*/

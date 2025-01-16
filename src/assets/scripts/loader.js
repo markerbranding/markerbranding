@@ -21,8 +21,8 @@
 			ovrl.style.opacity = 0;
 			setTimeout(function(){ 
 				ovrl.style.display = "none";
-				gsap.to(".transition__top", { height: "0%", ease: "power1.in", duration: 0.4 });
-				gsap.to(".transition__bottom", { height: "0%", ease: "power1.in", duration: 0.4 });
+				gsap.to(".transition__top", { scaleY: 0, ease: "power1.in", duration: 0.4 });
+				gsap.to(".transition__bottom", { scaleY: 0, ease: "power1.in", duration: 0.4 });
 			}, 400);/**/
 		}
 		for(var i=0; i<tot; i++) {

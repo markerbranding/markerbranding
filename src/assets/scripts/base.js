@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
             leave(data) {
-                gsap.to(".transition__top", { height: "100%", ease: "power1.out", duration: 0.4 });
-                gsap.to(".transition__bottom", { delay: 0.2, height: "100%", ease: "power1.out", duration: 0.4 });
+                gsap.to(".transition__top", { scaleY: 1, ease: "power1.out", duration: 0.4 });
+                gsap.to(".transition__bottom", { delay: 0.2, scaleY: 1, ease: "power1.out", duration: 0.4 });
                 gsap.killTweensOf(data.current.container);
                 return gsap.to(data.current.container, {
                 duration: 1,
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                             ovrl.style.opacity = 0;
                             setTimeout(function(){ 
                                 ovrl.style.display = "none";
-                                gsap.to(".transition__top", { height: "0%", ease: "power1.in", duration: 0.4 });
-                                gsap.to(".transition__bottom", { delay: 0.2, height: "0%", ease: "power1.in", duration: 0.4 });
+                                gsap.to(".transition__top", { scaleY: 0, ease: "power1.in", duration: 0.4 });
+                                gsap.to(".transition__bottom", { delay: 0.2, scaleY: 0, ease: "power1.in", duration: 0.4 });
                             }, 500);/**/
                         }
                         for(var i=0; i<tot; i++) {

@@ -258,39 +258,48 @@ tl.to("#section__header", {
     }
 })
 
+
 /*	Frase	*/
 
-var tl2 = gsap.timeline(),
-mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
-chars = mySplitText.chars;
-
-gsap.set("#frase", { perspective: 400 });
-tl2.from(chars, {
-duration: 1.8,
-transformOrigin: "0% 50% -50",
-x: 0,
-color: "#bcc6d8",
-stagger: 1.5,
-ease: "power2.out",
-    scrollTrigger: {
-    trigger: '#section__intro',
-    start: 'top 55%',
-    end: '30% 35%',
-    scrub: true,
-    }
+ScrollTrigger.create({
+    trigger: "#section__intro",
+    start: "top 80%", 
+    onEnter: () => initSplitText()
 });
 
-tl2.from("#frase > div > div", {
-    y: 100,
-    scrollTrigger: {
-    trigger: "#section__intro",
-    start: 'top 60%',
-    end: '10% 50%',
-    scrub: true,
-    ease: "power1.inOut",
-    }
-})
+function initSplitText() {
 
+    var tl2 = gsap.timeline(),
+    mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
+    chars = mySplitText.chars;
+
+    tl2.from(chars, {
+    duration: 1.8,
+    transformOrigin: "0% 50% -50",
+    x: 0,
+    color: "#bcc6d8",
+    stagger: 1.5,
+    ease: "power2.out",
+        scrollTrigger: {
+        trigger: '#section__intro',
+        start: 'top 55%',
+        end: '30% 35%',
+        scrub: true,
+        }
+    });
+
+    tl2.from("#frase > div > div", {
+        y: 100,
+        scrollTrigger: {
+        trigger: "#section__intro",
+        start: 'top 60%',
+        end: '10% 50%',
+        scrub: true,
+        ease: "power1.inOut",
+        }
+    })
+
+}
 
 
 // GSAP Responsivo:
