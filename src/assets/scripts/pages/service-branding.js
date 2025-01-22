@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
 
 
 // Cursor follower
-
+window.addEventListener("load", () => {
 const isTouchDevice = "ontouchstart" in window;
     if (isTouchDevice) return;
   
@@ -122,7 +122,7 @@ const isTouchDevice = "ontouchstart" in window;
         // Cuando el puntero sale de la ventana, ocultar
         gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
-
+});
     
 
 

@@ -25,7 +25,7 @@ function gsapSoloAnimations() {
     splide.mount();
   
     
-    
+    window.addEventListener("load", () => {
         const isTouchDevice = "ontouchstart" in window;
         if (isTouchDevice) return;
     
@@ -95,7 +95,7 @@ function gsapSoloAnimations() {
             // Cuando el puntero sale de la ventana, ocultar
             gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
         });
-    
+    });
 
 
 
