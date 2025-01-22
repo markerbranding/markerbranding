@@ -1,0 +1,169 @@
+---
+title: Nosotros
+description: Nos especializamos en comunicación visual
+seodescription: Somos una agencia creativa especializada en comunicación, marketing, diseño y publicidad y conformada por un equipo multidisciplinario.
+seokeywords: branding, marketing, marker, logo, logotipo, brand, publicidad, merida, yucatan, mexico
+bodyClass: about
+layout: 'base.njk'
+barba: index
+label: en
+---
+
+<div data-barba="container" data-barba-namespace="about" data-css="about" data-js="about">
+  <section id="section__hero__about">
+    <div class="column__2">
+      <div class="col__left">
+        <h1>Agencia creativa especializada en branding y comunicación</h1>
+        <h2>
+          En Marker encontrarás a un equipo multidisciplinario apasionado
+          por lo que hace y motivado por lo que puede lograr para tu marca.
+        </h2>
+        <button class="btn btn__hero">Conoce más de nosotros</button>
+      </div>
+      <div class="col__right">
+      </div>
+    </div>
+    <div class="column__2">
+      <div class="col__left">
+        {{ "/assets/about/about_hero.jpg" | responsiveImage("Somos una agencia especializada en diseño y comunicación visual") | safe }}
+      </div>
+      <div class="col__right">
+        {{ "/assets/about/about_hero_b.jpg" | responsiveImage("Creamos estrategias para posicionar tu marca") | safe }}
+      </div>
+    </div>
+  </section>
+
+  <section id="section__intro">
+    <div class="column__2 column__intro">
+      <div class="col__left">
+        <h3 class="subtitle">Quiénes somos & qué hacemos</h3>
+        <h2 id="frase">
+          Somos una agencia creativa que inicia en 2019 con la visión de ayudar a otras
+          empresas a lograr un posicionamiento en el mercado, a través de una comunicación efectiva
+          y relevante para su audiencia.
+          Lo hacemos mediante estrategias que logren identificar y conocer al consumidor meta,
+          los valores que persigue y desea obtener a cambio, y con ello podamos ayudar
+          a las empresas a moldear su personalidad y oferta, logrando un mayor grado de atracción
+          durante la etapa de compra.
+        </h2>
+      </div>
+      <div class="col__right">
+      </div>
+    </div>
+  </section>
+
+  <section id="section__motivacion">
+    <div class="column__2">
+      <div class="col__left">
+        {{ "/assets/about/about_motivation.jpg" | responsiveImage("Nos apasiona cada nuevo proyecto de branding") | safe }}
+      </div>
+      <div class="col__right">
+        <h3 class="subtitle">Qué nos motiva</h3>
+        <h2 class="title">
+          Los retos… y el branding lo es. Nos motiva encarar cada proyecto de forma independiente e
+          integral porque ninguna marca es igual, desde su visión, valores, productos, servicios,
+          hasta su operación y forma de hacer las cosas, todo forma parte de la ecuación para alcanzar
+          un resultado exitoso.
+        </h2>
+        <h2 class="title">
+          Nos apasiona crear estrategias junto contigo, que te permitirán llamar la atención de aquellos
+          en busca de lo que ofreces. Nuestro objetivo es ayudarte a que tus clientes obtengan
+          la mejor versión de ti.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__values">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 class="subtitle">Nuestros valores fundamentales</h3>
+        <h2 class="title">
+          En Marker nos regimos a partir de valores fundamentales que son parte de nuestra
+          esencia en cada proyecto que iniciamos.
+        </h2>
+      </div>
+      <div class="col__right">
+        <ul role="list" class="value__list">
+          <li class="value">
+            <img src="/assets/about/valor_compromiso.svg" alt="Somos una agencia creativa con compromiso" loading="lazy" />
+            <div>
+              <h2>Compromiso</h2>
+              <p>
+                Somos un equipo que se caracteriza por su constante esfuerzo por entregar los mejores resultados
+                posibles para nuestros clientes a fin de satisfacer las necesidades de sus marcas.
+              </p>
+            </div>
+          </li>
+          <li class="value">
+            <img src="/assets/about/valor_honestidad.svg" alt="La honestidad es un pilar en nuestro servicio" loading="lazy" />
+            <div>
+              <h2>Honestidad</h2>
+              <p>
+                La confianza es una virtud fundamental en toda relación con nuestros clientes. La información
+                que nos compartes sobre tu marca siempre será usada con total discreción y seguridad.
+              </p>
+            </div>
+          </li>
+          <li class="value">
+            <img src="/assets/about/valor_calidad.svg" alt="Creamos proyectos de branding y marketing con calidad" loading="lazy" />
+            <div>
+              <h2>Calidad</h2>
+              <p>
+                Nuestro trabajo es metódico, se realiza a través de etapas que garantizan la obtención de
+                resultados a la altura de las expectativas. Nuestro cuidado a los detalles marcan la diferencia.
+              </p>
+            </div>
+          </li>
+          <li class="value">
+            <img src="/assets/about/valor_creatividad.svg" alt="Creamos soluciones creativas para las empresas" loading="lazy" />
+            <div>
+              <h2>Creatividad</h2>
+              <p>
+                Miramos fuera de la caja en busca de alternativas que brinden soluciones óptimas a los
+                problemas o situaciones de cada marca. Nos gusta crear, sin dejar de lado el sentido común.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__divisor__team">
+    <div class="column__1">
+      {{ "/assets/about/about_divisor.jpg" | responsiveImage("Somos un equipo creativo multidisciplinario") | safe }}
+    </div>
+  </section>
+
+  <section id="section__why__name">
+    <div class="column__2">
+      <div class="col__left">
+        <h3 class="subtitle">Origen del nombre Marker</h3>
+        <p id="why">Un Marker (marcador, rotulador o plumón) sirve para destacar lo más importante dentro de un libro en un mar de
+          palabras. Nuestro nombre es una metáfora de lo que ofrecemos, destacar a las empresas de su competencia a través de la
+          creación de estrategias que resulten en una marca memorable, que logre comunicar de manera efectiva su
+          propuesta de valor hacia un público bien segmentado.</p>
+      </div>
+      <div class="col__right">
+        <div id="marker__red">
+          {{ "/assets/about/marker_red.png" | responsiveImage("Somos MARKER branding y creamos marcas memorables") | safe }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__team">
+    <div class="column__1">
+      <h3 class="subtitle">Quiénes integran a Marker</h3>
+    </div>
+    <div class="column__1">
+      <ul role="list" class="team__list">
+        {%- for team in collections.equipo -%}
+          {% include 'team-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+
+</div>

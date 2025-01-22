@@ -1,0 +1,46 @@
+---
+title: Artículos sobre Marketing y Publicidad
+description: Categorías para los {{ title}}
+bodyClass: blog-category
+layout: 'base.njk'
+barba: blogMarketing
+label: en
+locale: en
+---
+
+<div data-barba="container" data-barba-namespace="{{ barba }}" data-css="blog" data-js="article-marketing">
+
+  <section id="section__hero__blog">
+    <div class="column__2">
+      <div class="col__left">
+        <h1>Blog de marketing</h1>
+        <h2>Todo sobre marketing.</h2>
+      </div>
+      <div class="col__right">
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="section__filter">
+    <div class="column__1">
+      <div class="filter__select">
+        <span>Ver artículos por categoría</span>
+        <div class="custom-select">
+          {% include 'filtro.njk' %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__articles">
+    <div class="column__1">
+      <ul role="list" class="blog__list flow">
+        {%- for blog in collections.blog_marketing_es | reverse -%}
+          {% include 'blog-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+  
+</div>

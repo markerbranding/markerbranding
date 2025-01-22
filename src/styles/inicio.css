@@ -270,6 +270,10 @@
   #frase > div{
     overflow: hidden;
   }
+
+  #frase > div > div{
+    transform: translateY(100px);
+  }
   
   .right__etapa{
     height: auto;
@@ -1023,6 +1027,7 @@
 
     .page-enfoque #section__hero{
         padding: 0 30px;
+        height: 100vh;
     }
 
     .page-enfoque .column__hero__2{
@@ -1292,6 +1297,7 @@
 
       .page-enfoque #section__hero{
         padding: 0 15px;
+        height: 100vh;
       }
     
       .page-enfoque .column__hero__2 .col__left{

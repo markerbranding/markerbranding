@@ -25,7 +25,7 @@ function gsapSoloAnimations() {
     splide.mount();
   
     
-    window.addEventListener("load", () => {
+    
         const isTouchDevice = "ontouchstart" in window;
         if (isTouchDevice) return;
     
@@ -95,7 +95,7 @@ function gsapSoloAnimations() {
             // Cuando el puntero sale de la ventana, ocultar
             gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
         });
-    });
+    
 
 
 
@@ -270,8 +270,8 @@ ScrollTrigger.create({
 function initSplitText() {
 
     var tl2 = gsap.timeline(),
-    mySplitText = new SplitText("#frase", { type: "lines,words,chars" }),
-    chars = mySplitText.chars;
+    mySplitText = new SplitText("#frase", { type: "lines" }),
+    chars = mySplitText.lines;
 
     tl2.from(chars, {
     duration: 1.8,

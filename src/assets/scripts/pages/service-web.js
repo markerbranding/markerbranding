@@ -91,7 +91,7 @@ function p1start() {
 
 
 // Cursor follower
-window.addEventListener("load", () => {
+
 const isTouchDevice = "ontouchstart" in window;
     if (isTouchDevice) return;
   
@@ -123,7 +123,7 @@ const isTouchDevice = "ontouchstart" in window;
   
     
     ScrollTrigger.create({
-      trigger: ".work__list",
+      trigger: ".column__1__work__list",
       start: "top 80%",
       end: "bottom 20%",
 
@@ -162,7 +162,7 @@ const isTouchDevice = "ontouchstart" in window;
         gsap.to(followerEl, { duration: 0.5, opacity: 0, rotate: 0 });
     });
 
-});
+
 
 
 

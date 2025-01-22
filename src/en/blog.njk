@@ -1,0 +1,48 @@
+---
+title: Blog
+description: Artículos sobre branding, marketing, web y negocios
+seodescription: Te presentamos escritos de utilidad sobre temas de branding, identidad y logo, así como desarrollo web, marketing, publicidad y comunicación.
+seokeywords: branding, marketing, diseño, identidad, estrategia, seo, web, marker, logo, logotipo, brand, publicidad, app, merida, yucatan, mexico
+bodyClass: blog
+layout: 'base.njk'
+barba: blog
+label: en
+locale: en
+---
+
+<div data-barba="container" data-barba-namespace="blog" data-css="blog" data-js="blog">
+
+  <section id="section__hero__blog">
+    <div class="column__2">
+      <div class="col__left">
+        <h1>Blog de branding, web, marketing y publicidad</h1>
+        <h2>Todo sobre branding, web y marketing.</h2>
+      </div>
+      <div class="col__right">
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="section__filter">
+    <div class="column__1">
+      <div class="filter__select">
+        <span>Ver artículos por categoría:</span>
+        <div class="custom-select">
+          {% include 'filtro.njk' %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="section__articles">
+    <div class="column__1">
+      <ul role="list" class="blog__list flow">
+        {%- for blog in collections.blog_es | reverse -%}
+          {% include 'blog-snippet.njk' %}
+        {%- endfor -%}
+      </ul>
+    </div>
+  </section>
+  
+</div>

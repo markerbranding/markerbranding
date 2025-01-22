@@ -1,0 +1,33 @@
+---
+title: Portafolio de Marketing y Publicidad
+description: Proyectos de marketing digital, campañas publicitarias y gestión de redes sociales
+seodescription: Te presentamos nuestro portafolio de proyectos de Marketing Digital.
+seokeywords: branding, marketing, diseño, identidad, estrategia, seo, web, marker, logo, logotipo, brand, publicidad, app, merida, yucatan, mexico
+bodyClass: work-marketing
+layout: 'base.njk'
+barba: work-marketing
+label: en
+id: work-marketing
+---
+<div data-barba="container" data-barba-namespace="work-marketing" data-css="work" data-js="work">
+  <section id="section__hero__work__cat">
+    <div class="column__1">
+      <h1>Te presentamos nuestros proyectos de</h1>
+      <h2>Marketing</h2><h2>Publicidad &</h2><h2>Redes Sociales.</h2>
+    </div>
+  </section>
+
+  <section id="section__work__list">
+    <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
+    <div class="column__1__work__list">
+      {% set groups = collections.marketing_es | reverse | chunk(5) %}
+      {% for group in groups %}
+        <ul role="list" class="work__list">
+          {% for work in group %}
+            {% include "work-snippet.njk" %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </div>
+  </section>
+</div>

@@ -143,6 +143,14 @@ module.exports = function (eleventyConfig) {
     return collection.getFilteredByGlob("./src/es/team/*.md");
   });
 
+  eleventyConfig.addCollection("testimonio", function(collection) {
+    return collection.getFilteredByTags("testimonio");
+  });
+
+  eleventyConfig.addCollection("testimonial", function(collection) {
+    return collection.getFilteredByGlob("./src/en/testimonial/*.md");
+  });
+
 
   /*  FaQs  */
 
