@@ -17,16 +17,16 @@ barba: workAll
         <!--
         <span><a href="../../work/">Regresar a Proyectos</a> /</span>
         -->
-        <span><a href="../../work/" class="btn-back">Regresar</a> /</span>
+        <span><a href="../../work/" class="btn-back"><span>Regresar</span><span>Go Back</span></a> /</span>
         <h1 style="color: {{ textcolor }};" >{{ title }}</h1>
       </div>
       <div class="column__2">
         <div class="col__left">
-          <h3 style="color: {{ textcolor }};">Sector</h3>
+          <h3 style="color: {{ textcolor }};"><span>Sector</span><span>Industry</span></h3>
           <h2>{{ sector }}</h2>
         </div>
         <div class="col__right">
-          <h3 style="color: {{ textcolor }};">Descripción del cliente</h3>
+          <h3 style="color: {{ textcolor }};"><span>Descripción del cliente</span><span>Client Description</span></h3>
           <h2 class="basics">{{ basics }}</h2>
         </div>
       </div>
@@ -54,7 +54,7 @@ barba: workAll
                 <img src="{{ previoPost.data.thumbnail }}" />
               </div>
               <div class="next__prev__description__wrapper">
-                <h2>Proyecto previo:</h2>
+                <h2><span>Proyecto previo:</span><span>Previous project:</span></h2>
                 <div class="snippet__title__wrapper">
                   <h3>{{ previoPost.data.title }}</h3>
                   <div class="underline__title"></div>
@@ -72,7 +72,7 @@ barba: workAll
                 <img src="{{ previousPost.data.thumbnail }}" />
               </div>
               <div class="next__prev__description__wrapper">
-                <h2>Proyecto previo:</h2>
+                <h2><span>Proyecto previo:</span><span>Previous project:</span></h2>
                 <div class="snippet__title__wrapper">
                   <h3>{{ previousPost.data.title }}</h3>
                   <div class="underline__title"></div>
@@ -89,7 +89,7 @@ barba: workAll
             
             <div class="next__prev__wrapper">
               <div class="next__prev__description__wrapper">
-                <h2>Proyecto siguiente:</h2>
+                <h2><span>Proyecto siguiente:</span><span>Next project:</span></h2>
                 <div class="snippet__title__wrapper">
                   <h3>{{ siguientePost.data.title }}</h3>
                   <div class="underline__title"></div>
@@ -107,7 +107,7 @@ barba: workAll
             
             <div class="next__prev__wrapper">
               <div class="next__prev__description__wrapper">
-                <h2>Proyecto siguiente:</h2>
+                <h2><span>Proyecto siguiente:</span><span>Next project:</span></h2>
                 <div class="snippet__title__wrapper">
                   <h3>{{ nextPost.data.title }}</h3>
                   <div class="underline__title"></div>
@@ -124,3 +124,7 @@ barba: workAll
     </div>
   </section>
 </div>
+
+<script>
+  
+</script>

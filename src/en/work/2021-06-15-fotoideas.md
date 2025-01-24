@@ -26,7 +26,7 @@ solution: Se creó un logo adecuado a sus valores de marca, a los atributos que 
 
 <div class="column__2">
     <div class="col__left">
-        <h3>Cuál fue el reto con la marca</h3>
+        <h3>The Challenge with the Brand</h3>
     </div>
     <div class="col__right">
         <h2>{{ issue }}</h2>
@@ -37,7 +37,7 @@ solution: Se creó un logo adecuado a sus valores de marca, a los atributos que 
 
 <div class="column__2 work__column__2">
     <div class="col__left">
-        <h3>Nuestra solución y el resultado</h3>
+        <h3>Our Solution and the Result</h3>
     </div>
     <div class="col__right">
         <h2>{{ solution }}</h2>

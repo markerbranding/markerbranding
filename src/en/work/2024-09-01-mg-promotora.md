@@ -28,7 +28,7 @@ solution: En nuestra colaboración con MG Promotora, hemos trabajado en el creci
 
 <div class="column__2">
     <div class="col__left">
-        <h3>Cuál fue el reto con la marca</h3>
+        <h3>The Challenge with the Brand</h3>
     </div>
     <div class="col__right">
         <h2>{{ issue }}</h2>
@@ -42,7 +42,7 @@ solution: En nuestra colaboración con MG Promotora, hemos trabajado en el creci
 
 <div class="column__2 work__column__2">
     <div class="col__left">
-        <h3>Nuestra solución y el resultado</h3>
+        <h3>Our Solution and the Result</h3>
     </div>
     <div class="col__right">
         <h2>{{ solution }}</h2>

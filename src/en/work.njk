@@ -1,7 +1,7 @@
 ---
-title: Portafolio
-description: Proyectos de branding, web y marketing
-seodescription: Te presentamos nuestro portafolio de proyectos de Branding y estrategia de marca, Desarrollo Web, y Marketing.
+title: Portfolio
+description: Branding, Web, and Marketing Projects
+seodescription: We present our portfolio of Branding and Brand Strategy Projects, Web Development, and Marketing.
 seokeywords: branding, marketing, diseño, identidad, estrategia, seo, web, marker, logo, logotipo, brand, publicidad, app, merida, yucatan, mexico
 bodyClass: work
 layout: 'base.njk'
@@ -12,15 +12,15 @@ id: all
 <div data-barba="container" data-barba-namespace="work" data-css="work" data-js="work">
   <section id="section__hero__work__cat">
     <div class="column__1">
-      <h1>Te presentamos nuestros proyectos de</h1>
-      <h2>Branding</h2><h2>Marketing &</h2><h2>Desarrollo Web</h2>
+      <h1>We present our projects in</h1>
+      <h2>Branding</h2><h2>Marketing &</h2><h2>Web Development</h2>
     </div>
   </section>
 
   <section id="section__work__list">
     <div class="column__1 filter__work">{% include 'filter-work.njk' %}</div>
     <div class="column__1__work__list">
-      {% set groups = collections.work_es | reverse | chunk(5) %}
+      {% set groups = collections.work_en | reverse | chunk(5) %}
       {% for group in groups %}
         <ul role="list" class="work__list">
           {% for work in group %}

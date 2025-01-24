@@ -1,19 +1,29 @@
 <section id="footer__contacto">
   <div class="column__1">
-    <h3 class="subtitle">Contáctanos</h3>
+    <h3 class="subtitle"><span>Contáctanos</span><span>Contact Us</span></h3>
   </div>
   <div class="column__2">
     <div class="col__left">
-      <h2 class="title">Nuestras oficinas</h2>
-      <a class="title" href="https://www.google.com/maps/place/MARKER+agencia+de+branding,+inbound+marketing+y+dise%C3%B1o/@21.03642,-89.5951133,17z/data=!3m1!4b1!4m6!3m5!1s0x8f5676fb796cacaf:0x10d6454e030169f4!8m2!3d21.03642!4d-89.5925384!16s%2Fg%2F11dxkvwjry?entry=ttu" target="_blank">Periférico Norte. Calle 11 #306 x 12-A Santa Gertrudis Copó, C.P. 97305 Mérida, Yucatán. México.</a>
-      <h2 class="title">Teléfono / Whatsapp</h2>
+      <h2 class="title"><span>Nuestras oficinas</span><span>Our Offices</span></h2>
+      <a class="title" href="https://www.google.com/maps/place/MARKER+agencia+de+branding,+inbound+marketing+y+dise%C3%B1o/@21.03642,-89.5951133,17z/data=!3m1!4b1!4m6!3m5!1s0x8f5676fb796cacaf:0x10d6454e030169f4!8m2!3d21.03642!4d-89.5925384!16s%2Fg%2F11dxkvwjry?entry=ttu" target="_blank"><span>Periférico Norte. Calle 11 #306 x 12-A Santa Gertrudis Copó, C.P. 97305 Mérida, Yucatán. México.</span><span>11 Periferico Norte, Suite 306, Santa Gertrudis Copo, Merida, Yucatan 97305, Mexico.</span></a>
+      <h2 class="title"><span>Teléfono / Whatsapp</span><span>Phone / Whatsapp</span></h2>
       <a class="title" href="tel:+52000000000">999 331 4062 </a>
     </div>
     <div class="col__right">
-      <p>MARKER branding
-        es una firma especializada en
-        crear marcas que conecten
-        y cumplan objetivos</p>
+      <p>
+        <span>
+          MARKER branding
+          es una firma especializada en
+          crear marcas que conecten
+          y cumplan objetivos
+        </span>
+        <span>
+          MARKER Branding
+          is a firm specialized in
+          creating brands that connect
+          and achieve objectives
+        </span>
+      </p>
       <div class="link__wrapper">
         <a href="mailto:hola@marker.com.mx">hola@marker.com.mx</a>
         <div class="underline__title"></div>
@@ -27,17 +37,17 @@
   </div>
   <div class="column__2">
     <div class="col__left">
-      <h2 class="title">Suscríbete a nuestro Newsletter</h2>
+      <h2 class="title"><span>Suscríbete a nuestro Newsletter</span><span>Subscribe to our Newsletter</span></h2>
       <form id="custom-newsletter-form" name="newsletter" method="POST">
         <div class="column__2">
           <div class="col__left">
             <div>
-              <label for="name_newsletter">Nombre:
+              <label for="name_newsletter"><span>Nombre:</span><span>Name:</span>
                 <input id="name_newsletter" type="text" name="name_newsletter" />
               </label>
             </div>
             <div>
-              <label for="email_newsletter">Correo electrónico:
+              <label for="email_newsletter"><span>Correo electrónico:</span><span>Email:</span>
                 <input id="email_newsletter" type="email" name="email_newsletter" />
               </label>
             </div>
@@ -50,7 +60,7 @@
               <div class="g-recaptcha" data-sitekey="6LeRD68qAAAAAPQ0yEEdoApyKcaPKpo3ns0yVTk1"></div>
               
             </div>
-            <button class="btn" type="submit">Suscribirse</button>
+            <button class="btn" type="submit"><span>Suscribirse</span><span>Suscribe</span></button>
           </div>
         </div>
       </form>
@@ -58,7 +68,7 @@
     </div>
     <div class="col__right">
       <div class="menu__footer">
-        <h2>Agencia</h2>
+        <h2><span>Agencia</span><span>Agency</span></h2>
         <ul role="list" class="nav-list flex-group">
           <li class="link__wrapper">
             <a class="menu-{{lang}}" href="{{ "/" | locale_url }}"><span>Enfoque</span><span>Approach</span></a>
@@ -79,7 +89,7 @@
         </ul>
       </div>
       <div class="menu__footer">
-        <h2>Servicios</h2>
+        <h2><span>Servicios</span><span>Services</span></h2>
         <ul role="list" class="nav-list flex-group">
           <li class="link__wrapper">
             <a href="{{ "/services/branding/" | locale_url }}">Branding</a>
@@ -118,7 +128,8 @@
 
 <footer id="site__footer">
   <div class="column__1 max1400">
-    <span>© MARKER branding - Todos los derechos reservados - <a class="foot-{{lang}}" href="{{ "/privacidad/" | locale_url }}"><span>Aviso de privacidad</span><span>Noticy or privacy</span></a></span>
+    <span class="foot-es">© MARKER branding - Todos los derechos reservados - <a href="{{ "/privacidad/" | locale_url }}">Aviso de privacidad</a></span>
+    <span class="foot-en">© MARKER branding - All rights reserved - <a href="{{ "/privacidad/" | locale_url }}">Privacy Policy</a></span>
   </div>
   
 </footer>

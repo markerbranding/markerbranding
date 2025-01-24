@@ -1,16 +1,18 @@
+function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1000 );
+    gsap.to(".transition__top", { scaleY: 1, ease: "power1.out", duration: 0.4 });
+    gsap.to(".transition__bottom", { delay: 0.2, scaleY: 1, ease: "power1.out", duration: 0.4 });
+    gsap.to(data.current.container, { opacity: 0 });
+}
+
+
+window.addEventListener("load", () => {
+
 gsapSoloAnimations();
 
 // GSAP:
 function gsapSoloAnimations() {
 
-
-
-function delay (URL) {
-    setTimeout( function() { window.location = URL }, 1000 );
-    gsap.to(".transition", { height: "100%", ease: "power4.out", duration: 0.4 });
-    gsap.to(".inner__transition", { delay: 0.4, height: "100%", ease: "power4.out", duration: 0.5 });
-    gsap.to(data.current.container, { opacity: 0 });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
 const backButton = document.querySelector(".btn-back");
@@ -87,3 +89,5 @@ scrollTrigger:{
 
 
 }
+
+});

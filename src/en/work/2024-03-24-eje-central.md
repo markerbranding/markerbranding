@@ -25,7 +25,7 @@ solution: Como punto de partida se trabaja en el concepto que dio lugar al nombr
 
 <div class="column__2">
     <div class="col__left">
-        <h3>El reto con la marca</h3>
+        <h3>The Challenge with the Brand</h3>
     </div>
     <div class="col__right">
         <h2>{{ issue }}</h2>
@@ -36,7 +36,7 @@ solution: Como punto de partida se trabaja en el concepto que dio lugar al nombr
 
 <div class="column__2 work__column__2">
     <div class="col__left">
-        <h3>La solución y el resultado</h3>
+        <h3>Our Solution and the Result</h3>
     </div>
     <div class="col__right">
         <h2>{{ solution }}</h2>

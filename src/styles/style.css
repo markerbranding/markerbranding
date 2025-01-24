@@ -1122,6 +1122,19 @@ section{
   background-color: #e9edf6;
   position: relative;
   z-index: 3;
+  span{
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+}
+
+.lang-es #footer__contacto span:last-child{
+  display: none;
+}
+
+.lang-en #footer__contacto span:first-child{
+  display: none;
 }
 
 #footer__contacto .col__left{
@@ -1180,12 +1193,46 @@ section{
   background-color: #e9edf6;
   position: relative;
   z-index: 3;
+  .col__left{
+    span{
+      font-size: inherit;
+      line-height: inherit;
+      font-weight: inherit;
+    }
+    label{
+      span{
+        color: inherit;
+      }
+    }
+  }
+}
+
+
+.lang-es #section__footer__menu span:nth-child(2){
+  display: none;
+}
+
+.lang-en #section__footer__menu span:first-child{
+  display: none;
 }
 
 .menu__footer h2{
   font-size: 1.2vw;
   line-height: 1.6;
   font-weight: 500;
+  span{
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+  }
+}
+
+.lang-es #menu__footer h2 span:last-child{
+  display: none;
+}
+
+.lang-en #menu__footer h2 span:first-child{
+  display: none;
 }
 
 .menu__footer a, .menu__footer a span{
@@ -1241,6 +1288,14 @@ section{
   background-color: #e9edf6;
   position: relative;
   z-index: 3;
+}
+
+.lang-es #site__footer .foot-en{
+  display: none;
+}
+
+.lang-en #site__footer .foot-es{
+  display: none;
 }
 
 #site__footer span{
