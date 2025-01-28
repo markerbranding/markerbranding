@@ -51,6 +51,56 @@
 }
 
 
+/*  Cookie bannner */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  padding: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+}
+
+.cookie-banner__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cookie-banner__buttons {
+  margin-top: 15px;
+}
+
+.cookie-banner__button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.cookie-banner__button.accept {
+  background-color: #4caf50;
+  color: #fff;
+}
+
+.cookie-banner__button.reject {
+  background-color: #f44336;
+  color: #fff;
+}
+
+.cookie-banner__button:hover {
+  opacity: 0.8;
+}
+
+
 /*	Loader	*/
 #overlay{
   position:fixed;
