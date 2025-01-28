@@ -13,12 +13,12 @@ textcolor: '#ff2c71'
 category: Branding
 tags: ["work", "branding", "en"]
 thumbnail: /assets/work/fotoideas/fotoideas_tb.jpg
-description: Rebranding para una empresa de impresión de recuerdos
+description: Rebranding for a Memory Printing Company
 services: ["Logo", "Identidad Corporativa"]
-sector: Servicios - Impresos
-basics: Fotoideas es un negocio que nace de la idea de facilitar el servicio de impresión de fotos, en una era donde la digitalización de las imágenes es lo que predomina en el mercado. Su valor como marca se halla en que dichas fotos pueden ser subidas a una plataforma web por parte del usuario, para solicitar su impresión en papel, o bien en un catálogo de sustratos y productos a elegir, desde lienzos y tazas, hasta almohadas y playeras. Además, con entrega a domicilio, a cualquier parte de la república mexicana.
-issue: La empresa contaba con una marca en existencia para sus tiendas físicas, sin embargo al ser este un servicio en línea, la imagen no comunicaba adecuadamente sus valores. A partir de aquí surge la necesidad de crear una identidad pertinente a sus características y diferenciadores como negocio.
-solution: Se creó un logo adecuado a sus valores de marca, a los atributos que la hacen especial, una vía fácil para que el usuario suba sus fotos (representado por una cámara fotográfica) a una plataforma digital (forma rectangular, un monitor) y con unos cuantos clics, pueda personalizar múltiples artículos para posteriormente recibirlos en su hogar (pin de ubicación).
+sector: Services - Printed Products
+basics: Fotoideas is a business born from the idea of making photo printing services more accessible in an era dominated by digital images. Its value as a brand lies in allowing users to upload their photos to a web platform to request prints on paper or choose from a catalog of substrates and products, including canvases, mugs, pillows, and t-shirts. Additionally, it offers home delivery to any part of Mexico.
+issue: The company already had branding for its physical stores; however, as an online service, the existing image did not effectively communicate its values. This created the need for an identity aligned with its characteristics and business differentiators.
+solution: A logo was designed to reflect the brand’s values and the unique features that set it apart. The logo incorporates a camera to represent an easy way for users to upload their photos, a rectangular shape symbolizing a digital platform (a monitor), and a location pin to highlight the convenience of receiving customized products at home with just a few clicks.
 
 ---
 

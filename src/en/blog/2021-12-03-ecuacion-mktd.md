@@ -2,46 +2,46 @@
 layout: blog.njk
 lang: en
 label: en
-title: La ecuación del marketing digital que tu negocio necesita para alcanzar sus objetivos
+title: The digital marketing equation your business needs to achieve its goals
 permalink: "/{{ label }}/blog/{{ title | slugify }}/"
 author: Andrea Tovar
-fecha: 3 de diciembre de 2021
+fecha: December 3, 2021
 tags: ["blog", "en", "marketing"]
-category: ["Marketing y publicidad"]
+category: ["Marketing"]
 thumbnail: /assets/blog/blog3/blog3_tb.jpg
-description: El mercado se ha vuelto más digital a medida que la tecnología avanza. Una gran parte de la población está conectada a internet en busca de todo tipo de información, haciendo del marketing digital una forma ideal para captar clientes.
-closure: ¿Buscas generar una estrategia que brinde contenido de valor para posicionar tu negocio? Contáctanos, estamos para apoyarte.
+description: We’ve seen how the market has become increasingly digital as technology continues to advance. A significant portion of the population is now connected to the internet, searching for all kinds of information and data...
+closure: Looking to create a strategy that delivers valuable content to position your business? Contact us, we’re here to help.
 ---
 
 ![El logo no tiene por qué comunicar, pero sí identificar](/assets/blog/blog3/blog3a.jpg)
 
-Hemos visto cómo el mercado se ha vuelto más digital a medida que la tecnología avanza con los años. Una gran parte de la población está conectada a internet en busca de todo tipo de información y data, lo que hace del marketing digital una forma ideal para llegar a clientes potenciales.
+We’ve seen how the market has become increasingly digital as technology continues to advance. A significant portion of the population is now connected to the internet, searching for all kinds of information and data, making digital marketing the ideal way to reach potential customers.
 
-No obstante, el crecimiento desmesurado de las tecnologías y las redes sociales ha hecho que el público se sature de contenido superficial que ofrece poco valor a su vida diaria. Por este motivo resulta importante trabajar de la mano con un equipo experto en el diseño de una estrategia de comunicación.
+However, the rapid growth of technology and social media has led to an oversaturation of superficial content that adds little value to people’s daily lives. This is why it’s crucial to work with an expert team to design an effective communication strategy.
 
-## Y te preguntarás, ¿cómo saber si tu negocio cuenta con una?
+## And you might wonder, how do I know if my business has one?
 
-Hay muchos factores que integran una estrategia exitosa. Pero necesitarás por lo menos la sumatoria de cuatro elementos: desarrollo de marca + contenido + experiencia de usuario + compromiso.
+There are many factors that make up a successful strategy. But at the very least, you’ll need the sum of four key elements: brand development + content + user experience + commitment.
 
-Te explicamos cada una:
+Here’s a breakdown of each:
 
-## 1. Desarrollo de marca
+## 1. Brand Development
 
-No sólo se trata de tener un logo bonito o encontrar la tipografía perfecta, sino saber cómo vas a posicionar tu negocio en la mente de los clientes a los que deseas llegar, de acuerdo a tu esencia, valores y ubicación.
+It’s not just about having a beautiful logo or finding the perfect typography. It’s about understanding how to position your business in the minds of the customers you want to reach, based on your essence, values, and location.
 
 ![El logo no tiene por qué comunicar, pero sí identificar](/assets/blog/blog3/blog3b.jpg)
-*Para poder lograr la mayor efectividad con el marketing digital, se tiene que establecer a quién le estamos hablando, qué le ofrecemos, cómo lo ofrecemos y por lo tanto, por qué debería representarle un valor.*
+*To achieve maximum effectiveness with digital marketing, it’s essential to establish who you’re speaking to, what you’re offering, how you’re offering it, and why it should represent value to them.*
 
-## 2. Contenido
+## 2. Content
 
-Al crear contenido valioso, relevante y coherente sobre temas de interés para tu público objetivo, construyes una relación que con el paso del tiempo desarrolla estabilidad y confianza. Esto le dará a la marca una reputación positiva, y reforzará la atracción y compromiso de la audiencia para lo que tu negocio ofrece.
+By creating valuable, relevant, and consistent content on topics of interest to your target audience, you build a relationship that, over time, develops stability and trust. This fosters a positive reputation for your brand and strengthens audience attraction and engagement with what your business offers.
 
-## 3. Experiencia de usuario
+## 3. User Experience
 
-La travesía de navegar por el sitio web, la interacción en las redes sociales o hasta cómo le respondes los mensajes a tus clientes para adquirir los productos o servicios, podría marcar la diferencia entre si realizará la compra o buscará en otra parte la próxima vez.
+The journey of navigating your website, interacting on social media, or even how you respond to customer inquiries about your products or services can make the difference between closing a sale or having them look elsewhere the next time.
 
-## 4. Compromiso
+## 4. Commitment
 
-Tanto el marketing como la comunicación online conllevan una gran responsabilidad, y demandan esfuerzo y trabajo constante para alcanzar los objetivos. Como dice el refrán: “Roma no se construyó en un día”.
+Both marketing and online communication come with great responsibility and require constant effort and dedication to achieve your goals. As the saying goes, “Rome wasn’t built in a day.”
 
-Un usuario nunca disfruta que le vendan, sin embargo siempre estará dispuesto a comprar un producto o servicio si el contenido es de valor.
+Users never enjoy feeling like they’re being sold to, but they’ll always be willing to buy a product or service if the content provides real value.

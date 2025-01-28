@@ -158,8 +158,8 @@ module.exports = function (eleventyConfig) {
     return collectionFaQ.getFilteredByTags("faq", "es", "web");
   });
 
-  eleventyConfig.addCollection("faq_web_es", function (collectionFaQ) {
-    return collectionFaQ.getFilteredByTags("faq", "marketing", "en");
+  eleventyConfig.addCollection("faq_web_en", function (collectionFaQ) {
+    return collectionFaQ.getFilteredByTags("faq", "en", "web");
   });
 
   
@@ -211,6 +211,10 @@ module.exports = function (eleventyConfig) {
   // Filtro para fechas
   eleventyConfig.addFilter("postDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
+
+  eleventyConfig.addFilter("postDateEnglish", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).setLocale('en').toLocaleString(DateTime.DATE_MED);
   });
 
   eleventyConfig.addFilter("sitemapDate", (dateObj) => {

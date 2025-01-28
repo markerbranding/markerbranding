@@ -13,8 +13,8 @@ locale: en
   <section id="section__hero__blog">
     <div class="column__2">
       <div class="col__left">
-        <h1>Blog de desarrollo web</h1>
-        <h2>Todo sobre desarrollo web.</h2>
+        <h1>Web Development Blog</h1>
+        <h2>Everything about Web Development.</h2>
       </div>
       <div class="col__right">
         
@@ -25,9 +25,9 @@ locale: en
   <section id="section__filter">
     <div class="column__1">
       <div class="filter__select">
-        <span>Ver artículos por categoría</span>
+        <span>Browse articles by category:</span>
         <div class="custom-select">
-          {% include 'filtro.njk' %}
+          {% include 'filter.njk' %}
         </div>
       </div>
     </div>
@@ -36,7 +36,7 @@ locale: en
   <section id="section__articles">
     <div class="column__1">
       <ul role="list" class="blog__list flow">
-        {%- for blog in collections.blog_web_es | reverse -%}
+        {%- for blog in collections.blog_web_en | reverse -%}
           {% include 'blog-snippet.njk' %}
         {%- endfor -%}
       </ul>

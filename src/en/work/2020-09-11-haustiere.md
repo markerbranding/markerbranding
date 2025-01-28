@@ -13,12 +13,12 @@ textcolor: '#ff6281'
 category: Branding
 tags: ["work", "branding", "en"]
 thumbnail: /assets/work/haustiere/haustiere_tb.jpg
-description: Identidad corporativa para una tienda de alimentos para mascotas
+description: Corporate Identity for a Pet Food Store
 services: ["Logo", "Identidad Corporativa"]
-sector:  Alimentos - Veterinario
-basics: Haustiere es un negocio enfocado en el cuidado y nutrición de las mascotas, especialmente perros y gatos. Se especializa en la venta de productos alimenticios de las marcas mas reconocidas para las mascotas, así como la promoción al cuidado y la salud de los animales.
-issue: Como empresa de reciente creación contaba con su nombre comercial "Haustiere", pero carecía de un logo e identidad definidos. Tampoco contaban con una estrategia de marketing para definir las herramientas y los canales para la difusión del negocio y sus productos.
-solution: Tras un análisis de sus objetivos a corto y mediano plazo, se opta por una imagen con un enfoque amplio y general sin delimitarlo a un servicio en específico, sino mas bien a un sentimiento. Utilizamos la característica que siempre está presente en todo lo que promueve Haustiere, amor y cariño por los animales. Tomando como referencia lo anterior, se utiliza el corazón como símbolo universal del amor y se crea un juego gráfico que facilita la percepción del rostro de una mascota, sin definir si es un perro o gato. Posteriormente se elige una tipografía legible, suave en sus trazos y adecuada al imagotipo, que proyectara el sentimiento amigable y de bienestar de la marca. Tras la obtención del logo, nos dispusimos a extender su identidad mediante aplicaciones gráficas y artículos promocionales para difundir los valores y el alcance de Haustiere.
+sector:  Pet Food - Veterinary
+basics: Haustiere is a business focused on the care and nutrition of pets, particularly dogs and cats. It specializes in selling food products from the most recognized pet brands while promoting pet care and health.
+issue: As a newly established company, Haustiere had its trade name but lacked a defined logo and identity. Additionally, it did not have a marketing strategy to determine the tools and channels for promoting the business and its products.
+solution: After analyzing its short- and medium-term objectives, we opted for a brand image with a broad and general focus, not limited to a specific service but instead centered on a feeling. We identified the core value consistently present in everything Haustiere promotes - love and care for animals. Using this as a foundation, we incorporated the universal symbol of love, the heart, and designed a graphic element that subtly depicts the face of a pet without specifying whether it’s a dog or a cat. We then selected a readable, soft-font typeface that complements the logo, projecting a friendly and caring brand personality. Once the logo was finalized, we expanded the brand’s identity by developing graphic applications and promotional items to communicate Haustiere’s values and reach.
 
 ---
 

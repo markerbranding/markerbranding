@@ -273,6 +273,34 @@
     color: #0053bf;
   }
 
+  .blog__snippet .btn{
+    span{
+      font-size: inherit;
+      font-weight: inherit;
+      color: inherit;
+    }
+  }
+
+  .lang-es .blog__snippet .btn span:last-child{
+    display: none;
+  }
+
+  .lang-en .blog__snippet .btn span:first-child{
+    display: none;
+  }
+
+  .lang-es .author_en{
+    display: none;
+  }
+
+  .lang-en .author_es{
+    display: none;
+  }
+
+
+
+
+
 
 
 

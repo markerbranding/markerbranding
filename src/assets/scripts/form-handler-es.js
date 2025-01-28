@@ -28,7 +28,7 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
   const recaptchaToken = grecaptcha.getResponse();
 
   // Validaciones adicionales
-  if (!/^[A-Za-z\s]+$/.test(name)) {
+  if (!/^[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+$/.test(name)) {
     alert("Nombre inválido. Solo se permiten letras y espacios.");
     return;
   }

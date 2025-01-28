@@ -13,14 +13,18 @@ textcolor: '#d71b23'
 category: Marketing
 tags: ["work", "marketing", "en"]
 thumbnail: /assets/work/mg-promotora/mg_tb.jpg
-description: Marketing para una constructora de vivienda
+description: Marketing for a Housing Developer
 services: ["Marketing", "Publicidad", "Redes sociales"]
 accountName: mgpromotoradevivienda
 accountTb: "/assets/work/mg-promotora/mg_account_tb.png"
-sector:  Constructor - Inmobiliario
-basics: MG Promotora de Vivienda es una destacada empresa yucateca con más de 18 años de experiencia en el sector inmobiliario. Reconocida por su trayectoria, MG Promotora ha desarrollado más de 10 fraccionamientos en Yucatán, transformando espacios en hogares que combinan calidad, estética y funcionalidad. Su compromiso con la calidad y correcta planeación de sus desarrollos inmobiliarios son un valor fundamental que los destaca.
-issue: MG Promotora confió en Marker Branding para dar un paso estratégico hacia el mundo digital, iniciando con cuentas de reciente creación para la gestión de sus redes sociales. Nuestro objetivo conjunto es claro, incrementar su presencia como desarrollador y constructor líder en el sureste de México, posicionando su marca como sinónimo de calidad, belleza y funcionalidad en el sector inmobiliario. Además, trabajamos para impulsar la comercialización de los proyectos actuales de la empresa, conectando con su audiencia ideal y destacando su propuesta de valor en cada plataforma digital.
-solution: En nuestra colaboración con MG Promotora, hemos trabajado en el crecimiento estratégico de sus cuentas de Facebook e Instagram, creando contenido que refleja su experiencia y compromiso en el sector inmobiliario. Además, hemos desarrollado campañas publicitarias integrales que abarcan desde medios digitales hasta estrategias de publicidad física, incluyendo el diseño de espectaculares, pendones, vallas móviles y señalización para sus proyectos. Estas acciones han permitido reforzar su presencia en el mercado y conectar de manera efectiva con su público objetivo, destacando su liderazgo en el sureste de México.
+sector:  Construction - Real Estate
+basics: MG Promotora de Vivienda is a prominent Yucatecan company with over 18 years of experience in the real estate sector. Renowned for its track record, MG Promotora has developed more than 10 residential communities in Yucatán, transforming spaces into homes that combine quality, aesthetics, and functionality. Their commitment to excellence and meticulous planning in their real estate developments is a key value that sets them apart.
+issue: |
+    MG Promotora entrusted Marker Branding to take a strategic step into the digital realm, starting with newly created social media accounts. The joint objective is clear: to enhance their presence as a leading developer and builder in southeastern Mexico, positioning their brand as synonymous with quality, beauty, and functionality in the real estate sector. Additionally, the goal is to drive the commercialization of the company’s current projects, connecting with their ideal audience and showcasing their value proposition on every digital platform.
+solution: |
+    In collaboration with MG Promotora, we worked on the strategic growth of their Facebook and Instagram accounts, creating content that reflects their expertise and dedication to the real estate sector. To further expand their reach, we developed comprehensive advertising campaigns that integrate both digital and physical strategies. These include: 1) Digital campaigns on Meta platforms to target potential buyers. 2) The design and placement of physical advertisements such as billboards, banners, mobile ads, and signage for their projects.
+    
+    These efforts have strengthened MG Promotora’s market presence and effectively connected them with their target audience. The campaigns highlight their leadership in the southeastern Mexican real estate market while reinforcing their commitment to creating high-quality, functional, and beautiful living spaces. This comprehensive approach positions MG Promotora as a benchmark in the housing development industry.
 
 ---
 

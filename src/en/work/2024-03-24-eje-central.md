@@ -13,12 +13,18 @@ textcolor: '#DD3E26'
 category: Branding
 tags: ["work", "branding", "destacado", "en"]
 thumbnail: /assets/work/eje-central/eje_central_tb.jpg
-description: Branding para un despacho arquitectónico
+description: Branding for an Architectural Firm
 services: ["Estrategia", "Logo", "Identidad", "Sitio web"]
-sector: Despacho arquitectónico
-basics: Eje Central es un despacho despacho conformado por profesionales y liderado por tres socios, expertos en los tres ejes centrales de su ideología… buena arquitectura, eficiente de construir y con sentido financiero. Se dedican a la realización de proyectos arquitectónicos con una perspectiva ágil y dinámica, especializados en el diseňo de desarrollos habitacionales de vivienda vertical y horizontal.
-issue: El despacho era de reciente creación, por lo tanto no contaban con un nombre comercial, así como tampoco ningún logo o elemento visual que formara parte de su identidad de marca. Todo fue creado desde su inicio, partiendo de una serie de valores que se fueron definiendo en las primeras interacciones con la visión de los socios fundadores.
-solution: Como punto de partida se trabaja en el concepto que dio lugar al nombre, el cual surge de la integración de las tres perspectivas distintas que cada uno de los socios tiene sobre cómo operar su negocio, debido a que se integra por un especialista en arquitectura, otro en construcción y un tercero en finanzas. Cada uno representa una faceta que aporta un valor único pero integral, un eje central desde donde surgen los conceptos para cada nuevo proyecto de vivienda. Posteriormente se genera una abstracción gráfica para dar lugar al logo, una construcción de formas geométricas simples que dan forma a una E y una C en representación de su nombre. Por último, se crea una identidad sobria, minimalista, moderna, acorde al estilo de la arquitectura del despacho.
+sector: Architectural Firm
+basics: |
+    Eje Central is an architectural firm composed of professionals and led by three partners, each an expert in the three central pillars of their ideology: good architecture, efficient construction, and financial sensibility. They specialize in designing residential developments, both vertical and horizontal, with an agile and dynamic approach.
+
+    As a newly established firm, Eje Central lacked a commercial name, logo, or any visual elements to form part of their brand identity. Everything was created from the ground up, starting with a set of values defined through initial interactions with the vision of the founding partners.
+issue: The name Eje Central (Central Axis) emerged from the integration of the three distinct perspectives that each partner brings to the business. The team includes a specialist in architecture, another in construction, and a third in finance. Together, they represent three unique yet integral facets—a central axis from which the concepts for each new housing project are developed.
+solution: |
+    The logo was designed as a graphic abstraction, combining simple geometric shapes to form an “E” and a “C,” symbolizing the firm’s name. This minimalist and clean design reflects the firm’s commitment to clarity and balance in both design and operations.
+
+    The brand identity was further developed to be sober, modern, and minimalistic, aligning with the architectural style of the firm. This approach not only reinforces the professional and innovative ethos of Eje Central but also ensures a timeless and elegant visual presence that resonates with their clients and the architectural industry.
 ---
 
 ![Diseño de tarjetas de presentación para Eje Central](/assets/work/eje-central/eje_central_tarjeta.jpg)

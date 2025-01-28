@@ -38,12 +38,12 @@ Con objeto de que usted pueda limitar el uso y divulgación de su información p
 
 Su inscripción en el Registro Público para evitar Publicidad, que está a cargo de la Procuraduría Federal del Consumidor, con la finalidad de que sus datos personales no sean utilizados para recibir publicidad o promociones de empresas de bienes o servicios. Para mayor información sobre este registro, usted puede consultar el portal de Internet de la PROFECO, o bien ponerse en contacto directo con ésta.
 
-Su registro en el listado de exclusión a cargo de ““LA EMPRESA””, a fin de que sus datos personales no sean tratados para fines mercadotécnicos, publicitarios o de prospección comercial por nuestra parte.
+Su registro en el listado de exclusión a cargo de “LA EMPRESA”, a fin de que sus datos personales no sean tratados para fines mercadotécnicos, publicitarios o de prospección comercial por nuestra parte.
 
 ## TECNOLOGÍAS DE RASTREO.
 Le informamos que en nuestra página de Internet utilizamos cookies, web beacons y otras tecnologías a través de las cuales es posible monitorear su comportamiento como usuario de Internet, así como brindarle un mejor servicio y experiencia de usuario al navegar en nuestra página.
 
-Los datos personales que obtenemos de estas tecnologías de rastreo son el nombre del proveedor de servicios Internet y la dirección IP, la fecha y la hora de acceso al Sitio; las páginas a las que ha tenido acceso dentro de nuestros sitios y la dirección de Internet del sitio Web desde el que ha llegado a nuestros sitios. Asimismo, le informamos que estos datos no con compartidos con ningún tercero pues son utilizados para fines internos de ““LA EMPRESA””.
+Los datos personales que obtenemos de estas tecnologías de rastreo son el nombre del proveedor de servicios Internet y la dirección IP, la fecha y la hora de acceso al Sitio; las páginas a las que ha tenido acceso dentro de nuestros sitios y la dirección de Internet del sitio Web desde el que ha llegado a nuestros sitios. Asimismo, le informamos que estos datos no con compartidos con ningún tercero pues son utilizados para fines internos de “LA EMPRESA”.
 
 ## MODIFICACIÓN Y ACTUALIZACIÓN.
 El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.

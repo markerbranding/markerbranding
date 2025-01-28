@@ -7,7 +7,7 @@ permalink: "/{{ label }}/blog/{{ title | slugify }}/"
 author: Andrea Tovar
 fecha: 3 de diciembre de 2021
 tags: ["blog", "es", "marketing"]
-category: ["Marketing y publicidad"]
+category: ["Marketing"]
 thumbnail: /assets/blog/blog3/blog3_tb.jpg
 description: El mercado se ha vuelto más digital a medida que la tecnología avanza. Una gran parte de la población está conectada a internet en busca de todo tipo de información, haciendo del marketing digital una forma ideal para captar clientes.
 closure: ¿Buscas generar una estrategia que brinde contenido de valor para posicionar tu negocio? Contáctanos, estamos para apoyarte.

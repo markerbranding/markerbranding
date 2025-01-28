@@ -13,12 +13,12 @@ textcolor: '#B26E04'
 category: Branding
 tags: ["work", "branding", "en"]
 thumbnail: /assets/work/camaleones/camaleones_tb.jpg
-description: Identidad para una cerveza artesanal
+description: Identity for a Craft Beer
 services: ["Logo", "Identidad Corporativa", "Sitio Web"]
-sector: Cerveza Artesanal
-basics: Camaleones es una cervecería artesanal de reciente creación ubicada en Cancún, Quintana Roo. Su nombre surge por la historia de sus creadores, quienes tras la pandemia tuvieron que ganar la habilidad de adaptarse a la nueva realidad, sobrevivir a un entorno difícil, a una situación laboral y social adversa.
-issue: Como todo proyecto que inicia, la planeación y la estrategia forman parte medular para una adecuada construcción de marca. Se contaba con un nombre adecuado, un producto de calidad pero en ese entonces aun en proceso de mejora. Pero también se carecía de un logo adecuado, una etiqueta memorable y atractiva, así como una identidad que pudiera reforzar el estilo de comunicación de esta cerveza.
-solution: El origen del nombre, la perseverancia y la adaptabilidad, fueron valores muy importantes para su creación, por tal motivo se decide impulsar como premisa para su identidad. El producto se enfoca a un público dispuesto a probar nuevos sabores, a disfrutar una cerveza sin importar que la acompañen con unos tacos de la esquina, o bien una tarde tranquila en la playa con los amigos, o inclusive en una cena de 3 tiempos en un buen restaurante.
+sector: Craft Beer
+basics: Camaleones is a recently established craft brewery located in Cancún, Quintana Roo. Its name stems from the story of its founders, who, following the pandemic, developed the ability to adapt to a new reality and navigate challenging social and professional circumstances.
+issue: As with any new project, planning and strategy played a critical role in building the brand. The brewery already had a fitting name and a quality product, though still undergoing refinement at the time. However, it lacked an appropriate logo, a memorable and attractive label, and an identity that could strengthen the beer’s communication style.
+solution: The brand’s core values—origin, perseverance, and adaptability—became essential elements of its creation and identity. These values were highlighted as the foundation for the brand’s identity. The product is aimed at a market open to exploring new flavors, enjoying a beer regardless of whether it’s paired with tacos from the corner stand, a relaxed afternoon at the beach with friends, or even a three-course dinner at a fine restaurant.
 
 ---
 
