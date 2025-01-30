@@ -218,11 +218,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             bgActive.classList.toggle('show');
         });
     });
-
-
-    document.getElementById("logoMarkerHeader").onclick = function() {myFunction()};
-    function myFunction() {
-        window.location = "/";
-    }
+    
 
 });
