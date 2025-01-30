@@ -220,5 +220,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     });
 
 
+    document.getElementById("logoMarkerHeader").onclick = function() {myFunction()};
+    function myFunction() {
+        window.location = "/";
+    }
 
 });
