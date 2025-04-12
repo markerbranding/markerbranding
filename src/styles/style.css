@@ -1298,6 +1298,12 @@ section{
 
 #section__footer__menu .col__left{
   padding-right: 10%;
+  a{
+    img{
+      width: 90px;
+      height: auto;
+    }
+  }
 }
 
 #section__footer__menu .col__left form{
