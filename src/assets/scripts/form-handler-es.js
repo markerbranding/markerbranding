@@ -67,7 +67,7 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
 
 
   // Verificar reCAPTCHA antes de enviar
-  const verifyRes = await fetch('../../../netlify/functions/verificar-recaptcha', {
+  const verifyRes = await fetch('/.netlify/functions/verificar-recaptcha', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
