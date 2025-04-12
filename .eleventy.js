@@ -207,6 +207,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./src/assets");
   eleventyConfig.addPassthroughCopy("./src/admin");
   eleventyConfig.addPassthroughCopy("./src/netlify.toml");
+  eleventyConfig.addPassthroughCopy("./netlify/");
 
   // Filtro para fechas
   eleventyConfig.addFilter("postDate", (dateObj) => {
