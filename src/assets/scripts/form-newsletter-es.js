@@ -20,7 +20,7 @@ document.getElementById("custom-newsletter-form").addEventListener("submit", asy
     // Capturar y sanitizar datos
     const name = sanitizeInput(document.getElementById("name_newsletter").value);
     const email = sanitizeInput(document.getElementById("email_newsletter").value);
-    //const recaptchaToken = grecaptcha.getResponse();
+    const recaptchaToken = grecaptcha.getResponse();
   
     // Validaciones adicionales
     if (!/^[A-Za-z\s]+$/.test(name)) {
@@ -31,10 +31,10 @@ document.getElementById("custom-newsletter-form").addEventListener("submit", asy
       alert("Correo electrónico inválido.");
       return;
     }
-    /*if (!recaptchaToken) {
+    if (!recaptchaToken) {
       alert("Por favor, verifica que no eres un robot.");
       return;
-    }*/
+    }
   
     // Preparar datos para HubSpot
     const formData = {
