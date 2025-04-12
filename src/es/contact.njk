@@ -41,119 +41,60 @@ locale: es
 
   <section id="section__contacto">
     <div class="column__2">
+
       <div class="col__left">
-        
-        <!--<ul class="nav__footer">
-          <li><a href="/">Enfoque</a></li>
-          <li><a href="/branding/">Branding</a></li>
-          <li><a href="/web/">Web</a></li>
-          <li><a href="/publicidad/">Publicidad</a></li>
-          <li><a href="/nosotros/">Nosotros</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contacto/">Contacto</a></li>
-        </ul>-->
         <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.749883864686!2d-89.60064602302455!3d21.037362780614174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5676fb796cacaf%3A0x10d6454e030169f4!2sMARKER%20agencia%20de%20branding%2C%20inbound%20marketing%20y%20dise%C3%B1o!5e0!3m2!1ses!2smx!4v1733636025039!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
+      
       <div class="col__right form__wrapper">
-        <!--<form name="contacto" method="POST" data-netlify="true">
+        <form id="custom-hubspot-form" name="contacto" method="POST">
           <div>
-            <label>Nombre:</label>
-            <input type="text" name="name" />
+            <label for="name">Nombre y Apellido: <span>*</span></label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" maxlength="50" title="Solo letras y espacios permitidos" />
           </div>
           <div>
-            <label>Empresa:</label>
-            <input type="text" name="empresa" />
+            <label for="telefono">Teléfono: <span>*</span></label>
+            <input type="text" id="telefono" name="telefono" required pattern="\d{10}" maxlength="10" title="Debe ser un número de 10 dígitos" />
           </div>
           <div>
-            <label>Teléfono:</label>
-            <input type="text" name="telefono" />
+            <label for="email">Correo electrónico: <span>*</span></label>
+            <input type="email" id="email" name="email" required maxlength="100" />
           </div>
           <div>
-            <label>Correo electrónico:</label>
-            <input type="email" name="email" />
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" maxlength="100" />
           </div>
           <div>
-            <label>Elige un servicio de interés:</label>
+            <label for="ciudad">Ciudad: <span>*</span></label>
+            <input type="text" id="ciudad" name="ciudad" required maxlength="100" />
+          </div>
+          <div>
+            <label for="role">Elige un servicio de interés: <span>*</span></label>
             <div class="select__wrapper">
-              <select name="role[]" >
+              <select id="role" name="role[]" required>
                 <option disabled selected value>-- Selecciona una opción --</option>
-                <option value="branding">Branding</option>
-                <option value="web">Sitio Web</option>
-                <option value="marketing">Marketing / Publicidad</option>
+                <option value="Branding">Branding (Estrategia + Identidad)</option>
+                <option value="Web">Desarrollo de Sitio Web</option>
+                <option value="Marketing">Marketing (Estrategia + Gestión mensual)</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
           </div>
           <div>
-            <label>Comentarios (opcional):</label>
-            <textarea name="message"></textarea>
+            <label for="message">Comentarios:</label>
+            <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
           </div>
+          
           <div>
+            <div style="display: none;">
+              <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdGCa8qAAAAAOt3UR8sQreBUL_utZO0CQLFKC5A"></div>
             <button class="btn" type="submit">Enviar mensaje</button>
           </div>
-        </form>-->
-
-        <!--        
-        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-        <script>
-          hbspt.forms.create({
-            portalId: "48702052",
-            formId: "34c53d9a-d627-49f1-b36f-bf19c5439c05"
-          });
-        </script>
-      -->
-
-      <form id="custom-hubspot-form" name="contacto" method="POST">
-        <div>
-          <label for="name">Nombre y Apellido: <span>*</span></label>
-          <input type="text" id="name" name="name" required pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" maxlength="50" title="Solo letras y espacios permitidos" />
-        </div>
-        <div>
-          <label for="telefono">Teléfono: <span>*</span></label>
-          <input type="text" id="telefono" name="telefono" required pattern="\d{10}" maxlength="10" title="Debe ser un número de 10 dígitos" />
-        </div>
-        <div>
-          <label for="email">Correo electrónico: <span>*</span></label>
-          <input type="email" id="email" name="email" required maxlength="100" />
-        </div>
-        <div>
-          <label for="empresa">Empresa:</label>
-          <input type="text" id="empresa" name="empresa" maxlength="100" />
-        </div>
-        <div>
-          <label for="ciudad">Ciudad: <span>*</span></label>
-          <input type="text" id="ciudad" name="ciudad" required maxlength="100" />
-        </div>
-        <div>
-          <label for="role">Elige un servicio de interés: <span>*</span></label>
-          <div class="select__wrapper">
-            <select id="role" name="role[]" required>
-              <option disabled selected value>-- Selecciona una opción --</option>
-              <option value="Branding">Branding (Estrategia + Identidad)</option>
-              <option value="Web">Desarrollo de Sitio Web</option>
-              <option value="Marketing">Marketing (Estrategia + Gestión mensual)</option>
-              <option value="Otro">Otro</option>
-            </select>
-          </div>
-        </div>
-        <div>
-          <label for="message">Comentarios:</label>
-          <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
-        </div>
-        
-        <div>
-          <div style="display: none;">
-            <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
-          </div>
-          <div class="g-recaptcha" data-sitekey="6LdGCa8qAAAAAOt3UR8sQreBUL_utZO0CQLFKC5A"></div>
-          <button class="btn" type="submit">Enviar mensaje</button>
-        </div>
-      </form>
-
-          
-          
-  
-          
+        </form>
       </div>
+
     </div>
   </section>
 </div>

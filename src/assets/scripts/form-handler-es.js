@@ -65,6 +65,25 @@ document.getElementById("custom-hubspot-form").addEventListener("submit", async 
 
   console.log("Datos enviados:", formData);
 
+
+  // Verificar reCAPTCHA antes de enviar
+  const verifyRes = await fetch('../../../netlify/functions/verificar-recaptcha', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ token: recaptchaToken }),
+  });
+
+  const verifyData = await verifyRes.json();
+
+  if (!verifyData.success) {
+    alert("Verificación de reCAPTCHA falló. Intenta de nuevo.");
+    return;
+  }
+
+
+
   // Enviar datos a HubSpot
   try {
     const response = await fetch(
