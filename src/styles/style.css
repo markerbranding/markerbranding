@@ -254,7 +254,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'AeonikRegular', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 /* Remove default margin */
