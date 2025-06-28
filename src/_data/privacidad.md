@@ -48,7 +48,7 @@ Los datos personales que obtenemos de estas tecnologías de rastreo son el nombr
 ## MODIFICACIÓN Y ACTUALIZACIÓN.
 El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales; de nuestras propias necesidades por los productos o servicios que ofrecemos; de nuestras prácticas de privacidad; de cambios en nuestro modelo de negocio, o por otras causas.
 
-Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, en nuestras oficinas sitas en Calle 35 No.198 entre 18 y 26 diagonal, Fracc. Brisas, Mérida Yucatán, C.P. 97144, en donde usted podrá consultar nuestro aviso de privacidad en todo momento.
+Nos comprometemos a mantenerlo informado sobre los cambios que pueda sufrir el presente aviso de privacidad, en nuestras oficinas sitas en Periférico Norte. Calle 11 #306 x 12-A Santa Gertrudis Copó, C.P. 97305, Mérida, Yucatán.
 
 ## POLÍTICA DE FACEBOOK/INSTAGRAM/MESSENGER (META PLATFORMS, INC.).
 Los detalles completos sobre los términos legales de Facebook, Instagram WhatsApp y Messenger (productos de META PLATFORMS, INC.) están disponibles en: https://www.facebook.com/legal/terms. Todas las políticas de los productos de META PLATFORMS, INC., están disponibles en: https://www.facebook.com/policies_center. Este sitio web no forma parte de ninguno de los productos de META PLATFORMS, INC. Adicionalmente, este sitio NO está avalado por META PLATFORMS, INC. en ninguna forma. Los productos de META PLATFORMS, INC. proveen una plataforma para realizar publicidad, pero las opiniones expresadas por ““LA EMPRESA”” no son representativas de META PLATFORMS, INC.

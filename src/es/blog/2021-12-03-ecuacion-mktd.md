@@ -2,7 +2,9 @@
 layout: blog.njk
 lang: es
 label: es
-title: La ecuación del marketing digital que tu negocio necesita para alcanzar sus objetivos
+title: La ecuación del marketing digital que tu negocio necesita
+seodescription: ¿Cómo lograr que el marketing digital realmente funcione? Conoce la ecuación esencial que combina objetivos, canales y acciones para llevar a tu marca al siguiente nivel.
+seokeywords: marketing digital, estrategia digital, crecimiento online, objetivos de negocio, publicidad digital, agencia de marketing, comunicación efectiva, marker, méxico
 permalink: "/{{ label }}/blog/{{ title | slugify }}/"
 author: Andrea Tovar
 fecha: 3 de diciembre de 2021

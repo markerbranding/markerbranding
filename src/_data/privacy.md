@@ -49,7 +49,7 @@ The personal data collected through these tracking technologies include the Inte
 ## MODIFICATIONS AND UPDATES.
 This privacy notice may be subject to modifications, changes, or updates due to legal requirements, our privacy practices, or changes in our business model.
 
-We are committed to keeping you informed about any changes to this privacy notice, which will be available at our office located at Calle 35 No.198, between 18 and 26 Diagonal, Fracc. Brisas, Mérida, Yucatán, C.P. 97144.
+We are committed to keeping you informed about any changes to this privacy notice, which will be available at our office located at 11 Periferico Norte, Suite 306, Santa Gertrudis Copo, Merida, Yucatan 97305, Mexico.
 
 ## META PLATFORMS, INC. POLICY (FACEBOOK/INSTAGRAM/MESSENGER).
 For full details on the legal terms of Facebook, Instagram, WhatsApp, and Messenger (products of META PLATFORMS, INC.), visit: https://www.facebook.com/legal/terms.

@@ -2,7 +2,9 @@
 layout: blog.njk
 lang: en
 label: en
-title: The digital marketing equation your business needs to achieve its goals
+title: The Digital Marketing Equation Your Business Needs
+seodescription: What makes digital marketing truly effective? Learn the essential equation that aligns goals, channels, and actions to take your brand to the next level.
+seokeywords: digital marketing strategy, business growth, marketing goals, online visibility, digital advertising, marketing agency, brand development, marker, mexico
 permalink: "/{{ label }}/blog/{{ title | slugify }}/"
 author: Andrea Tovar
 fecha: December 3, 2021
