@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Anchor Apparel
+seodescription: Diseño de branding y dirección creativa para Anchor Apparel, una marca de ropa con esencia náutica y estilo urbano. Desarrollo de logotipo, identidad visual y look & feel para redes sociales.
+seokeywords: diseño de marca, branding, dirección creativa, logotipo, identidad visual, moda urbana, marca de ropa, diseño gráfico, anchor apparel, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2017-05-02
 year: 2017

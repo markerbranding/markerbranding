@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Fotoideas
+seodescription: Rediseño de logo e identidad gráfica para Fotoideas, una marca que imprime las fotos de sus clientes en distintos sustratos como almohadas, camisas, gorras, y entrega a domicilio en todo el país.
+seokeywords: branding, rebranding, rediseño, identidad visual, diseño de logotipo, logo, marca para imprenta, artículos de impresión, diseño gráfico, fotoideas, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-06-15
 year: 2021

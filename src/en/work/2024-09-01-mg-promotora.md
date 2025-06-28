@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: MG Promotora de Vivienda
+seodescription: Marketing strategy, social media management, and advertising campaigns for MG Promotora de Vivienda, a real estate developer specialized in residential housing.
+seokeywords: marketing, advertising, social media, post design, facebook, instagram, marketing and advertising for real estate developers, real estate, residential developments, mg promotora de vivienda, web development, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-09-01
 year: 2024

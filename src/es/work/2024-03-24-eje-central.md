@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Eje Central
+seodescription: Creación del nombre, diseño de logo, identidad corporativa, y desarrollo de sitio web para Eje Central, un despacho de arquitectos especializados en desarrollo vertical.
+seokeywords: branding, rebranding, rediseño, identidad visual, diseño de logotipo, logo, marca para un despacho arquitectónico, arquitectura, arquitectos, diseño arquitectónico, eje central, desarrollo web, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-03-24
 year: 2024

@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Johnny Rockets
+seodescription: Diseño de rótulos en vehículos para Johnny Rockets México. Una evolución gráfica para reflejar modernidad, sin perder la esencia clásica de la marca.
+seokeywords: rediseño de marca, identidad corporativa, branding, logotipo, franquicia de restaurantes, diseño gráfico, marca internacional, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2018-06-22
 year: 2018

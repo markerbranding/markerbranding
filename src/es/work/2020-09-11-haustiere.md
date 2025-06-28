@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Haustiere
+seodescription: Diseño de logo e identidad gráfica para Haustiere, una empresa especializada en comercializar alimentos, así como el cuidado de las mascotas en Mérida, Yucatán.
+seokeywords: branding, identidad visual, diseño de logotipo, logo, marca para negocio de alimentos para mascotas, veterinaria, alimentos, diseño gráfico, haustiere, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2020-09-11
 year: 2020

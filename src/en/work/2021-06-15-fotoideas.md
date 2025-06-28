@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Fotoideas
+seodescription: Logo redesign and visual identity for Fotoideas, a brand that prints customers' photos on various items like pillows, t-shirts, and caps, with nationwide home delivery in Mexico.
+seokeywords: branding, rebranding, visual identity, logo design, printing brand, custom printed products, graphic design, fotoideas, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-06-15
 year: 2021

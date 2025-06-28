@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Haustiere
+seodescription: Logo design and visual identity for Haustiere, a company specialized in pet food and animal care, based in Mérida, Yucatán.
+seokeywords: branding, visual identity, logo design, pet food brand, veterinary, pet care, graphic design, haustiere, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2020-09-11
 year: 2020

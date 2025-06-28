@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Tubos Industriales
+seodescription: Rediseño de logo e identidad gráfica para Tubos Industriales, una empresa del sector industrial ubicada en la Ciudad de México.
+seokeywords: branding, rebranding, rediseño, identidad visual, diseño de logotipo, logo, marca para un comercializador de tubos de acero para la industria, tubos de acero, industrial, fábrica, diseño gráfico, tubos industriales, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-12-18
 year: 2021

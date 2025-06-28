@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Tubos Industriales
+seodescription: Logo redesign and visual identity for Tubos Industriales, an industrial company based in Mexico City.
+seokeywords: branding, rebranding, visual identity, logo design, steel pipe supplier brand, steel pipes, industrial, manufacturing, graphic design, tubos industriales, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-12-18
 year: 2021

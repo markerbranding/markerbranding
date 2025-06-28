@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Eje Central
+seodescription: Naming, logo design, corporate identity, and website development for Eje Central, an architecture firm specialized in vertical development.
+seokeywords: branding, rebranding, visual identity, logo design, architectural firm brand, architecture, architects, architectural design, eje central, web development, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2024-03-24
 year: 2024

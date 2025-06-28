@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Camaleones
+seodescription: Logo design, visual identity, and label design for Camaleones, a craft beer brand with its brewery located in Cancún, Quintana Roo.
+seokeywords: branding, visual identity, logo design, craft beer brand, brewery, beer, beverages, graphic design, camaleones, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-06-15
 year: 2021

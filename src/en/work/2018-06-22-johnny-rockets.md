@@ -3,6 +3,8 @@ layout: work.njk
 lang: en
 label: en
 title: Johnny Rockets
+seodescription: Vehicle signage design for Johnny Rockets Mexico. A visual evolution that reflects modernity while preserving the brand’s classic essence.
+seokeywords: brand redesign, corporate identity, branding, logo design, restaurant franchise, visual identity, international brand, marker, mexico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2018-06-22
 year: 2018

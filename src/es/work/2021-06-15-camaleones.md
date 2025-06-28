@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Camaleones
+seodescription: Diseño de logo, identidad gráfica y etiquetas para Camaleones, una marca de cerveza artesanal con su fábrica ubicada en Cancún, Quintana Roo.
+seokeywords: branding, identidad visual, diseño de logotipo, logo, marca para cerveza artesanal, cervecera, cerveza, bebidas, diseño gráfico, camaleones, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2021-06-15
 year: 2021

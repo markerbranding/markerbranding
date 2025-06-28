@@ -3,6 +3,8 @@ layout: work.njk
 lang: es
 label: es
 title: Grand Marina Kinuh
+seodescription: Rebranding y estrategia de marca y marketing para Grand Marina Kinuh, un complejo turístico ubicado en Telchac Puerto, Yucatán.
+seokeywords: branding, rebranding, rediseño, identidad visual, diseño de logotipo, logo, marca para una marina, complejo turístico, restaurante, villas, diseño gráfico, kinuh, marker, méxico
 permalink: "/{{ label }}/work/{{ title | slugify }}/"
 date: 2022-03-22
 year: 2022
