@@ -169,7 +169,7 @@ function applyFilter(filterClass) {
     //updateMargins(); // Recalcular márgenes después de mostrar/ocultar
     setTimeout(() => {
         createBatch(); // Reiniciar el batch con los elementos visibles
-        ScrollTrigger.refresh(); // Forzar la actualización de posiciones
+        gsapp // Forzar la actualización de posiciones
     }, 0); // Timeout para asegurar que el DOM se ha actualizado
 }
 
