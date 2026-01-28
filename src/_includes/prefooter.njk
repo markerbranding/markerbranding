@@ -1,0 +1,72 @@
+<section id="footer__contacto">
+  <div class="column__1">
+    <h3 class="subtitle"><span>Contáctanos</span><span>Contact Us</span></h3>
+  </div>
+  <div class="column__2">
+    <div class="col__left">
+      <h2 class="title"><span>Nuestras oficinas</span><span>Our Offices</span></h2>
+      <a class="title" href="https://www.google.com/maps/place/MARKER+agencia+de+branding,+inbound+marketing+y+dise%C3%B1o/@21.03642,-89.5951133,17z/data=!3m1!4b1!4m6!3m5!1s0x8f5676fb796cacaf:0x10d6454e030169f4!8m2!3d21.03642!4d-89.5925384!16s%2Fg%2F11dxkvwjry?entry=ttu" target="_blank"><span>Periférico Norte. Calle 11 #306 x 12-A Santa Gertrudis Copó, C.P. 97305 Mérida, Yucatán. México.</span><span>11 Periferico Norte, Suite 306, Santa Gertrudis Copo, Merida, Yucatan 97305, Mexico.</span></a>
+      <h2 class="title"><span>Teléfono / Whatsapp</span><span>Phone / Whatsapp</span></h2>
+      <a class="title" href="https://wa.me/+5219993314062">999 331 4062 </a>
+      <h2>Correo electrónico</h2>
+      <a href="mailto:hola@marker.com.mx">hola@marker.com.mx</a>
+    </div>
+    <div class="col__right form__wrapper">
+       <form id="custom-hubspot-form" name="contacto" method="POST">
+          <div>
+            <label for="name">Nombre y Apellido: <span>*</span></label>
+            <input type="text" id="name" name="name" required pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" maxlength="50" title="Solo letras y espacios permitidos" />
+          </div>
+          <div>
+            <label for="telefono">Teléfono: <span>*</span></label>
+            <input type="text" id="telefono" name="telefono" required pattern="\d{10}" maxlength="10" title="Debe ser un número de 10 dígitos" />
+          </div>
+          <div>
+            <label for="email">Correo electrónico: <span>*</span></label>
+            <input type="email" id="email" name="email" required maxlength="100" />
+          </div>
+          <div>
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" maxlength="100" />
+          </div>
+          <div>
+            <label for="ciudad">Ciudad: <span>*</span></label>
+            <input type="text" id="ciudad" name="ciudad" required maxlength="100" />
+          </div>
+          <div>
+            <label for="role">Elige un servicio de interés: <span>*</span></label>
+            <div class="select__wrapper">
+              <select id="role" name="role[]" required>
+                <option disabled selected value>-- Selecciona una opción --</option>
+                <option value="Branding">Branding (Estrategia + Identidad)</option>
+                <option value="Web">Desarrollo de Sitio Web</option>
+                <option value="Marketing">Marketing (Estrategia + Gestión mensual)</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <label for="message">Comentarios:</label>
+            <textarea id="message" name="message" rows="4" maxlength="500"></textarea>
+          </div>
+          
+          <div>
+            <div style="display: none;">
+              <input type="text" name="honeypot" tabindex="-1" autocomplete="off" />
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LdGCa8qAAAAAOt3UR8sQreBUL_utZO0CQLFKC5A"></div>
+            <button class="btn" type="submit">Enviar mensaje</button>
+          </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="/assets/scripts/form-handler-es.js" defer></script>
