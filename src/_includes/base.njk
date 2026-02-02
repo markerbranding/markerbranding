@@ -7,6 +7,15 @@
             <link rel="alternate" hreflang="{{link.lang}}" href="https://www.11ty.dev{{link.url}}">
         {% endfor %}-->
 
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KHJ8NN8F');</script>
+        <!-- End Google Tag Manager -->
+         
+
         <link rel="canonical" href="https://www.marker.com.mx/{{lang}}/" />
         {% set hreflangs = [ { "lang": "es", "path": "/es/" }, { "lang": "en", "path": "/en/" }] %}
         
@@ -55,32 +64,7 @@
             .column__3__mkt p picture::before, .column__3__mkt .video__wrapper .picture::before{ background-image: url({{accountTb}}); }
         </style>
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-10957507102"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-10957507102');
-        </script>
-
-        <!-- Event snippet for Enviar formulario de clientes potenciales conversion page
-        In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-        <script>
-        function gtag_report_conversion(url) {
-        var callback = function () {
-            if (typeof(url) != 'undefined') {
-            window.location = url;
-            }
-        };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-10957507102/1jKhCJbb6_AbEJ6U-ego',
-            'event_callback': callback
-        });
-        return false;
-        }
-        </script>
+        
 
 
         <!-- Meta Pixel Code -->
@@ -103,6 +87,11 @@
     </head>
     
     <body class="page-{{bodyClass}} lang-{{label}} pro{{id}}" data-barba="wrapper">
+
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KHJ8NN8F"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
        
         {% include 'loader.njk' %}
 
